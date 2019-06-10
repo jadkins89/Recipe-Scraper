@@ -1,16 +1,6 @@
 const request = require('request');
 const cheerio = require('cheerio');
-
-var Recipe = {
-  title: "",
-  ingredients: [],
-  instructions: [],
-  time: {
-    prep: "",
-    cook: "",
-    ready: ""
-  }
-};
+const Recipe = require('./recipe-schema');
 
 const allRecipes = (url) => {
   return new Promise ((resolve, reject) => {
