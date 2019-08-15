@@ -1,8 +1,9 @@
 const allRecipes = require("./allrecipes");
 const foodNetwork = require("./foodnetwork");
+const ambitiousKitchen = require("./ambitiouskitchen");
 
 allRecipes(
-  "https://www.allrecipes.com/recipe/220727/medium-cheddar-cheese-sauce-live-raw-and-vegan/"
+  "https://www.allrecipes.com/recipe/45736/chicken-tikka-masala/"
 ).then(recipe => {
   console.log(recipe);
 });
@@ -16,3 +17,13 @@ allRecipes(
 //   });
 //   console.log(recipe.time);
 // });
+
+// ambitiousKitchen(
+//   "https://www.ambitiouskitchen.com/slow-cooker-pulled-chicken-sandwiches/"
+// )
+//   .then(recipe => {
+//     console.log(recipe);
+//   })
+//   .catch(error => {
+//     console.log(error);
+//   });

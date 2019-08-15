@@ -18,6 +18,7 @@
   "homepage": "https://github.com/jadkins89/Recipe-Scraper#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
+    "puppeteer": "^1.18.1",
     "request": "^2.88.0"
   }
 }
