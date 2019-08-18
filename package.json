@@ -4,7 +4,7 @@
   "description": "",
   "main": "scrapers/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --reporter spec",
     "start": "node scrapers/index.js"
   },
   "repository": {
@@ -21,5 +21,9 @@
     "cheerio": "^1.0.0-rc.3",
     "puppeteer": "^1.18.1",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
   }
 }
