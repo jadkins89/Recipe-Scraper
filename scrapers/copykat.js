@@ -10,7 +10,9 @@ const copykat = async url => {
     return new Promise((resolve, reject) => {
       const $ = cheerio.load(html);
 
-      Recipe.name = $(".wprm-recipe-name").text();
+      Recipe.name = $(
+        $(".wprm-recipe-container").find(".wprm-recipe-name")
+      ).text();
 
       $(".wprm-recipe-ingredient").each((i, el) => {
         Recipe.ingredients.push(
