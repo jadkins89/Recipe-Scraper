@@ -10,6 +10,7 @@ function Recipe() {
     ready: "",
     total: ""
   };
+  this.servings = "";
 }
 
 module.exports = Recipe;

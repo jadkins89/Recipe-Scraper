@@ -1,64 +1,11 @@
-const request = require("request");
 const cheerio = require("cheerio");
-const puppeteer = require("puppeteer");
-var RecipeSchema = require("./recipe-schema");
 
-const blockedResourceTypes = [
-  "image",
-  "media",
-  "font",
-  "texttrack",
-  "object",
-  "beacon",
-  "csp_report",
-  "imageset"
-];
-
-const skippedResources = [
-  "quantserve",
-  "adzerk",
-  "doubleclick",
-  "adition",
-  "exelator",
-  "sharethrough",
-  "cdn.api.twitter",
-  "google-analytics",
-  "googletagmanager",
-  "google",
-  "fontawesome",
-  "facebook",
-  "analytics",
-  "optimizely",
-  "clicktale",
-  "mixpanel",
-  "zedo",
-  "clicksor",
-  "tiqcdn"
-];
+const RecipeSchema = require("./recipe-schema");
+const puppeteerFetch = require("../puppeteerFetch");
 
 const ambitiousKitchen = async url => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  await page.setRequestInterception(true);
-
-  page.on("request", req => {
-    const requestUrl = req._url.split("?")[0].split("#")[0];
-    if (
-      blockedResourceTypes.indexOf(req.resourceType()) !== -1 ||
-      skippedResources.some(resource => requestUrl.indexOf(resource) !== -1)
-    ) {
-      req.abort();
-    } else {
-      req.continue();
-    }
-  });
-
-  const response = await page.goto(url);
-
-  if (response._status < 400) {
-    let html = await page.content();
-    await browser.close();
-
+  try {
+    let html = await puppeteerFetch(url);
     var Recipe = new RecipeSchema();
     return new Promise((resolve, reject) => {
       const $ = cheerio.load(html);
@@ -85,8 +32,8 @@ const ambitiousKitchen = async url => {
 
       resolve(Recipe);
     });
-  } else {
-    reject(response._status);
+  } catch (error) {
+    reject(error);
   }
 };
 
