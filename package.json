@@ -4,7 +4,7 @@
   "description": "",
   "main": "scrapers/index.js",
   "scripts": {
-    "test": "mocha --reporter spec",
+    "test": "mocha --timeout 10000",
     "start": "node scrapers/index.js"
   },
   "repository": {

@@ -10,8 +10,14 @@ const copykat = require("./copykat");
 //   }
 // );
 
-// ambitiousKitchen(
-//   "https://www.ambitiouskitchen.com/sweet-potato-salmon-cakes/"
+ambitiousKitchen(
+  "https://www.ambitiouskitchen.com/street-corn-pasta-salad-with-cilantro-pesto-goat-cheese/"
+).then(recipe => {
+  console.log(recipe);
+});
+
+// allRecipes(
+//   "https://www.allrecipes.com/recipe/235151/crispy-and-tender-baked-chicken-thighs/"
 // ).then(recipe => {
 //   console.log(recipe);
 // });

@@ -5,21 +5,26 @@ var RecipeSchema = require("./recipe-schema");
 const allRecipes = url => {
   let Recipe = new RecipeSchema();
   return new Promise((resolve, reject) => {
-    request(url, (error, response, html) => {
-      if (!error && response.statusCode == 200) {
-        const $ = cheerio.load(html);
-        // Check if recipe is in new format
-        if ($(".recipe-info-section").text()) {
-          // Handle new format
-          newAllRecipes($, Recipe);
+    if (!url.includes("allrecipes.com/recipe")) {
+      reject("url provided must include 'allrecipes.com/recipe'");
+    } else {
+      request(url, (error, response, html) => {
+        if (!error && response.statusCode == 200) {
+          const $ = cheerio.load(html);
+          // Check if recipe is in new format
+          if ($(".recipe-info-section").text()) {
+            newAllRecipes($, Recipe);
+          } else if ($("#recipe-main-content").text()) {
+            oldAllRecipes($, Recipe);
+          } else {
+            reject("No recipe found on page");
+          }
+          resolve(Recipe);
         } else {
-          oldAllRecipes($, Recipe);
+          reject(error.message);
         }
-        resolve(Recipe);
-      } else {
-        reject(error);
-      }
-    });
+      });
+    }
   });
 };
 
@@ -49,7 +54,7 @@ const newAllRecipes = ($, Recipe) => {
       case "additional":
         Recipe.time.inactive = value;
       default:
-        break;
+        return false;
     }
   });
 
