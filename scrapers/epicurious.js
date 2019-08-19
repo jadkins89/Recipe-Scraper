@@ -1,40 +1,53 @@
 const request = require("request");
 const cheerio = require("cheerio");
-const RecipeSchema = require("./recipe-schema");
+
+const RecipeSchema = require("../helpers/recipe-schema");
 
 const epicurious = url => {
-  var Recipe = new RecipeSchema();
+  const Recipe = new RecipeSchema();
   return new Promise((resolve, reject) => {
-    request(url, (error, response, html) => {
-      if (!error && response.statusCode == 200) {
-        const $ = cheerio.load(html);
+    if (!url.includes("epicurious.com/recipes/")) {
+      reject(new Error("url provided must include 'epicurious.com/recipes/'"));
+    } else {
+      request(url, (error, response, html) => {
+        if (!error && response.statusCode == 200) {
+          const $ = cheerio.load(html);
 
-        Recipe.name = $("h1[itemprop=name]")
-          .text()
-          .trim();
+          Recipe.name = $("h1[itemprop=name]")
+            .text()
+            .trim();
 
-        $(".ingredient").each((i, el) => {
-          Recipe.ingredients.push($(el).text());
-        });
+          $(".ingredient").each((i, el) => {
+            Recipe.ingredients.push($(el).text());
+          });
 
-        $(".preparation-step").each((i, el) => {
-          Recipe.instructions.push(
-            $(el)
-              .text()
-              .replace(/\s\s+/g, "")
-          );
-        });
+          $(".preparation-step").each((i, el) => {
+            Recipe.instructions.push(
+              $(el)
+                .text()
+                .replace(/\s\s+/g, "")
+            );
+          });
 
-        Recipe.time.active = $("dd.active-time").text();
-        Recipe.time.total = $("dd.total-time").text();
+          Recipe.time.active = $("dd.active-time").text();
+          Recipe.time.total = $("dd.total-time").text();
 
-        Recipe.servings = $("dd.yield").text();
+          Recipe.servings = $("dd.yield").text();
 
-        resolve(Recipe);
-      } else {
-        reject(error);
-      }
-    });
+          if (
+            !Recipe.name ||
+            !Recipe.ingredients.length ||
+            !Recipe.instructions.length
+          ) {
+            reject(new Error("No recipe found on page"));
+          } else {
+            resolve(Recipe);
+          }
+        } else {
+          reject(error);
+        }
+      });
+    }
   });
 };
 

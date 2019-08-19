@@ -1,27 +1,28 @@
 const request = require("request");
 const cheerio = require("cheerio");
-var RecipeSchema = require("./recipe-schema");
+
+const RecipeSchema = require("../helpers/recipe-schema");
 
 const allRecipes = url => {
-  let Recipe = new RecipeSchema();
+  const Recipe = new RecipeSchema();
   return new Promise((resolve, reject) => {
     if (!url.includes("allrecipes.com/recipe")) {
-      reject("url provided must include 'allrecipes.com/recipe'");
+      reject(new Error("url provided must include 'allrecipes.com/recipe'"));
     } else {
       request(url, (error, response, html) => {
         if (!error && response.statusCode == 200) {
           const $ = cheerio.load(html);
           // Check if recipe is in new format
-          if ($(".recipe-info-section").text()) {
+          if ((Recipe.name = $(".intro").text())) {
             newAllRecipes($, Recipe);
-          } else if ($("#recipe-main-content").text()) {
+          } else if ((Recipe.name = $("#recipe-main-content").text())) {
             oldAllRecipes($, Recipe);
           } else {
-            reject("No recipe found on page");
+            reject(new Error("No recipe found on page"));
           }
           resolve(Recipe);
         } else {
-          reject(error.message);
+          reject(error);
         }
       });
     }
@@ -29,9 +30,7 @@ const allRecipes = url => {
 };
 
 const newAllRecipes = ($, Recipe) => {
-  Recipe.name = $(".intro")
-    .text()
-    .replace(/\s\s+/g, "");
+  Recipe.name = Recipe.name.replace(/\s\s+/g, "");
 
   $(".recipe-meta-item").each((i, el) => {
     const title = $(el)
@@ -72,8 +71,6 @@ const newAllRecipes = ($, Recipe) => {
 };
 
 const oldAllRecipes = ($, Recipe) => {
-  Recipe.name = $("#recipe-main-content").text();
-
   $("#polaris-app label").each((i, el) => {
     const item = $(el)
       .text()

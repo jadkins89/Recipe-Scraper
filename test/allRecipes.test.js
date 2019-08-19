@@ -1,6 +1,8 @@
 "use strict";
 
-var expect = require("chai").expect;
+const expect = require("chai").expect;
+const assert = require("chai").assert;
+
 const allRecipes = require("../scrapers/allrecipes");
 const Constants = require("./constants/allRecipesConstants");
 
@@ -24,7 +26,7 @@ describe("allRecipes", () => {
       await allRecipes(Constants.invalidUrl);
       assert.fail("was not supposed to succeed");
     } catch (error) {
-      expect(error).to.equal(
+      expect(error.message).to.equal(
         "url provided must include 'allrecipes.com/recipe'"
       );
     }
@@ -35,7 +37,7 @@ describe("allRecipes", () => {
       await allRecipes(Constants.nonRecipeUrl);
       assert.fail("was not supposed to succeed");
     } catch (error) {
-      expect(error).to.equal("No recipe found on page");
+      expect(error.message).to.equal("No recipe found on page");
     }
   });
 });
