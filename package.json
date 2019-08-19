@@ -1,7 +1,9 @@
 {
   "name": "recipe-scraper",
-  "version": "1.1.5",
-  "description": "",
+  "version": "1.1.6",
+  "description": "A javascript web scraping utility for recipe websites.",
+  "author": "Justin Adkins <jadkins1019@gmail.com>",
+  "license": "MIT",
   "main": "scrapers/index.js",
   "scripts": {
     "test": "mocha --timeout 10000",
@@ -17,8 +19,6 @@
     "type": "git",
     "url": "git+https://github.com/jadkins89/Recipe-Scraper.git"
   },
-  "author": "Justin Adkins <jadkins1019@gmail.com>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jadkins89/Recipe-Scraper/issues"
   },

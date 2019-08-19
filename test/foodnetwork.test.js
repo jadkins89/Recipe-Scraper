@@ -20,7 +20,7 @@ describe("foodNetwork", () => {
       assert.fail("was not supposed to succeed");
     } catch (error) {
       expect(error.message).to.equal(
-        "url provided must include 'foodnetwork.com/recipes/food-network-kitchen'"
+        "url provided must include 'foodnetwork.com/recipes/'"
       );
     }
   });
