@@ -6,12 +6,8 @@ const RecipeSchema = require("../helpers/recipe-schema");
 const foodNetwork = url => {
   const Recipe = new RecipeSchema();
   return new Promise((resolve, reject) => {
-    if (!url.includes("foodnetwork.com/recipes/food-network-kitchen")) {
-      reject(
-        new Error(
-          "url provided must include 'foodnetwork.com/recipes/food-network-kitchen'"
-        )
-      );
+    if (!url.includes("foodnetwork.com/recipes/")) {
+      reject(new Error("url provided must include 'foodnetwork.com/recipes/'"));
     } else {
       request(url, (error, response, html) => {
         if (!error && response.statusCode == 200) {
