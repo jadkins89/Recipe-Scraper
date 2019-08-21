@@ -7,6 +7,7 @@ const food = require("./food");
 const seriousEats = require("./seriouseats");
 const theRealFoodRds = require("./therealfoodrds");
 const simplyRecipes = require("./simplyrecipes");
+const smittenKitchen = require("./smittenkitchen");
 
 module.exports = {
   allRecipes,
@@ -17,5 +18,6 @@ module.exports = {
   food,
   seriousEats,
   theRealFoodRds,
-  simplyRecipes
+  simplyRecipes,
+  smittenKitchen
 };

@@ -2,19 +2,19 @@
 const expect = require("chai").expect;
 const assert = require("chai").assert;
 
-const allRecipes = require("../scrapers/allrecipes");
-const Constants = require("./constants/allRecipesConstants");
+const smittenKitchen = require("../scrapers/smittenkitchen");
+const Constants = require("./constants/smittenkitchenConstants");
 
-describe("allRecipes", () => {
+describe("smittenKitchen", () => {
   it("should fetch the expected recipe (old style)", async () => {
-    let actualRecipe = await allRecipes(Constants.testUrlOld);
+    let actualRecipe = await smittenKitchen(Constants.testUrlOld);
     expect(JSON.stringify(Constants.expectedRecipeOld)).to.equal(
       JSON.stringify(actualRecipe)
     );
   });
 
   it("should fetch the expected recipe (new style)", async () => {
-    let actualRecipe = await allRecipes(Constants.testUrlNew);
+    let actualRecipe = await smittenKitchen(Constants.testUrlNew);
     expect(JSON.stringify(Constants.expectedRecipeNew)).to.equal(
       JSON.stringify(actualRecipe)
     );
@@ -22,18 +22,18 @@ describe("allRecipes", () => {
 
   it("should throw an error if invalid url is used", async () => {
     try {
-      await allRecipes(Constants.invalidUrl);
+      await smittenKitchen(Constants.invalidUrl);
       assert.fail("was not supposed to succeed");
     } catch (error) {
       expect(error.message).to.equal(
-        "url provided must include 'allrecipes.com/recipe'"
+        "url provided must include 'smittenkitchen.com/'"
       );
     }
   });
 
   it("should throw an error if non-recipe page is used", async () => {
     try {
-      await allRecipes(Constants.nonRecipeUrl);
+      await smittenKitchen(Constants.nonRecipeUrl);
       assert.fail("was not supposed to succeed");
     } catch (error) {
       expect(error.message).to.equal("No recipe found on page");
