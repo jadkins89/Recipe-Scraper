@@ -5,12 +5,14 @@ const epicurious = require("./epicurious");
 const copykat = require("./copykat");
 const food = require("./food");
 const seriousEats = require("./seriouseats");
+const theRealFoodRds = require("./therealfoodrds");
+const simplyRecipes = require("./simplyrecipes");
 
-// seriousEats(
-//   "https://www.seriouseats.com/recipes/2019/08/korean-chilled-cucumber-soup-oi-naengguk-recipe.html"
-// ).then(recipe => {
-//   console.log(recipe);
-// });
+simplyRecipes(
+  "https://www.simplyrecipes.com/recipes/chicken_panzanella_salad/"
+).then(recipe => {
+  console.log(recipe);
+});
 
 module.exports = {
   allRecipes,
@@ -19,5 +21,7 @@ module.exports = {
   epicurious,
   copykat,
   food,
-  seriousEats
+  seriousEats,
+  theRealFoodRds,
+  simplyRecipes
 };

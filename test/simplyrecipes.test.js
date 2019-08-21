@@ -2,12 +2,12 @@
 const expect = require("chai").expect;
 const assert = require("chai").assert;
 
-const seriousEats = require("../scrapers/seriouseats");
-const Constants = require("./constants/seriouseatsConstants");
+const simplyRecipes = require("../scrapers/simplyrecipes");
+const Constants = require("./constants/simplyrecipesConstants");
 
-describe("seriousEats", () => {
+describe("simplyRecipes", () => {
   it("should fetch the expected recipe", async () => {
-    let actualRecipe = await seriousEats(Constants.testUrl);
+    let actualRecipe = await simplyRecipes(Constants.testUrl);
     expect(JSON.stringify(Constants.expectedRecipe)).to.equal(
       JSON.stringify(actualRecipe)
     );
@@ -15,32 +15,21 @@ describe("seriousEats", () => {
 
   it("should throw an error if invalid url is used", async () => {
     try {
-      await seriousEats(Constants.invalidUrl);
+      await simplyRecipes(Constants.invalidUrl);
       assert.fail("was not supposed to succeed");
     } catch (error) {
       expect(error.message).to.equal(
-        "url provided must include 'seriouseats.com/'"
+        "url provided must include 'simplyrecipes.com/recipes/'"
       );
     }
   });
 
   it("should throw an error if non-recipe page is used", async () => {
     try {
-      await seriousEats(Constants.nonRecipeUrl);
+      await simplyRecipes(Constants.nonRecipeUrl);
       assert.fail("was not supposed to succeed");
     } catch (error) {
       expect(error.message).to.equal("No recipe found on page");
-    }
-  });
-
-  it("should throw an error if sponsored recipe is used", async () => {
-    try {
-      await seriousEats(Constants.sponsorUrl);
-      assert.fail("was not supposed to succeed");
-    } catch (error) {
-      expect(error.message).to.equal(
-        "seriouseats.com sponsored recipes not supported"
-      );
     }
   });
 });

@@ -9,8 +9,8 @@ const ambitiousKitchen = url => {
       reject(new Error("url provided must include 'ambitiouskitchen.com'"));
     } else {
       try {
-        let html = await puppeteerFetch(url);
-        var Recipe = new RecipeSchema();
+        const html = await puppeteerFetch(url);
+        const Recipe = new RecipeSchema();
         const $ = cheerio.load(html);
 
         Recipe.name = $('[itemprop="name"]').text();
