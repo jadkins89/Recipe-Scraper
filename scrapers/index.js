@@ -8,12 +8,6 @@ const seriousEats = require("./seriouseats");
 const theRealFoodRds = require("./therealfoodrds");
 const simplyRecipes = require("./simplyrecipes");
 
-simplyRecipes(
-  "https://www.simplyrecipes.com/recipes/chicken_panzanella_salad/"
-).then(recipe => {
-  console.log(recipe);
-});
-
 module.exports = {
   allRecipes,
   foodNetwork,
