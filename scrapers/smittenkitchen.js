@@ -96,7 +96,20 @@ const newSmitten = ($, Recipe) => {
 
   Recipe.instructions = $(".jetpack-recipe-directions")
     .text()
-    .split("\n");
+    .split("\n")
+    .filter(instruction => instruction);
+
+  if (!Recipe.instructions.length) {
+    let lastIngredient = Recipe.ingredients[Recipe.ingredients.length - 1];
+    let recipeContents = $(".entry-content").text();
+    Recipe.instructions = recipeContents
+      .slice(
+        recipeContents.indexOf(lastIngredient) + lastIngredient.length,
+        recipeContents.indexOf("Rate this:")
+      )
+      .split("\n")
+      .filter(instruction => instruction);
+  }
 
   Recipe.time.total = $("time[itemprop=totalTime]")
     .text()

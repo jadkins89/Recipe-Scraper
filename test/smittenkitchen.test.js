@@ -13,9 +13,16 @@ describe("smittenKitchen", () => {
     );
   });
 
-  it("should fetch the expected recipe (new style)", async () => {
-    let actualRecipe = await smittenKitchen(Constants.testUrlNew);
-    expect(JSON.stringify(Constants.expectedRecipeNew)).to.equal(
+  it("should fetch the expected recipe (new style V1)", async () => {
+    let actualRecipe = await smittenKitchen(Constants.testUrlNewV1);
+    expect(JSON.stringify(Constants.expectedRecipeNewV1)).to.equal(
+      JSON.stringify(actualRecipe)
+    );
+  });
+
+  it("should fetch the expected recipe (new style V2)", async () => {
+    let actualRecipe = await smittenKitchen(Constants.testUrlNewV2);
+    expect(JSON.stringify(Constants.expectedRecipeNewV2)).to.equal(
       JSON.stringify(actualRecipe)
     );
   });
