@@ -1,26 +1,29 @@
-const allRecipes = require("./allrecipes");
-const foodNetwork = require("./foodnetwork");
-const ambitiousKitchen = require("./ambitiouskitchen");
-const epicurious = require("./epicurious");
-const copykat = require("./copykat");
-const food = require("./food");
-const seriousEats = require("./seriouseats");
-const theRealFoodRds = require("./therealfoodrds");
-const simplyRecipes = require("./simplyrecipes");
-const smittenKitchen = require("./smittenkitchen");
-const thePioneerWoman = require("./thepioneerwoman");
-const yummly = require("./yummly");
+const parseDomain = require("parse-domain");
 
-module.exports = {
-  allRecipes,
-  foodNetwork,
-  ambitiousKitchen,
-  epicurious,
-  copykat,
-  food,
-  seriousEats,
-  theRealFoodRds,
-  simplyRecipes,
-  smittenKitchen,
-  yummly
+const domains = {
+  allrecipes: require("./allrecipes"),
+  foodnetwork: require("./foodnetwork"),
+  ambitiouskitchen: require("./ambitiouskitchen"),
+  epicurious: require("./epicurious"),
+  copykat: require("./copykat"),
+  food: require("./food"),
+  seriouseats: require("./seriouseats"),
+  therealfoodrds: require("./therealfoodrds"),
+  simplyrecipes: require("./simplyrecipes"),
+  smittenkitchen: require("./smittenkitchen"),
+  thepioneerwoman: require("./thepioneerwoman"),
+  yummly: require("./yummly")
 };
+
+const recipeScraper = url => {
+  let domain = parseDomain(url).domain;
+  return new Promise((resolve, reject) => {
+    if (domains[domain] !== undefined) {
+      resolve(domains[domain](url));
+    } else {
+      reject(new Error("Site not yet supported"));
+    }
+  });
+};
+
+module.exports = recipeScraper;

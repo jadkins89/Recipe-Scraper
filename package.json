@@ -1,6 +1,6 @@
 {
   "name": "recipe-scraper",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "A javascript web scraping utility for recipe websites.",
   "author": "Justin Adkins <jadkins1019@gmail.com>",
   "license": "MIT",
@@ -25,6 +25,7 @@
   "homepage": "https://github.com/jadkins89/Recipe-Scraper#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
+    "parse-domain": "^2.3.2",
     "puppeteer": "^1.18.1",
     "request": "^2.88.0"
   },
