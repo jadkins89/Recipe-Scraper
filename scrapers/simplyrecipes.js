@@ -49,8 +49,7 @@ const simplyRecipes = url => {
             resolve(Recipe);
           }
         } else {
-          console.log(response);
-          reject(error);
+          reject(new Error("No recipe found on page"));
         }
       });
     }
