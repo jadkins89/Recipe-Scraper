@@ -49,7 +49,7 @@ const simplyRecipes = url => {
             resolve(Recipe);
           }
         } else {
-          console.log(error);
+          console.log(response);
           reject(error);
         }
       });
