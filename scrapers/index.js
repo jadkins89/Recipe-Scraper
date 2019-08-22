@@ -12,7 +12,8 @@ const domains = {
   simplyrecipes: require("./simplyrecipes"),
   smittenkitchen: require("./smittenkitchen"),
   thepioneerwoman: require("./thepioneerwoman"),
-  yummly: require("./yummly")
+  yummly: require("./yummly"),
+  "101cookbooks": require("./101cookbooks")
 };
 
 const recipeScraper = url => {
