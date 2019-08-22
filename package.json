@@ -1,9 +1,15 @@
 {
   "name": "recipe-scraper",
   "version": "1.5.0",
-  "description": "A javascript web scraping utility for recipe websites.",
+  "description": "A JS package for scraping recipes from the web.",
   "author": "Justin Adkins <jadkins1019@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "recipes",
+    "scraper",
+    "web-scraper",
+    "recipe"
+  ],
   "main": "scrapers/index.js",
   "scripts": {
     "test": "mocha --timeout 10000",
