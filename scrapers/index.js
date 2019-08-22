@@ -9,12 +9,7 @@ const theRealFoodRds = require("./therealfoodrds");
 const simplyRecipes = require("./simplyrecipes");
 const smittenKitchen = require("./smittenkitchen");
 const thePioneerWoman = require("./thepioneerwoman");
-
-thePioneerWoman(
-  "https://thepioneerwoman.com/cooking/french-dip-sandwiches/"
-).then(recipe => {
-  console.log(recipe);
-});
+const yummly = require("./yummly");
 
 module.exports = {
   allRecipes,
@@ -26,5 +21,6 @@ module.exports = {
   seriousEats,
   theRealFoodRds,
   simplyRecipes,
-  smittenKitchen
+  smittenKitchen,
+  yummly
 };
