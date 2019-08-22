@@ -29,6 +29,7 @@ describe("simplyRecipes", () => {
       await simplyRecipes(Constants.nonRecipeUrl);
       assert.fail("was not supposed to succeed");
     } catch (error) {
+      console.log(error);
       expect(error.message).to.equal("No recipe found on page");
     }
   });
