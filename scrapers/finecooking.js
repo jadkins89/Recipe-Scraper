@@ -49,7 +49,7 @@ const fineCooking = url => {
             resolve(Recipe);
           }
         } else {
-          reject(error);
+          reject(new Error("No recipe found on page"));
         }
       });
     }
