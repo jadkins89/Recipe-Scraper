@@ -14,6 +14,7 @@ const domains = {
   food: require("./food"),
   foodandwine: require("./foodandwine"),
   foodnetwork: require("./foodnetwork"),
+  gimmesomeoven: require("./gimmesomeoven"),
   myrecipes: require("./myrecipes"),
   seriouseats: require("./seriouseats"),
   simplyrecipes: require("./simplyrecipes"),
@@ -36,10 +37,10 @@ const recipeScraper = url => {
   });
 };
 
-recipeScraper(
-  "https://www.thespruceeats.com/grilled-squid-recipe-1808848"
-).then(recipe => {
-  console.log(recipe);
-});
+recipeScraper("http://www.gimmesomeoven.com/grilled-chicken-kabobs/").then(
+  recipe => {
+    console.log(recipe);
+  }
+);
 
 module.exports = recipeScraper;
