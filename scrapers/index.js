@@ -13,7 +13,8 @@ const domains = {
   smittenkitchen: require("./smittenkitchen"),
   thepioneerwoman: require("./thepioneerwoman"),
   yummly: require("./yummly"),
-  "101cookbooks": require("./101cookbooks")
+  "101cookbooks": require("./101cookbooks"),
+  cookieandkate: require("./cookieAndKate")
 };
 
 const recipeScraper = url => {
@@ -26,5 +27,11 @@ const recipeScraper = url => {
     }
   });
 };
+
+recipeScraper("https://cookieandkate.com/fresh-spring-rolls-recipe/").then(
+  recipe => {
+    console.log(recipe);
+  }
+);
 
 module.exports = recipeScraper;

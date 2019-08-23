@@ -16,17 +16,19 @@ const ambitiousKitchen = url => {
         Recipe.name = $('[itemprop="name"]').text();
 
         $('[itemprop="ingredients"]').each((i, el) => {
-          const item = $(el)
-            .text()
-            .replace(/\s\s+/g, "");
-          Recipe.ingredients.push(item);
+          Recipe.ingredients.push(
+            $(el)
+              .text()
+              .replace(/\s\s+/g, "")
+          );
         });
 
         $('[itemprop="recipeInstructions"]').each((i, el) => {
-          const step = $(el)
-            .text()
-            .replace(/\s\s+/g, "");
-          Recipe.instructions.push(step);
+          Recipe.instructions.push(
+            $(el)
+              .text()
+              .replace(/\s\s+/g, "")
+          );
         });
 
         Recipe.time.prep = $("time[itemprop=prepTime]").text() || "";
