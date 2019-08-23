@@ -33,12 +33,23 @@ recipeScraper("some.recipe.url").then(recipe => {
 
 ## Supported Websites
 
-- [https://www.101cookbooks.com/]
-- [https://www.allrecipes.com/]
+- https://www.101cookbooks.com/
+- https://www.allrecipes.com/
+- https://www.ambitiouskitchen.com/
+- https://copykat.com/
+- https://www.epicurious.com/
+- https://www.food.com/
+- https://www.foodnetwork.com/
+- https://www.seriouseats.com/
+- https://www.simplyrecipes.com/
+- https://smittenkitchen.com/
+- https://thepioneerwoman.com/
+- https://therealfoodrds.com/
+- https://www.yummly.com/
 
 ## Recipe Schema
 
-Depending on the recipe, certain fields may be left blank.
+Depending on the recipe, certain fields may be left blank. All fields are represented as strings or arrays of strings.
 
 ```javascript
 {
@@ -64,7 +75,7 @@ If the url provided doesn't match a supported domain, an error message will be r
 ```javascript
 recipeScraper("some.invalid.url").catch(error => {
   console.log(error.message);
-  // "Site not yet supported"
+  // => "Site not yet supported"
 });
 ```
 
@@ -73,7 +84,7 @@ If a recipe is not found on a supported domain site, an error message will be re
 ```javascript
 recipeScraper("some.no.recipe.url").catch(error => {
   console.log(error.message);
-  // "No recipe found on page"
+  // => "No recipe found on page"
 });
 ```
 
@@ -82,6 +93,10 @@ If a supported url does not contain the proper sub-url to be a valid recipe, an 
 ```javascript
 recipeScraper("some.improper.url").catch(error => {
   console.log(error.message);
-  // "url provided must include '#subUrl'"
+  // => "url provided must include '#subUrl'"
 });
 ```
+
+## Bugs
+
+With web scraping comes a reliance on the website being used not changing format. If this occurs we need to update our scrape. We've integrated testing that should notify us if this occurs but please reach out if you are experiencing an issue.
