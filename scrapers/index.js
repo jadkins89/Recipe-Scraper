@@ -13,6 +13,7 @@ const domains = {
   food: require("./food"),
   foodandwine: require("./foodandwine"),
   foodnetwork: require("./foodnetwork"),
+  myrecipes: require("./myrecipes"),
   seriouseats: require("./seriouseats"),
   simplyrecipes: require("./simplyrecipes"),
   smittenkitchen: require("./smittenkitchen"),
@@ -32,10 +33,10 @@ const recipeScraper = url => {
   });
 };
 
-recipeScraper("https://www.finecooking.com/recipe/white-chicken-chili").then(
-  recipe => {
-    console.log(recipe);
-  }
-);
+recipeScraper(
+  "https://www.yummly.com/recipe/No-Bake-Lemon-Mango-Cheesecakes-with-Speculoos-crust-781945"
+).then(recipe => {
+  console.log(recipe);
+});
 
 module.exports = recipeScraper;

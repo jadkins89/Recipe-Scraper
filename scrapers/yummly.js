@@ -56,8 +56,14 @@ const customPuppeteerFetch = async url => {
     const response = await page.goto(url);
     if (response._status < 400) {
       try {
-        await page.waitFor(1000);
-        await page.$eval("a.view-more-steps", elem => elem.click());
+        let steps = (await page.$$(".step")).length;
+        let newSteps = -1;
+
+        while (steps >= newSteps) {
+          await page.waitFor(100);
+          await page.$eval("a.view-more-steps", elem => elem.click());
+          newSteps = (await page.$$(".step")).length;
+        }
       } finally {
         let html = await page.content();
         await browser.close();
