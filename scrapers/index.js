@@ -9,6 +9,7 @@ const domains = {
   bonappetit: require("./bonappetit"),
   cookieandkate: require("./cookieAndKate"),
   copykat: require("./copykat"),
+  eatingwell: require("./eatingwell"),
   epicurious: require("./epicurious"),
   finecooking: require("./finecooking"),
   food: require("./food"),
@@ -37,10 +38,10 @@ const recipeScraper = url => {
   });
 };
 
-recipeScraper("http://www.gimmesomeoven.com/grilled-chicken-kabobs/").then(
-  recipe => {
-    console.log(recipe);
-  }
-);
+recipeScraper(
+  "http://www.eatingwell.com/recipe/264666/pressure-cooker-chicken-enchilada-soup/"
+).then(recipe => {
+  console.log(recipe);
+});
 
 module.exports = recipeScraper;

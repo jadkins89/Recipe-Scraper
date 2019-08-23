@@ -41,6 +41,7 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://www.bonappetit.com/
 - https://cookieandkate.com/
 - https://copykat.com/
+- http://www.eatingwell.com/
 - https://www.epicurious.com/
 - https://www.finecooking.com/
 - https://www.food.com/
