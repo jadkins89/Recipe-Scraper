@@ -1,21 +1,22 @@
 const parseDomain = require("parse-domain");
 
 const domains = {
+  "101cookbooks": require("./101cookbooks"),
   allrecipes: require("./allrecipes"),
-  foodnetwork: require("./foodnetwork"),
   ambitiouskitchen: require("./ambitiouskitchen"),
-  epicurious: require("./epicurious"),
+  bbc: require("./bbc"),
+  cookieandkate: require("./cookieAndKate"),
   copykat: require("./copykat"),
+  epicurious: require("./epicurious"),
   food: require("./food"),
+  foodandwine: require("./foodandwine"),
+  foodnetwork: require("./foodnetwork"),
   seriouseats: require("./seriouseats"),
-  therealfoodrds: require("./therealfoodrds"),
   simplyrecipes: require("./simplyrecipes"),
   smittenkitchen: require("./smittenkitchen"),
   thepioneerwoman: require("./thepioneerwoman"),
-  yummly: require("./yummly"),
-  "101cookbooks": require("./101cookbooks"),
-  cookieandkate: require("./cookieAndKate"),
-  foodandwine: require("./foodandwine")
+  therealfoodrds: require("./therealfoodrds"),
+  yummly: require("./yummly")
 };
 
 const recipeScraper = url => {
@@ -30,7 +31,7 @@ const recipeScraper = url => {
 };
 
 recipeScraper(
-  "https://www.foodandwine.com/recipes/french-onion-soup-ludo-lefebvre"
+  "https://www.bbc.co.uk/food/recipes/sausage_and_gnocchi_bake_80924"
 ).then(recipe => {
   console.log(recipe);
 });
