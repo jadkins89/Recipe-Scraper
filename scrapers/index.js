@@ -14,7 +14,8 @@ const domains = {
   thepioneerwoman: require("./thepioneerwoman"),
   yummly: require("./yummly"),
   "101cookbooks": require("./101cookbooks"),
-  cookieandkate: require("./cookieAndKate")
+  cookieandkate: require("./cookieAndKate"),
+  foodandwine: require("./foodandwine")
 };
 
 const recipeScraper = url => {
@@ -28,10 +29,10 @@ const recipeScraper = url => {
   });
 };
 
-recipeScraper("https://cookieandkate.com/fresh-spring-rolls-recipe/").then(
-  recipe => {
-    console.log(recipe);
-  }
-);
+recipeScraper(
+  "https://www.foodandwine.com/recipes/french-onion-soup-ludo-lefebvre"
+).then(recipe => {
+  console.log(recipe);
+});
 
 module.exports = recipeScraper;
