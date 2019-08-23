@@ -15,4 +15,73 @@ npm install recipe-scraper
 ```javascript
 // import the module
 const recipeScraper = require("recipe-scraper");
+
+// enter a supported recipe url as a parameter - returns a promise
+async function someAsyncFunc() {
+  ...
+  let recipe = await recipeScraper("some.recipe.url");
+  ...
+}
+
+// using Promise chaining
+recipeScraper("some.recipe.url").then(recipe => {
+    // do something with recipe
+  }).catch(error => {
+    // do something with error
+  });
+```
+
+## Supported Websites
+
+- [https://www.101cookbooks.com/]
+- [https://www.allrecipes.com/]
+
+## Recipe Schema
+
+Depending on the recipe, certain fields may be left blank.
+
+```javascript
+{
+    name: "",
+    ingredients: [],
+    instructions: [],
+    servings: "",
+    time: {
+      prep: "",
+      cook: "",
+      active: "",
+      inactive: "",
+      ready: "",
+      total: ""
+    }
+}
+```
+
+## Error Handling
+
+If the url provided doesn't match a supported domain, an error message will be returned.
+
+```javascript
+recipeScraper("some.invalid.url").catch(error => {
+  console.log(error.message);
+  // "Site not yet supported"
+});
+```
+
+If a recipe is not found on a supported domain site, an error message will be returned.
+
+```javascript
+recipeScraper("some.no.recipe.url").catch(error => {
+  console.log(error.message);
+  // "No recipe found on page"
+});
+```
+
+If a supported url does not contain the proper sub-url to be a valid recipe, an error message will be returned including the sub-url required.
+
+```javascript
+recipeScraper("some.improper.url").catch(error => {
+  console.log(error.message);
+  // "url provided must include '#subUrl'"
+});
 ```
