@@ -5,6 +5,7 @@ const domains = {
   allrecipes: require("./allrecipes"),
   ambitiouskitchen: require("./ambitiouskitchen"),
   bbc: require("./bbc"),
+  bbcgoodfood: require("./bbcgoodfood"),
   cookieandkate: require("./cookieAndKate"),
   copykat: require("./copykat"),
   epicurious: require("./epicurious"),
@@ -31,7 +32,7 @@ const recipeScraper = url => {
 };
 
 recipeScraper(
-  "https://www.bbc.co.uk/food/recipes/sausage_and_gnocchi_bake_80924"
+  "https://www.bbcgoodfood.com/recipes/1853652/doughnut-muffins"
 ).then(recipe => {
   console.log(recipe);
 });

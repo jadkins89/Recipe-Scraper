@@ -32,7 +32,7 @@ const foodAndWine = url => {
             });
 
           let metaBody = $(".recipe-meta-item-body");
-          // console.log(metaBody.text());
+
           Recipe.time.active = metaBody
             .first()
             .text()
