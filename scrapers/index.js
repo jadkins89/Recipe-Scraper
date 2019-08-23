@@ -9,6 +9,7 @@ const domains = {
   cookieandkate: require("./cookieAndKate"),
   copykat: require("./copykat"),
   epicurious: require("./epicurious"),
+  finecooking: require("./finecooking"),
   food: require("./food"),
   foodandwine: require("./foodandwine"),
   foodnetwork: require("./foodnetwork"),
@@ -31,10 +32,10 @@ const recipeScraper = url => {
   });
 };
 
-recipeScraper(
-  "https://www.bbcgoodfood.com/recipes/1853652/doughnut-muffins"
-).then(recipe => {
-  console.log(recipe);
-});
+recipeScraper("https://www.finecooking.com/recipe/white-chicken-chili").then(
+  recipe => {
+    console.log(recipe);
+  }
+);
 
 module.exports = recipeScraper;
