@@ -12,7 +12,7 @@
   ],
   "main": "scrapers/index.js",
   "scripts": {
-    "test": "mocha --timeout 10000",
+    "test": "mocha --timeout 15000",
     "start": "node scrapers/index.js"
   },
   "files": [

@@ -20,6 +20,7 @@ const domains = {
   smittenkitchen: require("./smittenkitchen"),
   thepioneerwoman: require("./thepioneerwoman"),
   therealfoodrds: require("./therealfoodrds"),
+  thespruceeats: require("./thespruceeats"),
   whatsgabycooking: require("./whatsgabycooking"),
   yummly: require("./yummly")
 };
@@ -36,7 +37,7 @@ const recipeScraper = url => {
 };
 
 recipeScraper(
-  "https://whatsgabycooking.com/roasted-pepper-and-corn-salad/"
+  "https://www.thespruceeats.com/grilled-squid-recipe-1808848"
 ).then(recipe => {
   console.log(recipe);
 });

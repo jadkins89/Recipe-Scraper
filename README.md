@@ -52,6 +52,7 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://smittenkitchen.com/
 - https://thepioneerwoman.com/
 - https://therealfoodrds.com/
+- https://www.thespruceeats.com/
 - https://whatsgabycooking.com/
 - https://www.yummly.com/
 
