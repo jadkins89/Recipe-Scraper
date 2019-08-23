@@ -6,6 +6,7 @@ const domains = {
   ambitiouskitchen: require("./ambitiouskitchen"),
   bbc: require("./bbc"),
   bbcgoodfood: require("./bbcgoodfood"),
+  bonappetit: require("./bonappetit"),
   cookieandkate: require("./cookieAndKate"),
   copykat: require("./copykat"),
   epicurious: require("./epicurious"),
@@ -19,6 +20,7 @@ const domains = {
   smittenkitchen: require("./smittenkitchen"),
   thepioneerwoman: require("./thepioneerwoman"),
   therealfoodrds: require("./therealfoodrds"),
+  whatsgabycooking: require("./whatsgabycooking"),
   yummly: require("./yummly")
 };
 
@@ -34,7 +36,7 @@ const recipeScraper = url => {
 };
 
 recipeScraper(
-  "https://www.yummly.com/recipe/No-Bake-Lemon-Mango-Cheesecakes-with-Speculoos-crust-781945"
+  "https://whatsgabycooking.com/roasted-pepper-and-corn-salad/"
 ).then(recipe => {
   console.log(recipe);
 });

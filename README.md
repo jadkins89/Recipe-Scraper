@@ -38,6 +38,7 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://www.ambitiouskitchen.com/
 - https://www.bbc.co.uk/
 - https://www.bbcgoodfood.com/
+- https://www.bonappetit.com/
 - https://cookieandkate.com/
 - https://copykat.com/
 - https://www.epicurious.com/
@@ -45,11 +46,13 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://www.food.com/
 - https://www.foodandwine.com/
 - https://www.foodnetwork.com/
+- https://www.myrecipes.com/
 - https://www.seriouseats.com/
 - https://www.simplyrecipes.com/
 - https://smittenkitchen.com/
 - https://thepioneerwoman.com/
 - https://therealfoodrds.com/
+- https://whatsgabycooking.com/
 - https://www.yummly.com/
 
 Don't see a website you'd like to scrape? Open an [issue](https://github.com/jadkins89/Recipe-Scraper/issues) and we'll do our best to add it.
