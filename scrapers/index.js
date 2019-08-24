@@ -8,6 +8,7 @@ const domains = {
   bbcgoodfood: require("./bbcgoodfood"),
   bonappetit: require("./bonappetit"),
   budgetbytes: require("./budgetbytes"),
+  closetcooking: require("./closetcooking"),
   cookieandkate: require("./cookieAndKate"),
   copykat: require("./copykat"),
   eatingwell: require("./eatingwell"),
@@ -39,7 +40,9 @@ const recipeScraper = url => {
   });
 };
 
-recipeScraper("https://www.budgetbytes.com/chicken-lime-soup/").then(recipe => {
+recipeScraper(
+  "https://www.closetcooking.com/reina-pepiada-arepa-chicken-and-avocado-sandwich/"
+).then(recipe => {
   console.log(recipe);
 });
 

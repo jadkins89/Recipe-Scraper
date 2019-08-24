@@ -8,7 +8,9 @@ const blockedResourceTypes = [
   "object",
   "beacon",
   "csp_report",
-  "imageset"
+  "imageset",
+  "stylesheet",
+  "font"
 ];
 
 const skippedResources = [
@@ -34,7 +36,9 @@ const skippedResources = [
 ];
 
 const puppeteerFetch = async url => {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    headless: true
+  });
   const page = await browser.newPage();
   await page.setRequestInterception(true);
 
