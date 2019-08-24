@@ -40,6 +40,7 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://www.bbcgoodfood.com/
 - https://www.bonappetit.com/
 - https://www.budgetbytes.com/
+- https://www.closetcooking.com/
 - https://cookieandkate.com/
 - https://copykat.com/
 - http://www.eatingwell.com/

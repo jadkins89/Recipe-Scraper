@@ -11,7 +11,9 @@ const blockedResourceTypes = [
   "object",
   "beacon",
   "csp_report",
-  "imageset"
+  "imageset",
+  "stylesheet",
+  "font"
 ];
 
 const skippedResources = [
@@ -61,7 +63,10 @@ const customPuppeteerFetch = async url => {
 
         while (steps >= newSteps) {
           await page.waitFor(100);
-          await page.$eval("a.view-more-steps", elem => elem.click());
+          await page.$eval(
+            "a.view-more-steps",
+            /* istanbul ignore next */ elem => elem.click()
+          );
           newSteps = (await page.$$(".step")).length;
         }
       } finally {
