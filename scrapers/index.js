@@ -7,6 +7,7 @@ const domains = {
   bbc: require("./bbc"),
   bbcgoodfood: require("./bbcgoodfood"),
   bonappetit: require("./bonappetit"),
+  budgetbytes: require("./budgetbytes"),
   cookieandkate: require("./cookieAndKate"),
   copykat: require("./copykat"),
   eatingwell: require("./eatingwell"),
@@ -38,9 +39,7 @@ const recipeScraper = url => {
   });
 };
 
-recipeScraper(
-  "http://www.eatingwell.com/recipe/264666/pressure-cooker-chicken-enchilada-soup/"
-).then(recipe => {
+recipeScraper("https://www.budgetbytes.com/chicken-lime-soup/").then(recipe => {
   console.log(recipe);
 });
 
