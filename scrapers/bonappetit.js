@@ -42,7 +42,7 @@ const bonAppetit = url => {
             resolve(Recipe);
           }
         } else {
-          reject(new Error("No recipe found on page"));
+          reject(new Error("There was a problem retrieving the page"));
         }
       });
     }

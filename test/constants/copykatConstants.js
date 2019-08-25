@@ -1,6 +1,7 @@
 module.exports = {
   testUrl: "https://copykat.com/homemade-croutons-made-in-an-air-fryer/",
-  invalidUrl: "www.invalid.com",
+  invalidUrl: "https://copykat.com/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://copykat.com/contact/",
   expectedRecipe: {
     name: "Air Fryer Croutons",

@@ -123,7 +123,7 @@ const yummy = url => {
           resolve(Recipe);
         }
       } catch (error) {
-        reject(new Error("No recipe found on page"));
+        reject(new Error("There was a problem retrieving the page"));
       }
     }
   });

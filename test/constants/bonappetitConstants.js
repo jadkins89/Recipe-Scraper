@@ -1,6 +1,7 @@
 module.exports = {
   testUrl: "https://www.bonappetit.com/recipe/soba-noodles-with-crispy-kale",
-  invalidUrl: "www.invalid.com",
+  invalidUrl: "https://www.bonappetit.com/recipe/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://www.bonappetit.com/recipe/",
   expectedRecipe: {
     name: "Soba Noodles With Crispy Kale",

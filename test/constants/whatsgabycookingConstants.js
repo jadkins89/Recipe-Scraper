@@ -1,6 +1,7 @@
 module.exports = {
   testUrl: "https://whatsgabycooking.com/roasted-pepper-and-corn-salad/",
-  invalidUrl: "www.invalid.com",
+  invalidUrl: "https://whatsgabycooking.com/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://whatsgabycooking.com/category/food-drink/menu-plans/",
   expectedRecipe: {
     name: "Roasted Pepper and Corn Salad",

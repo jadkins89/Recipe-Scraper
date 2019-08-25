@@ -1,6 +1,7 @@
 module.exports = {
   testUrl: "https://therealfoodrds.com/veggie-loaded-turkey-chili/",
-  invalidUrl: "www.invalid.com",
+  invalidUrl: "https://therealfoodrds.com/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://therealfoodrds.com/category/courses/slow-cooker/",
   expectedRecipe: {
     name: "Veggie Loaded Turkey Chili",

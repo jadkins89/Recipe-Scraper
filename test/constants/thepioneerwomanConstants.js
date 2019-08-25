@@ -1,6 +1,7 @@
 module.exports = {
   testUrl: "https://thepioneerwoman.com/cooking/french-dip-sandwiches/",
-  invalidUrl: "www.invalid.com",
+  invalidUrl: "https://thepioneerwoman.com/cooking/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://thepioneerwoman.com/cooking/patty-melt-video/",
   expectedRecipe: {
     name: "French Dip SandwichesFrench Dip Sandwiches",

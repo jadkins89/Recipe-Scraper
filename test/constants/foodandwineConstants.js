@@ -1,7 +1,8 @@
 module.exports = {
   testUrl:
     "https://www.foodandwine.com/recipes/french-onion-soup-ludo-lefebvre",
-  invalidUrl: "www.invalid.com",
+  invalidUrl: "https://www.foodandwine.com/recipes/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://www.foodandwine.com/recipes/",
   expectedRecipe: {
     name: "French Onion Soup",

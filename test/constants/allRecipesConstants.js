@@ -3,7 +3,8 @@ module.exports = {
     "https://www.allrecipes.com/recipe/8385/italian-fresh-purple-grape-cake/",
   testUrlNew:
     "https://www.allrecipes.com/recipe/235151/crispy-and-tender-baked-chicken-thighs/",
-  invalidUrl: "www.invalid.com",
+  invalidUrl: "https://www.allrecipes.com/recipe/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl:
     "https://www.allrecipes.com/recipes/453/everyday-cooking/family-friendly/kid-friendly/",
   expectedRecipeOld: {

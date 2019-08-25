@@ -5,7 +5,8 @@ module.exports = {
     "https://smittenkitchen.com/2017/08/blackberry-blueberry-crumb-pie/",
   testUrlNewV2:
     "https://smittenkitchen.com/2017/08/cheesecake-bars-with-all-the-berries/",
-  invalidUrl: "www.invalid.com",
+  invalidUrl: "https://smittenkitchen.com/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://smittenkitchen.com/2019/",
   expectedRecipeOld: {
     name: "Endives with Oranges and Almonds",

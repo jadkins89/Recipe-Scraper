@@ -1,6 +1,7 @@
 module.exports = {
   testUrl: "https://cookieandkate.com/fresh-spring-rolls-recipe/",
-  invalidUrl: "www.invalid.com",
+  invalidUrl: "https://cookieandkate.com/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://cookieandkate.com/about/",
   expectedRecipe: {
     name: "Fresh Spring Rolls with Peanut Sauce",

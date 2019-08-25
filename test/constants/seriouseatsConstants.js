@@ -1,7 +1,8 @@
 module.exports = {
   testUrl:
     "https://www.seriouseats.com/recipes/2019/08/korean-chilled-cucumber-soup-oi-naengguk-recipe.html",
-  invalidUrl: "www.invalid.com",
+  invalidUrl: "https://www.seriouseats.com/recipes/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://www.seriouseats.com/techniques",
   sponsorUrl:
     "https://www.seriouseats.com/sponsored/2019/07/wild-alaska-rockfish-kebabs-with-chimichurri.html",

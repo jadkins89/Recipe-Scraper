@@ -1,7 +1,8 @@
 module.exports = {
   testUrl: "https://www.simplyrecipes.com/recipes/chicken_panzanella_salad/",
-  invalidUrl: "www.invalid.com",
-  nonRecipeUrl: "https://www.simplyrecipes.com/recipes/",
+  invalidUrl: "https://www.simplyrecipes.com/recipes/notrealurl",
+  invalidDomainUrl: "www.invalid.com",
+  nonRecipeUrl: "https://www.simplyrecipes.com/recipes/type/quick/",
   expectedRecipe: {
     name: "Chicken Panzanella Salad Recipe",
     ingredients: [

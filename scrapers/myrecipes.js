@@ -6,8 +6,8 @@ const RecipeSchema = require("../helpers/recipe-schema");
 const myRecipes = url => {
   const Recipe = new RecipeSchema();
   return new Promise((resolve, reject) => {
-    if (!url.includes("myrecipes.com/recipe/")) {
-      reject(new Error("url provided must include 'myrecipes.com/recipe/'"));
+    if (!url.includes("myrecipes.com/recipe")) {
+      reject(new Error("url provided must include 'myrecipes.com/recipe'"));
     } else {
       request(url, (error, response, html) => {
         if (!error && response.statusCode == 200) {
@@ -57,7 +57,7 @@ const myRecipes = url => {
             resolve(Recipe);
           }
         } else {
-          reject(new Error("No recipe found on page"));
+          reject(new Error("There was a problem retrieving the page"));
         }
       });
     }

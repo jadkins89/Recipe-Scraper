@@ -22,7 +22,7 @@ const allRecipes = url => {
           }
           resolve(Recipe);
         } else {
-          reject(error);
+          reject(new Error("There was a problem retrieving the page"));
         }
       });
     }
@@ -88,10 +88,9 @@ const oldAllRecipes = ($, Recipe) => {
       Recipe.instructions.push(step);
     }
   });
-
-  Recipe.time.prep = $("time[itemprop=prepTime]").text() || "";
-  Recipe.time.cook = $("time[itemprop=cookTime]").text() || "";
-  Recipe.time.ready = $("time[itemprop=totalTime]").text() || "";
+  Recipe.time.prep = $("time[itemprop=prepTime]").text();
+  Recipe.time.cook = $("time[itemprop=cookTime]").text();
+  Recipe.time.ready = $("time[itemprop=totalTime]").text();
 };
 
 module.exports = allRecipes;

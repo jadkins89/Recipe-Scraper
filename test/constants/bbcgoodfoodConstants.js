@@ -1,6 +1,7 @@
 module.exports = {
   testUrl: "https://www.bbcgoodfood.com/recipes/1853652/doughnut-muffins",
-  invalidUrl: "www.invalid.com",
+  invalidUrl: "https://www.bbcgoodfood.com/recipes/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://www.bbcgoodfood.com/recipes/",
   expectedRecipe: {
     name: "Doughnut muffins",

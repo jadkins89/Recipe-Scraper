@@ -1,8 +1,12 @@
 module.exports = {
   testUrl:
     "http://www.eatingwell.com/recipe/264666/pressure-cooker-chicken-enchilada-soup/",
-  invalidUrl: "www.invalid.com",
-  nonRecipeUrl: "http://www.eatingwell.com/recipe/",
+  testUrl2:
+    "http://www.eatingwell.com/recipe/251433/mexican-pasta-salad-with-creamy-avocado-dressing/",
+  invalidUrl: "http://www.eatingwell.com/recipe/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
+  nonRecipeUrl:
+    "http://www.eatingwell.com/recipes/18306/cooking-methods-styles/quick-easy/dessert/",
   expectedRecipe: {
     name: "Pressure-Cooker Chicken Enchilada Soup",
     ingredients: [
@@ -32,6 +36,40 @@ module.exports = {
       active: "",
       inactive: "",
       ready: "45 m",
+      total: ""
+    },
+    servings: "6 servings"
+  },
+  expectedRecipe2: {
+    name: "Mexican Pasta Salad with Creamy Avocado Dressing",
+    ingredients: [
+      "Dressing",
+      "½ ripe avocado",
+      "¼ cup mayonnaise",
+      "2 tablespoons lime juice",
+      "1 small clove garlic, grated",
+      "½ teaspoon salt",
+      "¼ teaspoon cumin",
+      "Pasta Salad",
+      "8 ounces whole-wheat fusilli (about 3 cups)",
+      "1 cup halved grape or cherry tomatoes",
+      "½ cup canned black beans, rinsed",
+      "½ cup corn, fresh or frozen (thawed)",
+      "½ cup shredded Cheddar cheese",
+      "¼ cup diced red onion",
+      "¼ cup chopped fresh cilantro"
+    ],
+    instructions: [
+      "To prepare dressing: Combine avocado, mayonnaise, lime juice, garlic, salt and cumin in a mini food processor. Puree until smooth.",
+      "To prepare pasta salad: Cook pasta in a large pot of boiling water according to package directions. Drain, rinse with cold water, then drain again. Transfer to a large bowl. Stir in tomatoes, beans, corn, Cheddar, onion and cilantro. Add the dressing and toss to coat.",
+      ""
+    ],
+    time: {
+      prep: "",
+      cook: "",
+      active: "20 m",
+      inactive: "",
+      ready: "20 m",
       total: ""
     },
     servings: "6 servings"

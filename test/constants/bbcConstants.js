@@ -1,6 +1,7 @@
 module.exports = {
   testUrl: "https://www.bbc.co.uk/food/recipes/sausage_and_gnocchi_bake_80924",
-  invalidUrl: "www.invalid.com",
+  invalidUrl: "https://www.bbc.co.uk/food/recipes/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://www.bbc.co.uk/food/recipes/",
   expectedRecipe: {
     name: "Sausage bake with gnocchi",

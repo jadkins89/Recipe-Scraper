@@ -14,7 +14,8 @@
   "scripts": {
     "test": "mocha --timeout 15000",
     "start": "node scrapers/index.js",
-    "coverage": "nyc npm run test"
+    "coverage": "nyc npm test",
+    "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "files": [
     "helpers/",
@@ -38,6 +39,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
+    "coveralls": "^3.0.6",
     "mocha": "^6.2.0",
     "nyc": "^14.1.1"
   }

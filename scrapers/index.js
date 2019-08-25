@@ -41,9 +41,7 @@ const recipeScraper = url => {
 };
 
 recipeScraper(
-  "https://www.closetcooking.com/reina-pepiada-arepa-chicken-and-avocado-sandwich/"
-).then(recipe => {
-  console.log(recipe);
-});
+  "http://www.eatingwell.com/recipe/251433/mexican-pasta-salad-with-creamy-avocado-dressing/"
+).then(recipe => console.log(recipe));
 
 module.exports = recipeScraper;

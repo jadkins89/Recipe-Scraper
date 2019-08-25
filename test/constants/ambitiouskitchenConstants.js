@@ -1,7 +1,8 @@
 module.exports = {
   testUrl:
     "https://www.ambitiouskitchen.com/street-corn-pasta-salad-with-cilantro-pesto-goat-cheese/",
-  invalidUrl: "www.invalid.com",
+  invalidUrl: "https://www.ambitiouskitchen.com/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://www.ambitiouskitchen.com/category/healthy-living/",
   expectedRecipe: {
     name: "Street Corn Pasta Salad with Cilantro Pesto & Goat Cheese",

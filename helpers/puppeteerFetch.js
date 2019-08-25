@@ -61,7 +61,7 @@ const puppeteerFetch = async url => {
     await browser.close();
     return html;
   } else {
-    await brower.close();
+    await browser.close();
     return Promise.reject(response._status);
   }
 };

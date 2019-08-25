@@ -48,7 +48,7 @@ const cookieAndKate = url => {
             resolve(Recipe);
           }
         } else {
-          reject(error);
+          reject(new Error("There was a problem retrieving the page"));
         }
       });
     }

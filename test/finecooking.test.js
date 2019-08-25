@@ -7,5 +7,5 @@ commonRecipeTest(
   "fineCooking",
   fineCooking,
   Constants,
-  "finecooking.com/recipe/"
+  "finecooking.com/recipe"
 );

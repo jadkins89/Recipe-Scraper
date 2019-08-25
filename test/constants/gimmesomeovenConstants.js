@@ -1,6 +1,7 @@
 module.exports = {
   testUrl: "http://www.gimmesomeoven.com/grilled-chicken-kabobs/",
-  invalidUrl: "www.invalid.com",
+  invalidUrl: "http://www.gimmesomeoven.com/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl:
     "http://www.gimmesomeoven.com/life_category/10-things-ive-learned/",
   expectedRecipe: {

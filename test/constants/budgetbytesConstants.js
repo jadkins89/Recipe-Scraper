@@ -1,6 +1,7 @@
 module.exports = {
   testUrl: "https://www.budgetbytes.com/chicken-lime-soup/",
-  invalidUrl: "www.invalid.com",
+  invalidUrl: "https://www.budgetbytes.com/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://www.budgetbytes.com/kitchen-basics/",
   expectedRecipe: {
     name: "Chicken and Lime Soup",

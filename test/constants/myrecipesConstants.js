@@ -1,7 +1,8 @@
 module.exports = {
   testUrl: "https://www.myrecipes.com/recipe/London-broil-roasted-garlic-aioli",
-  invalidUrl: "www.invalid.com",
-  nonRecipeUrl: "https://www.myrecipes.com/recipe/",
+  invalidUrl: "https://www.myrecipes.com/recipe/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
+  nonRecipeUrl: "https://www.myrecipes.com/recipe-finder",
   expectedRecipe: {
     name:
       "Marinated London Broil with Potatoes, Broccoli, and Roasted Garlic Aioli",

@@ -1,6 +1,7 @@
 module.exports = {
   testUrl: "https://www.thespruceeats.com/grilled-squid-recipe-1808848",
-  invalidUrl: "www.invalid.com",
+  invalidUrl: "https://www.thespruceeats.com/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://www.thespruceeats.com/food-by-region-4162676",
   expectedRecipe: {
     name: "Grilled Squid (Calamari)",

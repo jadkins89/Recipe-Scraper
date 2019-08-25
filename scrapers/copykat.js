@@ -57,7 +57,7 @@ const copykat = url => {
           resolve(Recipe);
         }
       } catch (error) {
-        reject(error);
+        reject(new Error("There was a problem retrieving the page"));
       }
     }
   });

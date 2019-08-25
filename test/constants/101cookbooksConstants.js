@@ -1,6 +1,7 @@
 module.exports = {
   testUrl: "https://www.101cookbooks.com/coleslaw-recipe/",
-  invalidUrl: "www.invalid.com",
+  invalidUrl: "https://www.101cookbooks.com/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://www.101cookbooks.com/about/",
   expectedRecipe: {
     name: "Lime & Blistered Peanut Coleslaw",

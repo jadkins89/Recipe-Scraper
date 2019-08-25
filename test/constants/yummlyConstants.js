@@ -1,8 +1,9 @@
 module.exports = {
   testUrl:
     "https://www.yummly.com/recipe/No-Bake-Lemon-Mango-Cheesecakes-with-Speculoos-crust-781945",
-  invalidUrl: "www.invalid.com",
-  nonRecipeUrl: "www.yummly.com/recipe/",
+  invalidUrl: "https://www.yummly.com/recipe/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
+  nonRecipeUrl: "https://www.yummly.com/recipes",
   expectedRecipe: {
     name: "No-Bake Lemon-Mango Cheesecakes with Speculoos crust",
     ingredients: [

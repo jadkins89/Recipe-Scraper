@@ -1,7 +1,8 @@
 module.exports = {
   testUrl:
     "https://www.closetcooking.com/reina-pepiada-arepa-chicken-and-avocado-sandwich/",
-  invalidUrl: "www.invalid.com",
+  invalidUrl: "https://www.closetcooking.com/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://www.closetcooking.com/contact/",
   expectedRecipe: {
     name: "Reina Pepiada Arepa (Chicken and Avocado Sandwich)",

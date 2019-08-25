@@ -1,7 +1,8 @@
 module.exports = {
   testUrl:
     "https://www.epicurious.com/recipes/food/views/trout-toast-with-soft-scrambled-eggs",
-  invalidUrl: "www.invalid.com",
+  invalidUrl: "https://www.epicurious.com/recipes/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://www.epicurious.com/recipes/",
   expectedRecipe: {
     name: "Trout Toast with Soft Scrambled Eggs",

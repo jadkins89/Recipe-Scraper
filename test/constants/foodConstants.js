@@ -1,6 +1,7 @@
 module.exports = {
   testUrl: "https://www.food.com/recipe/oatmeal-raisin-cookies-35813",
-  invalidUrl: "www.invalid.com",
+  invalidUrl: "https://www.food.com/recipe/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://www.food.com/recipe/",
   expectedRecipe: {
     name: "Oatmeal Raisin Cookies",

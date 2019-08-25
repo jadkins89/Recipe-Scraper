@@ -1,7 +1,8 @@
 module.exports = {
   testUrl: "https://www.finecooking.com/recipe/white-chicken-chili",
-  invalidUrl: "www.invalid.com",
-  nonRecipeUrl: "https://www.finecooking.com/recipe/",
+  invalidUrl: "https://www.finecooking.com/recipe/notarealurl",
+  invalidDomainUrl: "www.invalid.com",
+  nonRecipeUrl: "https://www.finecooking.com/recipes-menus",
   expectedRecipe: {
     name: "White Chicken Chili",
     ingredients: [
