@@ -113,6 +113,15 @@ recipeScraper("some.improper.url").catch(error => {
 });
 ```
 
+If a page does not exist or some other 400+ error occurs when fetching, an error message will be returned.
+
+```javascript
+recipeScraper("some.nonexistent.page").catch(error => {
+  console.log(error.message);
+  // => "There was a problem retrieving the page"
+});
+```
+
 ## Bugs
 
 With web scraping comes a reliance on the website being used not changing format. If this occurs we need to update our scrape. We've integrated testing that should notify us if this occurs but please reach out if you are experiencing an issue.
