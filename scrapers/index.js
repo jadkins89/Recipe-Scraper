@@ -40,8 +40,4 @@ const recipeScraper = url => {
   });
 };
 
-recipeScraper(
-  "http://www.eatingwell.com/recipe/251433/mexican-pasta-salad-with-creamy-avocado-dressing/"
-).then(recipe => console.log(recipe));
-
 module.exports = recipeScraper;

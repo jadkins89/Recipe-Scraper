@@ -39,6 +39,7 @@ const puppeteerFetch = async url => {
   const browser = await puppeteer.launch({
     headless: true
   });
+
   const page = await browser.newPage();
   await page.setRequestInterception(true);
 
@@ -58,10 +59,14 @@ const puppeteerFetch = async url => {
 
   if (response._status < 400) {
     let html = await page.content();
-    await browser.close();
+    try {
+      await browser.close();
+    } catch (error) {} // avoid websocket error if browser already closed
     return html;
   } else {
-    await browser.close();
+    try {
+      await browser.close();
+    } catch (error) {}
     return Promise.reject(response._status);
   }
 };
