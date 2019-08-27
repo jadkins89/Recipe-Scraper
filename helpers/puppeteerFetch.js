@@ -60,12 +60,12 @@ const puppeteerFetch = async url => {
   if (response._status < 400) {
     let html = await page.content();
     try {
-      //await browser.close();
+      await browser.close();
     } catch (error) {} // avoid websocket error if browser already closed
     return html;
   } else {
     try {
-      //await browser.close();
+      await browser.close();
     } catch (error) {}
     return Promise.reject(response._status);
   }
