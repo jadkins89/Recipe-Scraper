@@ -22,6 +22,7 @@ const domains = {
   seriouseats: require("./seriouseats"),
   simplyrecipes: require("./simplyrecipes"),
   smittenkitchen: require("./smittenkitchen"),
+  thekitchn: require("./thekitchn"),
   thepioneerwoman: require("./thepioneerwoman"),
   therealfoodrds: require("./therealfoodrds"),
   thespruceeats: require("./thespruceeats"),
@@ -39,5 +40,9 @@ const recipeScraper = url => {
     }
   });
 };
+
+recipeScraper(
+  "https://www.thekitchn.com/recipe-sheet-pan-chicken-souvlaki-248129"
+).then(recipe => console.log(recipe));
 
 module.exports = recipeScraper;

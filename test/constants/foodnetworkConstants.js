@@ -3,8 +3,7 @@ module.exports = {
     "https://www.foodnetwork.com/recipes/food-network-kitchen/cast-iron-skillet-provencal-pork-chops-and-potatoes-3542642",
   invalidUrl: "https://www.foodnetwork.com/recipes/notarealurl",
   invalidDomainUrl: "www.invalid.com",
-  nonRecipeUrl:
-    "https://www.foodnetwork.com/recipes/food-network-kitchen/c/p/3",
+  nonRecipeUrl: "https://www.foodnetwork.com/recipes/food-network-kitchen/",
   expectedRecipe: {
     name: "Cast-Iron Skillet Provencal Pork Chops and Potatoes",
     ingredients: [
