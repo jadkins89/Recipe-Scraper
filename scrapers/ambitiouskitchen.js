@@ -13,6 +13,10 @@ const ambitiousKitchen = url => {
         const Recipe = new RecipeSchema();
         const $ = cheerio.load(html);
 
+        Recipe.image_url = $(".entry_content")
+          .find("img")
+          .data("jpibfi-src");
+
         Recipe.name = $('[itemprop="name"]').text();
 
         $('[itemprop="ingredients"]').each((i, el) => {

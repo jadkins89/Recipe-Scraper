@@ -61,13 +61,15 @@ const puppeteerFetch = async url => {
     let html = await page.content();
     try {
       await browser.close();
-    } catch (error) {} // avoid websocket error if browser already closed
-    return html;
+    } finally {
+      return html;
+    } // avoid websocket error if browser already closed
   } else {
     try {
       await browser.close();
-    } catch (error) {}
-    return Promise.reject(response._status);
+    } finally {
+      return Promise.reject(response._status);
+    }
   }
 };
 

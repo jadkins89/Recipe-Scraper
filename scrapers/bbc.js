@@ -13,6 +13,10 @@ const bbc = url => {
         if (!error && response.statusCode == 200) {
           const $ = cheerio.load(html);
 
+          Recipe.image_url = $(".recipe-media__image")
+            .children("img")
+            .prop("src");
+
           Recipe.name = $(".content-title__text").text();
 
           $(".recipe-ingredients__list-item").each((i, el) => {

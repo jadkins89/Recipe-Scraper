@@ -11,6 +11,7 @@ function Recipe() {
     total: ""
   };
   this.servings = "";
+  this.image_url = "";
 }
 
 module.exports = Recipe;
