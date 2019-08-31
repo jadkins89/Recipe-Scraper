@@ -7,5 +7,5 @@ commonRecipeTest(
   "woolworths",
   woolworths,
   Constants,
-  "woolworths.com.au/shop/recipes"
+  "woolworths.com.au/shop/recipedetail/"
 );
