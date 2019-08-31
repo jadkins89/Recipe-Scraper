@@ -13,6 +13,10 @@ const budgetBytes = url => {
         if (!error && response.statusCode == 200) {
           const $ = cheerio.load(html);
 
+          Recipe.url = $("article.single-post-content")
+            .find("img")
+            .data("lazy-src");
+
           Recipe.name = $(".wprm-recipe-name").text();
 
           $(".wprm-recipe-ingredient-notes").remove();

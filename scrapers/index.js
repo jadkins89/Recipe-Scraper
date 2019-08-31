@@ -41,7 +41,7 @@ const recipeScraper = url => {
 };
 
 recipeScraper(
-  "https://www.bbcgoodfood.com/recipes/coffee-ice-cream-terrine"
+  "https://www.budgetbytes.com/crispy-potatoes-with-lemon-dill-tahini-dressing/"
 ).then(recipe => console.log(recipe));
 
 module.exports = recipeScraper;
