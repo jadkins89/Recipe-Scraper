@@ -1,8 +1,8 @@
 module.exports = {
   testUrl: "https://www.woolworths.com.au/shop/recipedetail/5156/classic-guacamole",
-  invalidUrl: "https://woolworths.com.au/notarealurl",
+  invalidUrl: "https://woolworths.com.au/shop/recipedetail/notarealurl",
   invalidDomainUrl: "www.invalid.com",
-  nonRecipeUrl: "https://www.woolworths.com.au/shop/productdetails/502951/bertolli-extra-virgin-olive-oil-originale",
+  nonRecipeUrl: "https://www.woolworths.com.au/shop/recipedetail/0000/not-a-recipe",
   expectedRecipe: {
     name: "Classic Guacamole",
     ingredients: [
