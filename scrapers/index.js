@@ -42,8 +42,4 @@ const recipeScraper = url => {
   });
 };
 
-recipeScraper(
-  "https://www.thekitchn.com/recipe-sheet-pan-chicken-souvlaki-248129"
-).then(recipe => console.log(recipe));
-
 module.exports = recipeScraper;
