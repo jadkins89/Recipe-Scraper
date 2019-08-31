@@ -9,7 +9,7 @@ const domains = {
   bonappetit: require("./bonappetit"),
   budgetbytes: require("./budgetbytes"),
   closetcooking: require("./closetcooking"),
-  cookieandkate: require("./cookieAndKate"),
+  cookieandkate: require("./cookieandkate"),
   copykat: require("./copykat"),
   eatingwell: require("./eatingwell"),
   epicurious: require("./epicurious"),
