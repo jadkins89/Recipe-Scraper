@@ -96,7 +96,7 @@ const yummy = url => {
 
         Recipe.name = $(".recipe-title").text();
 
-        $(".IngredientLine").each((i, el) => {
+        $(".ingredients-header").find(".IngredientLine").each((i, el) => {
           Recipe.ingredients.push($(el).text());
         });
 
