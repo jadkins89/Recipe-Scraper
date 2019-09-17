@@ -96,7 +96,7 @@ const yummy = url => {
 
         Recipe.name = $(".recipe-title").text();
 
-        $(".ingredients-header").find(".IngredientLine").each((i, el) => {
+        $(".IngredientLine").each((i, el) => {
           Recipe.ingredients.push($(el).text());
         });
 
@@ -116,7 +116,7 @@ const yummy = url => {
             .text();
 
         Recipe.servings = $("input.font-bold").val();
-
+        
         if (!Recipe.name || !Recipe.ingredients.length) {
           reject(new Error("No recipe found on page"));
         } else {
