@@ -4,7 +4,7 @@ module.exports = {
   invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://thepioneerwoman.com/cooking/patty-melt-video/",
   expectedRecipe: {
-    name: "French Dip SandwichesFrench Dip Sandwiches",
+    name: "French Dip Sandwiches",
     ingredients: [
       "1 Tablespoon Kosher Salt",
       "2 Tablespoons Black Pepper",
@@ -21,21 +21,6 @@ module.exports = {
       "1 Tablespoon Soy Sauce",
       "1 cup Water",
       "10 whole Crusty Deli Rolls/sub Rolls, Toasted",
-      "1 Tablespoon Kosher Salt",
-      "2 Tablespoons Black Pepper",
-      "1/2 teaspoon Ground Oregano",
-      "1/2 teaspoon Ground Thyme",
-      "1 whole Boneless Ribeye Loin, About 4 To 5 Pounds (can Also Use Sirloin)",
-      "2 whole Large Onions, Sliced Thin",
-      "5 cloves Garlic, Minced",
-      "1 whole Packet French Onion Soup Mix (dry)",
-      "1 can Beef Consomme",
-      "1 cup Beef Broth Or Beef Stock",
-      "1/4 cup Dry Sherry Or White Wine (or You May Omit)",
-      "2 Tablespoons Worcestershire Sauce",
-      "1 Tablespoon Soy Sauce",
-      "1 cup Water",
-      "10 whole Crusty Deli Rolls/sub Rolls, Toasted"
     ],
     instructions: [
       "Preheat the oven to 475 degrees. Tie the piece of meat tightly with a couple of pieces of kitchen twine.",

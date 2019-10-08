@@ -15,9 +15,10 @@ const thePioneerWoman = url => {
         if (!error && response.statusCode == 200) {
           const $ = cheerio.load(html);
 
-          Recipe.name = $(".recipe-title").text();
+          Recipe.name = $(".recipe-title").first().text();
 
           $(".list-ingredients")
+            .first()
             .children("li")
             .each((i, el) => {
               Recipe.ingredients.push(
