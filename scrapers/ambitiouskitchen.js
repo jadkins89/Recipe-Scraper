@@ -34,7 +34,7 @@ const ambitiousKitchen = url => {
         Recipe.time.prep = $("time[itemprop=prepTime]").text() || "";
         Recipe.time.cook = $("time[itemprop=cookTime]").text() || "";
         Recipe.time.ready = $("time[itemprop=totalTime]").text() || "";
-
+        console.log(Recipe);
         if (
           !Recipe.name ||
           !Recipe.ingredients.length ||
