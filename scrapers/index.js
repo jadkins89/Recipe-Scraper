@@ -42,10 +42,4 @@ const recipeScraper = url => {
   });
 };
 
-recipeScraper(
-  "https://www.foodnetwork.com/recipes/knead-not-sourdough-recipe-1939606"
-).then(recipe => {
-  console.log(recipe);
-});
-
 module.exports = recipeScraper;
