@@ -116,14 +116,14 @@ const yummy = url => {
             .text();
 
         Recipe.servings = $("input.font-bold").val();
-        
+
         if (!Recipe.name || !Recipe.ingredients.length) {
           reject(new Error("No recipe found on page"));
         } else {
           resolve(Recipe);
         }
       } catch (error) {
-        reject(new Error("There was a problem retrieving the page"));
+        reject(new Error("No recipe found on page"));
       }
     }
   });

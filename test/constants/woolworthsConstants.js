@@ -14,6 +14,7 @@ module.exports = {
       "1 bunch of fresh coriander",
       "6 ripe cherry tomatoes",
       "2 limes",
+      "Pantry Staples",
       "extra virgin olive oil"
     ],
     instructions: [

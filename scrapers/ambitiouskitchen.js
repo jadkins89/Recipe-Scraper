@@ -25,7 +25,9 @@ const ambitiousKitchen = url => {
           let name = $(el)
             .find(".wprm-recipe-ingredient-name")
             .text();
-          let ingredient = `${amount} ${unit} ${name}`.replace(/\s\s+/g, "");
+          let ingredient = `${amount} ${unit} ${name}`
+            .replace(/\s\s+/g, " ")
+            .trim();
           Recipe.ingredients.push(ingredient);
         });
 
@@ -61,7 +63,7 @@ const ambitiousKitchen = url => {
           resolve(Recipe);
         }
       } catch (error) {
-        reject(new Error("There was a problem retrieving the page"));
+        reject(new Error("No recipe found on page"));
       }
     }
   });

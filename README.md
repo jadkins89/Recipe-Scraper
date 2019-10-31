@@ -44,6 +44,7 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://www.closetcooking.com/
 - https://cookieandkate.com/
 - https://copykat.com/
+- https://damndelicious.net/
 - http://www.eatingwell.com/
 - https://www.epicurious.com/
 - https://www.finecooking.com/
@@ -105,21 +106,21 @@ recipeScraper("some.no.recipe.url").catch(error => {
 });
 ```
 
+If a page does not exist or some other 400+ error occurs when fetching, an error message will be returned.
+
+```javascript
+recipeScraper("some.nonexistent.page").catch(error => {
+  console.log(error.message);
+  // => "No recipe found on page"
+});
+```
+
 If a supported url does not contain the proper sub-url to be a valid recipe, an error message will be returned including the sub-url required.
 
 ```javascript
 recipeScraper("some.improper.url").catch(error => {
   console.log(error.message);
   // => "url provided must include '#subUrl'"
-});
-```
-
-If a page does not exist or some other 400+ error occurs when fetching, an error message will be returned.
-
-```javascript
-recipeScraper("some.nonexistent.page").catch(error => {
-  console.log(error.message);
-  // => "There was a problem retrieving the page"
 });
 ```
 

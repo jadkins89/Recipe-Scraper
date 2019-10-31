@@ -16,7 +16,7 @@ const woolworths = url => {
         )
       );
     } else if (!urlRe.test(url)) {
-      reject(new Error("There was a problem retrieving the page"));
+      reject(new Error("No recipe found on page"));
     } else {
       const recipeId = urlRe.exec(url)[1];
       recipeJsonUrl = `https://www.woolworths.com.au/apis/ui/recipes/${recipeId}`;

@@ -15,7 +15,9 @@ const thePioneerWoman = url => {
         if (!error && response.statusCode == 200) {
           const $ = cheerio.load(html);
 
-          Recipe.name = $(".recipe-title").first().text();
+          Recipe.name = $(".recipe-title")
+            .first()
+            .text();
 
           $(".list-ingredients")
             .first()
@@ -57,7 +59,7 @@ const thePioneerWoman = url => {
             resolve(Recipe);
           }
         } else {
-          reject(new Error("There was a problem retrieving the page"));
+          reject(new Error("No recipe found on page"));
         }
       });
     }

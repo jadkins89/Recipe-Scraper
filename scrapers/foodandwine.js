@@ -57,7 +57,7 @@ const foodAndWine = url => {
             resolve(Recipe);
           }
         } else {
-          reject(new Error("There was a problem retrieving the page"));
+          reject(new Error("No recipe found on page"));
         }
       });
     }
