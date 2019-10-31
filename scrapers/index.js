@@ -42,10 +42,4 @@ const recipeScraper = url => {
   });
 };
 
-recipeScraper("https://www.ambitiouskitchen.com/butternut-squash-quiche/").then(
-  recipe => {
-    console.log(recipe);
-  }
-);
-
 module.exports = recipeScraper;

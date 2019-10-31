@@ -13,17 +13,23 @@ const ambitiousKitchen = url => {
         const Recipe = new RecipeSchema();
         const $ = cheerio.load(html);
 
-        Recipe.name = $('[itemprop="name"]').text();
+        Recipe.name = $(".wprm-recipe-name").text();
 
-        $('[itemprop="ingredients"]').each((i, el) => {
-          Recipe.ingredients.push(
-            $(el)
-              .text()
-              .replace(/\s\s+/g, "")
-          );
+        $(".wprm-recipe-ingredient").each((i, el) => {
+          let amount = $(el)
+            .find(".wprm-recipe-ingredient-amount")
+            .text();
+          let unit = $(el)
+            .find(".wprm-recipe-ingredient-unit")
+            .text();
+          let name = $(el)
+            .find(".wprm-recipe-ingredient-name")
+            .text();
+          let ingredient = `${amount} ${unit} ${name}`.replace(/\s\s+/g, "");
+          Recipe.ingredients.push(ingredient);
         });
 
-        $('[itemprop="recipeInstructions"]').each((i, el) => {
+        $(".wprm-recipe-instruction").each((i, el) => {
           Recipe.instructions.push(
             $(el)
               .text()
@@ -31,10 +37,20 @@ const ambitiousKitchen = url => {
           );
         });
 
-        Recipe.time.prep = $("time[itemprop=prepTime]").text() || "";
-        Recipe.time.cook = $("time[itemprop=cookTime]").text() || "";
-        Recipe.time.ready = $("time[itemprop=totalTime]").text() || "";
-        console.log(Recipe);
+        Recipe.time.prep =
+          $(".wprm-recipe-prep_time").text() +
+            " " +
+            $(".wprm-recipe-prep_time-unit").text() || "";
+        Recipe.time.cook =
+          $(".wprm-recipe-cook_time").text() +
+            " " +
+            $(".wprm-recipe-cook_time-unit").text() || "";
+        Recipe.time.total =
+          $(".wprm-recipe-total_time").text() +
+            " " +
+            $(".wprm-recipe-total_time-unit").text() || "";
+        Recipe.servings = $(".wprm-recipe-servings").text() || "";
+
         if (
           !Recipe.name ||
           !Recipe.ingredients.length ||
