@@ -50,10 +50,15 @@ const newAllRecipes = ($, Recipe) => {
         break;
       case "total":
         Recipe.time.total = value;
+        break;
       case "additional":
         Recipe.time.inactive = value;
+        break;
+      case "Servings":
+        Recipe.servings = value;
+        break;
       default:
-        return false;
+        break;
     }
   });
 
@@ -91,6 +96,7 @@ const oldAllRecipes = ($, Recipe) => {
   Recipe.time.prep = $("time[itemprop=prepTime]").text();
   Recipe.time.cook = $("time[itemprop=cookTime]").text();
   Recipe.time.ready = $("time[itemprop=totalTime]").text();
+  Recipe.servings = $("#metaRecipeServings").attr('content');
 };
 
 module.exports = allRecipes;
