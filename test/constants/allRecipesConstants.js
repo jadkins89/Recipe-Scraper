@@ -64,7 +64,7 @@ module.exports = {
       prep: "10 mins",
       cook: "1 hr",
       active: "",
-      inactive: "1 hr 10 mins",
+      inactive: "",
       ready: "",
       total: "1 hr 10 mins"
     },
