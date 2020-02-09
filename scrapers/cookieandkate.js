@@ -18,7 +18,7 @@ const cookieAndKate = url => {
             .text();
 
           $(".tasty-recipe-ingredients")
-            .find("h4, li")
+            .find("li")
             .each((i, el) => {
               Recipe.ingredients.push($(el).text());
             });
