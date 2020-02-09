@@ -42,4 +42,8 @@ const recipeScraper = url => {
   });
 };
 
+recipeScraper('http://www.eatingwell.com/recipe/264666/pressure-cooker-chicken-enchilada-soup/').then(recipe => {
+  console.log(recipe);
+})
+
 module.exports = recipeScraper;

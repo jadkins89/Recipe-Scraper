@@ -40,7 +40,7 @@ module.exports = {
       ready: "1 h 30 m",
       total: ""
     },
-    servings: ""
+    servings: "6"
   },
   expectedRecipeNew: {
     name: "Crispy and Tender Baked Chicken Thighs",
@@ -64,10 +64,10 @@ module.exports = {
       prep: "10 mins",
       cook: "1 hr",
       active: "",
-      inactive: "1 hr 10 mins",
+      inactive: "",
       ready: "",
       total: "1 hr 10 mins"
     },
-    servings: ""
+    servings: "8"
   }
 };
