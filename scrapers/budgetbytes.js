@@ -10,7 +10,7 @@ const budgetBytes = url => {
       reject(new Error("url provided must include 'budgetbytes.com/'"));
     } else {
       request(url, (error, response, html) => {
-        if (!error && response.statusCode == 200) {
+        if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
 
           Recipe.name = $(".wprm-recipe-name").text();
