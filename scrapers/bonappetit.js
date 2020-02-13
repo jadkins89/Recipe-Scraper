@@ -10,7 +10,7 @@ const bonAppetit = url => {
       reject(new Error("url provided must include 'bonappetit.com/recipe/'"));
     } else {
       request(url, (error, response, html) => {
-        if (!error && response.statusCode == 200) {
+        if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
 
           Recipe.name = $("a.top-anchor").text();

@@ -26,7 +26,7 @@ const woolworths = url => {
           json: true
         },
         (error, response, body) => {
-          if (!error && response.statusCode == 200 && body) {
+          if (!error && response.statusCode === 200 && body) {
             Recipe.name = body.Title.trim();
             Recipe.ingredients = body.Ingredients.map(i =>
               i.Description.trim()

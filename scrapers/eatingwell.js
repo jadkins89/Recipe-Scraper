@@ -10,19 +10,37 @@ const eatingWell = url => {
       reject(new Error("url provided must include 'eatingwell.com/recipe'"));
     } else {
       request(url, (error, response, html) => {
-        if (!error && response.statusCode == 200) {
+        if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
-          
-          Recipe.name = $(".main-header").find(".headline").text().trim();
 
-          $(".ingredients-section__legend, .ingredients-item-name").each((i, el) => {
-            if (!$(el).attr('class').includes('visually-hidden')) {
-              Recipe.ingredients.push($(el).text().trim().replace(/\s\s+/g, " "));
+          Recipe.name = $(".main-header")
+            .find(".headline")
+            .text()
+            .trim();
+
+          $(".ingredients-section__legend, .ingredients-item-name").each(
+            (i, el) => {
+              if (
+                !$(el)
+                  .attr("class")
+                  .includes("visually-hidden")
+              ) {
+                Recipe.ingredients.push(
+                  $(el)
+                    .text()
+                    .trim()
+                    .replace(/\s\s+/g, " ")
+                );
+              }
             }
-          });
+          );
 
           $(".instructions-section-item").each((i, el) => {
-            Recipe.instructions.push($(el).find("p").text());
+            Recipe.instructions.push(
+              $(el)
+                .find("p")
+                .text()
+            );
           });
 
           $(".recipe-meta-item").each((i, el) => {
