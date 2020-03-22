@@ -19,6 +19,7 @@ const domains = {
   foodandwine: require("./foodandwine"),
   foodnetwork: require("./foodnetwork"),
   gimmesomeoven: require("./gimmesomeoven"),
+  kitchenstories: require("./kitchenstories"),
   myrecipes: require("./myrecipes"),
   seriouseats: require("./seriouseats"),
   simplyrecipes: require("./simplyrecipes"),
