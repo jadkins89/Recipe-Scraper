@@ -43,4 +43,10 @@ const recipeScraper = url => {
   });
 };
 
+recipeScraper(
+  "https://www.allrecipes.com/recipe/274411/bucatini-cacio-e-pepe-roman-sheep-herders-pasta"
+).then(recipe => {
+  console.log(recipe);
+});
+
 module.exports = recipeScraper;

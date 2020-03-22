@@ -1,6 +1,6 @@
 module.exports = {
   testUrlOld:
-    "https://www.allrecipes.com/recipe/8385/italian-fresh-purple-grape-cake/",
+    "https://www.allrecipes.com/recipe/274411/bucatini-cacio-e-pepe-roman-sheep-herders-pasta",
   testUrlNew:
     "https://www.allrecipes.com/recipe/235151/crispy-and-tender-baked-chicken-thighs/",
   invalidUrl: "https://www.allrecipes.com/recipe/notarealurl",
@@ -8,36 +8,25 @@ module.exports = {
   nonRecipeUrl:
     "https://www.allrecipes.com/recipes/453/everyday-cooking/family-friendly/kid-friendly/",
   expectedRecipeOld: {
-    name: "Italian Fresh Purple Grape Cake",
+    name: "Bucatini Cacio e Pepe (Roman Sheep Herder's Pasta)",
     ingredients: [
-      "2 eggs",
-      "2/3 cup white sugar",
-      "4 tablespoons unsalted butter, melted",
-      "1/4 cup extra virgin olive oil",
-      "1/3 cup milk",
-      "1/2 teaspoon vanilla extract",
-      "1 1/2 cups all-purpose flour",
-      "3/4 teaspoon baking powder",
-      "1 pinch salt",
-      "2 tablespoons grated lemon zest",
-      "2 tablespoons grated orange zest",
-      "10 ounces small purple grapes"
+      "1 teaspoon salt",
+      "1 pound bucatini (dry)",
+      "2 cups finely grated Pecorino Romano cheese",
+      "1 1/2 tablespoons freshly ground black pepper, or more to taste"
     ],
     instructions: [
-      "Preheat the oven to 350 degrees F (175 degrees C). Generously butter and flour the 9 inch springform cake pan, tapping out any excess flour. Set aside.",
-      "In the bowl of an electric mixer fitted with a whisk, beat the eggs and sugar until thick and lemon-colored, about 3 minutes. Add the butter, oil, milk and vanilla extract, and mix until blended.",
-      "Sift the flour, baking powder and salt into a large bowl. Add the lemon zest and orange zest, and toss to coat the zest with flour.",
-      "Spoon the flour mixture into the bowl of batter and stir with a wooden spoon until thoroughly blended. Scrape down the sides of the bowl and mix once more.Set aside for 10 minutes to allow the flour to absorb the liquids.",
-      "Stir in about 3/4 of the grapes into the batter.Spoon the batter into the prepared cake pan and smooth out the top with a spatula.",
-      "Place the pan in the center of the oven at 350 degrees F (175 degrees C). Bake for 15 minutes, then sprinkle the top of the cake with the remaining grapes. Bake for about 40 minutes more, until the top is a deep golden brown and the cake feels quite firm when pressed with a fingertip.",
-      "Remove from oven and cool on a wire rack. After 10 minutes, run a knife along the sides of the pan. Release and remove the side of the springform pan, leaving the cake on the pan base. Serve at room temperature, cut into thin wedges."
+      "Bring a large pot of water to a boil and add salt. Cook bucatini in the boiling water, stirring occasionally, until tender yet firm to the bite, 8 to 10 minutes.",
+      "Place grated Pecorino Romano cheese into a large glass bowl and mix with a fork to make sure the cheese contains no lumps.",
+      "Once the bucatini are al dente, lift them out with a spaghetti fork or tongs and put them directly into the bowl with the cheese. Do not allow the water to drain too much.",
+      "Add one ladle of pasta water to the bowl. Stir the bucatini around until a cream has formed. Add more pasta water, little by little, until a thick cream has formed. Sprinkle freshly ground pepper over the pasta. Toss and serve immediately."
     ],
     time: {
-      prep: "30 m",
-      cook: "1 h",
+      prep: "10 m",
+      cook: "15 m",
       active: "",
       inactive: "",
-      ready: "1 h 30 m",
+      ready: "25 m",
       total: ""
     },
     servings: "6"
