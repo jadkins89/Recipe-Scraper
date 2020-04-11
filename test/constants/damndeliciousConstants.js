@@ -32,6 +32,8 @@ module.exports = {
       ready: "",
       total: "3 hours 15 minutes"
     },
-    servings: "8 servings"
+    servings: "8 servings",
+    image:
+      "https://s23209.pcdn.co/wp-content/uploads/2019/08/Raspberry-Croissant-French-Toast-BakeIMG_0314-760x1140.jpg"
   }
 };

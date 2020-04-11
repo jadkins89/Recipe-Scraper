@@ -41,6 +41,8 @@ module.exports = {
       ready: "",
       total: "26mins"
     },
-    servings: ""
+    servings: "",
+    image:
+      "https://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/recipes/35/81/3/KU3JVxMDRriISEG3KdPy_0S9A9740.jpg"
   }
 };

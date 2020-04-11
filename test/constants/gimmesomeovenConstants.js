@@ -32,6 +32,8 @@ module.exports = {
       ready: "",
       total: "35 minutes"
     },
-    servings: "4 -6 servings"
+    servings: "4 -6 servings",
+    image:
+      "https://www.gimmesomeoven.com/wp-content/uploads/2019/05/The-Juiciest-Chicken-Kabobs-Recipe-1-2-768x1152.jpg"
   }
 };

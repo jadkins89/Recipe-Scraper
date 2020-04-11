@@ -38,6 +38,8 @@ module.exports = {
       ready: "",
       total: "35 Minutes"
     },
-    servings: "4"
+    servings: "4",
+    image:
+      "https://www.yummly.com/images/No-Bake-Lemon-Mango-Cheesecakes-with-Speculoos-crust-recipe-781945"
   }
 };

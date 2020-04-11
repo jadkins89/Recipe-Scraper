@@ -15,6 +15,7 @@ const theRealFoodRds = url => {
         const Recipe = new RecipeSchema();
         const $ = cheerio.load(html);
 
+        Recipe.image = $("meta[property='og:image']").attr("content");
         Recipe.name = $(".tasty-recipes-entry-header")
           .children("h2")
           .first()

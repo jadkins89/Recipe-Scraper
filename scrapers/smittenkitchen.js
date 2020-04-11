@@ -42,6 +42,7 @@ const oldSmitten = ($, Recipe) => {
   let servingWords = ["Yield", "Serve", "Servings"];
   let servingsRegex = new RegExp(servingWords.join("|"), "i");
 
+  Recipe.image = $("meta[property='og:image']").attr("content");
   body.each((i, el) => {
     if (i === 0) {
       Recipe.name = $(el)
@@ -84,6 +85,7 @@ const oldSmitten = ($, Recipe) => {
 };
 
 const newSmitten = ($, Recipe) => {
+  Recipe.image = $("meta[property='og:image']").attr("content");
   Recipe.name = $(".jetpack-recipe-title").text();
 
   $(".jetpack-recipe-ingredients")

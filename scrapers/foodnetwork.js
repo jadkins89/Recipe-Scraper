@@ -13,9 +13,11 @@ const foodNetwork = url => {
         if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
 
+          Recipe.image = $("meta[property='og:image']").attr("content");
           Recipe.name = $(".o-AssetTitle__a-HeadlineText")
             .first()
             .text();
+
           $(".o-Ingredients__a-Ingredient, .o-Ingredients__a-SubHeadline").each(
             (i, el) => {
               const item = $(el)

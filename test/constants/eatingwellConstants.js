@@ -37,7 +37,9 @@ module.exports = {
       ready: "",
       total: "45 mins"
     },
-    servings: "6"
+    servings: "6",
+    image:
+      "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F5397860.jpg"
   },
   expectedRecipe2: {
     name: "Mexican Pasta Salad with Creamy Avocado Dressing",
@@ -70,6 +72,8 @@ module.exports = {
       ready: "",
       total: "20 mins"
     },
-    servings: "6"
+    servings: "6",
+    image:
+      "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F3759382.jpg"
   }
 };

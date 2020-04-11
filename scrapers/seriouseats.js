@@ -39,6 +39,7 @@ const seriousEats = url => {
 };
 
 const regularRecipe = ($, Recipe) => {
+  Recipe.image = $("meta[property='og:image']").attr("content");
   Recipe.name = $(".recipe-title")
     .text()
     .replace(/\s\s+/g, "");

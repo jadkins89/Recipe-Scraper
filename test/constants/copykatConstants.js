@@ -24,6 +24,8 @@ module.exports = {
       ready: "",
       total: "12 minutes"
     },
-    servings: "4"
+    servings: "4",
+    image:
+      "https://copykat.com/wp-content/uploads/2019/07/butter-air-fryer-croutons.jpg"
   }
 };

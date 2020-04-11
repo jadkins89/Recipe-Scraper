@@ -36,6 +36,8 @@ module.exports = {
       ready: "",
       total: ""
     },
-    servings: "4 servings"
+    servings: "4 servings",
+    image:
+      "https://www.simplyrecipes.com/wp-content/uploads/2019/08/summer-chicken-panzanella-Lead5.jpg"
   }
 };

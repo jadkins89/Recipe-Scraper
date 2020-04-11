@@ -20,7 +20,7 @@ module.exports = {
       "2 Tablespoons Worcestershire Sauce",
       "1 Tablespoon Soy Sauce",
       "1 cup Water",
-      "10 whole Crusty Deli Rolls/sub Rolls, Toasted",
+      "10 whole Crusty Deli Rolls/sub Rolls, Toasted"
     ],
     instructions: [
       "Preheat the oven to 475 degrees. Tie the piece of meat tightly with a couple of pieces of kitchen twine.",
@@ -36,6 +36,8 @@ module.exports = {
       ready: "",
       total: ""
     },
-    servings: "10 Servings"
+    servings: "10 Servings",
+    image:
+      "https://tastykitchen.com/recipes/wp-content/uploads/sites/2/2016/05/DSC_0580-420x280.jpg"
   }
 };

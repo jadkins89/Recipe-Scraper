@@ -13,6 +13,7 @@ const closetCooking = url => {
         const Recipe = new RecipeSchema();
         const $ = cheerio.load(html);
 
+        Recipe.image = $("meta[property='og:image']").attr("content");
         Recipe.name = $(".recipe_title").text();
 
         $(".ingredients")

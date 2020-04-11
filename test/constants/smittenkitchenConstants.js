@@ -34,7 +34,9 @@ module.exports = {
       ready: "",
       total: ""
     },
-    servings: "4 as an appetizer or 2 as a light meal"
+    servings: "4 as an appetizer or 2 as a light meal",
+    image:
+      "https://smittenkitchendotcom.files.wordpress.com/2014/12/endives-with-oranges-and-almonds1.jpg"
   },
   expectedRecipeNewV1: {
     name: "Blackberry-Blueberry Crumb Pie",
@@ -83,7 +85,9 @@ module.exports = {
       ready: "",
       total: "1 1/2 to 2 hours (with pie dough)"
     },
-    servings: "8"
+    servings: "8",
+    image:
+      "https://smittenkitchendotcom.files.wordpress.com/2017/08/blackberry-blueberry-crumb-pie.jpg?w=1200"
   },
   expectedRecipeNewV2: {
     name: " Cheesecake Bars with All The Berries",
@@ -121,6 +125,8 @@ module.exports = {
       ready: "",
       total: "1 hour, plus cooling time"
     },
-    servings: "24"
+    servings: "24",
+    image:
+      "https://smittenkitchendotcom.files.wordpress.com/2017/08/cheesecake-bars-with-all-the-berries.jpg?w=1200"
   }
 };

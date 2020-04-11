@@ -34,6 +34,8 @@ module.exports = {
       ready: "",
       total: ""
     },
-    servings: "6"
+    servings: "6",
+    image:
+      "https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2019/08/20135635/white-chicken-chili_wide.jpg"
   }
 };

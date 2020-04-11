@@ -28,7 +28,7 @@ module.exports = {
       "In a large pot or Dutch oven over medium heat add the oil. Once the oil is hot, add ground meat, garlic, onions, bell peppers, zucchini or yellow squash, and carrots and sauté for 7-9 minutes or until meat is cooked and no longer pink.",
       "Add seasonings, tomato sauce, crushed tomatoes, beans, corn, and water. Bring to a boil over medium-high heat. Reduce heat to low, cover, and simmer for 15 minutes or until carrots are tender. Serve with toppings of choice.",
       "Slow Cooker Directions:",
-      "Follow directions for the Stovetop version through Step 1.", 
+      "Follow directions for the Stovetop version through Step 1.",
       "Add turkey and vegetable mixture to slow cooker.",
       "Add remaining ingredients (except salt and pepper) and stir to combine.",
       "Cook on LOW for 8 hours or on HIGH for 4 hours."
@@ -41,6 +41,8 @@ module.exports = {
       ready: "",
       total: "40 mins"
     },
-    servings: "6"
+    servings: "6",
+    image:
+      "https://therealfoodrds.com/wp-content/uploads/2017/10/IMG_9397-2-e1508438046925.jpg"
   }
 };

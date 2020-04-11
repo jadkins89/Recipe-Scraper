@@ -30,6 +30,7 @@ const allRecipes = url => {
 };
 
 const newAllRecipes = ($, Recipe) => {
+  Recipe.image = $("meta[property='og:image']").attr("content");
   Recipe.name = Recipe.name.replace(/\s\s+/g, "");
 
   $(".recipe-meta-item").each((i, el) => {
@@ -76,6 +77,8 @@ const newAllRecipes = ($, Recipe) => {
 };
 
 const oldAllRecipes = ($, Recipe) => {
+  Recipe.image = $("meta[property='og:image']").attr("content");
+
   $("#polaris-app label").each((i, el) => {
     const item = $(el)
       .text()

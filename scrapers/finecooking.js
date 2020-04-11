@@ -13,6 +13,7 @@ const fineCooking = url => {
         if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
 
+          Recipe.image = $("meta[property='og:image']").attr("content");
           Recipe.name = $(".recipe__title").text();
 
           $(".recipe__nutrition").remove();

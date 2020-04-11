@@ -29,7 +29,8 @@ module.exports = {
       ready: "25 m",
       total: ""
     },
-    servings: "6"
+    servings: "6",
+    image: "https://images.media-allrecipes.com/userphotos/560x315/2253389.jpg"
   },
   expectedRecipeNew: {
     name: "Crispy and Tender Baked Chicken Thighs",
@@ -57,6 +58,8 @@ module.exports = {
       ready: "",
       total: "1 hr 10 mins"
     },
-    servings: "8"
+    servings: "8",
+    image:
+      "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1061355.jpg"
   }
 };

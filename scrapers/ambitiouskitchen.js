@@ -13,6 +13,7 @@ const ambitiousKitchen = url => {
         const Recipe = new RecipeSchema();
         const $ = cheerio.load(html);
 
+        Recipe.image = $("meta[property='og:image']").attr("content");
         Recipe.name = $(".wprm-recipe-name").text();
 
         $(".wprm-recipe-ingredient").each((i, el) => {

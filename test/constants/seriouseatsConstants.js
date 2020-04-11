@@ -31,6 +31,8 @@ module.exports = {
       ready: "",
       total: "20 minutes"
     },
-    servings: "Serves 4"
+    servings: "Serves 4",
+    image:
+      "https://www.seriouseats.com/2019/08/20190731-Oi-naengguk-chilled-cucumber-soup-vicky-wasik-5-1500x1125.jpg"
   }
 };

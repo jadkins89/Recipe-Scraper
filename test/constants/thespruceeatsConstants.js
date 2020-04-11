@@ -36,6 +36,8 @@ module.exports = {
       ready: "",
       total: "25 mins"
     },
-    servings: "1 pound (4 servings)"
+    servings: "1 pound (4 servings)",
+    image:
+      "https://www.thespruceeats.com/thmb/hbRXYt8onovguH2qKiAAKu3zcUk=/2309x1299/filters:fill(auto,1)/GettyImages-635101877-5955ee1c5f9b5815d9ce05f2.jpg"
   }
 };
