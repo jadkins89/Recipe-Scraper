@@ -51,6 +51,8 @@ module.exports = {
       ready: "",
       total: "45 minutes"
     },
-    servings: "6"
+    servings: "6",
+    image:
+      "https://www.ambitiouskitchen.com/wp-content/uploads/2018/07/Street-Corn-Pasta-Salad-4.jpg"
   }
 };

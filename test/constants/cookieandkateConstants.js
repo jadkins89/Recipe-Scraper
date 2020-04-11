@@ -45,6 +45,8 @@ module.exports = {
       ready: "",
       total: "45 minutes"
     },
-    servings: "8 spring rolls"
+    servings: "8 spring rolls",
+    image:
+      "https://cookieandkate.com/images/2019/08/fresh-spring-rolls-recipe-4.jpg"
   }
 };

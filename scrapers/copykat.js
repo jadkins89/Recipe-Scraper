@@ -13,6 +13,7 @@ const copykat = url => {
         var Recipe = new RecipeSchema();
         const $ = cheerio.load(html);
 
+        Recipe.image = $("meta[property='og:image']").attr("content");
         Recipe.name = $(
           $(".wprm-recipe-container").find(".wprm-recipe-name")
         ).text();

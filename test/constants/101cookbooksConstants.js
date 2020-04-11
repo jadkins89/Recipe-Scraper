@@ -32,6 +32,7 @@ module.exports = {
       ready: "",
       total: "15 mins"
     },
-    servings: "8"
+    servings: "8",
+    image: "https://images.101cookbooks.com/coleslaw-recipe-h.jpg?w=680"
   }
 };

@@ -37,6 +37,8 @@ module.exports = {
       ready: "",
       total: ""
     },
-    servings: "4"
+    servings: "4",
+    image:
+      "https://images.kitchenstories.io/wagtailOriginalImages/R1879-photo-final-04.jpg"
   }
 };

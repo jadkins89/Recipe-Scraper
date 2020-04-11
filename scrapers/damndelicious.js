@@ -15,6 +15,7 @@ const damnDelicious = url => {
 
         let titleDiv = $(".recipe-title");
 
+        Recipe.image = $("meta[property='og:image']").attr("content");
         Recipe.name = $(titleDiv)
           .children("h2")
           .text();

@@ -43,6 +43,8 @@ module.exports = {
       ready: "",
       total: "45 minutes"
     },
-    servings: "4"
+    servings: "4",
+    image:
+      "https://www.closetcooking.com/wp-content/uploads/2019/08/Reina-Pepiada-Arepa-Chicken-and-Avocado-Sandwich-1200-4572.jpg"
   }
 };

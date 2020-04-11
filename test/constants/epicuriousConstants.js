@@ -35,6 +35,8 @@ module.exports = {
       ready: "",
       total: ""
     },
-    servings: "4 servings"
+    servings: "4 servings",
+    image:
+      "https://assets.epicurious.com/photos/5c1146171ba70e4fce83c3e5/2:1/w_1260%2Ch_630/trout-toast-with-soft-scrambled-eggs-recipe-BA-121218.jpg"
   }
 };

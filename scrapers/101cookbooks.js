@@ -14,10 +14,7 @@ const oneHundredAndOne = url => {
           const $ = cheerio.load(html);
           const body = $(".wprm-recipe-container");
 
-          Recipe.image_url = $(".mainimagewide")
-            .children("img")
-            .data("lazy-src");
-
+          Recipe.image = $("meta[property='og:image']").attr("content");
           Recipe.name = body.children("h2").text();
 
           $(".wprm-recipe-ingredient").each((i, el) => {

@@ -28,6 +28,8 @@ module.exports = {
       ready: "",
       total: ""
     },
-    servings: "Makes 12"
+    servings: "Makes 12",
+    image:
+      "https://www.bbcgoodfood.com/sites/default/files/recipe_images/recipe-image-legacy-id--856543_10.jpg"
   }
 };

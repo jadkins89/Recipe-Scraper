@@ -13,6 +13,7 @@ const food = url => {
         if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
 
+          Recipe.image = $("meta[name='og:image']").attr("content");
           Recipe.name = $(".recipe-title").text();
 
           $(".recipe-ingredients__item").each((i, el) => {

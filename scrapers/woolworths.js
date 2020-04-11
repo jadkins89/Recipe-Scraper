@@ -1,4 +1,5 @@
 const request = require("request");
+const cheerio = require("cheerio");
 
 const RecipeSchema = require("../helpers/recipe-schema");
 
@@ -25,17 +26,20 @@ const woolworths = url => {
           url: recipeJsonUrl,
           json: true
         },
-        (error, response, body) => {
-          if (!error && response.statusCode === 200 && body) {
-            Recipe.name = body.Title.trim();
-            Recipe.ingredients = body.Ingredients.map(i =>
+        (error, response, html) => {
+          if (!error && response.statusCode === 200 && html) {
+            const $ = cheerio.load(html);
+
+            Recipe.image = $("meta[property='og:image']").attr("content");
+            Recipe.name = html.Title.trim();
+            Recipe.ingredients = html.Ingredients.map(i =>
               i.Description.trim()
             );
-            Recipe.time.prep = body.PreparationDuration.toString();
-            Recipe.time.cook = body.CookingDuration.toString();
-            Recipe.servings = body.Servings.toString();
+            Recipe.time.prep = html.PreparationDuration.toString();
+            Recipe.time.cook = html.CookingDuration.toString();
+            Recipe.servings = html.Servings.toString();
             Recipe.instructions = [];
-            body.Instructions.split("\r\n").map(step => {
+            html.Instructions.split("\r\n").map(step => {
               if (instructionsIndexRe.test(step)) {
                 Recipe.instructions.push(
                   instructionsIndexRe.exec(step)[1].trim()

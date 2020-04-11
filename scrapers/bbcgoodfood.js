@@ -13,16 +13,7 @@ const bbcGoodFood = url => {
         if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
 
-          let image_url = $(".recipe-header__media")
-            .find("img")
-            .prop("src");
-
-          if (image_url.substring(0, 2) === "//") {
-            image_url = "https:" + image_url;
-          }
-
-          Recipe.image_url = image_url;
-
+          Recipe.image = $("meta[property='og:image']").attr("content");
           Recipe.name = $(".recipe-header__title").text();
 
           $(".ingredients-list__item").each((i, el) => {

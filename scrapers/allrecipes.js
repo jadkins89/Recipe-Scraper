@@ -30,11 +30,8 @@ const allRecipes = url => {
 };
 
 const newAllRecipes = ($, Recipe) => {
+  Recipe.image = $("meta[property='og:image']").attr("content");
   Recipe.name = Recipe.name.replace(/\s\s+/g, "");
-
-  Recipe.image_url = $(".primary-media-section")
-    .find(".lazy-image")
-    .data("src");
 
   $(".recipe-meta-item").each((i, el) => {
     const title = $(el)
@@ -80,7 +77,7 @@ const newAllRecipes = ($, Recipe) => {
 };
 
 const oldAllRecipes = ($, Recipe) => {
-  Recipe.image_url = $(".rec-photo").prop("src");
+  Recipe.image = $("meta[property='og:image']").attr("content");
 
   $("#polaris-app label").each((i, el) => {
     const item = $(el)

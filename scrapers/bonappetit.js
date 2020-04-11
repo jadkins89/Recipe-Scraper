@@ -13,10 +13,7 @@ const bonAppetit = url => {
         if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
 
-          let url = $(".ba-picture--fit").prop("srcset");
-          url = url.slice(0, url.indexOf("1x") - 1);
-          Recipe.image_url = url;
-
+          Recipe.image = $("meta[property='og:image']").attr("content");
           Recipe.name = $("a.top-anchor").text();
 
           $(".ingredients")

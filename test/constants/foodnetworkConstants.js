@@ -35,7 +35,9 @@ module.exports = {
       ready: "",
       total: "45 min"
     },
-    servings: ""
+    servings: "",
+    image:
+      "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2016/12/4/2/FNK_Cast-Iron-Skillet-Provencal-Pork-Chops-and-Potatoes-1_s4x3.jpg.rend.hgtvcom.616.462.suffix/1480899712026.jpeg"
   },
   anotherExpectedRecipe: {
     name: "Knead Not Sourdough",
@@ -60,6 +62,8 @@ module.exports = {
       ready: "",
       total: "20 hr 55 min"
     },
-    servings: ""
+    servings: "",
+    image:
+      "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2008/5/27/0/EA1120_Knead-Not-Sourdough.jpg.rend.hgtvcom.616.462.suffix/1371587310017.jpeg"
   }
 };

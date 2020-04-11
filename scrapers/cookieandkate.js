@@ -13,6 +13,7 @@ const cookieAndKate = url => {
         if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
 
+          Recipe.image = $("meta[property='og:image']").attr("content");
           Recipe.name = $(".tasty-recipes")
             .children("h2")
             .text();

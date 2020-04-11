@@ -34,6 +34,8 @@ module.exports = {
       ready: "",
       total: "1 hr 10 mins"
     },
-    servings: "6"
+    servings: "6",
+    image:
+      "https://www.budgetbytes.com/wp-content/uploads/2012/10/Chicken-and-Lime-Soup-above.jpg"
   }
 };
