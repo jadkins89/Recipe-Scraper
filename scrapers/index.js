@@ -4,6 +4,7 @@ const domains = {
   "101cookbooks": require("./101cookbooks"),
   allrecipes: require("./allrecipes"),
   ambitiouskitchen: require("./ambitiouskitchen"),
+  averiecooks: require("./averiecooks"),
   bbc: require("./bbc"),
   bbcgoodfood: require("./bbcgoodfood"),
   bonappetit: require("./bonappetit"),
@@ -43,4 +44,7 @@ const recipeScraper = url => {
   });
 };
 
+recipeScraper("https://www.averiecooks.com/thai-chicken-coconut-curry/").then(
+  recipe => console.log(recipe)
+);
 module.exports = recipeScraper;

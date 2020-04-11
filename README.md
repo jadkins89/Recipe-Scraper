@@ -37,6 +37,7 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://www.101cookbooks.com/
 - https://www.allrecipes.com/
 - https://www.ambitiouskitchen.com/
+- https://www.averiecooks.com/
 - https://www.bbc.co.uk/
 - https://www.bbcgoodfood.com/
 - https://www.bonappetit.com/
