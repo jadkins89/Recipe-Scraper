@@ -29,7 +29,7 @@ describe("seriousEats", () => {
       await seriousEats(Constants.invalidUrl);
       assert.fail("was not supposed to succeed");
     } catch (error) {
-      expect(error.message).to.equal("There was a problem retrieving the page");
+      expect(error.message).to.equal("No recipe found on page");
     }
   });
 

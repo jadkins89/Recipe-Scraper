@@ -24,7 +24,7 @@ module.exports = {
       "Add squid bodies and tentacles, tossing to coat.",
       "Thread squid bodies lengthwise onto skewers so they lie flat.",
       "Thread tentacles onto separate skewers.",
-      "Grill over high heat, turning once, until just opaque throughout - about 1 to 2 minutes.",
+      "Grill over high heat, turning once, until just opaque throughout, about 1 to 2 minutes.",
       "Remove squid from skewers and pile on a platter. Sprinkle with parsley and serve with lemon wedges.",
       "Serve and enjoy!"
     ],
@@ -36,6 +36,6 @@ module.exports = {
       ready: "",
       total: "25 mins"
     },
-    servings: "4 servings"
+    servings: "1 pound (4 servings)"
   }
 };

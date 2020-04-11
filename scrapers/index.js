@@ -9,8 +9,9 @@ const domains = {
   bonappetit: require("./bonappetit"),
   budgetbytes: require("./budgetbytes"),
   closetcooking: require("./closetcooking"),
-  cookieandkate: require("./cookieAndKate"),
+  cookieandkate: require("./cookieandkate"),
   copykat: require("./copykat"),
+  damndelicious: require("./damndelicious"),
   eatingwell: require("./eatingwell"),
   epicurious: require("./epicurious"),
   finecooking: require("./finecooking"),
@@ -18,6 +19,7 @@ const domains = {
   foodandwine: require("./foodandwine"),
   foodnetwork: require("./foodnetwork"),
   gimmesomeoven: require("./gimmesomeoven"),
+  kitchenstories: require("./kitchenstories"),
   myrecipes: require("./myrecipes"),
   seriouseats: require("./seriouseats"),
   simplyrecipes: require("./simplyrecipes"),
@@ -26,6 +28,7 @@ const domains = {
   therealfoodrds: require("./therealfoodrds"),
   thespruceeats: require("./thespruceeats"),
   whatsgabycooking: require("./whatsgabycooking"),
+  woolworths: require("./woolworths.js"),
   yummly: require("./yummly")
 };
 
@@ -39,9 +42,5 @@ const recipeScraper = url => {
     }
   });
 };
-
-recipeScraper(
-  "https://www.budgetbytes.com/crispy-potatoes-with-lemon-dill-tahini-dressing/"
-).then(recipe => console.log(recipe));
 
 module.exports = recipeScraper;

@@ -10,44 +10,70 @@ const eatingWell = url => {
       reject(new Error("url provided must include 'eatingwell.com/recipe'"));
     } else {
       request(url, (error, response, html) => {
-        if (!error && response.statusCode == 200) {
+        if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
 
-          Recipe.name = $(".recipeDetailHeader[itemprop=name]").text();
+          Recipe.name = $(".main-header")
+            .find(".headline")
+            .text()
+            .trim();
 
-          $("span[itemprop=ingredients]").each((i, el) => {
-            Recipe.ingredients.push($(el).text());
+          $(".ingredients-section__legend, .ingredients-item-name").each(
+            (i, el) => {
+              if (
+                !$(el)
+                  .attr("class")
+                  .includes("visually-hidden")
+              ) {
+                Recipe.ingredients.push(
+                  $(el)
+                    .text()
+                    .trim()
+                    .replace(/\s\s+/g, " ")
+                );
+              }
+            }
+          );
+
+          $(".instructions-section-item").each((i, el) => {
+            Recipe.instructions.push(
+              $(el)
+                .find("p")
+                .text()
+            );
           });
 
-          $(".recipeDirectionsListItem").each((i, el) => {
-            Recipe.instructions.push($(el).text());
-          });
-
-          $(".prepTime__item").each((i, el) => {
-            let title = $(el)
-              .children(".prepTime__item--type")
-              .text();
-            let time = $(el)
-              .children("time")
-              .text();
+          $(".recipe-meta-item").each((i, el) => {
+            const title = $(el)
+              .children(".recipe-meta-item-header")
+              .text()
+              .replace(/\s*:|\s+(?=\s*)/g, "");
+            const value = $(el)
+              .children(".recipe-meta-item-body")
+              .text()
+              .replace(/\s\s+/g, "");
             switch (title) {
-              case "Prep":
-                Recipe.time.prep = time;
+              case "prep":
+                Recipe.time.prep = value;
                 break;
-              case "Active":
-                Recipe.time.active = time;
+              case "cook":
+                Recipe.time.cook = value;
                 break;
-              case "Ready In":
-                Recipe.time.ready = time;
+              case "active":
+                Recipe.time.active = value;
+              case "total":
+                Recipe.time.total = value;
+                break;
+              case "additional":
+                Recipe.time.inactive = value;
+                break;
+              case "Servings":
+                Recipe.servings = value;
                 break;
               default:
                 break;
             }
           });
-
-          Recipe.servings = $(".servingsCount")
-            .text()
-            .trim();
 
           if (
             !Recipe.name ||
@@ -59,7 +85,7 @@ const eatingWell = url => {
             resolve(Recipe);
           }
         } else {
-          reject(new Error("There was a problem retrieving the page"));
+          reject(new Error("No recipe found on page"));
         }
       });
     }

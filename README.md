@@ -44,6 +44,7 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://www.closetcooking.com/
 - https://cookieandkate.com/
 - https://copykat.com/
+- https://damndelicious.net/
 - http://www.eatingwell.com/
 - https://www.epicurious.com/
 - https://www.finecooking.com/
@@ -51,6 +52,7 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://www.foodandwine.com/
 - https://www.foodnetwork.com/
 - http://www.gimmesomeoven.com/
+- https://www.kitchenstories.com/
 - https://www.myrecipes.com/
 - https://www.seriouseats.com/
 - https://www.simplyrecipes.com/
@@ -59,6 +61,7 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://therealfoodrds.com/
 - https://www.thespruceeats.com/
 - https://whatsgabycooking.com/
+- https://www.woolworths.com.au/
 - https://www.yummly.com/
 
 Don't see a website you'd like to scrape? Open an [issue](https://github.com/jadkins89/Recipe-Scraper/issues) and we'll do our best to add it.
@@ -104,21 +107,21 @@ recipeScraper("some.no.recipe.url").catch(error => {
 });
 ```
 
+If a page does not exist or some other 400+ error occurs when fetching, an error message will be returned.
+
+```javascript
+recipeScraper("some.nonexistent.page").catch(error => {
+  console.log(error.message);
+  // => "No recipe found on page"
+});
+```
+
 If a supported url does not contain the proper sub-url to be a valid recipe, an error message will be returned including the sub-url required.
 
 ```javascript
 recipeScraper("some.improper.url").catch(error => {
   console.log(error.message);
   // => "url provided must include '#subUrl'"
-});
-```
-
-If a page does not exist or some other 400+ error occurs when fetching, an error message will be returned.
-
-```javascript
-recipeScraper("some.nonexistent.page").catch(error => {
-  console.log(error.message);
-  // => "There was a problem retrieving the page"
 });
 ```
 

@@ -10,7 +10,7 @@ const allRecipes = url => {
       reject(new Error("url provided must include 'allrecipes.com/recipe'"));
     } else {
       request(url, (error, response, html) => {
-        if (!error && response.statusCode == 200) {
+        if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
           // Check if recipe is in new format
           if ((Recipe.name = $(".intro").text())) {
@@ -22,7 +22,7 @@ const allRecipes = url => {
           }
           resolve(Recipe);
         } else {
-          reject(new Error("There was a problem retrieving the page"));
+          reject(new Error("No recipe found on page"));
         }
       });
     }
@@ -54,10 +54,15 @@ const newAllRecipes = ($, Recipe) => {
         break;
       case "total":
         Recipe.time.total = value;
+        break;
       case "additional":
         Recipe.time.inactive = value;
+        break;
+      case "Servings":
+        Recipe.servings = value;
+        break;
       default:
-        return false;
+        break;
     }
   });
 
@@ -97,6 +102,7 @@ const oldAllRecipes = ($, Recipe) => {
   Recipe.time.prep = $("time[itemprop=prepTime]").text();
   Recipe.time.cook = $("time[itemprop=cookTime]").text();
   Recipe.time.ready = $("time[itemprop=totalTime]").text();
+  Recipe.servings = $("#metaRecipeServings").attr("content");
 };
 
 module.exports = allRecipes;

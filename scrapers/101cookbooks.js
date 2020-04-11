@@ -10,7 +10,7 @@ const oneHundredAndOne = url => {
       reject(new Error("url provided must include '101cookbooks.com/'"));
     } else {
       request(url, (error, response, html) => {
-        if (!error && response.statusCode == 200) {
+        if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
           const body = $(".wprm-recipe-container");
 
@@ -62,7 +62,7 @@ const oneHundredAndOne = url => {
             resolve(Recipe);
           }
         } else {
-          reject(new Error("There was a problem retrieving the page"));
+          reject(new Error("No recipe found on page"));
         }
       });
     }

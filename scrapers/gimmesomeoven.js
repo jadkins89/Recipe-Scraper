@@ -10,7 +10,7 @@ const gimmeSomeOven = url => {
       reject(new Error("url provided must include 'gimmesomeoven.com/'"));
     } else {
       request(url, (error, response, html) => {
-        if (!error && response.statusCode == 200) {
+        if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
 
           Recipe.name = $(".tasty-recipes-header-content")
@@ -49,7 +49,7 @@ const gimmeSomeOven = url => {
             resolve(Recipe);
           }
         } else {
-          reject(new Error("There was a problem retrieving the page"));
+          reject(new Error("No recipe found on page"));
         }
       });
     }

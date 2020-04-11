@@ -59,7 +59,7 @@ const theRealFoodRds = url => {
           resolve(Recipe);
         }
       } catch (error) {
-        reject(new Error("There was a problem retrieving the page"));
+        reject(new Error("No recipe found on page"));
       }
     }
   });

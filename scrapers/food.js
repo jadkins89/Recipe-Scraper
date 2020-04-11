@@ -10,7 +10,7 @@ const food = url => {
       reject(new Error("url provided must include 'food.com/recipe/'"));
     } else {
       request(url, (error, response, html) => {
-        if (!error && response.statusCode == 200) {
+        if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
 
           Recipe.name = $(".recipe-title").text();
@@ -45,7 +45,7 @@ const food = url => {
             resolve(Recipe);
           }
         } else {
-          reject(new Error("There was a problem retrieving the page"));
+          reject(new Error("No recipe found on page"));
         }
       });
     }

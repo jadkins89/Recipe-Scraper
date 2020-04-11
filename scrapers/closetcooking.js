@@ -29,11 +29,11 @@ const closetCooking = url => {
 
         let metaData = $(".time");
         let prepText = metaData.first().text();
-        Recipe.time.prep = prepText.slice(prepText.indexOf(":") + 1);
+        Recipe.time.prep = prepText.slice(prepText.indexOf(":") + 1).trim();
         let cookText = $(metaData.get(1)).text();
-        Recipe.time.cook = cookText.slice(cookText.indexOf(":") + 1);
+        Recipe.time.cook = cookText.slice(cookText.indexOf(":") + 1).trim();
         let totalText = $(metaData.get(2)).text();
-        Recipe.time.total = totalText.slice(totalText.indexOf(":") + 1);
+        Recipe.time.total = totalText.slice(totalText.indexOf(":") + 1).trim();
 
         let servingsText = $(".yield").text();
         Recipe.servings = servingsText
@@ -50,7 +50,7 @@ const closetCooking = url => {
           resolve(Recipe);
         }
       } catch (error) {
-        reject(new Error("There was a problem retrieving the page"));
+        reject(new Error("No recipe found on page"));
       }
     }
   });
