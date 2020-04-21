@@ -44,7 +44,4 @@ const recipeScraper = url => {
   });
 };
 
-recipeScraper("https://www.averiecooks.com/thai-chicken-coconut-curry/").then(
-  recipe => console.log(recipe)
-);
 module.exports = recipeScraper;
