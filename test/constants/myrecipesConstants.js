@@ -47,6 +47,6 @@ module.exports = {
     servings:
       "Serves 4 (serving size: about 4 oz. steak, 3/4 cup potatoes, 1/2 cup broccoli, and 2 Tbsp. aioli)",
     image:
-      "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fcdn-image.myrecipes.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2Flondonbroil.jpg%3Fitok%3Dea0rwT73"
+      "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&url=https%3A%2F%2Fcdn-image.myrecipes.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2Flondonbroil.jpg%3Fitok%3Dea0rwT73"
   }
 };

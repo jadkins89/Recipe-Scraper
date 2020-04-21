@@ -39,7 +39,7 @@ module.exports = {
     },
     servings: "6",
     image:
-      "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F5397860.jpg"
+      "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=960&h=503&url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F5397860.jpg"
   },
   expectedRecipe2: {
     name: "Mexican Pasta Salad with Creamy Avocado Dressing",

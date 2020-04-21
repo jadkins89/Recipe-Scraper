@@ -13,7 +13,7 @@ module.exports = {
       "1 teaspoon salt",
       "1 pound bucatini (dry)",
       "2 cups finely grated Pecorino Romano cheese",
-      "1 1/2 tablespoons freshly ground black pepper, or more to taste"
+      "1 ½ tablespoons freshly ground black pepper, or more to taste"
     ],
     instructions: [
       "Bring a large pot of water to a boil and add salt. Cook bucatini in the boiling water, stirring occasionally, until tender yet firm to the bite, 8 to 10 minutes.",
@@ -22,15 +22,15 @@ module.exports = {
       "Add one ladle of pasta water to the bowl. Stir the bucatini around until a cream has formed. Add more pasta water, little by little, until a thick cream has formed. Sprinkle freshly ground pepper over the pasta. Toss and serve immediately."
     ],
     time: {
-      prep: "10 m",
-      cook: "15 m",
+      prep: "10 mins",
+      cook: "15 mins",
       active: "",
       inactive: "",
-      ready: "25 m",
-      total: ""
+      ready: "",
+      total: "25 mins"
     },
     servings: "6",
-    image: "https://images.media-allrecipes.com/userphotos/560x315/2253389.jpg"
+    image: "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2444&h=1280&url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F2253389.jpg"
   },
   expectedRecipeNew: {
     name: "Crispy and Tender Baked Chicken Thighs",
