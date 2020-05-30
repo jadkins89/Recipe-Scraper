@@ -37,14 +37,14 @@ module.exports = {
       "Portion the Cauliflower rice into 4 serving bowls. Add a spoonful of the beans to each bowl and a spoonful of the roasted sweet potatoes. Top with plenty of guacamole and serve."
     ],
     time: {
-      prep: "5 minutes",
-      cook: "45 minutes",
+      prep: "5 mins",
+      cook: "45 mins",
       active: "",
       inactive: "",
       ready: "",
-      total: "50 minutes"
+      total: "50 mins"
     },
-    servings: "6",
+    servings: "6 people",
     image:
       "https://cdn.whatsgabycooking.com/wp-content/uploads/2018/02/WGC-Instant-Pot-Bowl-copy-2.jpg"
   }

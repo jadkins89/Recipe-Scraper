@@ -30,7 +30,7 @@ const woolworths = url => {
           if (!error && response.statusCode === 200 && html) {
             const $ = cheerio.load(html);
 
-            Recipe.image = $("meta[property='og:image']").attr("content");
+            Recipe.image = html.ImageFilename;
             Recipe.name = html.Title.trim();
             Recipe.ingredients = html.Ingredients.map(i =>
               i.Description.trim()

@@ -30,13 +30,14 @@ module.exports = {
       total: "25 mins"
     },
     servings: "6",
-    image: "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2444&h=1280&url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F2253389.jpg"
+    image:
+      "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2444&h=1280&url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F2253389.jpg"
   },
   expectedRecipeNew: {
     name: "Crispy and Tender Baked Chicken Thighs",
     ingredients: [
-      "cooking spray",
-      "8 bone-in chicken thighs with skin",
+      "1 serving cooking spray",
+      "8 eaches bone-in chicken thighs with skin",
       "¼ teaspoon garlic salt",
       "¼ teaspoon onion salt",
       "¼ teaspoon dried oregano",
@@ -60,6 +61,6 @@ module.exports = {
     },
     servings: "8",
     image:
-      "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1061355.jpg"
+      "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=1300&h=681&url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1061355.jpg"
   }
 };

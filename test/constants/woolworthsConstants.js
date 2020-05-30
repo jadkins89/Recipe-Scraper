@@ -35,6 +35,8 @@ module.exports = {
       ready: "",
       total: ""
     },
-    servings: "8"
+    servings: "8",
+    image:
+      "https://cdn1.woolworths.media/content/recipes/1701-jamie-classicguacamole.jpg"
   }
 };

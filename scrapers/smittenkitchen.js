@@ -99,7 +99,16 @@ const newSmitten = ($, Recipe) => {
   Recipe.instructions = $(".jetpack-recipe-directions")
     .text()
     .split("\n")
-    .filter(instruction => instruction);
+    .filter(instruction => {
+      if (
+        !instruction ||
+        instruction.includes("Do More:TwitterFacebookPinterestPrintEmail") ||
+        instruction.includes("\t")
+      ) {
+        return false;
+      }
+      return true;
+    });
 
   if (!Recipe.instructions.length) {
     let lastIngredient = Recipe.ingredients[Recipe.ingredients.length - 1];
@@ -110,7 +119,16 @@ const newSmitten = ($, Recipe) => {
         recipeContents.indexOf("Rate this:")
       )
       .split("\n")
-      .filter(instruction => instruction);
+      .filter(instruction => {
+        if (
+          !instruction ||
+          instruction.includes("Do More:TwitterFacebookPinterestPrintEmail") ||
+          instruction.includes("\t")
+        ) {
+          return false;
+        }
+        return true;
+      });
   }
 
   Recipe.time.total = $("time[itemprop=totalTime]")

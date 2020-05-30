@@ -14,7 +14,7 @@ const whatsGabyCooking = url => {
           const $ = cheerio.load(html);
 
           Recipe.image = $("meta[property='og:image']").attr("content");
-          Recipe.name = $(".recipe-header").text();
+          Recipe.name = $(".wprm-recipe-name").text();
 
           $(".wprm-recipe-ingredient").each((i, el) => {
             let elText = $(el)
@@ -38,23 +38,11 @@ const whatsGabyCooking = url => {
             Recipe.instructions.push(instruction);
           });
 
-          $(".recipe-info")
-            .children(".row")
-            .each((i, el) => {
-              let recipeInfo = $(el).text();
-              let infoData = $(el)
-                .find(".recipe-data")
-                .text();
-              if (recipeInfo.includes("Servings:")) {
-                Recipe.servings = infoData;
-              } else if (recipeInfo.includes("Prep Time:")) {
-                Recipe.time.prep = infoData;
-              } else if (recipeInfo.includes("Cook Time:")) {
-                Recipe.time.cook = infoData;
-              } else if (recipeInfo.includes("Total Time:")) {
-                Recipe.time.total = infoData;
-              }
-            });
+          const times = $(".wprm-recipe-time");
+          Recipe.time.prep = $(times.first()).text();
+          Recipe.time.cook = $(times.get(1)).text();
+          Recipe.time.total = $(times.last()).text();
+          Recipe.servings = $(".wprm-recipe-servings-with-unit").text();
           if (
             !Recipe.name ||
             !Recipe.ingredients.length ||

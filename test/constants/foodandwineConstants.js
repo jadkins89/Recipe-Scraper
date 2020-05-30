@@ -35,6 +35,7 @@ module.exports = {
       total: "2 HR 10 MIN"
     },
     servings: "4",
-    image: "https://www.foodandwine.com/img/misc/og-default.png"
+    image:
+      "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&url=undefined"
   }
 };

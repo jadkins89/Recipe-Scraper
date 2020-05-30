@@ -36,7 +36,7 @@ module.exports = {
     },
     servings: "4 as an appetizer or 2 as a light meal",
     image:
-      "https://smittenkitchendotcom.files.wordpress.com/2014/12/endives-with-oranges-and-almonds1.jpg"
+      "https://i1.wp.com/smittenkitchen.com/wp-content/uploads//2014/12/endives-with-oranges-and-almonds1.jpg?fit=1024%2C683&ssl=1"
   },
   expectedRecipeNewV1: {
     name: "Blackberry-Blueberry Crumb Pie",
@@ -87,7 +87,7 @@ module.exports = {
     },
     servings: "8",
     image:
-      "https://smittenkitchendotcom.files.wordpress.com/2017/08/blackberry-blueberry-crumb-pie.jpg?w=1200"
+      "https://i1.wp.com/smittenkitchen.com/wp-content/uploads//2017/08/blackberry-blueberry-crumb-pie.jpg?fit=1200%2C800&ssl=1"
   },
   expectedRecipeNewV2: {
     name: " Cheesecake Bars with All The Berries",
@@ -127,6 +127,6 @@ module.exports = {
     },
     servings: "24",
     image:
-      "https://smittenkitchendotcom.files.wordpress.com/2017/08/cheesecake-bars-with-all-the-berries.jpg?w=1200"
+      "https://i2.wp.com/smittenkitchen.com/wp-content/uploads//2017/08/cheesecake-bars-with-all-the-berries.jpg?fit=1200%2C800&ssl=1"
   }
 };
