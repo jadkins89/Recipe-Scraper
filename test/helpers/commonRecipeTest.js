@@ -5,9 +5,7 @@ function commonRecipeTest(name, scraper, Constants, url) {
   describe(name, () => {
     it("should fetch the expected recipe", async () => {
       let actualRecipe = await scraper(Constants.testUrl);
-      expect(JSON.stringify(Constants.expectedRecipe)).to.equal(
-        JSON.stringify(actualRecipe)
-      );
+      expect(Constants.expectedRecipe).to.deep.equal(actualRecipe);
     });
 
     it("should throw an error if a problem occurred during page retrieval", async () => {
