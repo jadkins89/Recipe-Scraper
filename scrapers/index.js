@@ -31,7 +31,7 @@ const domains = {
   therealfoodrds: require("./therealfoodrds"),
   thespruceeats: require("./thespruceeats"),
   whatsgabycooking: require("./whatsgabycooking"),
-  woolworths: require("./woolworths.js"),
+  woolworths: require("./woolworths"),
   yummly: require("./yummly")
 };
 
