@@ -23,6 +23,7 @@ const domains = {
   kitchenstories: require("./kitchenstories"),
   myrecipes: require("./myrecipes"),
   nomnompaleo: require("./nomnompaleo"),
+  omnivorescookbook: require("./omnivorescookbook"),
   seriouseats: require("./seriouseats"),
   simplyrecipes: require("./simplyrecipes"),
   smittenkitchen: require("./smittenkitchen"),
