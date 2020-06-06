@@ -39,7 +39,6 @@ const simplyRecipes = url => {
           Recipe.time.cook = $(".cooktime").text();
 
           Recipe.servings = $(".yield").text();
-
           if (
             !Recipe.name ||
             !Recipe.ingredients.length ||

@@ -52,6 +52,6 @@ module.exports = {
     },
     servings: "6 servings",
     image:
-      "https://omnivorescookbook.com/wp-content/uploads/2017/04/2002_Dan-Dan-Noodles-FB_550.jpg"
+      "https://omnivorescookbook.com/wp-content/uploads/2017/04/2002_Dan-Dan-Noodles_001.jpg"
   }
 };

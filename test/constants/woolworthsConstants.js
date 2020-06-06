@@ -25,7 +25,7 @@ module.exports = {
       "Squeeze in the juice from 1 lime and 1 tablespoon of oil, then season to taste with sea salt, black pepper and more lime juice, if needed.",
       "Deseed, finely chop and scatter over the remaining chilli if you like more of a kick.",
       "Pick over the reserved coriander leaves, then serve.",
-      "Super-quick and easy, this guacamole recipe is delicious with fajitas, quesadillas, dolloped into a wrap or served as a snack with crunchy veggies."
+      "Tip: Super quick and easy, this guacamole recipe is delicious with fajitas, quesadillas, dolloped into a wrap or served as a snack with crunchy veggies."
     ],
     time: {
       prep: "15",

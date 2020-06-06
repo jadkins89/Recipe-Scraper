@@ -5,7 +5,7 @@ const RecipeSchema = require("../helpers/recipe-schema");
 
 const urlRe = /\/(\d\d\d\d)\//;
 const instructionsIndexRe = /(?:\d.)(.*)/;
-const instructionsTipRe = /(Tip:)(.*)/;
+const instructionsTipRe = /(Tip:)(.*)/i;
 
 const woolworths = url => {
   const Recipe = new RecipeSchema();
@@ -38,16 +38,15 @@ const woolworths = url => {
             Recipe.time.prep = html.PreparationDuration.toString();
             Recipe.time.cook = html.CookingDuration.toString();
             Recipe.servings = html.Servings.toString();
-            Recipe.instructions = [];
             html.Instructions.split("\r\n").map(step => {
+              let newIngredient = "";
               if (instructionsIndexRe.test(step)) {
-                Recipe.instructions.push(
-                  instructionsIndexRe.exec(step)[1].trim()
-                );
+                newIngredient = instructionsIndexRe.exec(step)[1].trim();
               } else if (instructionsTipRe.test(step)) {
-                // Skip
-              } else {
-                Recipe.instructions.push(step.trim());
+                newIngredient = step.trim();
+              }
+              if (newIngredient.length) {
+                Recipe.instructions.push(newIngredient);
               }
             });
 
