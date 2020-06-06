@@ -36,12 +36,17 @@ const domains = {
 };
 
 const recipeScraper = url => {
-  let domain = parseDomain(url).domain;
   return new Promise((resolve, reject) => {
-    if (domains[domain] !== undefined) {
-      resolve(domains[domain](url));
+    let parse = parseDomain(url);
+    if (parse) {
+      let domain = parse.domain;
+        if (domains[domain] !== undefined) {
+          resolve(domains[domain](url));
+        } else {
+          reject(new Error("Site not yet supported"));
+        }
     } else {
-      reject(new Error("Site not yet supported"));
+      reject(new Error("Failed to parse domain"));
     }
   });
 };

@@ -93,6 +93,15 @@ Depending on the recipe, certain fields may be left blank. All fields are repres
 
 ## Error Handling
 
+If the url provided is invalid and a domain is unable to be parsed, an error message will be returned.
+
+```javascript
+recipeScraper("keyboard kitty").catch(error => {
+  console.log(error.message);
+  // => "Failed to parse domain"
+});
+```
+
 If the url provided doesn't match a supported domain, an error message will be returned.
 
 ```javascript

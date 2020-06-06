@@ -1,6 +1,6 @@
 {
   "name": "recipe-scraper",
-  "version": "1.18.0",
+  "version": "1.19.0",
   "description": "A JS package for scraping recipes from the web.",
   "author": "Justin Adkins <jadkins1019@gmail.com>",
   "license": "MIT",
