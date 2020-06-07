@@ -9,6 +9,7 @@ const domains = {
   bbcgoodfood: require("./bbcgoodfood"),
   bonappetit: require("./bonappetit"),
   budgetbytes: require("./budgetbytes"),
+  centraltexasfoodbank: require("./centraltexasfoodbank"),
   closetcooking: require("./closetcooking"),
   cookieandkate: require("./cookieandkate"),
   copykat: require("./copykat"),
