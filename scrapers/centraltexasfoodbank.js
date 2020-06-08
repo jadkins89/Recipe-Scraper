@@ -26,7 +26,11 @@ const centralTexasFoodBank = url => {
           $(".ingredients-container")
             .find(".field-item")
             .each((i, el) => {
-              Recipe.ingredients.push($(el).text());
+              Recipe.ingredients.push(
+                $(el)
+                  .text()
+                  .trim()
+              );
             });
 
           $(".bottom-section")
@@ -34,6 +38,26 @@ const centralTexasFoodBank = url => {
             .each((i, el) => {
               Recipe.instructions.push($(el).text());
             });
+
+          if (!Recipe.instructions.length) {
+            let done = false;
+            $(".bottom-section")
+              .find("p")
+              .each((i, el) => {
+                if (!done && !$(el).children("strong").length) {
+                  let instructions = $(el)
+                    .text()
+                    .trim()
+                    .replace(/\s\s+/g, " ");
+                  if (!instructions.length) done = true;
+                  let instructionList = instructions
+                    .replace(/\d+\.\s/g, "")
+                    .split("\n")
+                    .filter(instruction => !!instruction.length);
+                  Recipe.instructions.push(...instructionList);
+                }
+              });
+          }
 
           Recipe.time.prep = $(".field-name-field-prep-time")
             .find(".field-item")
