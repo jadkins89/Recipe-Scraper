@@ -52,8 +52,4 @@ const recipeScraper = url => {
   });
 };
 
-recipeScraper(
-  "https://www.centraltexasfoodbank.org/recipe/grilled-cheese-mushroom-spinach-and-tomato"
-).then(recipe => console.log(recipe));
-
 module.exports = recipeScraper;
