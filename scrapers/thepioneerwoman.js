@@ -16,24 +16,20 @@ const thePioneerWoman = url => {
           const $ = cheerio.load(html);
 
           Recipe.image = $("meta[property='og:image']").attr("content");
-          Recipe.name = $(".recipe-title")
+          Recipe.name = $(".recipe-hed")
             .first()
             .text();
 
-          $(".list-ingredients")
-            .first()
-            .children("li")
-            .each((i, el) => {
-              Recipe.ingredients.push(
-                $(el)
-                  .text()
-                  .replace(/\s\s+/g, "")
-              );
-            });
+          $(".ingredient-item").each((i, el) => {
+            Recipe.ingredients.push(
+              $(el)
+                .text()
+                .replace(/\s\s+/g, "")
+            );
+          });
 
-          $(".panel-body")
-            .last()
-            .contents()
+          $(".direction-lists")
+            .find("li")
             .each((i, el) => {
               if (el.type === "text") {
                 Recipe.instructions.push(
@@ -43,6 +39,14 @@ const thePioneerWoman = url => {
                 );
               }
             });
+
+          if (!Recipe.instructions.length) {
+            let directions = $(".direction-lists").text();
+            let list = directions
+              .split("\n")
+              .filter(direction => !!direction.length);
+            Recipe.instructions.push(...list);
+          }
 
           let times = $(".recipe-summary-time").find("dd");
           Recipe.time.prep = times.first().text();
