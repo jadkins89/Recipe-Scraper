@@ -22,6 +22,7 @@ const domains = {
   foodnetwork: require("./foodnetwork"),
   gimmesomeoven: require("./gimmesomeoven"),
   kitchenstories: require("./kitchenstories"),
+  minimalistbaker: require("./minimalistbaker"),
   myrecipes: require("./myrecipes"),
   nomnompaleo: require("./nomnompaleo"),
   omnivorescookbook: require("./omnivorescookbook"),

@@ -49,7 +49,7 @@ const thePioneerWoman = url => {
           Recipe.time.cook = $(times.get(2)).text();
 
           Recipe.servings = times.last().text();
-
+          console.log(Recipe);
           if (
             !Recipe.name ||
             !Recipe.ingredients.length ||
