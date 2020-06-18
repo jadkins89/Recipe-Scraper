@@ -1,25 +1,26 @@
 module.exports = {
-  testUrl: "https://thepioneerwoman.com/cooking/french-dip-sandwiches/",
-  invalidUrl: "https://thepioneerwoman.com/cooking/notarealurl",
+  testUrl:
+    "https://www.thepioneerwoman.com/food-cooking/recipes/a86873/french-dip-sandwiches/",
+  invalidUrl: "https://thepioneerwoman.com/food-cooking/notarealurl",
   invalidDomainUrl: "www.invalid.com",
-  nonRecipeUrl: "https://thepioneerwoman.com/cooking/patty-melt-video/",
+  nonRecipeUrl: "https://www.thepioneerwoman.com/food-cooking/",
   expectedRecipe: {
     name: "French Dip Sandwiches",
     ingredients: [
-      "1 Tablespoon Kosher Salt",
-      "2 Tablespoons Black Pepper",
-      "1/2 teaspoon Ground Oregano",
-      "1/2 teaspoon Ground Thyme",
+      "1 tbsp. Kosher Salt",
+      "2 tbsp. Black Pepper",
+      "1/2 tsp. Ground Oregano",
+      "1/2 tsp. Ground Thyme",
       "1 whole Boneless Ribeye Loin, About 4 To 5 Pounds (can Also Use Sirloin)",
       "2 whole Large Onions, Sliced Thin",
       "5 cloves Garlic, Minced",
       "1 whole Packet French Onion Soup Mix (dry)",
       "1 can Beef Consomme",
-      "1 cup Beef Broth Or Beef Stock",
-      "1/4 cup Dry Sherry Or White Wine (or You May Omit)",
-      "2 Tablespoons Worcestershire Sauce",
-      "1 Tablespoon Soy Sauce",
-      "1 cup Water",
+      "1 c. Beef Broth Or Beef Stock",
+      "1/4 c. Dry Sherry Or White Wine (or You May Omit)",
+      "2 tbsp. Worcestershire Sauce",
+      "1 tbsp. Soy Sauce",
+      "1 c. Water",
       "10 whole Crusty Deli Rolls/sub Rolls, Toasted"
     ],
     instructions: [
@@ -29,15 +30,15 @@ module.exports = {
       "Slice the beef very thin. Pile meat and onions on rolls, then serve with dishes of jus."
     ],
     time: {
-      prep: "15 Minutes",
-      cook: "1 Hours",
+      prep: "0 hours 15 mins",
+      cook: "1 hour 0 mins",
       active: "",
       inactive: "",
       ready: "",
-      total: ""
+      total: "1 hour 15 mins"
     },
-    servings: "10 Servings",
+    servings: "10 servings",
     image:
-      "https://tastykitchen.com/recipes/wp-content/uploads/sites/2/2016/05/DSC_0580-420x280.jpg"
+      "https://hips.hearstapps.com/amv-prod-tpw.s3.amazonaws.com/wp-content/uploads/2016/05/dsc_0580.jpg?crop=1xw:0.7513148009015778xh;center,top&resize=1200:*"
   }
 };

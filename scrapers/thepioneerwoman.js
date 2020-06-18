@@ -6,9 +6,11 @@ const RecipeSchema = require("../helpers/recipe-schema");
 const thePioneerWoman = url => {
   const Recipe = new RecipeSchema();
   return new Promise((resolve, reject) => {
-    if (!url.includes("thepioneerwoman.com/cooking/")) {
+    if (!url.includes("thepioneerwoman.com/food-cooking/")) {
       reject(
-        new Error("url provided must include 'thepioneerwoman.com/cooking/'")
+        new Error(
+          "url provided must include 'thepioneerwoman.com/food-cooking/'"
+        )
       );
     } else {
       request(url, (error, response, html) => {
@@ -24,7 +26,8 @@ const thePioneerWoman = url => {
             Recipe.ingredients.push(
               $(el)
                 .text()
-                .replace(/\s\s+/g, "")
+                .replace(/\s\s+/g, " ")
+                .trim()
             );
           });
 
@@ -39,21 +42,36 @@ const thePioneerWoman = url => {
                 );
               }
             });
-
           if (!Recipe.instructions.length) {
-            let directions = $(".direction-lists").text();
-            let list = directions
-              .split("\n")
-              .filter(direction => !!direction.length);
-            Recipe.instructions.push(...list);
+            let directions = $(".direction-lists")
+              .contents()
+              .each((i, el) => {
+                if (el.type === "text") {
+                  Recipe.instructions.push(
+                    $(el)
+                      .text()
+                      .trim()
+                  );
+                }
+              });
           }
 
-          let times = $(".recipe-summary-time").find("dd");
-          Recipe.time.prep = times.first().text();
-          Recipe.time.cook = $(times.get(2)).text();
-
-          Recipe.servings = times.last().text();
-          console.log(Recipe);
+          Recipe.time.prep = $(".prep-time-amount")
+            .text()
+            .replace(/\s\s+/g, " ")
+            .trim();
+          Recipe.time.cook = $(".cook-time-amount")
+            .text()
+            .replace(/\s\s+/g, " ")
+            .trim();
+          Recipe.time.total = $(".total-time-amount")
+            .text()
+            .replace(/\s\s+/g, " ")
+            .trim();
+          Recipe.servings = $(".yields-amount")
+            .text()
+            .replace(/\s\s+/g, " ")
+            .trim();
           if (
             !Recipe.name ||
             !Recipe.ingredients.length ||

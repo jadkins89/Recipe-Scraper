@@ -7,5 +7,5 @@ commonRecipeTest(
   "thePioneerWoman",
   thePioneerWoman,
   Constants,
-  "thepioneerwoman.com/cooking/"
+  "thepioneerwoman.com/food-cooking/"
 );

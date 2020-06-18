@@ -55,6 +55,7 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://www.foodnetwork.com/
 - http://www.gimmesomeoven.com/
 - https://www.kitchenstories.com/
+- https://www.minimalistbaker.com/
 - https://www.myrecipes.com/
 - https://www.nomnompaleo.com/
 - https://www.omnivorescookbook.com/
