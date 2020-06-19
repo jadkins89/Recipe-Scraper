@@ -53,8 +53,4 @@ const recipeScraper = url => {
   });
 };
 
-recipeScraper(
-  "https://thepioneerwoman.com/cooking/french-dip-sandwiches/"
-).then(recipe => console.log(recipe));
-
 module.exports = recipeScraper;
