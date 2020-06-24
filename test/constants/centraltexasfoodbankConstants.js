@@ -34,6 +34,6 @@ module.exports = {
     },
     servings: "8",
     image:
-      "https://www.centraltexasfoodbank.org/sites/default/files/styles/recipe_square_-_recipe_page/public/Crockpot%20Chicken%20Mole.jpg?itok=v9QsVoku"
+      "https://www.centraltexasfoodbank.org/sites/default/files/Crockpot%20Chicken%20Mole_0.jpg"
   }
 };
