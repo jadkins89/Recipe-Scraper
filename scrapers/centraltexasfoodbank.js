@@ -18,7 +18,13 @@ const centralTexasFoodBank = url => {
         if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
 
-          Recipe.image = baseUrl + $("img[typeof='foaf:Image']").prop("src");
+          Recipe.image =
+            baseUrl +
+            $(".middle-section")
+              .find("img[typeof='foaf:Image']")
+              .first()
+              .prop("src");
+
           Recipe.name = $("#block-basis-page-title")
             .find("span")
             .text()
