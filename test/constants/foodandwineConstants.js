@@ -26,6 +26,7 @@ module.exports = {
       "Carefully ladle the soup into 4 oven-safe 12-ounce bowls set on a large rimmed baking sheet. Top each bowl with 5 croutons and 4 slices of cheese. Broil on HIGH until the cheese melts and browns, 3 to 5 minutes.",
       "When using store-bought stock, please reduce to a third of the original volume. For example, for 6 cups of stock use 18 cups of store-bought beef stock, and reduce."
     ],
+    tags: [],
     time: {
       prep: "",
       cook: "",

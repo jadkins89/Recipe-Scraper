@@ -18,6 +18,14 @@ const smittenKitchen = url => {
           } else {
             oldSmitten($, Recipe);
           }
+
+          $("a[rel='category tag']").each((i, el) => {
+            Recipe.tags.push(
+              $(el)
+                .text()
+            );
+          });
+
           if (
             !Recipe.name ||
             !Recipe.ingredients.length ||

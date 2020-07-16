@@ -30,6 +30,13 @@ const cookieAndKate = url => {
               Recipe.instructions.push($(el).text());
             });
 
+          $("a[rel='category tag']").each((i, el) => {
+            Recipe.tags.push(
+              $(el)
+                .text()
+            );
+          });
+
           Recipe.time.prep = $(".tasty-recipes-prep-time").text();
           Recipe.time.cook = $(".tasty-recipes-cook-time").text();
           Recipe.time.total = $(".tasty-recipes-total-time").text();

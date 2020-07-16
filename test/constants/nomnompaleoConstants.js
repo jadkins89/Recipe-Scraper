@@ -28,6 +28,7 @@ module.exports = {
       "In a slow, steady stream, pour in the beaten eggs whites from high above the pot, stirring as the whites hit the liquid. The whites will cook upon contact with the hot soup, forming ribbon-like tendrils.",
       "Mix in the cilantro and scallions and stir well. Ladle the West Lake Beef Soup into bowls and serve immediately."
     ],
+    tags: ["gluten-free","nut-free","paleo","Whole30"],
     time: {
       prep: "10 mins",
       cook: "20 mins",

@@ -29,6 +29,7 @@ module.exports = {
       "Return the roasting pan to the stovetop burner over medium-high heat. Add the onions and garlic and stir them around for 5 minutes, until they are soft and golden. Sprinkle in the soup mix, then pour in the consomme, broth, sherry, Worcestershire, soy, and water. Bring it to a boil, then reduce the heat to low. Simmer for 45 minutes, stirring occasionally, to develop the flavors. Add more water if it starts to evaporate too much. Pour the liquid through a fine mesh strainer and reserve both the liquid and the onions.",
       "Slice the beef very thin. Pile meat and onions on rolls, then serve with dishes of jus."
     ],
+    tags: [],
     time: {
       prep: "0 hours 15 mins",
       cook: "1 hour 0 mins",

@@ -40,6 +40,13 @@ const gimmeSomeOven = url => {
             .text()
             .trim();
 
+          $("a[rel='category tag']").each((i, el) => {
+            Recipe.tags.push(
+              $(el)
+                .text()
+            );
+          });
+
           if (
             !Recipe.name ||
             !Recipe.ingredients.length ||

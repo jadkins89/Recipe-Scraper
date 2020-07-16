@@ -28,6 +28,7 @@ module.exports = {
       "Remove squid from skewers and pile on a platter. Sprinkle with parsley and serve with lemon wedges.",
       "Serve and enjoy!"
     ],
+    tags: ["Calamari","appetizer","american","cookout"],
     time: {
       prep: "20 mins",
       cook: "5 mins",

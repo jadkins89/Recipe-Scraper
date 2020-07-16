@@ -19,6 +19,7 @@ module.exports = {
       "Toss together the peppers, gnocchi, olive oil and a generous amount of salt and pepper on a large baking tray.",
       "Place the sausages on the tray. Roast for 25 minutes, or until the sausages and gnocchi are golden-brown and the peppers are soft and have started to brown around the edges. Serve."
     ],
+    tags: [],
     time: {
       prep: "less than 30 mins",
       cook: "10 to 30 mins",

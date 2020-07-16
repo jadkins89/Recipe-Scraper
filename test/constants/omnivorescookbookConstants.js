@@ -42,6 +42,7 @@ module.exports = {
       "For each noodle bowl, add 1/4 cup of noodle sauce. Add the chili oil according to your taste. Add some noodles, then top with a few spoonfuls of the cooked pork and green veggies. Garnish with peanut crumbles and chopped green onion. Sprinkle with a pinch of toasted ground Sichuan peppercorn, if you like the numbing taste.",
       "Serve hot or cold."
     ],
+    tags: ["Dim Sim","street food"],
     time: {
       prep: "30 minutes",
       cook: "30 minutes",

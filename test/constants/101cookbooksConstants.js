@@ -24,6 +24,7 @@ module.exports = {
       "Make the Dressing",
       "In a separate bowl combine the lime juice, olive oil, salt. Taste, and whisk in a teaspoon or two of honey if the lime is too strong for you. Add to the cabbage mixture and gently stir to combine. Just before serving fold in the peanuts (add them too earl and they lose some of their crunch). Taste and adjust the flavor with more salt if needed."
     ],
+    tags: [],
     time: {
       prep: "15 mins",
       cook: "",

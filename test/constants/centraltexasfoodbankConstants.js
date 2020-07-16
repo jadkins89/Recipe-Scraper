@@ -24,6 +24,7 @@ module.exports = {
       "Season chicken with salt and pepper and nestle into slow cooker. Cover and cook until chicken is tender, 4-5 hours on low.",
       "To make a creamy sauce, transfer chicken to serving dish. Process braising liquid in a blender until smooth, about 20 seconds, or enjoy the sauce unblended."
     ],
+    tags: [],
     time: {
       prep: "30 minutes",
       cook: "4-5 hours",

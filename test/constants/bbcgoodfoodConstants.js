@@ -20,6 +20,7 @@ module.exports = {
       "Divide two-thirds of the mixture between the muffin holes. Carefully add 1 tsp jam into the centre of each, then cover with the remaining mixture. Bake for 16-18 mins until risen, golden and springy to touch.",
       "Leave the muffins to cool for 5 mins before lifting out of the tin and rolling in the extra sugar."
     ],
+    tags: [],
     time: {
       prep: "20 mins",
       cook: "18 mins",

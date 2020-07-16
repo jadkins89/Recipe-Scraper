@@ -61,6 +61,13 @@ const foodNetwork = url => {
             }
           });
 
+          $(".o-Capsule__a-Tag").each((i, el) => {
+            Recipe.tags.push(
+              $(el)
+                .text()
+            );
+          });
+
           if (
             !Recipe.name ||
             !Recipe.ingredients.length ||

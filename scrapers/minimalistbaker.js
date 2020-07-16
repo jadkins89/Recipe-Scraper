@@ -38,6 +38,16 @@ const minimalistBaker = url => {
               });
           });
 
+          $(".wprm-recipe-cuisine").each((i, el) => {
+            Recipe.tags.push(
+              $(el)
+                .find("a")
+                .text()
+            );
+          });
+
+          Recipe.tags = $(".wprm-recipe-cuisine").text().split(',').map(x => x.trim());
+
           Recipe.time.prep = $(".wprm-recipe-time")
             .first()
             .text();

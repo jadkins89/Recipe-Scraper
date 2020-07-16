@@ -31,6 +31,14 @@ const theSpruceEats = url => {
               Recipe.instructions.push($(el).text());
             });
 
+          $(".recipe-search-suggestions__chip").each((i, el) => {
+            Recipe.tags.push(
+              $(el)
+                .find("a")
+                .text()
+            );
+          });
+
           let metaText = $(".meta-text__data");
           Recipe.time.total = metaText.first().text();
           Recipe.time.prep = $(metaText.get(1)).text();

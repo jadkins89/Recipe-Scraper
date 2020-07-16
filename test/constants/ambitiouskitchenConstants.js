@@ -38,11 +38,12 @@ module.exports = {
       "Preheat grill to high. Drizzle corn with olive or avocado oil. Sprinkle with chili powder, cumin, salt and pepper. Place the corn directly on grill and turn occasionally until corn is charred and cooked, about 10 minutes. Allow corn to cool then cut the corn from the cob and set aside.",
       "While the corn is cooking, you can boil your pasta until al dente, according to the directions on the pasta package.",
       "Once the pasta is done, drain, rinse with cool water then add to a large bowl.",
-      "Next make the cilantro pesto: Add cilantro, cashews, lime juice, garlic clove, jalapeno, olive oil, and salt and pepper. Process until smooth, add water if necessary to help thin the pesto and make it easier to process.",
+      "Next make the cilantro pesto: Add cilantro, cashews, lime juice, garlic clove, jalapeno, olive oil, salt and pepper to the bowl of a food processor. Process until smooth, add water if necessary to help thin the pesto and make it easier to process.",
       "Add the pesto directly to the bowl with the pasta and mix to combine.",
       "Next add in the corn, red bell pepper, avocado, goat cheese and red onion. Gently mix together.",
       "Place in fridge for serving for later, or serve immediately! Once ready to serve, garnish with extra cilantro, avocado, goat cheese and jalapeno slices, if you'd like. Serves 6."
     ],
+    tags: [],
     time: {
       prep: "15 minutes",
       cook: "30 minutes",

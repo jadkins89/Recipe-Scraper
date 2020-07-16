@@ -97,6 +97,14 @@ const yummy = url => {
         Recipe.image = $("meta[property='og:image']").attr("content");
         Recipe.name = $(".recipe-title").text();
 
+        $(".recipe-tag").each((i, el) => {
+          Recipe.tags.push(
+            $(el)
+              .find("a")
+              .text()
+          );
+        });
+
         $(".IngredientLine").each((i, el) => {
           Recipe.ingredients.push($(el).text());
         });

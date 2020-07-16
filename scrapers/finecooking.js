@@ -23,6 +23,14 @@ const fineCooking = url => {
               Recipe.ingredients.push($(el).text());
             });
 
+          $(".recipe__tags__tag").each((i, el) => {
+            Recipe.tags.push(
+              $(el)
+                .find("a")
+                .text()
+            );
+          });
+
           $(".wide-tags-container").remove();
           $(".recipe__preparation")
             .find("h3, li")

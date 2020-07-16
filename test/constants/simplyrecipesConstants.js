@@ -28,6 +28,7 @@ module.exports = {
       "Make the blistered peppers (DAD ADD, optional): In a small or medium skillet, add a drizzle of oil over medium-high heat. Add the peppers and let sit, untouched, for 3-4 minutes or until the peppers start to blister. Then turn them all over and let them blister on the other side for a few minutes. Remove the peppers from the skillet and sprinkle with coarse salt. Chop and serve on top of the panzanella salad!",
       "Salad leftovers will keep in the fridge for up to 2 days."
     ],
+    tags: ["Eat Your Food","Salad","Rotisserie Chicken","Tomato","Eat Your Food","Dinner","Salad","Father's Day","Favorite Summer","Quick and Easy","Italian","Dairy-Free","Bread","Chicken","Rotisserie Chicken","Tomato"],
     time: {
       prep: "15 minutes",
       cook: "15 minutes",

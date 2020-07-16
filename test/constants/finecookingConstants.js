@@ -26,6 +26,7 @@ module.exports = {
       "In the same pot, heat the oil over medium-high heat. Add the onion and jalapeño, and cook, stirring occasionally, until tender, about 5 minutes. Add the garlic, oregano, and cumin, and cook, stirring, until fragrant, about 30 seconds. Add the beans, and mash about half with a potato masher. Add enough of the reserved broth to cover. Stir in the chiles and 1 tsp. salt, and bring to a boil. Reduce the heat to a simmer.",
       "Chop the chicken, discarding any excess fat, and add to the bean mixture. Add broth to thin the chili, if you like, and then warm through over medium-low heat. Remove from the heat, stir in the lime juice and sour cream, and season to taste with salt. Serve topped with the avocado and cilantro."
     ],
+    tags: ["American","Beans","Chicken","Chili","Fall","Fish-Free"],
     time: {
       prep: "",
       cook: "",

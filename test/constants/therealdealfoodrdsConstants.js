@@ -33,6 +33,7 @@ module.exports = {
       "Add remaining ingredients (except salt and pepper) and stir to combine.",
       "Cook on LOW for 8 hours or on HIGH for 4 hours."
     ],
+    tags: ["Entree","Soup"],
     time: {
       prep: "15 mins",
       cook: "25 mins",

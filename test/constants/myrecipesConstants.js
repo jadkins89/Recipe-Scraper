@@ -36,6 +36,7 @@ module.exports = {
       "Toss together broccoli, and remaining 2 tablespoons oil, 1/4 teaspoon salt, and 1/4 teaspoon pepper. Arrange broccoli around steak, and broil until potatoes are fork tender, broccoli is charred and tender, and a thermometer inserted into the thickest part of steak registers 125°F, 5 to 8 minutes. Let steak rest 10 minutes before thinly slicing against the grain. ",
       "While steak rests, prepare the aioli: Stir together mayonnaise, roasted garlic, lemon juice, salt, pepper, and sugar in a small bowl. Serve sliced London broil and vegetables with aioli. "
     ],
+    tags: [],
     time: {
       prep: "",
       cook: "",

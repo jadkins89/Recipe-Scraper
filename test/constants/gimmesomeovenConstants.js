@@ -24,6 +24,7 @@ module.exports = {
       "Transfer the kabobs to a clean plate, and loosely tent with aluminum foil.  Let the chicken rest for at least 5-10 minutes.",
       "Then serve warm while the chicken is hot and juicy, drizzled with freshly-squeezed lemon juice if desired.  Or, refrigerate in a sealed container for up to 3 days, or freeze for up to 3 months."
     ],
+    tags: ["4th of July / Memorial Day / Labor Day","Entrees / Main Dishes","Gluten-free","Mediterranean"],
     time: {
       prep: "20 minutes",
       cook: "15 minutes",

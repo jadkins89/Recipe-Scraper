@@ -41,6 +41,8 @@ const theRealFoodRds = url => {
             );
           });
 
+        Recipe.tags = $(".tasty-recipes-category").text().split('|').map(x => x.trim());
+
         Recipe.time.prep = $(".tasty-recipes-prep-time").text();
         Recipe.time.cook = $(".tasty-recipes-cook-time").text();
         Recipe.time.total = $(".tasty-recipes-total-time").text();

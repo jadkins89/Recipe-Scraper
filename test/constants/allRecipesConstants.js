@@ -21,6 +21,7 @@ module.exports = {
       "Once the bucatini are al dente, lift them out with a spaghetti fork or tongs and put them directly into the bowl with the cheese. Do not allow the water to drain too much.",
       "Add one ladle of pasta water to the bowl. Stir the bucatini around until a cream has formed. Add more pasta water, little by little, until a thick cream has formed. Sprinkle freshly ground pepper over the pasta. Toss and serve immediately."
     ],
+    tags: [],
     time: {
       prep: "10 mins",
       cook: "15 mins",
@@ -51,6 +52,7 @@ module.exports = {
       "Combine garlic salt, onion salt, oregano, thyme, paprika, and pepper together in a small container with a lid. Close the lid and shake container until spices are thoroughly mixed. Sprinkle spice mixture liberally over chicken thighs.",
       "Bake chicken in the preheated oven until skin is crispy, thighs are no longer pink at the bone, and the juices run clear, about 1 hour. An instant-read thermometer inserted near the bone should read 165 degrees F (74 degrees C)."
     ],
+    tags: [],
     time: {
       prep: "10 mins",
       cook: "1 hr",

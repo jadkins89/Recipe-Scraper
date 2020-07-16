@@ -48,6 +48,8 @@ const omnivorescookbook = url => {
               });
           });
 
+          Recipe.tags = $(".wprm-recipe-keyword").text().split(',').map(x => x.trim());
+
           $(".wprm-recipe-time-container").each((i, el) => {
             let label = $(el)
               .children(".wprm-recipe-time-label")
