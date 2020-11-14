@@ -18,7 +18,24 @@ module.exports = {
       "Mix everything together and let marinate, covered, at room temperature for at least 30 minutes.",
       "If refrigerating, let come to room temperature before serving."
     ],
-    tags: ["Eat Your Food","Salad","Rotisserie Chicken","Tomato","Eat Your Food","Dinner","Salad","Father's Day","Favorite Summer","Quick and Easy","Italian","Dairy-Free","Bread","Chicken","Rotisserie Chicken","Tomato"],
+    tags: [
+      "Salad",
+      "Favorite Summer",
+      "Italian",
+      "Vegan",
+      "Bread",
+      "Lunch",
+      "Salad",
+      "Side Dish",
+      "Favorite Summer",
+      "Make-ahead",
+      "Italian",
+      "Vegan",
+      "Vegetarian",
+      "Bread",
+      "Cucumber",
+      "Tomato"
+    ],
     time: {
       prep: "15 minutes",
       cook: "",

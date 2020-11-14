@@ -70,7 +70,7 @@ recipeScraper("some.recipe.url").then(recipe => {
 
 Don't see a website you'd like to scrape? Open an [issue](https://github.com/jadkins89/Recipe-Scraper/issues) and we'll do our best to add it.
 
-## Recipe Schema
+## Recipe Object
 
 Depending on the recipe, certain fields may be left blank. All fields are represented as strings or arrays of strings.
 
