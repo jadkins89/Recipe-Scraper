@@ -27,6 +27,7 @@ module.exports = {
       "Pick over the reserved coriander leaves, then serve.",
       "Tip: Super quick and easy, this guacamole recipe is delicious with fajitas, quesadillas, dolloped into a wrap or served as a snack with crunchy veggies."
     ],
+    tags: [],
     time: {
       prep: "15",
       cook: "15",

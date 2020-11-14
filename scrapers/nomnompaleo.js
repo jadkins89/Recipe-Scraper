@@ -25,6 +25,8 @@ const nomNomPaleo = url => {
           );
         });
 
+        Recipe.tags = $(".wprm-recipe-keyword").text().split(',').map(x => x.trim());
+
         $(".wprm-recipe-instruction-group").each((i, el) => {
           let groupName = $(el)
             .children(".wprm-recipe-group-name")

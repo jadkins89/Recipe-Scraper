@@ -26,6 +26,7 @@ module.exports = {
       "After simmering for 45 minutes, carefully remove the chicken breast from the pot and use two forks to shred the meat. Return the shredded meat to the pot. Squeeze the juice of one lime into the soup (2-3 Tbsp juice). ",
       "Rinse the cilantro and then roughly chop the leaves. Add the chopped cilantro to the soup, give it a quick stir, then serve. Slice the avocado and add a few slices to each bowl."
     ],
+    tags: [],
     time: {
       prep: "10 mins",
       cook: "1 hr",

@@ -30,6 +30,13 @@ const epicurious = url => {
             );
           });
 
+          $("dt[itemprop=recipeCategory]").each((i, el) => {
+            Recipe.tags.push(
+              $(el)
+                .text()
+            );
+          });
+
           Recipe.time.active = $("dd.active-time").text();
           Recipe.time.total = $("dd.total-time").text();
 

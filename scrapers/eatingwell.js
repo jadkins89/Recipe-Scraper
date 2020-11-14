@@ -44,6 +44,14 @@ const eatingWell = url => {
             );
           });
 
+          $(".nutrition-profile-item").each((i, el) => {
+            Recipe.tags.push(
+              $(el)
+                .find("a")
+                .text()
+            );
+          });
+
           $(".recipe-meta-item").each((i, el) => {
             const title = $(el)
               .children(".recipe-meta-item-header")

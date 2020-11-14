@@ -25,6 +25,7 @@ module.exports = {
       "When the onions have caramelized to a golden brown, add butter, and season with salt. Deglaze the pan with sherry. Add beef stock and sachet of aromatics, and simmer for 20 to 30 minutes. Remove and discard the sachet, and stir in the Worcestershire sauce.",
       "Carefully ladle the soup into 4 oven-safe 12-ounce bowls set on a large rimmed baking sheet. Top each bowl with 5 croutons and 4 slices of cheese. Broil on HIGH until the cheese melts and browns, 3 to 5 minutes."
     ],
+    tags: [],
     time: {
       prep: "",
       cook: "",

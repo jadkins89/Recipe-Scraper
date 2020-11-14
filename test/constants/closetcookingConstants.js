@@ -35,6 +35,7 @@ module.exports = {
       "For the reina pepiada:",
       "Slice the arepas, stuff with the avocado chicken salad and enjoy!"
     ],
+    tags: ["Avocado", "Breakfast", "Chicken", "Food", "Gluten-free", "Recipe", "Sandwich", "Venezuelan"],
     time: {
       prep: "20 minutes",
       cook: "25 minutes",

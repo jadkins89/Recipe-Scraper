@@ -28,6 +28,13 @@ const closetCooking = url => {
             Recipe.instructions.push($(el).text());
           });
 
+        $("a[rel='category tag']").each((i, el) => {
+          Recipe.tags.push(
+            $(el)
+              .text()
+          );
+        });
+
         let metaData = $(".time");
         let prepText = metaData.first().text();
         Recipe.time.prep = prepText.slice(prepText.indexOf(":") + 1).trim();

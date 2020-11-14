@@ -30,6 +30,7 @@ module.exports = {
       "Let it cool overnight in the refrigerator.",
       "To unmold, pass a hot knife blade along the sides of the circle."
     ],
+    tags: ["Desserts","Boiling","Blending"],
     time: {
       prep: "",
       cook: "",

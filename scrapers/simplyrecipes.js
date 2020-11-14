@@ -35,6 +35,14 @@ const simplyRecipes = url => {
               }
             });
 
+          $(".taxonomy-term").each((i, el) => {
+            Recipe.tags.push(
+              $(el)
+                .find("span")
+                .text()
+            );
+          });
+
           Recipe.time.prep = $(".preptime").text();
           Recipe.time.cook = $(".cooktime").text();
 

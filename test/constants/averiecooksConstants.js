@@ -31,6 +31,7 @@ module.exports = {
       "Add the spinach, lime juice, and stir to combine. Cook until spinach has wilted and is tender, about 1 to 2 minutes. Taste and optionally add brown sugar, additional curry paste, salt, pepper, etc. to taste.",
       "Evenly sprinkle with the cilantro and serve immediately. Curry is best warm and fresh but will keep airtight in the fridge for up to 1 week."
     ],
+    tags: [],
     time: {
       prep: "5 minutes",
       cook: "about 15 to 20 minutes",

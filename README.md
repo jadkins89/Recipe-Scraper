@@ -79,6 +79,7 @@ Depending on the recipe, certain fields may be left blank. All fields are repres
     name: "",
     ingredients: [],
     instructions: [],
+    tags: [],
     servings: "",
     image: "",
     time: {

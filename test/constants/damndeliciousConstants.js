@@ -24,6 +24,7 @@ module.exports = {
       "Place into oven and bake, covered, for 30 minutes. Uncover; continue to bake for an additional 30-35 minutes, or until golden brown and center is firm.",
       "Serve immediately, sprinkled with remaining raspberries and confectioners’ sugar, if desired."
     ],
+    tags: [],
     time: {
       prep: "2 hours 15 minutes",
       cook: "1 hour",

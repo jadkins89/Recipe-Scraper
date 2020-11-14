@@ -37,6 +37,7 @@ module.exports = {
       "To make the peanut sauce: In a small bowl, whisk together the peanut butter, rice vinegar, tamari, honey, sesame oil, and garlic. Whisk in 2 to 3 tablespoons water, as needed to make a super creamy but dip-able sauce.",
       "Serve the spring rolls with peanut sauce on the side. You can serve them whole, or sliced in half on the diagonal with a sharp chef’s knife."
     ],
+    tags: ["appetizers", "Asian", "dairy free", "egg free", "fall", "gluten free", "recipes", "spring", "summer", "tomato free", "vegan"],
     time: {
       prep: "40 minutes",
       cook: "5 minutes",
