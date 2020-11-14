@@ -36,6 +36,7 @@ module.exports = {
       "Assembly",
       "Portion the Cauliflower rice into 4 serving bowls. Add a spoonful of the beans to each bowl and a spoonful of the roasted sweet potatoes. Top with plenty of guacamole and serve."
     ],
+    tags: ["American","Tex Mex"],
     time: {
       prep: "5 mins",
       cook: "45 mins",

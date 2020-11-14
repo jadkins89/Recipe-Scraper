@@ -27,6 +27,19 @@ module.exports = {
       "Spoon eggs over toast and top with trout. Finely grate lemon zest from one of the lemon halves over trout, then squeeze juice over toast. Season with pepper; scatter scallions and dill on top.",
       "Squeeze juice from remaining lemon half into a medium bowl. Add arugula and drizzle with oil; season with salt and pepper. Toss to coat. Mound alongside toasts."
     ],
+    tags: [
+      "Bon Appétit",
+      "Breakfast",
+      "Brunch",
+      "Dinner",
+      "Egg",
+      "Fish",
+      "Trout",
+      "Peanut Free",
+      "Tree Nut Free",
+      "Bread",
+      "Sourdough"
+    ],
     time: {
       prep: "",
       cook: "",

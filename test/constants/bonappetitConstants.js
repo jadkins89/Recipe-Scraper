@@ -25,6 +25,7 @@ module.exports = {
       "Combine tahini, soy sauce, honey, 2 tsp. sesame oil, ½ tsp. red pepper flakes, and remaining ½ cup olive oil in a small bowl. Finely grate zest from lime directly into bowl; halve lime and squeeze in juice (about 2 Tbsp.). Whisk dressing until smooth, then pour about half of it over noodles; toss to coat.",
       "Add half of kale mixture to noodles and toss to incorporate. Drizzle in more dressing as needed, tossing until noodles are creamy; season with salt. Pile remaining kale on top. Drizzle with additional sesame oil and sprinkle with more red pepper flakes."
     ],
+    tags: [],
     time: {
       prep: "",
       cook: "",

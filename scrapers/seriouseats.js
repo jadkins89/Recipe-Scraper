@@ -68,6 +68,22 @@ const regularRecipe = ($, Recipe) => {
       }
     });
 
+  $("li[class='label label-category top-level']").each((i, el) => {
+    Recipe.tags.push(
+      $(el)
+        .find("a")
+        .text()
+    );
+  });
+
+  Recipe.tags = Recipe.tags.filter(item => item);
+
+  function onlyUnique(value, index, self) {
+    return self.indexOf(value) === index;
+  }
+
+  Recipe.tags = Recipe.tags.filter(onlyUnique);
+
   $(".recipe-procedure-text").each((i, el) => {
     Recipe.instructions.push(
       $(el)

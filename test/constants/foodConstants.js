@@ -33,6 +33,7 @@ module.exports = {
       "Bake 11-13 minutes (on center rack), until golden, but still moist beneath cracks on top.",
       "Remove from oven; let cookies sit on baking sheet for 2 minutes before transferring to a wire rack to cool."
     ],
+    tags: [],
     time: {
       prep: "",
       cook: "",

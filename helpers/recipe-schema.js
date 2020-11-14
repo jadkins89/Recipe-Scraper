@@ -2,6 +2,7 @@ function Recipe() {
   this.name = "";
   this.ingredients = [];
   this.instructions = [];
+  this.tags = [];
   this.time = {
     prep: "",
     cook: "",

@@ -38,6 +38,8 @@ const whatsGabyCooking = url => {
             Recipe.instructions.push(instruction);
           });
 
+          Recipe.tags = $(".wprm-recipe-cuisine").text().split(',').map(x => x.trim());
+
           const times = $(".wprm-recipe-time");
           Recipe.time.prep = $(times.first()).text();
           Recipe.time.cook = $(times.get(1)).text();

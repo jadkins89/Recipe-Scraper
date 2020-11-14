@@ -30,6 +30,7 @@ module.exports = {
       "Bake on the center rack (at 350 F / 176 C) for 28-32 minutes. The brownie edges should appear slightly dry and a toothpick inserted into the center should come out mostly clean (a few crumbs are okay, but it shouldn’t be overly gooey). Remove from oven and let cool in the pan for 30 minutes – 1 hour.",
       "Lift out of pan and slice. Enjoy warm or room temperature. Store leftovers covered at room temperature up to 3 days, in the refrigerator up to 5-7 days, or in the freezer up to 1 month. These brownies are delicious on their own but elevated with a scoop of dairy-free ice cream."
     ],
+    tags: ["Baking","Gluten-Free","Vegan"],
     time: {
       prep: "50 minutes",
       cook: "30 minutes",

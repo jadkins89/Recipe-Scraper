@@ -29,6 +29,7 @@ module.exports = {
       "Squeeze the inner part of chorizo from the skin and add to the same frying pan, let cook. When chorizo is done, add eggs and cook until a soft scramble forms. Season with salt and pepper to taste.",
       "Heat tortillas in a small pan. Serve chorizo and egg scramble in warm tortillas with shaved radishes, cilantro, the remaining avocado slices, sour cream and prepared salsa verde. Season with lime juice. Enjoy!"
     ],
+    tags: [],
     time: {
       prep: "35 min.",
       cook: "",

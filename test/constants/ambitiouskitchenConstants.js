@@ -43,6 +43,7 @@ module.exports = {
       "Next add in the corn, red bell pepper, avocado, goat cheese and red onion. Gently mix together.",
       "Place in fridge for serving for later, or serve immediately! Once ready to serve, garnish with extra cilantro, avocado, goat cheese and jalapeno slices, if you'd like. Serves 6."
     ],
+    tags: [],
     time: {
       prep: "15 minutes",
       cook: "30 minutes",

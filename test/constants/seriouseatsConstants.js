@@ -23,6 +23,7 @@ module.exports = {
       "In a large mixing bowl, combine cucumber with garlic, water, soy sauce, and vinegar, stirring to distribute ingredients. Season with salt. Transfer to refrigerator if not serving right away.",
       "When ready to serve, add ice cubes and season once more with salt, if needed. Sprinkle sesame seeds on top. Ladle into individual bowls, along with the ice cubes, and serve."
     ],
+    tags: ["Cucumber","Korean","Quick and Easy","Cold Soup","Appetizers and Hors d'Oeuvres","Gluten-Free"],
     time: {
       prep: "",
       cook: "",
