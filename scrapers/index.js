@@ -16,7 +16,6 @@ const domains = {
   damndelicious: require("./damndelicious"),
   eatingwell: require("./eatingwell"),
   epicurious: require("./epicurious"),
-  finecooking: require("./finecooking"),
   food: require("./food"),
   foodandwine: require("./foodandwine"),
   foodnetwork: require("./foodnetwork"),

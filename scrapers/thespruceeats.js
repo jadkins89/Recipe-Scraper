@@ -24,11 +24,15 @@ const theSpruceEats = url => {
             );
           });
 
-          $(".section-content")
-            .find("ol")
-            .find("p")
+          $(".section--instructions")
+            .find("li")
+            .find("p.comp")
             .each((i, el) => {
-              Recipe.instructions.push($(el).text());
+              Recipe.instructions.push(
+                $(el)
+                  .text()
+                  .trim()
+              );
             });
 
           let metaText = $(".meta-text__data");

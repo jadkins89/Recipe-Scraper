@@ -36,8 +36,8 @@ module.exports = {
       ready: "",
       total: "25 mins"
     },
-    servings: "1 pound (4 servings)",
+    servings: "4 servings",
     image:
-      "https://www.thespruceeats.com/thmb/hbRXYt8onovguH2qKiAAKu3zcUk=/2309x1299/filters:fill(auto,1)/GettyImages-635101877-5955ee1c5f9b5815d9ce05f2.jpg"
+      "https://www.thespruceeats.com/thmb/WywOxIgTo-isqza_IBLSZFc4qrQ=/8256x5504/filters:fill(auto,1)/grilled-squid-recipe-1808848-hero-01jpg-baae463a9b60471f9c5d9f4d91b350af.jpg"
   }
 };

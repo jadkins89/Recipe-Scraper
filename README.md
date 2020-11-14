@@ -49,7 +49,6 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://damndelicious.net/
 - http://www.eatingwell.com/
 - https://www.epicurious.com/
-- https://www.finecooking.com/
 - https://www.food.com/
 - https://www.foodandwine.com/
 - https://www.foodnetwork.com/

@@ -21,21 +21,20 @@ module.exports = {
     ],
     instructions: [
       "Tie the garlic clove, bay leaf, and thyme in a sachet of cheesecloth with twine. Set aside.",
-      "Coat the bottom of a cold heavy-bottomed large saucepan with the grapeseed oil. Add the sliced onions to the cold saucepan, being sure to separate all the pieces. Cook over high for about 10 minutes, stirring occasionally so the onion does not burn. Reduce heat to medium, and caramelize gradually, about 1 hour.",
-      "When the onions have caramelized to a golden brown, add butter, and season with salt. Deglaze the pan with sherry. Add beef stock and sachet of aromatics, and simmer for 20 to 30 minutes. Remove and discard the sachet, and stir in the Worcestershire sauce.",
-      "Carefully ladle the soup into 4 oven-safe 12-ounce bowls set on a large rimmed baking sheet. Top each bowl with 5 croutons and 4 slices of cheese. Broil on HIGH until the cheese melts and browns, 3 to 5 minutes.",
-      "When using store-bought stock, please reduce to a third of the original volume. For example, for 6 cups of stock use 18 cups of store-bought beef stock, and reduce."
+      "Coat the bottom of a cold heavy-bottomed large saucepan with the grapeseed oil. Add the sliced onions to the cold saucepan, being sure to separate all the pieces. Cook over high for about 10 minutes, stirring occasionally so the onion does not burn. Reduce heat to medium, and caramelize gradually, about 1 hour.",
+      "When the onions have caramelized to a golden brown, add butter, and season with salt. Deglaze the pan with sherry. Add beef stock and sachet of aromatics, and simmer for 20 to 30 minutes. Remove and discard the sachet, and stir in the Worcestershire sauce.",
+      "Carefully ladle the soup into 4 oven-safe 12-ounce bowls set on a large rimmed baking sheet. Top each bowl with 5 croutons and 4 slices of cheese. Broil on HIGH until the cheese melts and browns, 3 to 5 minutes."
     ],
     time: {
       prep: "",
       cook: "",
-      active: "1 HR 30 MIN",
+      active: "1 hr 30 mins",
       inactive: "",
       ready: "",
-      total: "2 HR 10 MIN"
+      total: "2 hrs 10 mins"
     },
     servings: "4",
     image:
-      "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&url=undefined"
+      "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=480&h=251&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2019%2F03%2F1660653193_6016070154001_6016065802001-vs.jpg"
   }
 };

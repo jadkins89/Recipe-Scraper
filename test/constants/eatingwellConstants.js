@@ -20,10 +20,10 @@ module.exports = {
       "4 cups low-sodium chicken broth",
       "1 (15 ounce) can low-sodium black beans, rinsed",
       "1 (14 ounce) can no-salt-added fire-roasted diced tomatoes",
-      "Juice of 1 lime",
+      "1 Juice of 1 lime",
       "½ cup chopped fresh cilantro, plus more for garnish",
       "¾ cup shredded Mexican-style cheese blend",
-      "Tortilla chips for garnish"
+      "1 cup Tortilla chips for garnish"
     ],
     instructions: [
       "Heat oil on high heat using the sauté function of your multicooker. (No sauté mode? See Tip.) Add onion, poblano, chicken, garlic, chili powder and salt. Cook, stirring occasionally, until the vegetables have softened and the chicken is no longer pink on the outside, about 5 minutes. Turn off the heat. Stir in broth, beans and tomatoes. Close and lock the lid. Cook at high pressure for 10 minutes.",
@@ -39,7 +39,7 @@ module.exports = {
     },
     servings: "6",
     image:
-      "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=960&h=503&url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F5397860.jpg"
+      "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=960&h=503&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26232433%2F5397860.jpg"
   },
   expectedRecipe2: {
     name: "Mexican Pasta Salad with Creamy Avocado Dressing",
@@ -74,6 +74,6 @@ module.exports = {
     },
     servings: "6",
     image:
-      "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=960&h=503&url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F3759382.jpg"
+      "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=640&h=335&url=https%3A%2F%2Fcf-images.us-east-1.prod.boltdns.net%2Fv1%2Fstatic%2F5118192885001%2Fc9b189d6-367e-4c94-8b05-f805363ae20f%2Fc185934c-9360-4f85-b766-0edbbfd1a583%2F640x360%2Fmatch%2Fimage.jpg"
   }
 };

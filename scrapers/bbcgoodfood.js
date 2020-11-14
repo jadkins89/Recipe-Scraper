@@ -13,30 +13,44 @@ const bbcGoodFood = url => {
         if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
 
-          Recipe.image = $("meta[property='og:image']").attr("content");
-          Recipe.name = $(".recipe-header__title").text();
+          Recipe.image = $("meta[name='og:image']").attr("content");
+          Recipe.name = $("meta[name='og:title']").attr("content");
 
-          $(".ingredients-list__item").each((i, el) => {
-            $(el)
-              .find("p, h2, span")
-              .remove();
-            Recipe.ingredients.push($(el).text());
-          });
+          $(".recipe-template__ingredients")
+            .find(".list-item")
+            .each((i, el) => {
+              Recipe.ingredients.push(
+                $(el)
+                  .text()
+                  .replace(" ,", ",")
+              );
+            });
 
-          $(".method__item[itemprop=recipeInstructions]").each((i, el) => {
-            Recipe.instructions.push($(el).text());
-          });
+          $(".recipe-template__method-steps")
+            .find(".list-item")
+            .children("div")
+            .each((i, el) => {
+              Recipe.instructions.push($(el).text());
+            });
 
-          Recipe.time.prep = $(".recipe-details__cooking-time-prep")
-            .children("span")
-            .text();
-          Recipe.time.cook = $(".recipe-details__cooking-time-cook")
-            .children("span")
-            .text();
+          $(".cook-and-prep-time")
+            .find(".list-item")
+            .each((i, el) => {
+              const text = $(el).text();
+              if (text.includes("Prep")) {
+                Recipe.time.prep = $(el)
+                  .find("time")
+                  .text();
+              } else if (text.includes("Cook")) {
+                Recipe.time.cook = $(el)
+                  .find("time")
+                  .text();
+              }
+            });
 
-          Recipe.servings = $(".recipe-details__text[itemprop=recipeYield]")
+          Recipe.servings = $(".masthead__servings")
             .text()
-            .trim();
+            .replace("Makes ", "");
 
           if (
             !Recipe.name ||

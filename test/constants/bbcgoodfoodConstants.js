@@ -1,5 +1,5 @@
 module.exports = {
-  testUrl: "https://www.bbcgoodfood.com/recipes/1853652/doughnut-muffins",
+  testUrl: "https://www.bbcgoodfood.com/recipes/doughnut-muffins",
   invalidUrl: "https://www.bbcgoodfood.com/recipes/notarealurl",
   invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://www.bbcgoodfood.com/recipes/",
@@ -28,8 +28,8 @@ module.exports = {
       ready: "",
       total: ""
     },
-    servings: "Makes 12",
+    servings: "12",
     image:
-      "https://www.bbcgoodfood.com/sites/default/files/recipe_images/recipe-image-legacy-id--856543_10.jpg"
+      "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-856543_10-0d65b66.jpg"
   }
 };

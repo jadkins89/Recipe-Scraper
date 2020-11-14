@@ -16,7 +16,7 @@ module.exports = {
       "1/4 cup pitted Kalamata olives, roughly chopped",
       "4 teaspoons drained capers",
       "3 cloves garlic, peeled and smashed",
-      "3 sprigs of thyme ",
+      "3 sprigs of thyme",
       "1 cup halved cherry tomatoes (about 1 pint)",
       "1/2 cup white wine",
       "1/2 cup low-sodium chicken broth",

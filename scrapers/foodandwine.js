@@ -16,8 +16,8 @@ const foodAndWine = url => {
           Recipe.image = $("meta[property='og:image']").attr("content");
           Recipe.name = $("h1.headline").text();
 
-          $(".ingredients")
-            .find("li")
+          $(".ingredients-section")
+            .find(".ingredients-item-name")
             .each((i, el) => {
               Recipe.ingredients.push(
                 $(el)
@@ -42,11 +42,10 @@ const foodAndWine = url => {
             .text()
             .trim();
 
-          let servings = metaBody
+          Recipe.servings = metaBody
             .last()
             .text()
             .trim();
-          Recipe.servings = servings.slice(servings.indexOf(":") + 2);
 
           if (
             !Recipe.name ||

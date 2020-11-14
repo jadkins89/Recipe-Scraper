@@ -14,24 +14,31 @@ const bonAppetit = url => {
           const $ = cheerio.load(html);
 
           Recipe.image = $("meta[property='og:image']").attr("content");
-          Recipe.name = $("a.top-anchor").text();
+          Recipe.name = $("meta[property='og:title']").attr("content");
 
-          $(".ingredients")
-            .find("h3, li")
-            .each((i, el) => {
-              let elText = $(el).text();
-              if (elText.length) {
-                Recipe.ingredients.push(elText);
-              }
-            });
+          const container = $('div[data-testid="IngredientList"]');
+          const ingredientsContainer = container.children("div");
+          const units = ingredientsContainer.children("p");
+          const ingredients = ingredientsContainer.children("div");
 
-          $(".steps-wrapper")
-            .find("h4, p")
-            .each((i, el) => {
-              Recipe.instructions.push($(el).text());
-            });
+          units.each((i, el) => {
+            Recipe.ingredients.push(
+              `${$(el).text()} ${$(ingredients[i]).text()}`
+            );
+          });
 
-          Recipe.servings = $(".recipe__header__servings").text();
+          const instructionContainer = $(
+            'div[data-testid="InstructionsWrapper"]'
+          );
+
+          instructionContainer.find("p").each((i, el) => {
+            Recipe.instructions.push($(el).text());
+          });
+
+          Recipe.servings = container
+            .children("p")
+            .text()
+            .split(" ")[0];
 
           if (
             !Recipe.name ||

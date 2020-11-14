@@ -20,10 +20,12 @@ const foodNetwork = url => {
 
           $(".o-Ingredients__a-Ingredient, .o-Ingredients__a-SubHeadline").each(
             (i, el) => {
-              const item = $(el)
-                .text()
-                .replace(/\s\s+/g, "");
-              Recipe.ingredients.push(item);
+              if (!$(el).hasClass("o-Ingredients__a-Ingredient--SelectAll")) {
+                const item = $(el)
+                  .text()
+                  .replace(/\s\s+/g, "");
+                Recipe.ingredients.push(item);
+              }
             }
           );
 

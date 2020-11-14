@@ -18,20 +18,16 @@ const myRecipes = url => {
             .text()
             .trim();
 
-          $(".ingredients")
-            .find("h2, li")
-            .each((i, el) => {
-              Recipe.ingredients.push($(el).text());
-            });
-
-          $(".step")
-            .find("p")
-            .each((i, el) => {
-              const step = $(el)
-                .text()
-                .replace(/\s\s+/g, "");
-              Recipe.instructions.push(step);
-            });
+          $(".ingredients-item").each((i, el) => {
+            const ingredient = $(el)
+              .text()
+              .replace(/\s\s+/g, " ")
+              .trim();
+            Recipe.ingredients.push(ingredient);
+          });
+          $($(".instructions-section-item").find("p")).each((i, el) => {
+            Recipe.instructions.push($(el).text());
+          });
 
           let metaBody = $(".recipe-meta-item-body");
 

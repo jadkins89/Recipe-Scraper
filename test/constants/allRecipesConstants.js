@@ -36,8 +36,8 @@ module.exports = {
   expectedRecipeNew: {
     name: "Crispy and Tender Baked Chicken Thighs",
     ingredients: [
-      "1 serving cooking spray",
-      "8 eaches bone-in chicken thighs with skin",
+      "cooking spray",
+      "8 bone-in chicken thighs with skin",
       "¼ teaspoon garlic salt",
       "¼ teaspoon onion salt",
       "¼ teaspoon dried oregano",

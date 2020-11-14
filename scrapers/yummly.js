@@ -116,7 +116,10 @@ const yummy = url => {
             .last()
             .text();
 
-        Recipe.servings = $("input.font-bold").val();
+        Recipe.servings = $(".unit-serving-wrapper")
+          .find(".greyscale-1")
+          .text()
+          .split(" ")[0];
 
         if (!Recipe.name || !Recipe.ingredients.length) {
           reject(new Error("No recipe found on page"));
