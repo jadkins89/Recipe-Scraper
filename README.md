@@ -59,10 +59,12 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://www.nomnompaleo.com/
 - https://www.omnivorescookbook.com/
 - https://pinchofyum.com/
+- https://recipetineats.com/
 - https://www.seriouseats.com/
 - https://www.simplyrecipes.com/
 - https://smittenkitchen.com/
 - https://thepioneerwoman.com/
+- https://tastesbetterfromscratch.com/
 - https://therealfoodrds.com/
 - https://www.thespruceeats.com/
 - https://whatsgabycooking.com/
