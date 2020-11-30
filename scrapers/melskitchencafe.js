@@ -15,6 +15,7 @@ const epicurious = url => {
 
           Recipe.image = $(".mv-create-image").attr("data-pin-media");
           Recipe.name = $(".mv-create-title-primary")
+            .eq(0)
             .text()
             .trim();
 
