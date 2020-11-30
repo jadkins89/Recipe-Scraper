@@ -14,7 +14,7 @@ const epicurious = url => {
           const $ = cheerio.load(html);
 
           Recipe.image = $(".mv-create-image").attr("data-pin-media");
-          Recipe.name = $("header.mv-create-header")
+          Recipe.name = $(".mv-create-title-primary")
             .text()
             .trim();
 
