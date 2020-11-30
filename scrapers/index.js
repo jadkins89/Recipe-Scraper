@@ -20,6 +20,7 @@ const domains = {
   foodandwine: require("./foodandwine"),
   foodnetwork: require("./foodnetwork"),
   gimmesomeoven: require("./gimmesomeoven"),
+  julieblanner: require("./julieblanner"),
   kitchenstories: require("./kitchenstories"),
   melskitchencafe: require("./melskitchencafe"),
   minimalistbaker: require("./minimalistbaker"),
