@@ -3,22 +3,22 @@ const cheerio = require("cheerio");
 
 const RecipeSchema = require("../helpers/recipe-schema");
 
-const julieblanner = url => {
+const gimmedelicious = url => {
   const Recipe = new RecipeSchema();
   return new Promise((resolve, reject) => {
-    if (!url.includes("julieblanner.com")) {
-      reject(new Error("url provided must include 'julieblanner.com'"));
+    if (!url.includes("gimmedelicious.com")) {
+      reject(new Error("url provided must include 'gimmedelicious.com'"));
     } else {
       request(url, (error, response, html) => {
         if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
 
-          Recipe.image = $(".wprm-recipe-image img").attr("data-pin-media");
+          Recipe.image = $(".wprm-recipe-image img").attr("src");
           Recipe.name = $(".wprm-recipe-name").eq(0)
             .text()
             .trim();
 
-            $('.wprm-recipe-ingredients > .wprm-recipe-ingredient')
+          $('.wprm-recipe-ingredients > .wprm-recipe-ingredient')
             .each((i, el) => {
             Recipe.ingredients.push($(el).text().replace(/▢/g, ''));
           });
@@ -37,6 +37,8 @@ const julieblanner = url => {
           Recipe.time.total = $(".wprm-recipe-total_time-minutes").text() + ' ' + $(".wprm-recipe-total_timeunit-minutes").text();
           Recipe.servings = $(".wprm-recipe-servings").text();
 
+          console.log('Recipe', JSON.stringify(Recipe));
+
           if (
             !Recipe.name ||
             !Recipe.ingredients.length ||
@@ -54,4 +56,4 @@ const julieblanner = url => {
   });
 };
 
-module.exports = julieblanner;
+module.exports = gimmedelicious;

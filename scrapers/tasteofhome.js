@@ -3,7 +3,7 @@ const cheerio = require("cheerio");
 
 const RecipeSchema = require("../helpers/recipe-schema");
 
-const epicurious = url => {
+const tasteofhome = url => {
   const Recipe = new RecipeSchema();
   return new Promise((resolve, reject) => {
     if (!url.includes("tasteofhome.com/recipes")) {
@@ -49,4 +49,4 @@ const epicurious = url => {
   });
 };
 
-module.exports = epicurious;
+module.exports = tasteofhome;
