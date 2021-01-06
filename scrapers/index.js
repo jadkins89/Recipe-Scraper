@@ -62,7 +62,7 @@ const recipeScraper = url => {
 };
 
 recipeScraper(
-  "https://julieblanner.com/reindeer-bacon-cheddar-cheeseball/"
+  "https://www.tasteofhome.com/recipes/beef-noodle-casserole/"
 ).then(recipe => console.log(recipe));
 
 module.exports = recipeScraper;

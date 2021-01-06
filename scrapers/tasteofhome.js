@@ -13,9 +13,14 @@ const tasteofhome = url => {
         if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
 
+          Recipe.image = $("meta[property='og:image']").attr("content");
           Recipe.name = $("h1.recipe-title")
             .text()
             .trim();
+
+          $("meta[property='article:tag']").each((i, el) => {
+            Recipe.tags.push($(el).attr("content"));
+          });
 
           $(".recipe-ingredients__list li").each((i, el) => {
             Recipe.ingredients.push($(el).text());
@@ -25,12 +30,18 @@ const tasteofhome = url => {
             Recipe.instructions.push(
               $(el)
                 .text()
-                .replace(/\s\s+/g, "")
+                .trim()
             );
           });
 
-          Recipe.time.total = $(".recipe-time-yield__label-prep").text();
-          Recipe.servings = $(".recipe-time-yield__label-servings").text();
+          let timeStr = $(".recipe-time-yield__label-prep")
+            .text()
+            .split(/Bake:/g);
+          Recipe.time.prep = timeStr[0].replace("Prep:", "").trim();
+          Recipe.time.cook = timeStr[1].trim();
+          Recipe.servings = $(".recipe-time-yield__label-servings")
+            .text()
+            .trim();
 
           if (
             !Recipe.name ||
