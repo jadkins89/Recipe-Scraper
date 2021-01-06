@@ -61,8 +61,8 @@ const recipeScraper = url => {
   });
 };
 
-recipeScraper("https://julieblanner.com/cheese-ball-bites/").then(recipe =>
-  console.log(recipe)
-);
+recipeScraper(
+  "https://julieblanner.com/reindeer-bacon-cheddar-cheeseball/"
+).then(recipe => console.log(recipe));
 
 module.exports = recipeScraper;

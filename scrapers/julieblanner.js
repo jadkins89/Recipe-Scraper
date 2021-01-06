@@ -12,11 +12,9 @@ const julieblanner = url => {
       request(url, (error, response, html) => {
         if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
-          const textTrim = el => el.text().trim();
 
-          Recipe.image = $(".wprm-recipe-image img").attr("data-pin-media");
+          Recipe.image = $("meta[property='og:image']").attr("content");
           Recipe.name = $(".wprm-recipe-name")
-            .eq(0)
             .text()
             .trim();
 
@@ -25,7 +23,8 @@ const julieblanner = url => {
               Recipe.ingredients.push(
                 $(el)
                   .text()
-                  .replace(/▢/g, "")
+                  .replace(/(\s\s+|▢)/g, " ")
+                  .trim()
               );
             }
           );
@@ -35,22 +34,22 @@ const julieblanner = url => {
               $(el)
                 .remove("img")
                 .text()
-                .replace(/\s\s+/g, "")
+                .trim()
             );
           });
 
-          Recipe.time.prep =
-            $(".wprm-recipe-prep_time-minutes").text() +
-            " " +
-            $(".wprm-recipe-prep_timeunit-minutes").text();
-          Recipe.time.cook =
-            $(".wprm-recipe-cook_time-minutes").text() +
-            " " +
-            $(".wprm-recipe-cook_timeunit-minutes").text();
-          Recipe.time.total =
-            $(".wprm-recipe-total_time-minutes").text() +
-            " " +
-            $(".wprm-recipe-total_timeunit-minutes").text();
+          Recipe.time.prep = $(".wprm-recipe-prep-time-label")
+            .next()
+            .text();
+          Recipe.time.cook = $(".wprm-recipe-cook-time-label")
+            .next()
+            .text();
+          Recipe.time.inactive = $(".wprm-recipe-custom-time-label")
+            .next()
+            .text();
+          Recipe.time.total = $(".wprm-recipe-total-time-label")
+            .next()
+            .text();
           Recipe.servings = $(".wprm-recipe-servings").text();
 
           if (
