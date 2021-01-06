@@ -61,8 +61,8 @@ const recipeScraper = url => {
   });
 };
 
-recipeScraper(
-  "https://www.melskitchencafe.com/bbq-pulled-pork-sandwiches-slow-cooker/"
-).then(recipe => console.log(recipe));
+recipeScraper("https://julieblanner.com/cheese-ball-bites/").then(recipe =>
+  console.log(recipe)
+);
 
 module.exports = recipeScraper;
