@@ -12,28 +12,30 @@ const therecipecritic = url => {
       request(url, (error, response, html) => {
         if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
+          const textTrim = el => el.text().trim();
 
-          Recipe.image = $(".wprm-recipe-image img").attr("src");
-          Recipe.name = $(".wprm-recipe-name")
-            .text()
-            .trim();
+          Recipe.image = $("meta[property='og:image']").attr("content");
+          Recipe.name = textTrim($(".wprm-recipe-name"));
 
           $(".wprm-recipe-ingredient").each((i, el) => {
-            Recipe.ingredients.push($(el).text());
+            Recipe.ingredients.push(textTrim($(el)).replace(/\s\s+/g, " "));
           });
 
           $(".wprm-recipe-instruction-text").each((i, el) => {
-            Recipe.instructions.push(
-              $(el)
-                .text()
-                .replace(/\s\s+/g, "")
-            );
+            Recipe.instructions.push(textTrim($(el)).replace(/\s\s+/g, " "));
           });
 
-          Recipe.time.total = $(".recipe-time-yield__label-prep").text();
-          Recipe.time.prep = $(".wprm-recipe-prep_time").text() + ' ' + $(".wprm-recipe-prep_timeunit-minutes").text();
-          Recipe.time.total = $(".wprm-recipe-total_time").text() + ' ' + $(".wprm-recipe-total_timeunit-minutes").text();
-          Recipe.servings = $(".wprm-recipe-servings").text(); + ' ' + $(".wprm-recipe-servings-unit").text()
+          $(".wprm-recipe-details-name").remove();
+
+          Recipe.time.prep = textTrim($(".wprm-recipe-prep-time-container"));
+          Recipe.time.cook = textTrim($(".wprm-recipe-cook-time-container"));
+          Recipe.time.inactive = textTrim(
+            $(".wprm-recipe-custom-time-container")
+          );
+          Recipe.time.total = textTrim($(".wprm-recipe-total-time-container"));
+          Recipe.servings = $(
+            ".wprm-recipe-servings-container .wprm-recipe-servings"
+          ).text();
 
           if (
             !Recipe.name ||

@@ -15,7 +15,6 @@ const theblackpeppercorn = url => {
 
           Recipe.image = $("meta[property='og:image']").attr("content");
           Recipe.name = $(".wprm-recipe-name")
-            .eq(0)
             .text()
             .trim();
 
