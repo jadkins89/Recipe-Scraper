@@ -61,8 +61,4 @@ const recipeScraper = url => {
   });
 };
 
-recipeScraper(
-  "https://www.tasteofhome.com/recipes/beef-noodle-casserole/"
-).then(recipe => console.log(recipe));
-
 module.exports = recipeScraper;
