@@ -62,7 +62,7 @@ const recipeScraper = url => {
 };
 
 recipeScraper(
-  "https://gimmedelicious.com/creamy-spinach-and-mushroom-pasta-bake"
+  "https://www.melskitchencafe.com/bbq-pulled-pork-sandwiches-slow-cooker/"
 ).then(recipe => console.log(recipe));
 
 module.exports = recipeScraper;

@@ -13,27 +13,36 @@ const melskitchencafe = url => {
         if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
 
-          Recipe.image = $(".mv-create-image").attr("data-pin-media");
-          Recipe.name = $(".mv-create-title-primary")
-            .eq(0)
-            .text()
-            .trim();
+          const textTrim = el => el.text().trim();
+
+          Recipe.image = $("meta[property='og:image']").attr("content");
+          Recipe.name = textTrim(
+            $(".wp-block-mv-recipe .mv-create-title-primary")
+          );
 
           $("div.mv-create-ingredients ul li").each((i, el) => {
-            Recipe.ingredients.push($(el).text());
+            Recipe.ingredients.push(textTrim($(el)));
           });
 
           $("div.mv-create-instructions ol li").each((i, el) => {
-            Recipe.instructions.push(
-              $(el)
-                .text()
-                .replace(/\s\s+/g, "")
-            );
+            Recipe.instructions.push(textTrim($(el)));
           });
 
-          Recipe.time.prep = $(".mv-create-time-prep .mv-time-part").text();
-          Recipe.time.total = $(".mv-create-time-total .mv-time-part").text();
-          Recipe.servings = $(".mv-create-time-yield .mv-create-time-format").text();
+          Recipe.time.prep = textTrim(
+            $(".mv-create-time-prep .mv-create-time-format")
+          );
+          Recipe.time.cook = textTrim(
+            $(".mv-create-time-active .mv-create-time-format")
+          );
+          Recipe.time.inactive = textTrim(
+            $(".mv-create-time-additional .mv-create-time-format")
+          );
+          Recipe.time.total = textTrim(
+            $(".mv-create-time-total .mv-create-time-format")
+          );
+          Recipe.servings = textTrim(
+            $(".mv-create-time-yield .mv-create-time-format")
+          );
 
           if (
             !Recipe.name ||
