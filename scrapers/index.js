@@ -61,4 +61,8 @@ const recipeScraper = url => {
   });
 };
 
+recipeScraper(
+  "https://gimmedelicious.com/creamy-spinach-and-mushroom-pasta-bake"
+).then(recipe => console.log(recipe));
+
 module.exports = recipeScraper;

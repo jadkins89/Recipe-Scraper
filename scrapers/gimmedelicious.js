@@ -13,31 +13,47 @@ const gimmedelicious = url => {
         if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
 
-          Recipe.image = $(".wprm-recipe-image img").attr("src");
-          Recipe.name = $(".wprm-recipe-name").eq(0)
+          Recipe.image = $("meta[property='og:image']").attr("content");
+          Recipe.tags = $("meta[name='keywords']")
+            .attr("content")
+            .split(",");
+          Recipe.name = $(".wprm-recipe-name")
+            .eq(0)
             .text()
             .trim();
 
-          $('.wprm-recipe-ingredients > .wprm-recipe-ingredient')
-            .each((i, el) => {
-            Recipe.ingredients.push($(el).text().replace(/▢/g, ''));
-          });
+          $(".wprm-recipe-ingredients > .wprm-recipe-ingredient").each(
+            (i, el) => {
+              Recipe.ingredients.push(
+                $(el)
+                  .text()
+                  .replace(/▢/g, "")
+              );
+            }
+          );
 
           $(".wprm-recipe-instruction-text").each((i, el) => {
             Recipe.instructions.push(
               $(el)
-                .remove('img')
+                .remove("img")
                 .text()
-                .replace(/\s\s+/g, "")
+                .trim()
             );
           });
 
-          Recipe.time.prep = $(".wprm-recipe-prep_time-minutes").text() + ' ' + $(".wprm-recipe-prep_timeunit-minutes").text();
-          Recipe.time.cook = $(".wprm-recipe-cook_time-minutes").text() + ' ' + $(".wprm-recipe-cook_timeunit-minutes").text();
-          Recipe.time.total = $(".wprm-recipe-total_time-minutes").text() + ' ' + $(".wprm-recipe-total_timeunit-minutes").text();
+          Recipe.time.prep =
+            $(".wprm-recipe-prep_time-minutes").text() +
+            " " +
+            $(".wprm-recipe-prep_timeunit-minutes").text();
+          Recipe.time.cook =
+            $(".wprm-recipe-cook_time-minutes").text() +
+            " " +
+            $(".wprm-recipe-cook_timeunit-minutes").text();
+          Recipe.time.total =
+            $(".wprm-recipe-total_time-minutes").text() +
+            " " +
+            $(".wprm-recipe-total_timeunit-minutes").text();
           Recipe.servings = $(".wprm-recipe-servings").text();
-
-          console.log('Recipe', JSON.stringify(Recipe));
 
           if (
             !Recipe.name ||
