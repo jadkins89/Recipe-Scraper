@@ -6,8 +6,8 @@ const RecipeSchema = require("../helpers/recipe-schema");
 const tasteofhome = url => {
   const Recipe = new RecipeSchema();
   return new Promise((resolve, reject) => {
-    if (!url.includes("tasteofhome.com/recipes")) {
-      reject(new Error("url provided must include 'tasteofhome.com/recipes'"));
+    if (!url.includes("tasteofhome.com/recipes/")) {
+      reject(new Error("url provided must include 'tasteofhome.com/recipes/'"));
     } else {
       request(url, (error, response, html) => {
         if (!error && response.statusCode === 200) {
@@ -38,7 +38,7 @@ const tasteofhome = url => {
             .text()
             .split(/Bake:/g);
           Recipe.time.prep = timeStr[0].replace("Prep:", "").trim();
-          Recipe.time.cook = timeStr[1].trim();
+          Recipe.time.cook = (timeStr[1] || "").trim();
           Recipe.servings = $(".recipe-time-yield__label-servings")
             .text()
             .trim();

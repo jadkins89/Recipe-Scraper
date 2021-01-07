@@ -6,8 +6,8 @@ const RecipeSchema = require("../helpers/recipe-schema");
 const theblackpeppercorn = url => {
   const Recipe = new RecipeSchema();
   return new Promise((resolve, reject) => {
-    if (!url.includes("theblackpeppercorn.com")) {
-      reject(new Error("url provided must include 'theblackpeppercorn.com'"));
+    if (!url.includes("theblackpeppercorn.com/")) {
+      reject(new Error("url provided must include 'theblackpeppercorn.com/'"));
     } else {
       request(url, (error, response, html) => {
         if (!error && response.statusCode === 200) {

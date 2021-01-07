@@ -6,19 +6,18 @@ const RecipeSchema = require("../helpers/recipe-schema");
 const gimmedelicious = url => {
   const Recipe = new RecipeSchema();
   return new Promise((resolve, reject) => {
-    if (!url.includes("gimmedelicious.com")) {
-      reject(new Error("url provided must include 'gimmedelicious.com'"));
+    if (!url.includes("gimmedelicious.com/")) {
+      reject(new Error("url provided must include 'gimmedelicious.com/'"));
     } else {
       request(url, (error, response, html) => {
         if (!error && response.statusCode === 200) {
           const $ = cheerio.load(html);
 
           Recipe.image = $("meta[property='og:image']").attr("content");
-          Recipe.tags = $("meta[name='keywords']")
-            .attr("content")
-            .split(",");
+          Recipe.tags = (
+            $("meta[name='keywords']").attr("content") || ""
+          ).split(",");
           Recipe.name = $(".wprm-recipe-name")
-            .eq(0)
             .text()
             .trim();
 
