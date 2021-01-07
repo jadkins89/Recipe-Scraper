@@ -61,8 +61,4 @@ const recipeScraper = url => {
   });
 };
 
-recipeScraper(
-  "https://www.thespruceeats.com/grilled-squid-recipe-1808848"
-).then(recipe => console.log(recipe));
-
 module.exports = recipeScraper;
