@@ -92,6 +92,6 @@ module.exports = {
     },
     servings: "6",
     image:
-      "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=640&h=335&url=https%3A%2F%2Fcf-images.us-east-1.prod.boltdns.net%2Fv1%2Fstatic%2F5118192885001%2Fc9b189d6-367e-4c94-8b05-f805363ae20f%2Fc185934c-9360-4f85-b766-0edbbfd1a583%2F640x360%2Fmatch%2Fimage.jpg"
+      "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=960&h=503&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26231112%2F3750024.jpg"
   }
 };

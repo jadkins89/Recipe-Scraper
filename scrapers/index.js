@@ -19,8 +19,11 @@ const domains = {
   food: require("./food"),
   foodandwine: require("./foodandwine"),
   foodnetwork: require("./foodnetwork"),
+  gimmedelicious: require("./gimmedelicious"),
   gimmesomeoven: require("./gimmesomeoven"),
+  julieblanner: require("./julieblanner"),
   kitchenstories: require("./kitchenstories"),
+  melskitchencafe: require("./melskitchencafe"),
   minimalistbaker: require("./minimalistbaker"),
   myrecipes: require("./myrecipes"),
   nomnompaleo: require("./nomnompaleo"),
@@ -31,6 +34,9 @@ const domains = {
   simplyrecipes: require("./simplyrecipes"),
   smittenkitchen: require("./smittenkitchen"),
   tastesbetterfromscratch: require("./tastesbetterfromscratch"),
+  tasteofhome: require("./tasteofhome"),
+  theblackpeppercorn: require("./theblackpeppercorn"),
+  therecipecritic: require("./therecipecritic"),
   thepioneerwoman: require("./thepioneerwoman"),
   therealfoodrds: require("./therealfoodrds"),
   thespruceeats: require("./thespruceeats"),
@@ -54,5 +60,9 @@ const recipeScraper = url => {
     }
   });
 };
+
+recipeScraper(
+  "https://www.thespruceeats.com/grilled-squid-recipe-1808848"
+).then(recipe => console.log(recipe));
 
 module.exports = recipeScraper;

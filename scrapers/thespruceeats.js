@@ -43,12 +43,18 @@ const theSpruceEats = url => {
             );
           });
 
-          let metaText = $(".meta-text__data");
-          Recipe.time.total = metaText.first().text();
-          Recipe.time.prep = $(metaText.get(1)).text();
-          Recipe.time.cook = $(metaText.get(2)).text();
-
-          Recipe.servings = metaText.last().text();
+          let metaText = $(".meta-text").each((i, el) => {
+            let text = $(el).text();
+            if (text.includes("Prep:")) {
+              Recipe.time.prep = text.replace("Prep: ", "").trim();
+            } else if (text.includes("Cook: ")) {
+              Recipe.time.cook = text.replace("Cook:", "").trim();
+            } else if (text.includes("Total: ")) {
+              Recipe.time.total = text.replace("Total:", "").trim();
+            } else if (text.includes("Servings: ")) {
+              Recipe.servings = text.replace("Servings: ", "").trim();
+            }
+          });
 
           if (
             !Recipe.name ||
