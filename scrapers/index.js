@@ -7,4 +7,8 @@ const recipeScraper = async url => {
   return await klass.fetchRecipe();
 };
 
+recipeScraper(
+  "https://www.bbcgoodfood.com/recipes/doughnut-muffins"
+).then(recipe => console.log(recipe));
+
 module.exports = recipeScraper;

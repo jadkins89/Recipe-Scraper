@@ -31,7 +31,9 @@ class BaseScraper {
    *
    */
   defaultSetImage($) {
-    this.recipe.image = $("meta[property='og:image']").attr("content");
+    this.recipe.image =
+      $("meta[property='og:image']").attr("content") ||
+      $("meta[name='og:image']").attr("content");
   }
 
   /**
