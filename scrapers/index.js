@@ -8,7 +8,7 @@ const recipeScraper = async url => {
 };
 
 recipeScraper(
-  "https://www.bbcgoodfood.com/recipes/doughnut-muffins"
+  "https://www.centraltexasfoodbank.org/recipe/crock-pot-chicken-mole"
 ).then(recipe => console.log(recipe));
 
 module.exports = recipeScraper;
