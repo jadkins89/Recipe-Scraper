@@ -1,16 +1,24 @@
-const expect = require("chai").expect;
-const assert = require("chai").assert;
+const { assert, expect } = require("chai");
+const ScraperFactory = require("../../helpers/ScraperFactory");
 
-function commonRecipeTest(name, scraper, Constants, url) {
+const commonRecipeTest = (name, constants, url) => {
   describe(name, () => {
+    let scraper;
+
+    before(() => {
+      scraper = ScraperFactory.getScraper(url);
+    });
+
     it("should fetch the expected recipe", async () => {
-      let actualRecipe = await scraper(Constants.testUrl);
-      expect(Constants.expectedRecipe).to.deep.equal(actualRecipe);
+      scraper.url = constants.testUrl;
+      let actualRecipe = await scraper.fetchRecipe();
+      expect(constants.expectedRecipe).to.deep.equal(actualRecipe);
     });
 
     it("should throw an error if a problem occurred during page retrieval", async () => {
       try {
-        await scraper(Constants.invalidUrl);
+        scraper.url = constants.invalidUrl;
+        await scraper.fetchRecipe();
         assert.fail("was not supposed to succeed");
       } catch (error) {
         expect(error.message).to.equal("No recipe found on page");
@@ -19,7 +27,8 @@ function commonRecipeTest(name, scraper, Constants, url) {
 
     it("should throw an error if the url doesn't contain required sub-url", async () => {
       try {
-        await scraper(Constants.invalidDomainUrl);
+        scraper.url = constants.invalidDomainUrl;
+        await scraper.fetchRecipe();
         assert.fail("was not supposed to succeed");
       } catch (error) {
         expect(error.message).to.equal(`url provided must include '${url}'`);
@@ -28,13 +37,14 @@ function commonRecipeTest(name, scraper, Constants, url) {
 
     it("should throw an error if non-recipe page is used", async () => {
       try {
-        await scraper(Constants.nonRecipeUrl);
+        scraper.url = constants.nonRecipeUrl;
+        await scraper.fetchRecipe(constants.nonRecipeUrl);
         assert.fail("was not supposed to succeed");
       } catch (error) {
         expect(error.message).to.equal("No recipe found on page");
       }
     });
   });
-}
+};
 
 module.exports = commonRecipeTest;

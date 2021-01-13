@@ -4,12 +4,11 @@ const BaseScraper = require("../helpers/BaseScraper");
 
 class AmbitiousKitchenScraper extends BaseScraper {
   constructor(url) {
-    super(url);
-    this.subUrl = "ambitiouskitchen.com/";
+    super(url, "ambitiouskitchen.com/");
   }
 
   scrape($) {
-    this.setImage($);
+    this.defaultSetImage($);
     this.recipe.name = $(".wprm-recipe-name").text();
     const { ingredients, instructions, time } = this.recipe;
 

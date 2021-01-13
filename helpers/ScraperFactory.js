@@ -3,10 +3,10 @@
 const parseDomain = require("parse-domain");
 
 const domains = {
-  "101cookbooks": require("../scrapers/101cookbooks"),
-  allrecipes: require("../scrapers/allrecipes"),
+  "101cookbooks": require("../scrapers/101CookbooksScraper"),
+  allrecipes: require("../scrapers/AllRecipesScraper"),
   ambitiouskitchen: require("../scrapers/AmbitiousKitchenScraper"),
-  averiecooks: require("../scrapers/averiecooks"),
+  averiecooks: require("../scrapers/AverieCooksScraper"),
   bbc: require("../scrapers/bbc"),
   bbcgoodfood: require("../scrapers/bbcgoodfood"),
   bonappetit: require("../scrapers/bonappetit"),

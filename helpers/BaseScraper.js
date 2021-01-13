@@ -9,10 +9,9 @@ const RecipeSchema = require("./recipe-schema");
  *
  */
 class BaseScraper {
-  constructor(url) {
+  constructor(url, subUrl = "") {
     this.url = url;
-    this.subUrl = "";
-    this.recipe = new RecipeSchema();
+    this.subUrl = subUrl;
   }
 
   /**
@@ -20,8 +19,19 @@ class BaseScraper {
    */
   checkUrl() {
     if (!this.url.includes(this.subUrl)) {
-      throw new Error(`url provided must includes '${this.subUrl}'`);
+      throw new Error(`url provided must include '${this.subUrl}'`);
     }
+  }
+
+  createRecipeObject() {
+    this.recipe = new RecipeSchema();
+  }
+
+  /**
+   *
+   */
+  defaultSetImage($) {
+    this.recipe.image = $("meta[property='og:image']").attr("content");
   }
 
   /**
@@ -39,29 +49,23 @@ class BaseScraper {
   }
 
   /**
+   *
+   */
+  async fetchRecipe() {
+    this.checkUrl();
+    const $ = await this.fetchDOMModel();
+    this.createRecipeObject();
+    this.scrape($);
+    return this.validateRecipe();
+  }
+
+  /**
    * Abstract method
    * @param {object} $ - cheerio instance
    * @returns {object} - an object representing the recipe
    */
   scrape($) {
     throw new Error("scrape is not defined in BaseScraper");
-  }
-
-  /**
-   *
-   */
-  async fetchRecipe() {
-    this.checkUrl();
-    const $ = await this.fetchDOMModel();
-    this.scrape($);
-    return this.validateRecipe();
-  }
-
-  /**
-   *
-   */
-  setImage($) {
-    this.recipe.image = $("meta[property='og:image']").attr("content");
   }
 
   /**

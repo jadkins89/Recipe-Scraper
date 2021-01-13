@@ -7,8 +7,4 @@ const recipeScraper = async url => {
   return await klass.fetchRecipe();
 };
 
-recipeScraper(
-  "https://www.ambitiouskitchen.com/street-corn-pasta-salad-with-cilantro-pesto-goat-cheese/"
-).then(recipe => console.log(recipe));
-
 module.exports = recipeScraper;
