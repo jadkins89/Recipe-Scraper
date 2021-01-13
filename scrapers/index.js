@@ -45,20 +45,18 @@ const domains = {
   yummly: require("./yummly")
 };
 
-const recipeScraper = url => {
-  return new Promise((resolve, reject) => {
-    let parse = parseDomain(url);
-    if (parse) {
-      let domain = parse.domain;
-      if (domains[domain] !== undefined) {
-        resolve(domains[domain](url));
-      } else {
-        reject(new Error("Site not yet supported"));
-      }
+const recipeScraper = async url => {
+  let parse = parseDomain(url);
+  if (parse) {
+    let domain = parse.domain;
+    if (domains[domain] !== undefined) {
+      return await domains[domain](url);
     } else {
-      reject(new Error("Failed to parse domain"));
+      throw new Error("Site not yet supported");
     }
-  });
+  } else {
+    throw new Error("Failed to parse domain");
+  }
 };
 
 module.exports = recipeScraper;
