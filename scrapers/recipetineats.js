@@ -1,7 +1,7 @@
 const request = require("request");
 const cheerio = require("cheerio");
 
-const RecipeSchema = require("../helpers/recipe-schema");
+const RecipeSchema = require("../helpers/RecipeSchema");
 
 const recipeTinEats = url => {
   const Recipe = new RecipeSchema();

@@ -1,5 +1,5 @@
 const request = require("request");
-const RecipeSchema = require("../helpers/recipe-schema");
+const RecipeSchema = require("../helpers/RecipeSchema");
 
 const urlRe = /\/(\d\d\d\d)\//;
 const instructionsIndexRe = /(?:\d.)(.*)/;

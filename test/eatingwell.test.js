@@ -1,28 +1,36 @@
 "use strict";
-const expect = require("chai").expect;
-const assert = require("chai").assert;
+const { assert, expect } = require("chai");
 
-const eatingWell = require("../scrapers/eatingwell");
-const Constants = require("./constants/eatingwellConstants");
+const EatingWellScraper = require("../scrapers/EatingWellScraper");
+const constants = require("./constants/eatingwellConstants");
 
 describe("eatingWell", () => {
+  let eatingWell;
+
+  before(() => {
+    eatingWell = new EatingWellScraper();
+  });
+
   it("should fetch the expected recipe", async () => {
-    let actualRecipe = await eatingWell(Constants.testUrl);
-    expect(JSON.stringify(Constants.expectedRecipe)).to.equal(
+    eatingWell.url = constants.testUrl;
+    let actualRecipe = await eatingWell.fetchRecipe();
+    expect(JSON.stringify(constants.expectedRecipe)).to.equal(
       JSON.stringify(actualRecipe)
     );
   });
 
   it("should fetch another expected recipe", async () => {
-    let actualRecipe = await eatingWell(Constants.testUrl2);
-    expect(JSON.stringify(Constants.expectedRecipe2)).to.equal(
+    eatingWell.url = constants.testUrl2;
+    let actualRecipe = await eatingWell.fetchRecipe();
+    expect(JSON.stringify(constants.expectedRecipe2)).to.equal(
       JSON.stringify(actualRecipe)
     );
   });
 
   it("should throw an error if a problem occurred during page retrieval", async () => {
     try {
-      await eatingWell(Constants.invalidUrl);
+      eatingWell.url = constants.invalidUrl;
+      await eatingWell.fetchRecipe();
       assert.fail("was not supposed to succeed");
     } catch (error) {
       expect(error.message).to.equal("No recipe found on page");
@@ -31,7 +39,8 @@ describe("eatingWell", () => {
 
   it("should throw an error if the url doesn't contain required sub-url", async () => {
     try {
-      await eatingWell(Constants.invalidDomainUrl);
+      eatingWell.url = constants.invalidDomainUrl;
+      await eatingWell.fetchRecipe();
       assert.fail("was not supposed to succeed");
     } catch (error) {
       expect(error.message).to.equal(
@@ -42,7 +51,8 @@ describe("eatingWell", () => {
 
   it("should throw an error if non-recipe page is used", async () => {
     try {
-      await eatingWell(Constants.nonRecipeUrl);
+      eatingWell.url = constants.nonRecipeUrl;
+      await eatingWell.fetchRecipe();
       assert.fail("was not supposed to succeed");
     } catch (error) {
       expect(error.message).to.equal("No recipe found on page");

@@ -16,17 +16,19 @@ class YummlyScraper extends PuppeteerScraper {
    * Navigates through steps to recipe
    */
   async customPoll(page) {
-    let steps = (await page.$$(".step")).length;
-    let newSteps = -1;
+    try {
+      let steps = (await page.$$(".step")).length;
+      let newSteps = -1;
 
-    while (steps >= newSteps) {
-      await page.waitFor(100);
-      await page.$eval(
-        "a.view-more-steps",
-        /* istanbul ignore next */ elem => elem.click()
-      );
-      newSteps = (await page.$$(".step")).length;
-    }
+      while (steps >= newSteps) {
+        await page.waitFor(100);
+        await page.$eval(
+          "a.view-more-steps",
+          /* istanbul ignore next */ elem => elem.click()
+        );
+        newSteps = (await page.$$(".step")).length;
+      }
+    } catch (err) {}
   }
 
   scrape($) {

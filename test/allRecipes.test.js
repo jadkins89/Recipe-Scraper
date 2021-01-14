@@ -34,7 +34,7 @@ describe("allRecipes", () => {
       assert.fail("was not supposed to succeed");
     } catch (error) {
       expect(error.message).to.equal(
-        "url provided must include 'allrecipes.com/recipe/'"
+        "url provided must include 'allrecipes.com/recipe'"
       );
     }
   });

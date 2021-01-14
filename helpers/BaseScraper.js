@@ -3,10 +3,10 @@
 const fetch = require("node-fetch");
 const cheerio = require("cheerio");
 
-const RecipeSchema = require("./recipe-schema");
+const RecipeSchema = require("./RecipeSchema");
 
 /**
- *
+ * Abstract Class which all scrapers inherit from
  */
 class BaseScraper {
   constructor(url, subUrl = "") {
@@ -25,6 +25,10 @@ class BaseScraper {
 
   createRecipeObject() {
     this.recipe = new RecipeSchema();
+  }
+
+  defaultError() {
+    throw new Error("No recipe found on page");
   }
 
   /**
@@ -46,7 +50,7 @@ class BaseScraper {
       const html = await res.text();
       return cheerio.load(html);
     } catch (err) {
-      throw new Error("No recide found on page");
+      this.defaultError();
     }
   }
 
@@ -80,7 +84,7 @@ class BaseScraper {
       !this.recipe.ingredients.length ||
       !this.recipe.instructions.length
     ) {
-      throw new Error("No recipe found on page");
+      this.defaultError();
     }
     return this.recipe;
   }

@@ -16,15 +16,15 @@ const domains = {
   cookieandkate: require("../scrapers/CookieAndKateScraper"),
   copykat: require("../scrapers/CopyKatScraper"),
   damndelicious: require("../scrapers/DamnDeliciousScraper"),
-  eatingwell: require("../scrapers/eatingwell"),
-  epicurious: require("../scrapers/epicurious"),
-  food: require("../scrapers/food"),
-  foodandwine: require("../scrapers/foodandwine"),
-  foodnetwork: require("../scrapers/foodnetwork"),
-  gimmedelicious: require("../scrapers/gimmedelicious"),
-  gimmesomeoven: require("../scrapers/gimmesomeoven"),
-  julieblanner: require("../scrapers/julieblanner"),
-  kitchenstories: require("../scrapers/kitchenstories"),
+  eatingwell: require("../scrapers/EatingWellScraper"),
+  epicurious: require("../scrapers/EpicuriousScraper"),
+  food: require("../scrapers/FoodScraper"),
+  foodandwine: require("../scrapers/FoodAndWineScraper"),
+  foodnetwork: require("../scrapers/FoodNetworkScraper"),
+  gimmedelicious: require("../scrapers/GimmeDeliciousScraper"),
+  gimmesomeoven: require("../scrapers/GimmeSomeOvenScraper"),
+  julieblanner: require("../scrapers/JulieBlannerScraper"),
+  kitchenstories: require("../scrapers/KitchenStoriesScraper"),
   melskitchencafe: require("../scrapers/melskitchencafe"),
   minimalistbaker: require("../scrapers/minimalistbaker"),
   myrecipes: require("../scrapers/myrecipes"),
@@ -47,8 +47,6 @@ const domains = {
   yummly: require("../scrapers/YummlyScraper")
 };
 
-const instances = {};
-
 /**
  * A Singleton Factory to whom supplies an instance of a scraper based on a give URL
  */
@@ -57,14 +55,11 @@ class ScraperFactory {
     let parse = parseDomain(url);
     if (parse) {
       let domain = parse.domain;
-      if (!instances[domain]) {
-        if (domains[domain] !== undefined) {
-          instances[domain] = new domains[domain](url);
-        } else {
-          throw new Error("Site not yet supported");
-        }
+      if (domains[domain] !== undefined) {
+        return new domains[domain](url);
+      } else {
+        throw new Error("Site not yet supported");
       }
-      return instances[domain];
     } else {
       throw new Error("Failed to parse domain");
     }

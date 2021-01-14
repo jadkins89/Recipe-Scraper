@@ -4,7 +4,7 @@ const BaseScraper = require("../helpers/BaseScraper");
 
 class AmbitiousKitchenScraper extends BaseScraper {
   constructor(url) {
-    super(url, "allrecipes.com/recipe/");
+    super(url, "allrecipes.com/recipe");
   }
 
   newScrape($) {

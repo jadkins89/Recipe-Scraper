@@ -1,6 +1,5 @@
 "use strict";
 const commonRecipeTest = require("./helpers/commonRecipeTest");
-const food = require("../scrapers/food");
-const Constants = require("./constants/foodConstants");
+const constants = require("./constants/foodConstants");
 
-commonRecipeTest("food", food, Constants, "food.com/recipe/");
+commonRecipeTest("food", constants, "food.com/recipe/");

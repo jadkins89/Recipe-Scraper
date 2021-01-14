@@ -20,10 +20,10 @@ module.exports = {
       "4 cups low-sodium chicken broth",
       "1 (15 ounce) can low-sodium black beans, rinsed",
       "1 (14 ounce) can no-salt-added fire-roasted diced tomatoes",
-      "1 Juice of 1 lime",
+      "Juice of 1 lime",
       "½ cup chopped fresh cilantro, plus more for garnish",
       "¾ cup shredded Mexican-style cheese blend",
-      "1 cup Tortilla chips for garnish"
+      "Tortilla chips for garnish"
     ],
     instructions: [
       "Heat oil on high heat using the sauté function of your multicooker. (No sauté mode? See Tip.) Add onion, poblano, chicken, garlic, chili powder and salt. Cook, stirring occasionally, until the vegetables have softened and the chicken is no longer pink on the outside, about 5 minutes. Turn off the heat. Stir in broth, beans and tomatoes. Close and lock the lid. Cook at high pressure for 10 minutes.",
