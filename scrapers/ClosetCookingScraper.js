@@ -4,7 +4,7 @@ const PuppeteerScraper = require("../helpers/PuppeteerScraper");
 
 /**
  * Class for scraping closetcooking.com
- * @extends BaseScraper
+ * @extends PuppeteerScraper
  */
 class ClosetCookingScraper extends PuppeteerScraper {
   constructor(url) {

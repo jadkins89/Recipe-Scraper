@@ -8,7 +8,7 @@ const recipeScraper = async url => {
 };
 
 recipeScraper(
-  "https://www.closetcooking.com/reina-pepiada-arepa-chicken-and-avocado-sandwich/"
+  "https://www.yummly.com/recipe/No-Bake-Lemon-Mango-Cheesecakes-with-Speculoos-crust-781945"
 ).then(recipe => console.log(recipe));
 
 module.exports = recipeScraper;

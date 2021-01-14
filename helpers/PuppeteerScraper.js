@@ -45,6 +45,12 @@ const BaseScraper = require("./BaseScraper");
  */
 class PuppeteerScraper extends BaseScraper {
   /**
+   *
+   */
+  async customPoll(page) {
+    return true;
+  }
+  /**
    * @override
    * Fetches html from url using puppeteer headless browser
    * @returns {object} - Cheerio instance
@@ -53,7 +59,6 @@ class PuppeteerScraper extends BaseScraper {
     const browser = await puppeteer.launch({
       headless: true
     });
-
     const page = await browser.newPage();
     await page.setRequestInterception(true);
 
@@ -73,6 +78,7 @@ class PuppeteerScraper extends BaseScraper {
 
     let html;
     if (response._status < 400) {
+      await this.customPoll(page);
       html = await page.content();
     } else {
       throw new Error(response._status);
