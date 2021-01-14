@@ -8,7 +8,7 @@ const recipeScraper = async url => {
 };
 
 recipeScraper(
-  "https://www.centraltexasfoodbank.org/recipe/crock-pot-chicken-mole"
+  "https://www.closetcooking.com/reina-pepiada-arepa-chicken-and-avocado-sandwich/"
 ).then(recipe => console.log(recipe));
 
 module.exports = recipeScraper;

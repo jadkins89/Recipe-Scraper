@@ -12,7 +12,7 @@ const domains = {
   bonappetit: require("../scrapers/BonAppetitScraper"),
   budgetbytes: require("../scrapers/BudgetBytesScraper"),
   centraltexasfoodbank: require("../scrapers/CentralTexasFoodBankScraper"),
-  closetcooking: require("../scrapers/closetcooking"),
+  closetcooking: require("../scrapers/ClosetCookingScraper"),
   cookieandkate: require("../scrapers/cookieandkate"),
   copykat: require("../scrapers/copykat"),
   damndelicious: require("../scrapers/damndelicious"),
