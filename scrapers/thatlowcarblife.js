@@ -28,7 +28,18 @@ const simplyRecipes = url => {
                         });
 
                     var instructions = $('.mv-create-instructions');
-                    
+
+                    if (instructions.children('h4')) {
+                        instructions.children().toArray().forEach(ele => {
+                            if (ele.name === 'h4') {
+                                if (ele.children[0].prev === null && ele.children[0].next === null) {
+                                    Recipe.instructions.push(ele.children[0].data)
+
+                                }
+                            }
+                        })
+                    }
+
                     instructions.children('ol').children('li').each((i, el) => {
                         Recipe.instructions.push($(el).text());
                     });
