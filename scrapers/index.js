@@ -31,6 +31,7 @@ const domains = {
   simplyrecipes: require("./simplyrecipes"),
   smittenkitchen: require("./smittenkitchen"),
   tastesbetterfromscratch: require("./tastesbetterfromscratch"),
+  thatlowcarblife: require("./thatlowcarblife"),
   thepioneerwoman: require("./thepioneerwoman"),
   therealfoodrds: require("./therealfoodrds"),
   thespruceeats: require("./thespruceeats"),
