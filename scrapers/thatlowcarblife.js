@@ -43,8 +43,15 @@ const simplyRecipes = url => {
                     instructions.children('ol').children('li').each((i, el) => {
                         Recipe.instructions.push($(el).text());
                     });
-
-
+                    if (
+                        !Recipe.name ||
+                        !Recipe.ingredients.length ||
+                        !Recipe.instructions.length
+                    ) {
+                        reject(new Error("No recipe found on page"));
+                    } else {
+                        resolve(Recipe);
+                    }
                 } else {
                     reject(new Error("No recipe found on page"));
                 }
