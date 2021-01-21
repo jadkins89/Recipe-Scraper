@@ -25,14 +25,14 @@ const domains = {
   gimmesomeoven: require("../scrapers/GimmeSomeOvenScraper"),
   julieblanner: require("../scrapers/JulieBlannerScraper"),
   kitchenstories: require("../scrapers/KitchenStoriesScraper"),
-  melskitchencafe: require("../scrapers/melskitchencafe"),
-  minimalistbaker: require("../scrapers/minimalistbaker"),
-  myrecipes: require("../scrapers/myrecipes"),
+  melskitchencafe: require("../scrapers/MelsKitchenCafeScraper"),
+  minimalistbaker: require("../scrapers/MinimalistBakerScraper"),
+  myrecipes: require("../scrapers/MyRecipesScraper"),
   nomnompaleo: require("../scrapers/NomNomPaleoScraper"),
-  omnivorescookbook: require("../scrapers/omnivorescookbook"),
-  pinchofyum: require("../scrapers/pinchofyum"),
-  recipetineats: require("../scrapers/recipetineats"),
-  seriouseats: require("../scrapers/seriouseats"),
+  omnivorescookbook: require("../scrapers/OmnivoresCookbookScraper"),
+  pinchofyum: require("../scrapers/PinchOfYumScraper"),
+  recipetineats: require("../scrapers/RecipeTinEatsScraper"),
+  seriouseats: require("../scrapers/SeriousEatsScraper"),
   simplyrecipes: require("../scrapers/simplyrecipes"),
   smittenkitchen: require("../scrapers/smittenkitchen"),
   tastesbetterfromscratch: require("../scrapers/TastesBetterFromScratchScraper"),
@@ -48,7 +48,7 @@ const domains = {
 };
 
 /**
- * A Singleton Factory to whom supplies an instance of a scraper based on a give URL
+ * A Factory that supplies an instance of a scraper based on a given URL
  */
 class ScraperFactory {
   getScraper(url) {
@@ -66,7 +66,4 @@ class ScraperFactory {
   }
 }
 
-const singletonFactory = new ScraperFactory();
-Object.freeze(singletonFactory);
-
-module.exports = singletonFactory;
+module.exports = ScraperFactory;

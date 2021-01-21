@@ -16,8 +16,8 @@ class BbcGoodFoodScraper extends BaseScraper {
     const { ingredients, instructions, time } = this.recipe;
     this.recipe.name = $("meta[name='og:title']").attr("content");
 
-    $(".recipe-template__ingredients")
-      .find(".list-item")
+    $(".recipe__ingredients")
+      .find("li")
       .each((i, el) => {
         ingredients.push(
           $(el)
@@ -26,9 +26,8 @@ class BbcGoodFoodScraper extends BaseScraper {
         );
       });
 
-    $(".recipe-template__method-steps")
-      .find(".list-item")
-      .children("div")
+    $(".recipe__method-steps")
+      .find("p")
       .each((i, el) => {
         instructions.push($(el).text());
       });

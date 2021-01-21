@@ -6,7 +6,7 @@ const commonRecipeTest = (name, constants, url) => {
     let scraper;
 
     before(() => {
-      scraper = ScraperFactory.getScraper(url);
+      scraper = new ScraperFactory().getScraper(url);
     });
 
     it("should fetch the expected recipe", async () => {

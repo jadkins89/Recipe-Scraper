@@ -74,6 +74,10 @@ class BaseScraper {
     throw new Error("scrape is not defined in BaseScraper");
   }
 
+  textTrim(el) {
+    return el.text().trim();
+  }
+
   /**
    *
    */

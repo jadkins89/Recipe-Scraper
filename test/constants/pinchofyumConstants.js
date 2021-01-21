@@ -28,14 +28,15 @@ module.exports = {
       "Toss everything together and season to taste!"
     ],
     tags: [
-      "Bowls",
-      "Dinner",
-      "Healthy",
+      "Avocado",
       "Recipes",
+      "Bowls",
+      "Healthy",
+      "Legume",
       "Lunch",
       "Quick and Easy",
       "Salads",
-      "Sugar Free",
+      "Sugar-Free",
       "Superfoods",
       "Vegan",
       "Vegetarian"

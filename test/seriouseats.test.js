@@ -1,21 +1,22 @@
 "use strict";
-const expect = require("chai").expect;
-const assert = require("chai").assert;
+const { assert, expect } = require("chai");
 
-const seriousEats = require("../scrapers/seriouseats");
-const Constants = require("./constants/seriouseatsConstants");
+const seriousEats = require("../scrapers/SeriousEatsScraper");
+const constants = require("./constants/seriouseatsConstants");
 
 describe("seriousEats", () => {
   it("should fetch the expected recipe", async () => {
-    let actualRecipe = await seriousEats(Constants.testUrl);
-    expect(JSON.stringify(Constants.expectedRecipe)).to.equal(
+    seriousEats.url = constants.testUrl;
+    let actualRecipe = await seriousEats.fetchRecipe();
+    expect(JSON.stringify(constants.expectedRecipe)).to.equal(
       JSON.stringify(actualRecipe)
     );
   });
 
   it("should throw an error if invalid url is used", async () => {
     try {
-      await seriousEats(Constants.invalidDomainUrl);
+      seriousEats.url = constants.invalidDomainUrl;
+      await seriousEats.fetchRecipe();
       assert.fail("was not supposed to succeed");
     } catch (error) {
       expect(error.message).to.equal(
@@ -26,7 +27,8 @@ describe("seriousEats", () => {
 
   it("should throw an error if a problem occurred during page retrieval", async () => {
     try {
-      await seriousEats(Constants.invalidUrl);
+      seriousEats.url = constants.invalidUrl;
+      await seriousEats.fetchRecipe();
       assert.fail("was not supposed to succeed");
     } catch (error) {
       expect(error.message).to.equal("No recipe found on page");
@@ -35,7 +37,8 @@ describe("seriousEats", () => {
 
   it("should throw an error if non-recipe page is used", async () => {
     try {
-      await seriousEats(Constants.nonRecipeUrl);
+      seriousEats.url = constants.nonRecipeUrl;
+      await seriousEats.fetchRecipe();
       assert.fail("was not supposed to succeed");
     } catch (error) {
       expect(error.message).to.equal("No recipe found on page");
@@ -44,7 +47,8 @@ describe("seriousEats", () => {
 
   it("should throw an error if sponsored recipe is used", async () => {
     try {
-      await seriousEats(Constants.sponsorUrl);
+      seriousEats.url = constants.sponsorUrl;
+      await seriousEats.fetchRecipe();
       assert.fail("was not supposed to succeed");
     } catch (error) {
       expect(error.message).to.equal(

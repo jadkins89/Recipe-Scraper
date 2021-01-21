@@ -53,25 +53,25 @@ class KitchenStoriesScraper extends BaseScraper {
       let title = $(el)
         .children(".title")
         .text();
-      let time = $(el)
+      let timeText = $(el)
         .find(".time")
         .text();
       let unit = $(el)
         .find(".unit")
         .text();
-      if (parseInt(time)) {
+      if (parseInt(timeText)) {
         switch (title) {
           case "Preparation":
           case "Zubereitung":
-            time.prep = `${time} ${unit}`;
+            time.prep = `${timeText} ${unit}`;
             break;
           case "Baking":
           case "Backzeit":
-            time.cook = `${time} ${unit}`;
+            time.cook = `${timeText} ${unit}`;
             break;
           case "Resting":
           case "Ruhezeit":
-            time.inactive = `${time} ${unit}`;
+            time.inactive = `${timeText} ${unit}`;
             break;
           default:
         }

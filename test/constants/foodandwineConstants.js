@@ -36,6 +36,6 @@ module.exports = {
     },
     servings: "4",
     image:
-      "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=480&h=251&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2019%2F03%2F1660653193_6016070154001_6016065802001-vs.jpg"
+      "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=480&h=240&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2019%2F03%2F1660653193_6016070154001_6016065802001-vs.jpg"
   }
 };
