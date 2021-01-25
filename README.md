@@ -80,7 +80,7 @@ Don't see a website you'd like to scrape? Open an [issue](https://github.com/jad
 
 ## Recipe Object
 
-Depending on the recipe, certain fields may be left blank. All fields are represented as strings or arrays of strings. The name, ingredients, and instructions property are required for schema validation.
+Depending on the recipe, certain fields may be left blank. All fields are represented as strings or arrays of strings. The name, ingredients, and instructions properties are required for schema validation.
 
 ```javascript
 {
