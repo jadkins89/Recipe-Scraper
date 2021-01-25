@@ -1,6 +1,6 @@
 # recipe-scraper
 
-**A JS package for scraping recipes from the web.**
+**A NodeJS package for scraping recipes from the web.**
 
 [![Build Status](https://travis-ci.org/jadkins89/Recipe-Scraper.svg?branch=master)](https://travis-ci.org/jadkins89/Recipe-Scraper)
 [![Coverage Status](https://coveralls.io/repos/github/jadkins89/Recipe-Scraper/badge.svg?branch=master)](https://coveralls.io/github/jadkins89/Recipe-Scraper?branch=master)
@@ -47,13 +47,13 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://cookieandkate.com/
 - https://copykat.com/
 - https://damndelicious.net/
-- http://www.eatingwell.com/
+- https://www.eatingwell.com/
 - https://www.epicurious.com/
 - https://www.food.com/
 - https://www.foodandwine.com/
 - https://www.foodnetwork.com/
 - https://gimmedelicious.com/
-- http://www.gimmesomeoven.com/
+- https://www.gimmesomeoven.com/
 - https://julieblanner.com/
 - https://www.kitchenstories.com/
 - https://www.melskitchencafe.com/
@@ -80,7 +80,7 @@ Don't see a website you'd like to scrape? Open an [issue](https://github.com/jad
 
 ## Recipe Object
 
-Depending on the recipe, certain fields may be left blank. All fields are represented as strings or arrays of strings.
+Depending on the recipe, certain fields may be left blank. All fields are represented as strings or arrays of strings. The name, ingredients, and instructions property are required for schema validation.
 
 ```javascript
 {

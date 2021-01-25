@@ -18,11 +18,12 @@ class RecipeTinEatsScraper extends BaseScraper {
 
     $(".wprm-recipe-ingredient").each((i, el) => {
       ingredients.push(
-        this.textTrim(
-          $(el)
-            .replace(/\s\s+/g, " ")
-            .replace("▢", "")
-        )
+        $(el)
+          .text()
+          .replace(/\s\s+/g, " ")
+          .replace(" ,", ",")
+          .replace("▢", "")
+          .trim()
       );
     });
 

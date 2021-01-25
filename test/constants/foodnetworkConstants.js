@@ -28,7 +28,7 @@ module.exports = {
       "Increase the heat to medium, add the tomatoes and wine and cook until reduced by half, 2 to 3 minutes, then stir in the chicken broth. Put the pork chops in the sauce and carefully nestle the potatoes around them. Cook 3 to 5 minutes more until the pork chops register 145 degrees F in the center on an instant-read thermometer. Remove the pork chops from the sauce and transfer to shallow bowls or a serving platter. Taste the sauce and season with additional salt and pepper if needed. If most of the liquid in the pan evaporates while you are cooking the pork, stir in tablespoons of water at a time to get it back to a saucy consistency. If the sauce is a little thin and weak, after you take the chops out, turn the heat up and cook 1 to 2 minutes more to thicken and concentrate the flavors. Stir the parsley into the sauce, remove the thyme sprigs, spoon the sauce over the chops and serve."
     ],
     tags: [
-      "Comfort Food",
+      "Comfort Food Restaurants",
       "Cast Iron Skillet",
       "Skillet Recipes",
       "French Recipes",

@@ -2,8 +2,10 @@
 
 const fetch = require("node-fetch");
 const cheerio = require("cheerio");
+const { validate } = require("jsonschema");
 
-const RecipeSchema = require("./RecipeSchema");
+const Recipe = require("./Recipe");
+const recipeSchema = require("./RecipeSchema.json");
 
 /**
  * Abstract Class which all scrapers inherit from
@@ -15,7 +17,7 @@ class BaseScraper {
   }
 
   /**
-   *
+   * Checks if the url has the required sub url
    */
   checkUrl() {
     if (!this.url.includes(this.subUrl)) {
@@ -23,8 +25,11 @@ class BaseScraper {
     }
   }
 
+  /**
+   * Builds a new instance of Recipe
+   */
   createRecipeObject() {
-    this.recipe = new RecipeSchema();
+    this.recipe = new Recipe();
   }
 
   defaultError() {
@@ -32,12 +37,14 @@ class BaseScraper {
   }
 
   /**
-   *
+   * @param {object} $ - a cheerio object representing a DOM
+   * @returns {string|null} - if found, an image url
    */
   defaultSetImage($) {
     this.recipe.image =
       $("meta[property='og:image']").attr("content") ||
-      $("meta[name='og:image']").attr("content");
+      $("meta[name='og:image']").attr("content") ||
+      $("meta[itemprop='image']").attr("content");
   }
 
   /**
@@ -55,7 +62,8 @@ class BaseScraper {
   }
 
   /**
-   *
+   * Handles the workflow for fetching a recipe
+   * @returns {object} - an object representing the recipe
    */
   async fetchRecipe() {
     this.checkUrl();
@@ -79,15 +87,12 @@ class BaseScraper {
   }
 
   /**
-   *
+   * Validates scraped recipes against defined recipe schema
+   * @returns {object} - an object representing the recipe
    */
-  // TODO build recipe schema
   validateRecipe() {
-    if (
-      !this.recipe.name ||
-      !this.recipe.ingredients.length ||
-      !this.recipe.instructions.length
-    ) {
+    let res = validate(this.recipe, recipeSchema);
+    if (!res.valid) {
       this.defaultError();
     }
     return this.recipe;

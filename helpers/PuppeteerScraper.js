@@ -80,10 +80,11 @@ class PuppeteerScraper extends BaseScraper {
     if (response._status < 400) {
       await this.customPoll(page);
       html = await page.content();
-    } else {
-      this.defaultError();
     }
     browser.close().catch(err => {});
+    if (response._status >= 400) {
+      this.defaultError();
+    }
     return cheerio.load(html);
   }
 }

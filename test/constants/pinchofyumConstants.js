@@ -36,6 +36,7 @@ module.exports = {
       "Lunch",
       "Quick and Easy",
       "Salads",
+      "Sugar Free",
       "Sugar-Free",
       "Superfoods",
       "Vegan",

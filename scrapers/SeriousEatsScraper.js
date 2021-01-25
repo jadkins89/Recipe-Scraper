@@ -9,7 +9,7 @@ const BaseScraper = require("../helpers/BaseScraper");
 class SeriousEatsScraper extends BaseScraper {
   constructor(url) {
     super(url, "seriouseats.com/");
-    if (this.url.includes("seriouseats.com/sponsored/")) {
+    if (this.url && this.url.includes("seriouseats.com/sponsored/")) {
       throw new Error("seriouseats.com sponsored recipes not supported");
     }
   }

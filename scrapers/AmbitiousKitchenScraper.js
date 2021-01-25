@@ -29,11 +29,7 @@ class AmbitiousKitchenScraper extends BaseScraper {
     });
 
     $(".wprm-recipe-instruction").each((i, el) => {
-      instructions.push(
-        $(el)
-          .text()
-          .trim()
-      );
+      instructions.push(this.textTrim($(el)));
     });
 
     time.prep =

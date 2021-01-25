@@ -1,10 +1,16 @@
 "use strict";
 const { assert, expect } = require("chai");
 
-const seriousEats = require("../scrapers/SeriousEatsScraper");
+const SeriousEats = require("../scrapers/SeriousEatsScraper");
 const constants = require("./constants/seriouseatsConstants");
 
 describe("seriousEats", () => {
+  let seriousEats;
+
+  before(() => {
+    seriousEats = new SeriousEats();
+  });
+
   it("should fetch the expected recipe", async () => {
     seriousEats.url = constants.testUrl;
     let actualRecipe = await seriousEats.fetchRecipe();
@@ -47,8 +53,7 @@ describe("seriousEats", () => {
 
   it("should throw an error if sponsored recipe is used", async () => {
     try {
-      seriousEats.url = constants.sponsorUrl;
-      await seriousEats.fetchRecipe();
+      seriousEats = new SeriousEats(constants.sponsorUrl);
       assert.fail("was not supposed to succeed");
     } catch (error) {
       expect(error.message).to.equal(
