@@ -1,6 +1,5 @@
 "use strict";
 const commonRecipeTest = require("./helpers/commonRecipeTest");
-const copyKat = require("../scrapers/copykat");
-const Constants = require("./constants/copykatConstants");
+const constants = require("./constants/copykatConstants");
 
-commonRecipeTest("copyKat", copyKat, Constants, "copykat.com/");
+commonRecipeTest("copyKat", constants, "copykat.com/");

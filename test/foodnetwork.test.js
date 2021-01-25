@@ -1,28 +1,36 @@
 "use strict";
-const expect = require("chai").expect;
-const assert = require("chai").assert;
+const { assert, expect } = require("chai");
 
-const foodNetwork = require("../scrapers/foodnetwork");
-const Constants = require("./constants/foodnetworkConstants");
+const FoodNetworkScraper = require("../scrapers/FoodNetworkScraper");
+const constants = require("./constants/foodnetworkConstants");
 
 describe("foodNetwork", () => {
+  let foodNetwork;
+
+  before(() => {
+    foodNetwork = new FoodNetworkScraper();
+  });
+
   it("should fetch the expected recipe(1)", async () => {
-    let actualRecipe = await foodNetwork(Constants.testUrl);
-    expect(JSON.stringify(Constants.expectedRecipe)).to.equal(
+    foodNetwork.url = constants.testUrl;
+    let actualRecipe = await foodNetwork.fetchRecipe();
+    expect(JSON.stringify(constants.expectedRecipe)).to.equal(
       JSON.stringify(actualRecipe)
     );
   });
 
   it("should fetch the expected recipe(2)", async () => {
-    let actualRecipe = await foodNetwork(Constants.anotherTestUrl);
-    expect(JSON.stringify(Constants.anotherExpectedRecipe)).to.equal(
+    foodNetwork.url = constants.anotherTestUrl;
+    let actualRecipe = await foodNetwork.fetchRecipe();
+    expect(JSON.stringify(constants.anotherExpectedRecipe)).to.equal(
       JSON.stringify(actualRecipe)
     );
   });
 
   it("should throw an error if invalid url is used", async () => {
     try {
-      await foodNetwork(Constants.invalidDomainUrl);
+      foodNetwork.url = constants.invalidDomainUrl;
+      await foodNetwork.fetchRecipe();
       assert.fail("was not supposed to succeed");
     } catch (error) {
       expect(error.message).to.equal(
@@ -33,7 +41,8 @@ describe("foodNetwork", () => {
 
   it("should throw an error if a problem occurred during page retrieval", async () => {
     try {
-      await foodNetwork(Constants.invalidUrl);
+      foodNetwork.url = constants.invalidUrl;
+      await foodNetwork.fetchRecipe();
       assert.fail("was not supposed to succeed");
     } catch (error) {
       expect(error.message).to.equal("No recipe found on page");
@@ -42,7 +51,8 @@ describe("foodNetwork", () => {
 
   it("should throw an error if non-recipe page is used", async () => {
     try {
-      await foodNetwork(Constants.nonRecipeUrl);
+      foodNetwork.url = constants.nonRecipeUrl;
+      await foodNetwork.fetchRecipe();
       assert.fail("was not supposed to succeed");
     } catch (error) {
       expect(error.message).to.equal("No recipe found on page");

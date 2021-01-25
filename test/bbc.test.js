@@ -1,6 +1,5 @@
 "use strict";
 const commonRecipeTest = require("./helpers/commonRecipeTest");
-const bbc = require("../scrapers/bbc");
-const Constants = require("./constants/bbcConstants");
+const constants = require("./constants/bbcConstants");
 
-commonRecipeTest("bbc", bbc, Constants, "bbc.co.uk/food/recipes/");
+commonRecipeTest("bbc", constants, "bbc.co.uk/food/recipes/");

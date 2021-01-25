@@ -59,6 +59,6 @@ module.exports = {
     },
     servings: "8 servings",
     image:
-      "https://www.tasteofhome.com/wp-content/uploads/2018/01/Artichoke-Chicken_EXPS_13X9BZ19_24_B10_04_5b-6.jpg"
+      "https://www.tasteofhome.com/wp-content/uploads/2018/01/Artichoke-Chicken_EXPS_13X9BZ19_24_B10_04_5b-9.jpg"
   }
 };

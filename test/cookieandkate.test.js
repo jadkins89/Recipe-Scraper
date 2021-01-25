@@ -1,11 +1,5 @@
 "use strict";
 const commonRecipeTest = require("./helpers/commonRecipeTest");
-const cookieAndKate = require("../scrapers/cookieandkate");
-const Constants = require("./constants/cookieandkateConstants");
+const constants = require("./constants/cookieandkateConstants");
 
-commonRecipeTest(
-  "cookieAndKate",
-  cookieAndKate,
-  Constants,
-  "cookieandkate.com/"
-);
+commonRecipeTest("cookieAndKate", constants, "cookieandkate.com/");
