@@ -52,8 +52,11 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://www.food.com/
 - https://www.foodandwine.com/
 - https://www.foodnetwork.com/
+- https://gimmedelicious.com/
 - https://www.gimmesomeoven.com/
+- https://julieblanner.com/
 - https://www.kitchenstories.com/
+- https://www.melskitchencafe.com/
 - https://www.minimalistbaker.com/
 - https://www.myrecipes.com/
 - https://www.nomnompaleo.com/
@@ -67,6 +70,12 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://www.thepioneerwoman.com/
 - https://www.tastesbetterfromscratch.com/
 - https://www.therealfoodrds.com/
+- https://smittenkitchen.com/
+- https://thepioneerwoman.com/
+- https://www.tasteofhome.com/
+- https://tastesbetterfromscratch.com/
+- https://www.theblackpeppercorn.com/
+- https://therealfoodrds.com/
 - https://www.thespruceeats.com/
 - https://whatsgabycooking.com/
 - https://www.woolworths.com.au/

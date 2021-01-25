@@ -1,6 +1,4 @@
 const request = require("request");
-const cheerio = require("cheerio");
-
 const RecipeSchema = require("../helpers/recipe-schema");
 
 const urlRe = /\/(\d\d\d\d)\//;
@@ -28,8 +26,6 @@ const woolworths = url => {
         },
         (error, response, html) => {
           if (!error && response.statusCode === 200 && html) {
-            const $ = cheerio.load(html);
-
             Recipe.image = html.ImageFilename;
             Recipe.name = html.Title.trim();
             Recipe.ingredients = html.Ingredients.map(i =>
