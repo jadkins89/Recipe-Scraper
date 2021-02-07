@@ -69,6 +69,7 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://thepioneerwoman.com/
 - https://www.tasteofhome.com/
 - https://tastesbetterfromscratch.com/
+- https://thatlowcarblife.com/
 - https://www.theblackpeppercorn.com/
 - https://therealfoodrds.com/
 - https://www.thespruceeats.com/
