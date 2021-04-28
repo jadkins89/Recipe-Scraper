@@ -4,8 +4,8 @@ module.exports = {
   invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://www.simplyrecipes.com/recipes/type/quick/",
   expectedRecipe: {
-    name: "Panzanella Bread Salad Recipe",
-    description: "",
+    name: "Panzanella Bread Salad",
+    description: "Got ripe summer tomatoes? Got day-old bread? Make this classic Tuscan Panzanella Salad recipe! This is a great make-ahead recipe for a summer potluck or backyard party, or make it for dinner and serve with grilled chicken.",
     ingredients: [
       "4 cups tomatoes, cut into large chunks",
       "4 cups day old (somewhat dry and hard) crusty bread (Italian or French loaf), cut into chunks the same size as the tomatoes (see Recipe Note)",
@@ -20,28 +20,23 @@ module.exports = {
       "If refrigerating, let come to room temperature before serving."
     ],
     tags: [
-      "Salad",
-      "Favorite Summer",
-      "Italian",
-      "Vegan",
-      "Bread",
-      "Lunch",
-      "Side Dish",
-      "Make-ahead",
-      "Vegetarian",
-      "Cucumber",
-      "Tomato"
+        "recipes",
+        "dinner-recipes",
+        "dinner-recipes-by-type",
+        "salad-recipes",
+        "seasonal-salad-recipes",
+        "summer-salad-recipes"
     ],
     time: {
-      prep: "15 minutes",
-      cook: "",
+      prep: "15 mins",
+      cook: "30 mins",
       active: "",
       inactive: "",
       ready: "",
-      total: ""
+      total: "45 mins"
     },
-    servings: "Serves 6-8",
+    servings: "6 to 8 servings",
     image:
-      "https://www.simplyrecipes.com/wp-content/uploads/2013/07/panzanella-bread-salad-vertical-a-1600.jpg"
+      "https://www.simplyrecipes.com/thmb/uItRtn2b5mGAnHWj5g2Wfb43YOo=/1600x1067/filters:fill(auto,1)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2013__07__panzanella-bread-salad-horiz-a-1600-694a76c8b391430c8012f5c916aa8caa.jpg"
   }
 };
