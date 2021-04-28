@@ -2,7 +2,7 @@
 
 const BaseScraper = require("../helpers/BaseScraper");
 
-class AmbitiousKitchenScraper extends BaseScraper {
+class JamieOliverScraper extends BaseScraper {
   constructor(url) {
     super(url, "jamieoliver.com/");
   }
@@ -56,4 +56,4 @@ class AmbitiousKitchenScraper extends BaseScraper {
   }
 }
 
-module.exports = AmbitiousKitchenScraper;
+module.exports = JamieOliverScraper;
