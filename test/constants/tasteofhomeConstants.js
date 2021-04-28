@@ -58,7 +58,7 @@ module.exports = {
       ready: "",
       total: ""
     },
-    servings: "6 to 8 servings",
+    servings: "8 servings",
     image:
       "https://www.tasteofhome.com/wp-content/uploads/2018/01/Artichoke-Chicken_EXPS_13X9BZ19_24_B10_04_5b-14.jpg"
   }

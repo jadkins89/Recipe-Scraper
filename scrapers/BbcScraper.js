@@ -13,6 +13,7 @@ class BbcScraper extends BaseScraper {
 
   scrape($) {
     this.defaultSetImage($);
+    this.defaultSetDescription($);
     const { ingredients, instructions, time } = this.recipe;
     this.recipe.name = $(".content-title__text").text();
 
@@ -31,11 +32,8 @@ class BbcScraper extends BaseScraper {
       .first()
       .text();
 
-    this.recipe.servings = $(".icon-with-text__children")
-      .first()
-      .replace('Makes', '')
-      .text()
-      .trim();
+    this.recipe.servings = $(".recipe-leading-info__side-bar .recipe-metadata__serving")
+      .text();
   }
 }
 

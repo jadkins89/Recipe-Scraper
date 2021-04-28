@@ -52,10 +52,12 @@ class BaseScraper {
      * @returns {string|null} - if found, an image url
      */
     defaultSetDescription($) {
-        this.recipe.description =
+        const description =
             $("meta[name='description']").attr("content") ||
             $("meta[property='og:description']").attr("content") ||
             $("meta[name='twitter:description']").attr("content");
+
+        this.recipe.description = description ? description.replace(/\n/g, "") : '';
     }
 
   /**

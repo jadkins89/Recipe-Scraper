@@ -47,7 +47,7 @@ class BbcGoodFoodScraper extends BaseScraper {
         }
       });
 
-    this.recipe.servings = $(".masthead__servings")
+    this.recipe.servings = $(".post-header__servings .icon-with-text__children")
       .text()
       .replace("Makes ", "");
   }
