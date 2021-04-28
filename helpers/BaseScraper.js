@@ -58,6 +58,17 @@ class BaseScraper {
       $("meta[itemprop='image']").attr("content");
   }
 
+    /**
+     * @param {object} $ - a cheerio object representing a DOM
+     * @returns {string|null} - if found, an image url
+     */
+    defaultSetDescription($) {
+        this.recipe.description =
+            $("meta[name='description']").attr("content") ||
+            $("meta[property='og:description']").attr("content") ||
+            $("meta[name='twitter:description']").attr("content");
+    }
+
   /**
    * @param {object} $ - a cheerio object representing a DOM
    * if found, set recipe description
