@@ -3,3 +3,4 @@ package-lock.json
 .nyc_output
 .coveralls.yml
 .vscode/launch.json
+.idea/

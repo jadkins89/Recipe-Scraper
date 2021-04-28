@@ -44,7 +44,8 @@ const domains = {
   thespruceeats: require("../scrapers/TheSpruceEatsScraper"),
   whatsgabycooking: require("../scrapers/WhatsGabyCookingScraper"),
   woolworths: require("../scrapers/WoolworthsScraper"),
-  yummly: require("../scrapers/YummlyScraper")
+  yummly: require("../scrapers/YummlyScraper"),
+  jamieoliver: require("../scrapers/JamieOliverScraper")
 };
 
 /**
