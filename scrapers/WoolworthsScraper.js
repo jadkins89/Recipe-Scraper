@@ -17,7 +17,7 @@ class WoolworthsScraper extends PuppeteerScraper {
     do {
       container = await page.$(".recipeDetailContainer");
       if (!container) {
-        await page.waitFor(100);
+        await page.waitForTimeout(100);
         count++;
       }
     } while (!container && count < 60);

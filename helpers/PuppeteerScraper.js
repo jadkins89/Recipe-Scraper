@@ -87,6 +87,16 @@ class PuppeteerScraper extends BaseScraper {
     }
     return cheerio.load(html);
   }
+
+    static async isElementVisible(page, cssSelector) {
+      let visible = true;
+      await page
+          .waitForSelector(cssSelector, { visible: true, timeout: 2000 })
+          .catch(() => {
+              visible = false;
+          });
+      return visible;
+  };
 }
 
 module.exports = PuppeteerScraper;

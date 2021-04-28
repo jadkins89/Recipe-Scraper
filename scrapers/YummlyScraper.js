@@ -11,28 +11,31 @@ class YummlyScraper extends PuppeteerScraper {
     super(url, "yummly.com/recipe");
   }
 
+
+
   /**
    * @override
    * Navigates through steps to recipe
    */
   async customPoll(page) {
     try {
-      let steps = (await page.$$(".step")).length;
-      let newSteps = -1;
+        const selectorForLoadMoreButton = "a.view-more-steps";
 
-      while (steps >= newSteps) {
-        await page.waitFor(100);
-        await page.$eval(
-          "a.view-more-steps",
-          /* istanbul ignore next */ elem => elem.click()
-        );
-        newSteps = (await page.$$(".step")).length;
-      }
-    } catch (err) {}
+        let loadMoreVisible = await PuppeteerScraper.isElementVisible(page, selectorForLoadMoreButton);
+        while (loadMoreVisible) {
+            await page
+                .click(selectorForLoadMoreButton)
+                .catch(() => {});
+            loadMoreVisible = await PuppeteerScraper.isElementVisible(page, selectorForLoadMoreButton);
+        }
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   scrape($) {
     this.defaultSetImage($);
+    this.recipe.description = $("meta[name='description']").attr("content");
     const { ingredients, instructions, tags, time } = this.recipe;
     this.recipe.name = $(".recipe-title").text();
 
