@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://copykat.com/contact/",
   expectedRecipe: {
     name: "Air Fryer Croutons",
+    description: "",
     ingredients: [
       "4 slices bread",
       "2 tablespoons melted butter",

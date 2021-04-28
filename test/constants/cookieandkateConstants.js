@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://cookieandkate.com/about/",
   expectedRecipe: {
     name: "Fresh Spring Rolls with Peanut Sauce",
+    description: "",
     ingredients: [
       "Spring Rolls",
       "2 ounces rice vermicelli or maifun brown rice noodles*",

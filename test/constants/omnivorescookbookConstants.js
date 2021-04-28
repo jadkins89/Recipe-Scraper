@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://omnivorescookbook.com/about/",
   expectedRecipe: {
     name: "Dan Dan Noodles (担担面)",
+    description: "",
     ingredients: [
       "Noodle sauce",
       "1/3 cup Chinese sesame paste (or unsweetened natural peanut butter)",

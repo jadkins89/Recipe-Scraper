@@ -33,7 +33,7 @@ class AmbitiousKitchenScraper extends BaseScraper {
           time.inactive = value;
           break;
         case "Servings":
-          this.recipe.servings = value;
+          this.recipe.servings = value.replace(/\n/g, " ").trim();
           break;
         default:
           break;
@@ -76,7 +76,7 @@ class AmbitiousKitchenScraper extends BaseScraper {
     time.prep = $("time[itemprop=prepTime]").text();
     time.cook = $("time[itemprop=cookTime]").text();
     time.ready = $("time[itemprop=totalTime]").text();
-    this.recipe.servings = $("#metaRecipeServings").attr("content");
+    this.recipe.servings = $("#metaRecipeServings").attr("content").replace(/\n/g, " ").trim();
   }
 
   scrape($) {

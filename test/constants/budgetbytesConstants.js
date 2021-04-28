@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.budgetbytes.com/kitchen-basics/",
   expectedRecipe: {
     name: "Chicken and Lime Soup",
+    description: "",
     ingredients: [
       "1 yellow onion",
       "3 ribs celery (about 1/4 bunch)",

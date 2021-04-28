@@ -6,6 +6,7 @@ module.exports = {
   nonRecipeUrl: "https://www.yummly.com/recipes",
   expectedRecipe: {
     name: "No-Bake Lemon-Mango Cheesecakes with Speculoos crust",
+    description: "",
     ingredients: [
       "125 grams cookies (spéculoos)",
       "60 grams butter ",

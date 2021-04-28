@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.food.com/recipe/",
   expectedRecipe: {
     name: "Oatmeal Raisin Cookies",
+    description: "",
     ingredients: [
       "Whisk together and set aside",
       "2 cups all-purpose flour",

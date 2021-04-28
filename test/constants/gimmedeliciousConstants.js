@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://gimmedelicious.com/shop/",
   expectedRecipe: {
     name: "Creamy Spinach and Mushroom Pasta Bake",
+    description: "",
     ingredients: [
       "12 oz pasta uncooked",
       "2 tablespoons unsalted butter",
@@ -39,6 +40,6 @@ module.exports = {
     },
     servings: "6",
     image:
-      "https://i2.wp.com/gimmedelicious.com/wp-content/uploads/2020/12/Image-11.jpg"
+      "https://gimmedelicious.com/wp-content/uploads/2020/12/Image-11.jpg"
   }
 };

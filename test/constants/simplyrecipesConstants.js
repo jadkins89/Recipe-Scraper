@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.simplyrecipes.com/recipes/type/quick/",
   expectedRecipe: {
     name: "Panzanella Bread Salad Recipe",
+    description: "",
     ingredients: [
       "4 cups tomatoes, cut into large chunks",
       "4 cups day old (somewhat dry and hard) crusty bread (Italian or French loaf), cut into chunks the same size as the tomatoes (see Recipe Note)",

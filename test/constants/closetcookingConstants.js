@@ -6,6 +6,7 @@ module.exports = {
   nonRecipeUrl: "https://www.closetcooking.com/contact/",
   expectedRecipe: {
     name: "Reina Pepiada Arepa (Chicken and Avocado Sandwich)",
+    description: "",
     ingredients: [
       "For the arepas:",
       "1 1/2 cups pre-cooked white cornmeal (aka masarepa) (such as PAN)",

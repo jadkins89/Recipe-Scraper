@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.bbcgoodfood.com/recipes/",
   expectedRecipe: {
     name: "Doughnut muffins",
+    description: "",
     ingredients: [
       "140g golden caster sugar, plus 200g extra for dusting",
       "200g plain flour",

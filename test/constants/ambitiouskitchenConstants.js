@@ -6,6 +6,7 @@ module.exports = {
   nonRecipeUrl: "https://www.ambitiouskitchen.com/the-second-trimester/",
   expectedRecipe: {
     name: "Street Corn Pasta Salad with Cilantro Pesto & Goat Cheese",
+    description: "",
     ingredients: [
       "For the corn",
       "2 large ears of corn, shucked and cleaned",

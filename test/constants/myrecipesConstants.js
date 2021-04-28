@@ -6,6 +6,7 @@ module.exports = {
   expectedRecipe: {
     name:
       "Marinated London Broil with Potatoes, Broccoli, and Roasted Garlic Aioli",
+    description: "",
     ingredients: [
       "½ cup olive oil",
       "3 tablespoons Worcestershire sauce",

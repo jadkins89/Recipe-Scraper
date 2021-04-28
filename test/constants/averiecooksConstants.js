@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.averiecooks.com/about/",
   expectedRecipe: {
     name: "Thai Chicken Coconut Curry",
+    description: "",
     ingredients: [
       "2 to 3 tablespoons coconut oil (olive oil may be substituted)",
       "1 medium/large sweet Vidalia or yellow onion, diced small",

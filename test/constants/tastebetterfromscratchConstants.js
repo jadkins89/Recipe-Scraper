@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.tastesbetterfromscratch.com/about/",
   expectedRecipe: {
     name: "Chess Pie",
+    description: "",
     ingredients: [
       "1/2 cup butter",
       "2 cups granulated sugar",

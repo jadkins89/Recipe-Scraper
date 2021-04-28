@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.bonappetit.com/recipe/",
   expectedRecipe: {
     name: "Soba Noodles With Crispy Kale",
+    description: "",
     ingredients: [
       "1 medium bunch curly kale, ribs and stems removed, leaves coarsely chopped (about 4 cups)",
       "1¼ cups unsweetened coconut flakes",

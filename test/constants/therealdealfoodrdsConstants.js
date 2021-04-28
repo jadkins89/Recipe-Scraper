@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://therealfoodrds.com/category/courses/slow-cooker/",
   expectedRecipe: {
     name: "Veggie Loaded Turkey Chili",
+    description: "",
     ingredients: [
       "1 lb. lean ground turkey, beef or chicken",
       "1 Tbsp olive oil or avocado oil",

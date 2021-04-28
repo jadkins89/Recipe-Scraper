@@ -6,6 +6,7 @@ module.exports = {
   nonRecipeUrl: "https://www.foodandwine.com/recipes/",
   expectedRecipe: {
     name: "French Onion Soup",
+    description: "",
     ingredients: [
       "1 garlic clove, halved",
       "1 bay leaf, scored",

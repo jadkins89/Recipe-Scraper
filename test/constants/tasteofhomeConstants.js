@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.tasteofhome.com/recipes/",
   expectedRecipe: {
     name: "Artichoke Chicken",
+    description: "",
     ingredients: [
       "8 boneless skinless chicken breast halves (4 ounces each)",
       "2 tablespoons butter",
@@ -57,8 +58,8 @@ module.exports = {
       ready: "",
       total: ""
     },
-    servings: "8 servings",
+    servings: "6 to 8 servings",
     image:
-      "https://www.tasteofhome.com/wp-content/uploads/2018/01/Artichoke-Chicken_EXPS_13X9BZ19_24_B10_04_5b-9.jpg"
+      "https://www.tasteofhome.com/wp-content/uploads/2018/01/Artichoke-Chicken_EXPS_13X9BZ19_24_B10_04_5b-14.jpg"
   }
 };

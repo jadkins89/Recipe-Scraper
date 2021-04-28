@@ -6,6 +6,7 @@ module.exports = {
   nonRecipeUrl: "https://www.melskitchencafe.com/about/",
   expectedRecipe: {
     name: "BBQ Pulled Pork Sandwiches",
+    description: "",
     ingredients: [
       "3 to 4 pounds boneless pork shoulder, pork butt or pork sirloin roast",
       "1 teaspoon salt (I use coarse, kosher salt)",

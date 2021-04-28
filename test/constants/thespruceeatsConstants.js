@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.thespruceeats.com/food-by-region-4162676",
   expectedRecipe: {
     name: "Grilled Squid (Calamari)",
+    description: "",
     ingredients: [
       "1 pound squid (cleaned)",
       "1 tablespoon extra-virgin olive oil",

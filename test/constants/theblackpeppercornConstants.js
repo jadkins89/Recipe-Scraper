@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.theblackpeppercorn.com/about-me/",
   expectedRecipe: {
     name: "How to Cook a Picnic Ham - Smoked Pork Shoulder",
+    description: "",
     ingredients: [
       "1 smoked picnic ham (5-8 pounds)",
       "2 oranges, peeled",

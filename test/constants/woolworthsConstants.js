@@ -7,6 +7,7 @@ module.exports = {
     "https://www.woolworths.com.au/shop/recipedetail/0000/not-a-recipe",
   expectedRecipe: {
     name: "Bean & Tomato Nachos",
+    description: "",
     ingredients: [
       "2 tsp cumin",
       "2 tsp coriander; plus 1 bunch coriander, chopped",

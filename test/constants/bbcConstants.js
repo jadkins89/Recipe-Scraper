@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.bbc.co.uk/food/recipes/",
   expectedRecipe: {
     name: "Sausage bake with gnocchi",
+    description: "",
     ingredients: [
       "1 red pepper, deseeded and cut into chunks",
       "1 yellow pepper, deseeded and cut into chunks",

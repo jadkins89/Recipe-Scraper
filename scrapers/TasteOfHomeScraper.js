@@ -35,7 +35,7 @@ class TasteOfHomeScraper extends BaseScraper {
       .split(/Bake:/g);
     time.prep = timeStr[0].replace("Prep:", "").trim();
     time.cook = (timeStr[1] || "").trim();
-    this.recipe.servings = $(".makes > p").text();
+    this.recipe.servings = $(".recipe-serving span span.meta-text__data").text();
   }
 }
 

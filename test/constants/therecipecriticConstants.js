@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://therecipecritic.com/food-blogger/",
   expectedRecipe: {
     name: "Creamy Parmesan Spaghetti",
+    description: "",
     ingredients: [
       "12 ounces spaghetti noodles",
       "1 tablespoon butter",

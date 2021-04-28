@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://nomnompaleo.com/aboutme",
   expectedRecipe: {
     name: "West Lake Beef Soup",
+    description: "",
     ingredients: [
       "½ pound flank steak finely minced or ground beef",
       "1 teaspoon Diamond Crystal kosher salt",

@@ -9,6 +9,7 @@ module.exports = {
     "http://www.eatingwell.com/recipes/18306/cooking-methods-styles/quick-easy/dessert/",
   expectedRecipe: {
     name: "Pressure-Cooker Chicken Enchilada Soup",
+    description: "",
     ingredients: [
       "1 tablespoon olive oil",
       "1 medium onion, chopped",
@@ -52,6 +53,7 @@ module.exports = {
   },
   expectedRecipe2: {
     name: "Mexican Pasta Salad with Creamy Avocado Dressing",
+    description: "",
     ingredients: [
       "Dressing",
       "½ ripe avocado",

@@ -31,9 +31,11 @@ class BbcScraper extends BaseScraper {
       .first()
       .text();
 
-    this.recipe.servings = $(".recipe-metadata__serving")
+    this.recipe.servings = $(".icon-with-text__children")
       .first()
-      .text();
+      .replace('Makes', '')
+      .text()
+      .trim();
   }
 }
 

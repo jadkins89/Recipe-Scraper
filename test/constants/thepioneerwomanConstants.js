@@ -6,6 +6,7 @@ module.exports = {
   nonRecipeUrl: "https://www.thepioneerwoman.com/food-cooking/",
   expectedRecipe: {
     name: "French Dip Sandwiches",
+    description: "",
     ingredients: [
       "1 boneless ribeye loin or sirloin (about 4 to 5 pounds)",
       "1 tbsp. kosher salt",

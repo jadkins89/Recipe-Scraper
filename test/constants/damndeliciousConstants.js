@@ -6,6 +6,7 @@ module.exports = {
   nonRecipeUrl: "https://damndelicious.net/about-me/",
   expectedRecipe: {
     name: "Raspberry Croissant French Toast Bake",
+    description: "",
     ingredients: [
       "1 1/4 pounds fresh croissants (about 12 medium), cut in half",
       "1 (8-ounce) package cream cheese, cubed",

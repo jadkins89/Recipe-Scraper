@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://minimalistbaker.com/about/",
   expectedRecipe: {
     name: "Fudgy Sweet Potato Brownies (V/GF)",
+    description: "",
     ingredients: [
       "1 cup sweet potato purée (see instructions)",
       "2/3 cup maple syrup",

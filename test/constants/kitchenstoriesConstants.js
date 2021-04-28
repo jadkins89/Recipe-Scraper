@@ -6,6 +6,7 @@ module.exports = {
   nonRecipeUrl: "https://www.kitchenstories.com/en/recipes/",
   expectedRecipe: {
     name: "Chorizo breakfast tacos with salsa verde",
+    description: "",
     ingredients: [
       "12 flour tortillas",
       "3 green bell peppers",
