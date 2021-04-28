@@ -5,7 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.thespruceeats.com/food-by-region-4162676",
   expectedRecipe: {
     name: "Grilled Squid (Calamari)",
-    description: "",
+    description: "In this recipe, squid is simply flavored with olive oil and lemon juice, then quickly grilled to tender perfection. How to clean squid also included.",
     ingredients: [
       "1 pound squid, cleaned",
       "1 tablespoon extra-virgin olive oil",
