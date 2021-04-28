@@ -44,6 +44,7 @@ class BaseScraper {
   }
 
   defaultError() {
+    console.log(this.recipe);
     throw new Error("No recipe found on page");
   }
 
