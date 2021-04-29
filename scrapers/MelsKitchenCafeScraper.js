@@ -16,6 +16,20 @@ class MelsKitchenCafeScraper extends BaseScraper {
     this.defaultSetDescription($);
     const { ingredients, instructions, time } = this.recipe;
 
+    // get tags from json schema
+    const jsonLD = $("script[type='application/ld+json']")[0];
+    if (jsonLD && jsonLD.children && jsonLD.children[0].data) {
+      const jsonRaw = jsonLD.children[0].data;
+      const result = JSON.parse(jsonRaw);
+
+      if (result['@graph']) {
+        const article = result['@graph'].find((el) => el['@type'] === 'Article');
+        if (article && article.keywords) {
+          this.recipe.tags = article.keywords.split(',').map(t => t.trim());
+        }
+      }
+    }
+
     this.recipe.name = this.textTrim(
       $(".wp-block-mv-recipe .mv-create-title-primary")
     );

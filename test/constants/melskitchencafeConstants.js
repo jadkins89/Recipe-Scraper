@@ -22,7 +22,11 @@ module.exports = {
       "Remove the pork from the slow cooker or pressure cooker and discard most of the remaining liquid (I leave about 1/4 cup or so). Shred the pork using a couple of forks - it should easily fall apart into pieces. Place the meat back in the slow cooker or pressure cooker. Add the BBQ sauce and heat through (or keep on warm for several hours).",
       "Serve on buns with extra barbecue sauce."
     ],
-    tags: [],
+    tags: [
+      "BBQ sauce",
+      "liquid smoke",
+      "pork shoulder"
+    ],
     time: {
       prep: "15 minutes",
       cook: "8 hours",
