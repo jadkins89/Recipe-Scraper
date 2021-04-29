@@ -13,6 +13,7 @@ class FoodScraper extends BaseScraper {
 
   scrape($) {
     this.defaultSetImage($);
+    this.defaultSetDescription($);
     const { ingredients, instructions, time } = this.recipe;
     this.recipe.name = $(".recipe-title").text();
 
