@@ -13,10 +13,9 @@ class GimmeDeliciousScraper extends BaseScraper {
 
   scrape($) {
     this.defaultSetImage($);
+    this.recipe.description = this.textTrim($('.entry-content em').first());
     const { ingredients, instructions, time } = this.recipe;
-    this.recipe.name = $(".wprm-recipe-name")
-      .text()
-      .trim();
+    this.recipe.name = this.textTrim($(".wprm-recipe-name"));
 
     this.recipe.tags = ($("meta[name='keywords']").attr("content") || "").split(
       ","

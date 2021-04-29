@@ -5,7 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://gimmedelicious.com/shop/",
   expectedRecipe: {
     name: "Creamy Spinach and Mushroom Pasta Bake",
-    description: "",
+    description: "Pasta with spinach & mushroom sautéed in butter and garlic then baked in parmesan cream sauce. This creamy pasta casserole is packed full of flavor and makes a delicious quick weeknight dinner!",
     ingredients: [
       "12 oz pasta uncooked",
       "2 tablespoons unsalted butter",
