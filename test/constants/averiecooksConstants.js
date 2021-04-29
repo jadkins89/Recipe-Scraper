@@ -5,7 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.averiecooks.com/about/",
   expectedRecipe: {
     name: "Thai Chicken Coconut Curry",
-    description: "",
+    description: "Thai Chicken Coconut Curry – An EASY one-skillet curry that’s ready in 20 minutes and is layered with so many fabulous flavors!! Low-cal, low-carb, and HEALTHY but tastes like comfort food!!",
     ingredients: [
       "2 to 3 tablespoons coconut oil (olive oil may be substituted)",
       "1 medium/large sweet Vidalia or yellow onion, diced small",

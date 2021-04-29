@@ -25,7 +25,8 @@ module.exports = {
     tags: [
       "BBQ sauce",
       "liquid smoke",
-      "pork shoulder"
+      "pork shoulder",
+      "Pork"
     ],
     time: {
       prep: "15 minutes",

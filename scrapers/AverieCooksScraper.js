@@ -15,6 +15,15 @@ class AverieCooksScraper extends BaseScraper {
       .first()
       .text();
 
+    const jsonLD = $("script[type='application/ld+json']:not(.yoast-schema-graph)")[0];
+    if (jsonLD && jsonLD.children && jsonLD.children[0].data) {
+      const jsonRaw = jsonLD.children[0].data;
+      const result = JSON.parse(jsonRaw);
+      this.recipe.description = result.description;
+    } else {
+      this.defaultSetDescription($);
+    }
+
     $(".cookbook-ingredients-list")
       .children("li")
       .each((i, el) => {
