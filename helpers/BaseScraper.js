@@ -14,6 +14,7 @@ class BaseScraper {
   constructor(url, subUrl = "") {
     this.url = url;
     this.subUrl = subUrl;
+    console.log(this.url)
   }
 
   /**
@@ -33,7 +34,8 @@ class BaseScraper {
   }
 
   defaultError() {
-    console.log(this.recipe);
+    // console.log('defaultError, recipe:')
+    // console.log(this.recipe);
     throw new Error("No recipe found on page");
   }
 
@@ -66,11 +68,15 @@ class BaseScraper {
    * @returns {object} - Cheerio instance
    */
   async fetchDOMModel() {
+    console.log('fetchDOMModel')
+    console.log(this.url)
     try {
       const res = await fetch(this.url);
       const html = await res.text();
       return cheerio.load(html);
     } catch (err) {
+      console.log('error in fetchDOMModel')
+      console.log(err)
       this.defaultError();
     }
   }
@@ -82,6 +88,7 @@ class BaseScraper {
   async fetchRecipe() {
     this.checkUrl();
     const $ = await this.fetchDOMModel();
+    console.log('fetchRecipe')
     this.createRecipeObject();
     this.scrape($);
     return this.validateRecipe();
