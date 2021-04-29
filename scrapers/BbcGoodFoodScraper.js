@@ -13,6 +13,7 @@ class BbcGoodFoodScraper extends BaseScraper {
 
   scrape($) {
     this.defaultSetImage($);
+    this.defaultSetDescription($);
     const { ingredients, instructions, time } = this.recipe;
     this.recipe.name = $("meta[name='og:title']").attr("content");
 
