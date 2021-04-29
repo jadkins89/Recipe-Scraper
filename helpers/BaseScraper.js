@@ -61,7 +61,7 @@ class BaseScraper {
 
     /**
      * @param {object} $ - a cheerio object representing a DOM
-     * @returns {string|null} - if found, an image url
+     * if found, set recipe description
      */
     defaultSetDescription($) {
         const description =
