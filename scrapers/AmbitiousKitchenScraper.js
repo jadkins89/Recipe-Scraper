@@ -9,6 +9,7 @@ class AmbitiousKitchenScraper extends BaseScraper {
 
   scrape($) {
     this.defaultSetImage($);
+    this.defaultSetDescription($);
     this.recipe.name = $(".wprm-recipe-name").text();
     const { ingredients, instructions, time } = this.recipe;
 
