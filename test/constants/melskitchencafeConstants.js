@@ -6,7 +6,7 @@ module.exports = {
   nonRecipeUrl: "https://www.melskitchencafe.com/about/",
   expectedRecipe: {
     name: "BBQ Pulled Pork Sandwiches",
-    description: "",
+    description: "The best BBQ pulled pork sandwiches EVER. The pork is so tender and flavorful and can be made in the slow cooker or instant pot!",
     ingredients: [
       "3 to 4 pounds boneless pork shoulder, pork butt or pork sirloin roast",
       "1 teaspoon salt (I use coarse, kosher salt)",
