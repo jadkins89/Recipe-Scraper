@@ -66,7 +66,6 @@ class BaseScraper {
    * @returns {object} - Cheerio instance
    */
   async fetchDOMModel() {
-    console.log('fetchDOMModel from url: ', this.url)
     try {
       const res = await fetch(this.url);
       const html = await res.text();

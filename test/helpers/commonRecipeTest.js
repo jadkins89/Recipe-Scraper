@@ -12,7 +12,6 @@ const commonRecipeTest = (name, constants, url) => {
 
     it("should fetch the expected recipe", async () => {
       scraper.url = constants.testUrl;
-      console.log('scraper.url: ', scraper.url)
       let actualRecipe = await scraper.fetchRecipe();
       expect(constants.expectedRecipe).to.deep.equal(actualRecipe);
     });

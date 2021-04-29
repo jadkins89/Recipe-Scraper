@@ -50,52 +50,61 @@ class PuppeteerScraper extends BaseScraper {
   async customPoll(page) {
     return true;
   }
+
   /**
    * @override
    * Fetches html from url using puppeteer headless browser
    * @returns {object} - Cheerio instance
    */
   async fetchDOMModel() {
-    const browser = await puppeteer.launch({
-      headless: true
-    });
-    const page = await browser.newPage();
-    await page.setRequestInterception(true);
+    console.log('fetchDOMModel from url: ', this.url)
+    try {
+      const browser = await puppeteer.launch({
+        headless: true
+      });
+      const page = await browser.newPage();
+      await page.setRequestInterception(true);
 
-    await page.on("request", req => {
-      const requestUrl = req._url.split("?")[0].split("#")[0];
-      if (
-        blockedResourceTypes.indexOf(req.resourceType()) !== -1 ||
-        skippedResources.some(resource => requestUrl.indexOf(resource) !== -1)
-      ) {
-        req.abort();
-      } else {
-        req.continue();
+      await page.on("request", req => {
+        const requestUrl = req._url.split("?")[0].split("#")[0];
+        if (
+          blockedResourceTypes.indexOf(req.resourceType()) !== -1 ||
+          skippedResources.some(resource => requestUrl.indexOf(resource) !== -1)
+        ) {
+          req.abort();
+        } else {
+          req.continue();
+        }
+      });
+
+      const response = await page.goto(this.url);
+
+      let html;
+      if (response._status < 400) {
+        await this.customPoll(page);
+        html = await page.content();
       }
-    });
-
-    const response = await page.goto(this.url);
-
-    let html;
-    if (response._status < 400) {
-      await this.customPoll(page);
-      html = await page.content();
+      browser.close().catch(err => {
+      });
+      if (response._status >= 400) {
+        console.log('failed to fetchDOMModel: response status ', response._status)
+        this.defaultError()
+      }
+      return cheerio.load(html);
+    } catch (e) {
+      console.log(e);
+      this.defaultError()
     }
-    browser.close().catch(err => {});
-    if (response._status >= 400) {
-      this.defaultError();
-    }
-    return cheerio.load(html);
   }
 
-    static async isElementVisible(page, cssSelector) {
-      let visible = true;
-      await page
-          .waitForSelector(cssSelector, { visible: true, timeout: 2000 })
-          .catch(() => {
-              visible = false;
-          });
-      return visible;
+  static async isElementVisible(page, cssSelector) {
+    let visible = true;
+    await page
+      .waitForSelector(cssSelector, {visible: true, timeout: 2000})
+      .catch(() => {
+        visible = false;
+      });
+    return visible;
   };
 }
 
