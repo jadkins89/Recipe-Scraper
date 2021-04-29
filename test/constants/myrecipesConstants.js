@@ -6,7 +6,7 @@ module.exports = {
   expectedRecipe: {
     name:
       "Marinated London Broil with Potatoes, Broccoli, and Roasted Garlic Aioli",
-    description: "",
+    description: "This sheet pan dinner couldn’t be easier (or more delicious), and utilizing inexpensive London broil, it’s one you’ll come back to again and again. Serving this budget-friendly dinner with a shortcut aioli takes the entire meal up a notch with minimal effort. In testing, we even found that using jarred roasted garlic, rather than preparing your own, absolutely delivers on flavor. London broil will be labeled as such in many supermarkets, but you can also substitute flank steak or top round.",
     ingredients: [
       "½ cup olive oil",
       "3 tablespoons Worcestershire sauce",
