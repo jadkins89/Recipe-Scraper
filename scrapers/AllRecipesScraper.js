@@ -8,6 +8,7 @@ class AmbitiousKitchenScraper extends BaseScraper {
   }
 
   newScrape($) {
+    this.defaultSetDescription($);
     this.recipe.name = this.recipe.name.replace(/\s\s+/g, "");
     const { ingredients, instructions, time } = this.recipe;
     $(".recipe-meta-item").each((i, el) => {
@@ -55,6 +56,7 @@ class AmbitiousKitchenScraper extends BaseScraper {
   }
 
   oldScrape($) {
+    this.defaultSetDescription($);
     const { ingredients, instructions, time } = this.recipe;
     $("#polaris-app label").each((i, el) => {
       const item = $(el)
