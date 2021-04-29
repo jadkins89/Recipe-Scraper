@@ -7,7 +7,6 @@ const commonRecipeTest = (name, constants, url) => {
 
     before(() => {
       scraper = new ScraperFactory().getScraper(url);
-      console.log(scraper)
     });
 
     it("should fetch the expected recipe", async () => {
