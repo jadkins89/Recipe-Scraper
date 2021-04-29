@@ -69,7 +69,7 @@ class BaseScraper {
             $("meta[property='og:description']").attr("content") ||
             $("meta[name='twitter:description']").attr("content");
 
-        this.recipe.description = description ? description.replace(/\n/g, "") : '';
+        this.recipe.description = description ? description.replace(/\n/g, "").trim() : '';
     }
 
   /**
