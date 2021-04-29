@@ -57,44 +57,39 @@ class PuppeteerScraper extends BaseScraper {
    * @returns {object} - Cheerio instance
    */
   async fetchDOMModel() {
-    console.log('fetchDOMModel from url: ', this.url)
-    try {
-      const browser = await puppeteer.launch({
-        headless: true
-      });
-      const page = await browser.newPage();
-      await page.setRequestInterception(true);
+    const browser = await puppeteer.launch({
+      headless: true
+    });
+    const page = await browser.newPage();
+    await page.setRequestInterception(true);
 
-      await page.on("request", req => {
-        const requestUrl = req._url.split("?")[0].split("#")[0];
-        if (
-          blockedResourceTypes.indexOf(req.resourceType()) !== -1 ||
-          skippedResources.some(resource => requestUrl.indexOf(resource) !== -1)
-        ) {
-          req.abort();
-        } else {
-          req.continue();
-        }
-      });
-
-      const response = await page.goto(this.url);
-
-      let html;
-      if (response._status < 400) {
-        await this.customPoll(page);
-        html = await page.content();
+    await page.on("request", req => {
+      const requestUrl = req._url.split("?")[0].split("#")[0];
+      if (
+        blockedResourceTypes.indexOf(req.resourceType()) !== -1 ||
+        skippedResources.some(resource => requestUrl.indexOf(resource) !== -1)
+      ) {
+        req.abort();
+      } else {
+        req.continue();
       }
-      browser.close().catch(err => {
-      });
-      if (response._status >= 400) {
-        console.log('failed to fetchDOMModel: response status ', response._status)
-        this.defaultError()
-      }
-      return cheerio.load(html);
-    } catch (e) {
-      console.log(e);
+    });
+
+    const response = await page.goto(this.url);
+
+    let html;
+    if (response._status < 400) {
+      await this.customPoll(page);
+      html = await page.content();
+    }
+    browser.close().catch(err => {
+    });
+
+    if (response._status >= 400) {
+      console.log('failed to fetchDOMModel: response status ', response._status);
       this.defaultError()
     }
+    return cheerio.load(html);
   }
 
   static async isElementVisible(page, cssSelector) {

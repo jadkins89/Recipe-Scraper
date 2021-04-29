@@ -16,11 +16,21 @@ class BaseScraper {
     this.subUrl = subUrl;
   }
 
+  async checkServerResponse() {
+    try {
+    const res = await fetch(this.url);
+
+    return res.ok; // res.status >= 200 && res.status < 300
+    } catch (e) {
+      console.log(e)
+      return false;
+    }
+  }
+
   /**
    * Checks if the url has the required sub url
    */
   checkUrl() {
-    console.log('checkUrl')
     if (!this.url.includes(this.subUrl)) {
       throw new Error(`url provided must include '${this.subUrl}'`);
     }
@@ -80,7 +90,6 @@ class BaseScraper {
    * @returns {object} - an object representing the recipe
    */
   async fetchRecipe() {
-    console.log('fetchRecipe')
     this.checkUrl();
     const $ = await this.fetchDOMModel();
     this.createRecipeObject();
