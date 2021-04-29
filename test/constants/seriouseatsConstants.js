@@ -8,7 +8,7 @@ module.exports = {
     "https://www.seriouseats.com/sponsored/2019/07/wild-alaska-rockfish-kebabs-with-chimichurri.html",
   expectedRecipe: {
     name: "Icy-Cold Korean Cucumber Soup (Oi Naengguk) Recipe",
-    description: "",
+    description: "Using only a few key ingredients, this refreshing Korean cucumber soup delivers tons of savory flavor. With the addition of ice to keep it frosty, and a topping of roasted sesame seeds for a final nutty note, this soup will fool your taste buds into thinking a lot more went into making it than actually did.",
     ingredients: [
       "One 1-pound (500g) cucumber, preferably Korean or English (about 8 to 10 inches/20 to 25cm long; see note)",
       "4 medium cloves garlic, finely minced",
