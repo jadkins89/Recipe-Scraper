@@ -34,7 +34,6 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
     "jsonschema": "^1.4.0",
-    "moment": "^2.29.1",
     "node-fetch": "^2.6.1",
     "parse-domain": "^2.3.2",
     "puppeteer": "^9.0.0"

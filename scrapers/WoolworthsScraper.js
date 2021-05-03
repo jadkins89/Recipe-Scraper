@@ -1,6 +1,5 @@
 "use strict";
 
-const moment = require('moment');
 const PuppeteerScraper = require("../helpers/PuppeteerScraper");
 
 /**
@@ -48,9 +47,9 @@ class WoolworthsScraper extends PuppeteerScraper {
           this.recipe.ingredients = result.recipeIngredient;
           this.recipe.instructions = result.recipeInstructions.map(step => step.text);
 
-          this.recipe.time.prep = moment.duration(result.prepTime).humanize();
-          this.recipe.time.cook = moment.duration(result.cookTime).humanize();
-          this.recipe.time.total = moment.duration(result.totalTime).humanize();
+          this.recipe.time.prep = WoolworthsScraper.parsePTTime(result.prepTime);
+          this.recipe.time.cook = WoolworthsScraper.parsePTTime(result.cookTime);
+          this.recipe.time.total = WoolworthsScraper.parsePTTime(result.totalTime);
 
           this.recipe.servings = result.recipeYield;
 
