@@ -59,18 +59,18 @@ class BaseScraper {
       $("meta[itemprop='image']").attr("content");
   }
 
-    /**
-     * @param {object} $ - a cheerio object representing a DOM
-     * if found, set recipe description
-     */
-    defaultSetDescription($) {
-        const description =
-            $("meta[name='description']").attr("content") ||
-            $("meta[property='og:description']").attr("content") ||
-            $("meta[name='twitter:description']").attr("content");
+  /**
+   * @param {object} $ - a cheerio object representing a DOM
+   * if found, set recipe description
+   */
+  defaultSetDescription($) {
+    const description =
+      $("meta[name='description']").attr("content") ||
+      $("meta[property='og:description']").attr("content") ||
+      $("meta[name='twitter:description']").attr("content");
 
-        this.recipe.description = description ? description.replace(/\n/g, " ").trim() : '';
-    }
+    this.recipe.description = description ? description.replace(/\n/g, " ").trim() : '';
+  }
 
   /**
    * @param {object} $ - a cheerio object representing a DOM
