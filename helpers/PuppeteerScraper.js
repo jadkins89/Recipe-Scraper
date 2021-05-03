@@ -86,7 +86,6 @@ class PuppeteerScraper extends BaseScraper {
     });
 
     if (response._status >= 400) {
-      console.log('failed to fetchDOMModel: response status ', response._status);
       this.defaultError()
     }
     return cheerio.load(html);
