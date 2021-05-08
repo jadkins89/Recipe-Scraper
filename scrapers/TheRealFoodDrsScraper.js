@@ -13,6 +13,7 @@ class TheRealFoodDrsScraper extends PuppeteerScraper {
 
   scrape($) {
     this.defaultSetImage($);
+    this.defaultSetDescription($);
     const { ingredients, instructions, time } = this.recipe;
     this.recipe.name = $(".tasty-recipes-entry-header")
       .children("h2")

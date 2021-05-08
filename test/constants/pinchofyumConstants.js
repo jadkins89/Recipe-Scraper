@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://pinchofyum.com/about/",
   expectedRecipe: {
     name: "Couscous Summer Salad - Pinch of Yum",
+    description: "Couscous Summer Salad! Spiced couscous, juicy nectarines, crunchy cucumber, avocado, chickpeas, cherries, sweet corn, and mint.",
     ingredients: [
       "1 cup couscous (uncooked)",
       "1/2 cup dried cherries",
@@ -28,17 +29,17 @@ module.exports = {
       "Toss everything together and season to taste!"
     ],
     tags: [
-      "Avocado",
+      "All Recipes",
       "Recipes",
+      "Avocado",
       "Bowls",
+      "Dairy-Free",
       "Healthy",
       "Legume",
       "Lunch",
       "Quick and Easy",
       "Salads",
-      "Sugar Free",
       "Sugar-Free",
-      "Superfoods",
       "Vegan",
       "Vegetarian"
     ],

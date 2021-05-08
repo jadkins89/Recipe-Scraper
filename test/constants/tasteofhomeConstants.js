@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.tasteofhome.com/recipes/",
   expectedRecipe: {
     name: "Artichoke Chicken",
+    description: "Rosemary, mushrooms and artichokes combine to give this chicken a wonderful, savory flavor. I've served this healthy canned vegetable recipe for a large group by doubling the batch. It's always a big hit with everyone—especially my family! —Ruth Stenson, Santa Ana, California",
     ingredients: [
       "8 boneless skinless chicken breast halves (4 ounces each)",
       "2 tablespoons butter",
@@ -59,6 +60,6 @@ module.exports = {
     },
     servings: "8 servings",
     image:
-      "https://www.tasteofhome.com/wp-content/uploads/2018/01/Artichoke-Chicken_EXPS_13X9BZ19_24_B10_04_5b-9.jpg"
+      "https://www.tasteofhome.com/wp-content/uploads/2018/01/Artichoke-Chicken_EXPS_13X9BZ19_24_B10_04_5b-14.jpg"
   }
 };

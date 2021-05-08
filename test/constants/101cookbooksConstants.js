@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.101cookbooks.com/about/",
   expectedRecipe: {
     name: "Lime & Blistered Peanut Coleslaw",
+    description: "This feather-light, mayo-free, coleslaw recipe uses blistered peanuts, cherry tomatoes, and lime vinaigrette and is perfect alongside fajitas, or whatever you have coming off the grill. Keep in mind - great coleslaw is rooted in great knife skills.",
     ingredients: [
       "1 1/2 cups unsalted raw peanuts",
       "1/2 of a medium-large cabbage",

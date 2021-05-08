@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.budgetbytes.com/kitchen-basics/",
   expectedRecipe: {
     name: "Chicken and Lime Soup",
+    description: "This Chicken and Lime Soup is light, fresh, and flavorful with shredded chicken, vegetables, fresh cilantro, and a tangy lime infused broth.",
     ingredients: [
       "1 yellow onion",
       "3 ribs celery (about 1/4 bunch)",

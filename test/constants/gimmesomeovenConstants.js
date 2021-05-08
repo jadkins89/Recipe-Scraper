@@ -6,6 +6,7 @@ module.exports = {
     "http://www.gimmesomeoven.com/life_category/10-things-ive-learned/",
   expectedRecipe: {
     name: "The Juiciest Grilled Chicken Kabobs",
+    description: "The BEST juiciest grilled chicken kabobs! Easy to make with whatever seasoning blends you prefer, and always so tender and flavorful.",
     ingredients: [
       "4 boneless skinless chicken breasts, pounded to even thickness and brined in saltwater (*see easy instructions below)",
       "1 Tablespoon melted butter or olive oil",

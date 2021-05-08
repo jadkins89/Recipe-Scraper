@@ -13,11 +13,13 @@ class TheRecipeCriticScraper extends BaseScraper {
 
   scrape($) {
     this.defaultSetImage($);
+    this.defaultSetDescription($);
     const { ingredients, instructions, time } = this.recipe;
     this.recipe.name = this.textTrim($(".wprm-recipe-name"));
 
     $(".wprm-recipe-ingredient").each((i, el) => {
-      ingredients.push(this.textTrim($(el)).replace(/\s\s+/g, " "));
+        el = $(el).remove('.wprm-checkbox-container');
+      ingredients.push(this.textTrim($(el)).replace(/\s\s+/g, " ").replace(/▢/g, "").trim());
     });
 
     $(".wprm-recipe-instruction-text").each((i, el) => {
@@ -26,10 +28,10 @@ class TheRecipeCriticScraper extends BaseScraper {
 
     $(".wprm-recipe-details-name").remove();
 
-    time.prep = this.textTrim($(".wprm-recipe-prep-time-container"));
-    time.cook = this.textTrim($(".wprm-recipe-cook-time-container"));
+    time.prep = this.textTrim($(".wprm-recipe-prep-time-container .wprm-recipe-time"));
+    time.cook = this.textTrim($(".wprm-recipe-cook-time-container .wprm-recipe-time"));
     time.inactive = this.textTrim($(".wprm-recipe-custom-time-container"));
-    time.total = this.textTrim($(".wprm-recipe-total-time-container"));
+    time.total = this.textTrim($(".wprm-recipe-total-time-container .wprm-recipe-time"));
     this.recipe.servings = $(
       ".wprm-recipe-servings-container .wprm-recipe-servings"
     ).text();

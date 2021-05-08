@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.theblackpeppercorn.com/about-me/",
   expectedRecipe: {
     name: "How to Cook a Picnic Ham - Smoked Pork Shoulder",
+    description: "Baked picnic ham with a orange and brown sugar glaze is a classic comfort food meal and is easy to cook in the oven with this recipe. Roast the smoked pork shoulder.",
     ingredients: [
       "1 smoked picnic ham (5-8 pounds)",
       "2 oranges, peeled",

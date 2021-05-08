@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.bbc.co.uk/food/recipes/",
   expectedRecipe: {
     name: "Sausage bake with gnocchi",
+    description: "This easy sausage bake is made with gnocchi rather than pasta. Roasted gnocchi is magical – while the inside stays light and fluffy, the outside goes crisp and golden, like mini roast potatoes.  Each serving provides 600 kcal, 24g protein, 47g carbohydrates (of which 10g sugars), 33.5g fat (of which 12g saturates), 8g fibre and 1.8g salt.",
     ingredients: [
       "1 red pepper, deseeded and cut into chunks",
       "1 yellow pepper, deseeded and cut into chunks",

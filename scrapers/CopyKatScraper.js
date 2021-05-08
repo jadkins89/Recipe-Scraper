@@ -13,6 +13,7 @@ class CopyKatScraper extends PuppeteerScraper {
 
   scrape($) {
     this.defaultSetImage($);
+    this.defaultSetDescription($);
     const { ingredients, instructions, time } = this.recipe;
     this.recipe.name = $(
       $(".wprm-recipe-container").find(".wprm-recipe-name")

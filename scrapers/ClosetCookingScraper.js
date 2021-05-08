@@ -13,6 +13,7 @@ class ClosetCookingScraper extends PuppeteerScraper {
 
   scrape($) {
     this.defaultSetImage($);
+    this.defaultSetDescription($);
     const { ingredients, instructions, tags, time } = this.recipe;
     this.recipe.name = $(".recipe_title").text();
 

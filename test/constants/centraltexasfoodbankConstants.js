@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.centraltexasfoodbank.org/recipes",
   expectedRecipe: {
     name: "Crock-Pot Chicken Mole",
+    description: "",
     ingredients: [
       "1 can (14.5 oz.) diced tomatoes",
       "1/3 cup raisins or pitted dates",

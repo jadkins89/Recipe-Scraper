@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.bbcgoodfood.com/recipes/",
   expectedRecipe: {
     name: "Doughnut muffins",
+    description: "These individual sugar-dipped cupcakes are baked not fried but taste just as delicious, from BBC Good Food.",
     ingredients: [
       "140g golden caster sugar, plus 200g extra for dusting",
       "200g plain flour",

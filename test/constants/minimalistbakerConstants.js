@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://minimalistbaker.com/about/",
   expectedRecipe: {
     name: "Fudgy Sweet Potato Brownies (V/GF)",
+    description: "Incredible sweet potato brownies with cacao, almond butter, oats, and maple syrup! Topped with pecans and chocolate chips for the ultimate healthier treat!",
     ingredients: [
       "1 cup sweet potato purée (see instructions)",
       "2/3 cup maple syrup",

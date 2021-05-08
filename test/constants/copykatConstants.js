@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://copykat.com/contact/",
   expectedRecipe: {
     name: "Air Fryer Croutons",
+    description: "See how quick and easy it is to make buttery, crispy, homemade croutons in an air fryer with this easy, step-by-step recipe. Make tasty croutons in minutes!",
     ingredients: [
       "4 slices bread",
       "2 tablespoons melted butter",

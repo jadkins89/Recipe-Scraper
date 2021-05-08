@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.food.com/recipe/",
   expectedRecipe: {
     name: "Oatmeal Raisin Cookies",
+    description: "You've made oatmeal-raisin cookies before, so why try these? Because they're moist, chewy and loi aded with raisins - and they're better than any you've tried before! From Cuisine Magazine i don't remrmber  been to long",
     ingredients: [
       "Whisk together and set aside",
       "2 cups all-purpose flour",

@@ -9,6 +9,7 @@ class OneOOneCookbooksScraper extends BaseScraper {
 
   scrape($) {
     this.defaultSetImage($);
+    this.defaultSetDescription($);
     const { ingredients, instructions, time } = this.recipe;
     const body = $(".wprm-recipe-container");
     this.recipe.name = body.children("h2").text();

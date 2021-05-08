@@ -13,6 +13,7 @@ class FoodNetworkScraper extends BaseScraper {
 
   scrape($) {
     this.defaultSetImage($);
+    this.defaultSetDescription($);
     const { ingredients, instructions, tags, time } = this.recipe;
     this.recipe.name = $(".o-AssetTitle__a-HeadlineText")
       .first()

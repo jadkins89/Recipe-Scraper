@@ -6,6 +6,7 @@ module.exports = {
   nonRecipeUrl: "https://www.yummly.com/recipes",
   expectedRecipe: {
     name: "No-Bake Lemon-Mango Cheesecakes with Speculoos crust",
+    description: "Perfect for times when you just don’t want to use your oven. Cheesecake sitting on a cookie. What could be better than that? Combining the tart flavors of lemon and mango adds a hint of the exotic to this rich dessert.",
     ingredients: [
       "125 grams cookies (spéculoos)",
       "60 grams butter ",

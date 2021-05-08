@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://nomnompaleo.com/aboutme",
   expectedRecipe: {
     name: "West Lake Beef Soup",
+    description: "The West Lake Beef Soup recipe from our first cookbook, Nom Nom Paleo: Food For Humans, is a simple and delicious Whole30-friendly soup that’ll fill you",
     ingredients: [
       "½ pound flank steak finely minced or ground beef",
       "1 teaspoon Diamond Crystal kosher salt",

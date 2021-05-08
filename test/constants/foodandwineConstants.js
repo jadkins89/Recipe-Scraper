@@ -6,6 +6,7 @@ module.exports = {
   nonRecipeUrl: "https://www.foodandwine.com/recipes/",
   expectedRecipe: {
     name: "French Onion Soup",
+    description: "This classic French Onion Soup from Chef Ludo Lefebvre gets its flavor from rich veal stock and golden brown caramelized onions. Get the recipe from Food & Wine.",
     ingredients: [
       "1 garlic clove, halved",
       "1 bay leaf, scored",

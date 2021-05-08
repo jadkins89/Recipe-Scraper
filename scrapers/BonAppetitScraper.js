@@ -13,9 +13,13 @@ class BonAppetitScraper extends BaseScraper {
 
   scrape($) {
     this.defaultSetImage($);
-    const { ingredients, instructions, time } = this.recipe;
+    this.defaultSetDescription($);
+    const { ingredients, instructions } = this.recipe;
 
     this.recipe.name = $("meta[property='og:title']").attr("content");
+    const tags = $("meta[name='keywords']").attr("content");
+
+    this.recipe.tags = tags ? tags.split(',') : [];
 
     const container = $('div[data-testid="IngredientList"]');
     const ingredientsContainer = container.children("div");
