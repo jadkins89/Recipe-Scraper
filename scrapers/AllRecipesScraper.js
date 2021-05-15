@@ -2,7 +2,7 @@
 
 const BaseScraper = require("../helpers/BaseScraper");
 
-class AmbitiousKitchenScraper extends BaseScraper {
+class AllRecipesScraper extends BaseScraper {
   constructor(url) {
     super(url, "allrecipes.com/recipe");
   }
@@ -78,7 +78,10 @@ class AmbitiousKitchenScraper extends BaseScraper {
     time.prep = $("time[itemprop=prepTime]").text();
     time.cook = $("time[itemprop=cookTime]").text();
     time.ready = $("time[itemprop=totalTime]").text();
-    this.recipe.servings = $("#metaRecipeServings").attr("content").replace(/\n/g, " ").trim();
+    this.recipe.servings = $("#metaRecipeServings")
+      .attr("content")
+      .replace(/\n/g, " ")
+      .trim();
   }
 
   scrape($) {
@@ -92,4 +95,4 @@ class AmbitiousKitchenScraper extends BaseScraper {
   }
 }
 
-module.exports = AmbitiousKitchenScraper;
+module.exports = AllRecipesScraper;
