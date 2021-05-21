@@ -9,7 +9,8 @@ module.exports = {
     "http://www.eatingwell.com/recipes/18306/cooking-methods-styles/quick-easy/dessert/",
   expectedRecipe: {
     name: "Pressure-Cooker Chicken Enchilada Soup",
-    description: "This easy soup flavored with chili powder and a splash of lime is quick enough to prepare for a warming weeknight meal thanks to an electric pressure cooker like the Instant Pot. Lean chicken breast is easy to prep, but boneless, skinless chicken thighs would make a great substitute.",
+    description:
+      "This easy soup flavored with chili powder and a splash of lime is quick enough to prepare for a warming weeknight meal thanks to an electric pressure cooker like the Instant Pot. Lean chicken breast is easy to prep, but boneless, skinless chicken thighs would make a great substitute.",
     ingredients: [
       "1 tablespoon olive oil",
       "1 medium onion, chopped",
@@ -52,8 +53,9 @@ module.exports = {
       "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=960&h=480&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26232433%2F5397860.jpg"
   },
   expectedRecipe2: {
-    name: "Mexican Pasta Salad with Creamy Avocado Dressing",
-    description: "Everyone will love this Mexican-inspired pasta salad recipe. We lighten up the creamy dressing with avocado for a healthier version of a picnic favorite.",
+    name: "Pasta Salad with Black Beans & Avocado Dressing",
+    description:
+      "Everyone will love this pasta salad recipe that's packed with tomatoes, corn and black beans. We lighten up the creamy dressing with avocado for a healthier version of a picnic favorite.",
     ingredients: [
       "Dressing",
       "½ ripe avocado",

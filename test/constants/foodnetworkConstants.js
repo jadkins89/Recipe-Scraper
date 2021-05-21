@@ -8,7 +8,8 @@ module.exports = {
   nonRecipeUrl: "https://www.foodnetwork.com/recipes/food-network-kitchen/",
   expectedRecipe: {
     name: "Cast-Iron Skillet Provencal Pork Chops and Potatoes",
-    description: "Get Cast-Iron Skillet Provencal Pork Chops and Potatoes Recipe from Food Network",
+    description:
+      "Get Cast-Iron Skillet Provencal Pork Chops and Potatoes Recipe from Food Network",
     ingredients: [
       "2 medium Yukon gold potatoes (about 3/4 pound), cut into 1/2-inch chunks and soaked in cold water until ready to use",
       "3 tablespoons olive oil",
@@ -34,11 +35,10 @@ module.exports = {
       "Skillet Recipes",
       "French Recipes",
       "Pork Chop",
-      "Meat",
       "Pork",
       "Potato",
-      "Vegetable",
-      "Main Dish"
+      "Main Dish",
+      "Gluten Free"
     ],
     time: {
       prep: "",

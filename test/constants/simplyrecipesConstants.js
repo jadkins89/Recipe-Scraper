@@ -4,8 +4,9 @@ module.exports = {
   invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://www.simplyrecipes.com/recipes/type/quick/",
   expectedRecipe: {
-    name: "Panzanella Bread Salad",
-    description: "Got ripe summer tomatoes? Got day-old bread? Make this classic Tuscan Panzanella Salad recipe! This is a great make-ahead recipe for a summer potluck or backyard party, or make it for dinner and serve with grilled chicken.",
+    name: "\nPanzanella Bread Salad\n",
+    description:
+      "Got ripe summer tomatoes? Got day-old bread? Make this classic Tuscan Panzanella Salad recipe! This is a great make-ahead recipe for a summer potluck or backyard party, or make it for dinner and serve with grilled chicken.",
     ingredients: [
       "4 cups tomatoes, cut into large chunks",
       "4 cups day old (somewhat dry and hard) crusty bread (Italian or French loaf), cut into chunks the same size as the tomatoes (see Recipe Note)",
@@ -19,19 +20,12 @@ module.exports = {
       "Mix everything together and let marinate, covered, at room temperature for at least 30 minutes.",
       "If refrigerating, let come to room temperature before serving."
     ],
-    tags: [
-        "recipes",
-        "dinner-recipes",
-        "dinner-recipes-by-type",
-        "salad-recipes",
-        "seasonal-salad-recipes",
-        "summer-salad-recipes"
-    ],
+    tags: [],
     time: {
       prep: "15 mins",
-      cook: "30 mins",
+      cook: "",
       active: "",
-      inactive: "",
+      inactive: "30 mins",
       ready: "",
       total: "45 mins"
     },

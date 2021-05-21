@@ -15,31 +15,50 @@ class SimplyRecipesScraper extends BaseScraper {
     this.defaultSetImage($);
     this.defaultSetDescription($);
     const { ingredients, instructions, time } = this.recipe;
-    this.recipe.name = $("meta[itemprop='name']").attr("content");
+    this.recipe.name = $("#recipe-block__header_1-0").text();
 
-    $("li.ingredient")
+    $("li.ingredient").each((i, el) => {
+      ingredients.push(this.textTrim($(el)));
+    });
+
+    $("#structured-project__steps_1-0")
+      .find("p")
       .each((i, el) => {
-        ingredients.push($(el).text().replace(/\n/g, "").trim());
+        instructions.push(
+          $(el)
+            .text()
+            .trim()
+        );
       });
 
-    $(".section--instructions li.comp p")
-      .each((i, el) => {
-        let curEl = $(el).text();
-        if (curEl) {
-          instructions.push(curEl.replace(/^\d+\s/, "").replace(/\n/g, "").trim());
-        }
-      });
+    time.prep = this.textTrim($(".prep-time .meta-text__data")).replace(
+      "\n",
+      " "
+    );
 
-    const tags = $("meta[name='sailthru.tags']").attr("content");
-    if (tags) {
-        this.recipe.tags = tags.split(',')
-    }
+    time.active = this.textTrim($(".active-time .meta-text__data")).replace(
+      "\n",
+      " "
+    );
 
-    time.prep = $(".prep-time span span.meta-text__data").text().replace(/\n/g, "").trim();
-    time.cook = $(".custom-time span span.meta-text__data").text().replace(/\n/g, "").trim();
-    time.total = $(".total-time span span.meta-text__data").text().replace(/\n/g, "").trim();
+    time.inactive = this.textTrim($(".custom-time .meta-text__data")).replace(
+      "\n",
+      " "
+    );
 
-    this.recipe.servings = $(".recipe-serving span span.meta-text__data").text().replace(/\n/g, " ").trim();
+    time.cook = this.textTrim($(".cook-time .meta-text__data")).replace(
+      "\n",
+      " "
+    );
+
+    time.total = this.textTrim($(".total-time .meta-text__data")).replace(
+      "\n",
+      " "
+    );
+
+    this.recipe.servings = this.textTrim(
+      $(".recipe-serving .meta-text__data")
+    ).replace("\n", " ");
   }
 }
 

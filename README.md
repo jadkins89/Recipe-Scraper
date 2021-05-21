@@ -151,4 +151,8 @@ recipeScraper("some.improper.url").catch(error => {
 
 ## Bugs
 
-With web scraping comes a reliance on the website being used not changing format. If this occurs we need to update our scrape. We've integrated testing that should notify us if this occurs but please reach out if you are experiencing an issue.
+With web scraping comes a reliance on the website being used not changing format. If this occurs we need to update our scrape. Please reach out if you are experiencing an issue.
+
+## Contributing
+
+I welcome pull requests that keep the scrapes up to date or add new ones. I'm doing my best to keep this package maintained and with your help this goal is much more achievable. Please add testing if you add a scrape. Thank you 😁
