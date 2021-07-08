@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://julieblanner.com/aboutjulie",
   expectedRecipe: {
     name: "Chicken Enchiladas",
+    description: "These easy chicken enchiladas are fast and delicious! This TRIED + TRUE classic Tex-Mex chicken enchilada recipe is the perfect comfort food.",
     ingredients: [
       "2 tablespoons oil canola, vegetable, olive or butter",
       "1 cup white onion chopped (about 1 small onion)",

@@ -34,8 +34,14 @@ class KitchenStoriesScraper extends BaseScraper {
 
   scrape($) {
     this.defaultSetImage($);
+    this.defaultSetDescription($);
+
     const { ingredients, instructions, time } = this.recipe;
     this.recipe.name = $(".recipe-title").text();
+
+    const tags = $("meta[name='keywords']").attr("content");
+
+    this.recipe.tags = tags ? tags.split(',').map(t => t.trim()) : [];
 
     $(".ingredients")
       .find("tr")

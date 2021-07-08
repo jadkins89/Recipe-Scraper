@@ -1,6 +1,7 @@
 class Recipe {
   constructor() {
     this.name = "";
+    this.description = "";
     this.ingredients = [];
     this.instructions = [];
     this.tags = [];

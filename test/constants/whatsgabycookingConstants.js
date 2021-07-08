@@ -6,6 +6,7 @@ module.exports = {
   nonRecipeUrl: "https://whatsgabycooking.com/category/food-drink/menu-plans/",
   expectedRecipe: {
     name: "Cauliflower Rice Veggie Bowls (with Instant Pot Black Beans)",
+    description: "Grab the recipe for these epic Cauliflower Rice Veggie Bowls (with Instant Pot Black Beans) that will literally change your lunch/dinner game forever",
     ingredients: [
       "1 red onion finely diced",
       "6 cloves garlic roughly chopped",

@@ -10,6 +10,7 @@ module.exports = {
   nonRecipeUrl: "https://smittenkitchen.com/2019/",
   expectedRecipeOld: {
     name: "Endives with Oranges and Almonds",
+    description: "",
     ingredients: [
       "3 oranges (I used 2 navel and one cara cara orange)",
       "2 heads of endive",
@@ -41,6 +42,7 @@ module.exports = {
   },
   expectedRecipeNewV1: {
     name: "Blackberry-Blueberry Crumb Pie",
+    description: "I am completely and utterly failing at having a low-key, lazy summer. In part because, wait, didn’t summer just begin (NYC schools go to essentially the last day of June) and more largely bec…",
     ingredients: [
       "Crust",
       "1 1/4 cups (155 grams) all-purpose flour",
@@ -93,6 +95,7 @@ module.exports = {
   },
   expectedRecipeNewV2: {
     name: " Cheesecake Bars with All The Berries",
+    description: "Fuss-free cheesecake bars heaped with all the summer berries. You should take them everywhere this weekend.",
     ingredients: [
       "Crust",
       "2 cups (220 grams) graham or digestive cracker crumbs",

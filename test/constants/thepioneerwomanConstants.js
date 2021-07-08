@@ -6,6 +6,7 @@ module.exports = {
   nonRecipeUrl: "https://www.thepioneerwoman.com/food-cooking/",
   expectedRecipe: {
     name: "French Dip Sandwiches",
+    description: "French dip sandwiches are the ultimate comfort food. The crusty bread is piled high with tender beef and golden onions, then served warm with a delicious jus.",
     ingredients: [
       "1 boneless ribeye loin or sirloin (about 4 to 5 pounds)",
       "1 tbsp. kosher salt",

@@ -1,11 +1,11 @@
 module.exports = {
-  testUrl:
-    "https://www.closetcooking.com/reina-pepiada-arepa-chicken-and-avocado-sandwich/",
+  testUrl: "https://www.closetcooking.com/reina-pepiada-arepa-chicken-and-avocado-sandwich/",
   invalidUrl: "https://www.closetcooking.com/notarealurl",
   invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://www.closetcooking.com/contact/",
   expectedRecipe: {
     name: "Reina Pepiada Arepa (Chicken and Avocado Sandwich)",
+    description: "Reina pepiada arepa, aka Venezuelan chicken and avocado sandwiches where crispy, light and fluffy cornmeal buns are stuffed with a tasty avocado chicken salad!",
     ingredients: [
       "For the arepas:",
       "1 1/2 cups pre-cooked white cornmeal (aka masarepa) (such as PAN)",

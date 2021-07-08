@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://omnivorescookbook.com/about/",
   expectedRecipe: {
     name: "Dan Dan Noodles (担担面)",
+    description: "A dan dan noodles recipe that stays true to the authentic Sichuan flavor, with slight moderations for you to enjoy it even if you can’t handle spicy food.",
     ingredients: [
       "Noodle sauce",
       "1/3 cup Chinese sesame paste (or unsweetened natural peanut butter)",

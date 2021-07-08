@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://cookieandkate.com/about/",
   expectedRecipe: {
     name: "Fresh Spring Rolls with Peanut Sauce",
+    description: "These Vietnamese spring rolls are fresh, not fried! This veggie-packed recipe is easy to follow, with step-by-step photos. Vegan and easily gluten free.",
     ingredients: [
       "Spring Rolls",
       "2 ounces rice vermicelli or maifun brown rice noodles*",

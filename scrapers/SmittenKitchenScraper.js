@@ -14,6 +14,7 @@ class SmittenKitchenScraper extends BaseScraper {
   newScrape($) {
     const { ingredients, time } = this.recipe;
     this.recipe.name = $(".jetpack-recipe-title").text();
+    this.defaultSetDescription($);
 
     $(".jetpack-recipe-ingredients")
       .children("ul")

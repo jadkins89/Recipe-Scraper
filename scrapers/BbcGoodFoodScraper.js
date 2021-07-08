@@ -13,6 +13,7 @@ class BbcGoodFoodScraper extends BaseScraper {
 
   scrape($) {
     this.defaultSetImage($);
+    this.defaultSetDescription($);
     const { ingredients, instructions, time } = this.recipe;
     this.recipe.name = $("meta[name='og:title']").attr("content");
 
@@ -47,7 +48,7 @@ class BbcGoodFoodScraper extends BaseScraper {
         }
       });
 
-    this.recipe.servings = $(".masthead__servings")
+    this.recipe.servings = $(".post-header__servings .icon-with-text__children")
       .text()
       .replace("Makes ", "");
   }

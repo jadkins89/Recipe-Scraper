@@ -50,6 +50,7 @@ class PuppeteerScraper extends BaseScraper {
   async customPoll(page) {
     return true;
   }
+
   /**
    * @override
    * Fetches html from url using puppeteer headless browser
@@ -81,12 +82,24 @@ class PuppeteerScraper extends BaseScraper {
       await this.customPoll(page);
       html = await page.content();
     }
-    browser.close().catch(err => {});
+    browser.close().catch(err => {
+    });
+
     if (response._status >= 400) {
-      this.defaultError();
+      this.defaultError()
     }
     return cheerio.load(html);
   }
+
+  static async isElementVisible(page, cssSelector) {
+    let visible = true;
+    await page
+      .waitForSelector(cssSelector, {visible: true, timeout: 2000})
+      .catch(() => {
+        visible = false;
+      });
+    return visible;
+  };
 }
 
 module.exports = PuppeteerScraper;

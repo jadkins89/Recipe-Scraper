@@ -6,6 +6,7 @@ module.exports = {
   nonRecipeUrl: "https://damndelicious.net/about-me/",
   expectedRecipe: {
     name: "Raspberry Croissant French Toast Bake",
+    description: "Raspberry Croissant French Toast Bake - Easiest overnight French toast casserole! Prep the night before and bake in the morning. Too easy and so impressive!",
     ingredients: [
       "1 1/4 pounds fresh croissants (about 12 medium), cut in half",
       "1 (8-ounce) package cream cheese, cubed",
@@ -24,7 +25,13 @@ module.exports = {
       "Place into oven and bake, covered, for 30 minutes. Uncover; continue to bake for an additional 30-35 minutes, or until golden brown and center is firm.",
       "Serve immediately, sprinkled with remaining raspberries and confectioners’ sugar, if desired."
     ],
-    tags: [],
+    tags: [
+      "Raspberry",
+      "Croissant",
+      "French",
+      "Toast",
+      "Bake"
+    ],
     time: {
       prep: "2 hours 15 minutes",
       cook: "1 hour",

@@ -9,6 +9,7 @@ module.exports = {
     "https://www.allrecipes.com/recipes/453/everyday-cooking/family-friendly/kid-friendly/",
   expectedRecipeOld: {
     name: "Bucatini Cacio e Pepe (Roman Sheep Herder's Pasta)",
+    description: "The Italian classic pasta cacio e pepe with cheese and pepper initially was invented by Roman sheep herders with little time and money to spend on eating. Cheap, easy, and fast.",
     ingredients: [
       "1 teaspoon salt",
       "1 pound bucatini (dry)",
@@ -36,6 +37,7 @@ module.exports = {
   },
   expectedRecipeNew: {
     name: "Crispy and Tender Baked Chicken Thighs",
+    description: "Seasoned with a simple spice blend, these delicious baked chicken thighs yield crispy yet tender, succulent results!",
     ingredients: [
       "cooking spray",
       "8 bone-in chicken thighs with skin",
@@ -63,6 +65,6 @@ module.exports = {
     },
     servings: "8",
     image:
-      "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=1300&h=650&url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1061355.jpg"
+      "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=596&h=298&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2021%2F03%2F17%2Fchicken-thighs2.jpg"
   }
 };

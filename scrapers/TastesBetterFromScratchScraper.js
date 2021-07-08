@@ -13,8 +13,15 @@ class TastesBetterFromScratchScraper extends PuppeteerScraper {
 
   scrape($) {
     this.defaultSetImage($);
+    this.defaultSetDescription($);
     const { ingredients, instructions, time } = this.recipe;
     this.recipe.name = $(".wprm-recipe-name").text();
+
+    let course = this.textTrim($('.wprm-recipe-course'));
+    let cuisine = this.textTrim($('.wprm-recipe-cuisine'));
+
+    if (course) this.recipe.tags.push(course);
+    if (cuisine) this.recipe.tags.push(cuisine);
 
     $(".wprm-recipe-ingredient").each((i, el) => {
       let amount = $(el)

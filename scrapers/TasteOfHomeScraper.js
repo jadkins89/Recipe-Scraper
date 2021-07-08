@@ -13,6 +13,7 @@ class TasteOfHomeScraper extends BaseScraper {
 
   scrape($) {
     this.defaultSetImage($);
+    this.defaultSetDescription($);
     const { ingredients, instructions, tags, time } = this.recipe;
     this.recipe.name = $("h1.recipe-title")
       .text()
@@ -30,12 +31,12 @@ class TasteOfHomeScraper extends BaseScraper {
       instructions.push(this.textTrim($(el)));
     });
 
-    let timeStr = $(".total-time > p")
+    let timeStr = $(".recipe-time-yield__label-prep")
       .text()
       .split(/Bake:/g);
     time.prep = timeStr[0].replace("Prep:", "").trim();
     time.cook = (timeStr[1] || "").trim();
-    this.recipe.servings = $(".makes > p").text();
+    this.recipe.servings = $(".recipe-time-yield__label-servings").text().trim();
   }
 }
 

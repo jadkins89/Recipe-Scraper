@@ -75,6 +75,7 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://whatsgabycooking.com/
 - https://www.woolworths.com.au/
 - https://www.yummly.com/
+- https://www.jamieoliver.com/
 
 Don't see a website you'd like to scrape? Open an [issue](https://github.com/jadkins89/Recipe-Scraper/issues) and we'll do our best to add it.
 

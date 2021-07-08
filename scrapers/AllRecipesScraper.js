@@ -8,6 +8,7 @@ class AmbitiousKitchenScraper extends BaseScraper {
   }
 
   newScrape($) {
+    this.defaultSetDescription($);
     this.recipe.name = this.recipe.name.replace(/\s\s+/g, "");
     const { ingredients, instructions, time } = this.recipe;
     $(".recipe-meta-item").each((i, el) => {
@@ -33,7 +34,7 @@ class AmbitiousKitchenScraper extends BaseScraper {
           time.inactive = value;
           break;
         case "Servings":
-          this.recipe.servings = value;
+          this.recipe.servings = value.replace(/\n/g, " ").trim();
           break;
         default:
           break;
@@ -55,6 +56,7 @@ class AmbitiousKitchenScraper extends BaseScraper {
   }
 
   oldScrape($) {
+    this.defaultSetDescription($);
     const { ingredients, instructions, time } = this.recipe;
     $("#polaris-app label").each((i, el) => {
       const item = $(el)
@@ -76,7 +78,7 @@ class AmbitiousKitchenScraper extends BaseScraper {
     time.prep = $("time[itemprop=prepTime]").text();
     time.cook = $("time[itemprop=cookTime]").text();
     time.ready = $("time[itemprop=totalTime]").text();
-    this.recipe.servings = $("#metaRecipeServings").attr("content");
+    this.recipe.servings = $("#metaRecipeServings").attr("content").replace(/\n/g, " ").trim();
   }
 
   scrape($) {

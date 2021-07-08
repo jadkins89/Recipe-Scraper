@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://therealfoodrds.com/category/courses/slow-cooker/",
   expectedRecipe: {
     name: "Veggie Loaded Turkey Chili",
+    description: "When the weather turns cold, warming up with a bowl of Veggie Loaded Turkey Chili is about as good as it gets! A gluten-free recipe that serves 5-6.",
     ingredients: [
       "1 lb. lean ground turkey, beef or chicken",
       "1 Tbsp olive oil or avocado oil",

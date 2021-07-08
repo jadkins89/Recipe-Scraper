@@ -6,6 +6,7 @@ module.exports = {
   nonRecipeUrl: "https://www.epicurious.com/recipes/",
   expectedRecipe: {
     name: "Trout Toast with Soft Scrambled Eggs",
+    description: "Splurge on high-quality smoked fish and good bread—it makes all the difference",
     ingredients: [
       "8 large eggs",
       "3/4 tsp. kosher salt, plus more",

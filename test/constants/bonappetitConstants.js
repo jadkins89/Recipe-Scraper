@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://www.bonappetit.com/recipe/",
   expectedRecipe: {
     name: "Soba Noodles With Crispy Kale",
+    description: "Heidi Swanson, the vegetarian cookbook author and blogger behind 101 Cookbooks, has the power to make a bowl of tofu and lentils look as appealing as guanciale-flecked carbonara. In this noodle bowl, nutritional yeast acts like a vegan version of parm, adding a hit of umami flavor that plays well with bitter kale and earthy buckwheat noodles. We suggest using curly kale, which roasts into light, crispy chips, instead of Tuscan.",
     ingredients: [
       "1 medium bunch curly kale, ribs and stems removed, leaves coarsely chopped (about 4 cups)",
       "1¼ cups unsweetened coconut flakes",
@@ -25,7 +26,24 @@ module.exports = {
       "Combine tahini, soy sauce, honey, 2 tsp. sesame oil, ½ tsp. red pepper flakes, and remaining ½ cup olive oil in a small bowl. Finely grate zest from lime directly into bowl; halve lime and squeeze in juice (about 2 Tbsp.). Whisk dressing until smooth, then pour about half of it over noodles; toss to coat.",
       "Add half of kale mixture to noodles and toss to incorporate. Drizzle in more dressing as needed, tossing until noodles are creamy; season with salt. Pile remaining kale on top. Drizzle with additional sesame oil and sprinkle with more red pepper flakes."
     ],
-    tags: [],
+    tags: [
+      "recipes",
+      "soba",
+      "noodle",
+      "kale",
+      "coconut",
+      "yeast",
+      "olive oil",
+      "tahini",
+      "soy sauce",
+      "honey",
+      "sesame oil",
+      "red pepper",
+      "lime",
+      "family meals",
+      "healthyish",
+      "web"
+    ],
     time: {
       prep: "",
       cook: "",

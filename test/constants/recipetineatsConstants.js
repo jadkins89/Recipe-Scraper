@@ -6,6 +6,7 @@ module.exports = {
   nonRecipeUrl: "https://www.recipetineats.com/nagi-recipetin-eats/",
   expectedRecipe: {
     name: "Dan Dan Noodles (Spicy Sichuan noodles)",
+    description: "Get your sichuan spicy noodle fix! Dan Dan Noodles does call for a trip to the Asian store. But once you've got everything, it's a cinch to make!",
     ingredients: [
       "2 tbsp Chinese sesame paste (sub tahini, Note 1)",
       "1.5 tbsp Chinese chilli paste in oil, adjust spiciness (Note 2)",

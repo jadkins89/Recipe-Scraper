@@ -5,6 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://therecipecritic.com/food-blogger/",
   expectedRecipe: {
     name: "Creamy Parmesan Spaghetti",
+    description: "Creamy Parmesan Spaghetti is just 6 ingredients and one pan! It is a delicious quick and easy meal that the entire family will go crazy over!",
     ingredients: [
       "12 ounces spaghetti noodles",
       "1 tablespoon butter",
