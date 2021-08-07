@@ -72,19 +72,6 @@ class BaseScraper {
   }
 
   /**
-   * @param {object} $ - a cheerio object representing a DOM
-   * if found, set recipe description
-   */
-  defaultSetDescription($) {
-    const description =
-      $("meta[name='description']").attr("content") ||
-      $("meta[property='og:description']").attr("content") ||
-      $("meta[name='twitter:description']").attr("content");
-
-    this.recipe.description = description ? description.replace(/\n/g, " ").trim() : '';
-  }
-
-  /**
    * Fetches html from url
    * @returns {object} - Cheerio instance
    */
