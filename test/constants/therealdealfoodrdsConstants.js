@@ -45,6 +45,6 @@ module.exports = {
     },
     servings: "6",
     image:
-      "https://therealfoodrds.com/wp-content/uploads/2017/10/IMG_9397-2-e1508438046925.jpg"
+      "https://therealfooddietitians.com/wp-content/uploads/2017/10/IMG_9397-2-e1508438046925.jpg"
   }
 };

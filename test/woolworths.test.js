@@ -5,5 +5,5 @@ const constants = require("./constants/woolworthsConstants");
 commonRecipeTest(
   "woolworths",
   constants,
-  "woolworths.com.au/shop/recipedetail/"
+  "woolworths.com.au/shop/recipes/"
 );
