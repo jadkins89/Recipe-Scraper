@@ -31,7 +31,6 @@ class BaseScraper {
    * Checks if the url has the required sub url
    */
   checkUrl() {
-    console.log('checkUrl')
     if (!this.url.includes(this.subUrl)) {
       throw new Error(`url provided must include '${this.subUrl}'`);
     }
@@ -104,7 +103,6 @@ class BaseScraper {
    * @returns {object} - an object representing the recipe
    */
   async fetchRecipe() {
-    console.log('fetchRecipe')
     this.checkUrl();
     const $ = await this.fetchDOMModel();
     this.createRecipeObject();
