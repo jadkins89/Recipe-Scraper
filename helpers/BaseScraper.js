@@ -62,75 +62,124 @@ class BaseScraper {
           if (el.data) {
 
             const jsonRaw = el.data;
-            const result = JSON.parse(jsonRaw);
+            const recipe = JSON.parse(jsonRaw);
 
-            if (result['@type'] === 'Recipe') {
+            if (recipe['@type'] === 'Recipe') {
+              console.log('found a Recipe type json schema!');
+              // console.log(recipe)
               try {
                 // name
-                this.recipe.name = BaseScraper.HtmlDecode($, result.name);
+                this.recipe.name = BaseScraper.HtmlDecode($, recipe.name);
 
                 // description
-                this.recipe.description = result.description ? BaseScraper.HtmlDecode($, result.description) : this.defaultSetDescription($);
+                this.recipe.description = recipe.description ? BaseScraper.HtmlDecode($, recipe.description) : this.defaultSetDescription($);
 
                 // image
-                this.recipe.image = result.image ? result.image[0] : this.defaultSetImage($);
+                if (recipe.image) {
+                  if (recipe.image["@type"] === "ImageObject" && recipe.url) {
+                    this.recipe.image = recipe.image.url;
+                  } else if (typeof recipe.image === "string") {
+                    this.recipe.image = recipe.image;
+                  } else if (Array.isArray(recipe.image)) {
+                    this.recipe.image = recipe.image[0];
+                  }
+                } else {
+                  this.defaultSetImage($);
+                }
+
 
                 // tags
                 this.recipe.tags = [];
-                if (result.keywords) {
-                  if (typeof result.keywords === "string") {
-                    this.recipe.tags = [...result.keywords.split(',')]
-                  } else if (Array.isArray(result.keywords)) {
-                    this.recipe.tags = result.keywords
+                if (recipe.keywords) {
+                  if (typeof recipe.keywords === "string") {
+                    this.recipe.tags = [...recipe.keywords.split(',')]
+                  } else if (Array.isArray(recipe.keywords)) {
+                    this.recipe.tags = [...recipe.keywords]
                   }
                 }
 
-                if (result.recipeCuisine) {
-                  if (typeof result.recipeCuisine === "string") {
-                    this.recipe.tags.push(result.recipeCuisine)
-                  } else if (Array.isArray(result.recipeCuisine)) {
-                    this.recipe.tags = [...new Set(...this.recipe.tags, ...result.recipeCuisine)]
+                if (recipe.recipeCuisine) {
+                  if (typeof recipe.recipeCuisine === "string") {
+                    this.recipe.tags.push(recipe.recipeCuisine)
+                  } else if (Array.isArray(recipe.recipeCuisine)) {
+                    this.recipe.tags = [...new Set([...this.recipe.tags, ...recipe.recipeCuisine])]
                   }
                 }
 
-                if (result.recipeCategory) {
-                  if (typeof result.recipeCategory === "string") {
-                    this.recipe.tags.push(result.recipeCategory)
-                  } else if (Array.isArray(result.recipeCategory)) {
-                    this.recipe.tags = [...new Set([...this.recipe.tags, ...result.recipeCategory])]
+                if (recipe.recipeCategory) {
+                  if (typeof recipe.recipeCategory === "string") {
+                    this.recipe.tags.push(recipe.recipeCategory)
+                  } else if (Array.isArray(recipe.recipeCategory)) {
+                    this.recipe.tags = [...new Set([...this.recipe.tags, ...recipe.recipeCategory])]
                   }
                 }
+
+                this.recipe.tags = this.recipe.tags.map(i => BaseScraper.HtmlDecode($, i));
 
                 // ingredients
-                this.recipe.ingredients = result.recipeIngredient.map(i => BaseScraper.HtmlDecode($, i));
+                if (Array.isArray(recipe.recipeIngredient)) {
+                  this.recipe.ingredients = recipe.recipeIngredient.map(i => BaseScraper.HtmlDecode($, i));
+                } else if (typeof recipe.recipeIngredient === "string") {
+                  this.recipe.ingredients = recipe.recipeIngredient.split(",").map(i => BaseScraper.HtmlDecode($, i.trim()));
+                }
 
                 // instructions
-                if (Array.isArray(result.recipeInstructions)) {
-                  this.recipe.instructions = result.recipeInstructions.map(step => {
-                    if (step.text) return step.text;
-                    else if (typeof step === "string") return BaseScraper.HtmlDecode($, step)
+                this.recipe.instructions = [];
+                this.recipe.sectionedInstructions = [];
+
+                if (recipe.recipeInstructions &&
+                  recipe.recipeInstructions["@type"] === "ItemList" &&
+                  recipe.recipeInstructions.itemListElement) {
+
+                  recipe.recipeInstructions.itemListElement.forEach(section => {
+                    this.recipe.instructions = [
+                      ...this.recipe.instructions,
+                      ...section.itemListElement.map(i => BaseScraper.HtmlDecode($, i.text))
+                    ];
+                    section.itemListElement.forEach(i => {
+                      this.recipe.sectionedInstructions.push({
+                        sectionTitle: section.name,
+                        text: i.text,
+                        image: i.image || ''
+                      })
+                    });
                   });
-                } else if (typeof result.recipeInstructions === "string") {
-                  this.recipe.instructions = [BaseScraper.HtmlDecode($, result.recipeInstructions)]
+                } else if (Array.isArray(recipe.recipeInstructions)) {
+                  recipe.recipeInstructions.forEach(step => {
+                    if (step["@type"] === "HowToStep") {
+                      this.recipe.instructions.push(BaseScraper.HtmlDecode($, step.text));
+                      this.recipe.sectionedInstructions.push({
+                        sectionTitle: step.name || '',
+                        text: BaseScraper.HtmlDecode($, step.text),
+                        image: step.image || ''
+                      })
+                    } else if (typeof step === "string") {
+                      this.recipe.instructions.push(BaseScraper.HtmlDecode($, step));
+                    }
+                  });
+
+
+                } else if (typeof recipe.recipeInstructions === "string") {
+                  this.recipe.instructions = [BaseScraper.HtmlDecode($, recipe.recipeInstructions)]
                 }
 
                 // prep time
-                if (result.prepTime) {
-                  this.recipe.time.prep = BaseScraper.parsePTTime(result.prepTime);
+                if (recipe.prepTime) {
+                  this.recipe.time.prep = BaseScraper.parsePTTime(recipe.prepTime);
                 }
 
                 // cook time
-                if (result.cookTime) {
-                  this.recipe.time.cook = BaseScraper.parsePTTime(result.cookTime);
+                if (recipe.cookTime) {
+                  this.recipe.time.cook = BaseScraper.parsePTTime(recipe.cookTime);
                 }
 
                 // total time
-                if (result.total) {
-                  this.recipe.time.total = BaseScraper.parsePTTime(result.totalTime);
+                if (recipe.totalTime) {
+                  this.recipe.time.total = BaseScraper.parsePTTime(recipe.totalTime);
                 }
 
                 // servings
-                this.recipe.servings = result.recipeYield;
+                this.recipe.servings = recipe.recipeYield;
 
                 isRecipeSchemaFound = true;
               } catch (e) {
@@ -226,11 +275,11 @@ class BaseScraper {
 
   static parsePTTime(ptTime) {
     ptTime = ptTime.replace('PT', '');
-    ptTime = ptTime.replace('H', ' hours');
-    ptTime = ptTime.replace('M', ' minutes');
+    ptTime = ptTime.replace('H', ' hours ');
+    ptTime = ptTime.replace('M', ' minutes ');
     ptTime = ptTime.replace('S', ' seconds');
 
-    return ptTime;
+    return ptTime.trim();
   }
 }
 

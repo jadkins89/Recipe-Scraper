@@ -54,7 +54,7 @@ module.exports = {
       active: "",
       inactive: "",
       ready: "",
-      total: ""
+      total: "55 minutes"
     },
     servings: "8 servings.",
     image:

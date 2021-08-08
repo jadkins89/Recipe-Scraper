@@ -5,23 +5,29 @@ const constants = require("./constants/defaultLdJasonConstants");
 describe("defaultLdJson", () => {
   let scraper;
 
+  var testWithData = function (url) {
+    return async function () {
+      console.log(url);
+      //Here do your test.
+      scraper.url = url;
+      let isServiceAvailable = await scraper.checkServerResponse();
+
+      if (!isServiceAvailable) {
+        console.log('SKIP TEST, server not responding', isServiceAvailable);
+        expect(true);
+      } else {
+        let actualRecipe = await scraper.fetchRecipe();
+        expect(actualRecipe).to.not.be.null;
+      }
+    };
+  };
+
   before(() => {
-    scraper = new ScraperFactory().getScraper(constants.testUrl);
+    scraper = new ScraperFactory().getScraper("www.test.com");
   });
 
-  it("should fetch the expected recipe", async () => {
-    scraper.url = constants.testUrl;
-    let isServiceAvailable = await scraper.checkServerResponse();
-
-    if (!isServiceAvailable) {
-      console.log('SKIP TEST, server not responding', isServiceAvailable);
-      expect(true);
-    } else {
-      let actualRecipe = await scraper.fetchRecipe();
-      console.log(actualRecipe)
-      expect(actualRecipe).to.not.be.null;
-    }
-
+  constants.testUrls.forEach(function (url) {
+    it("should fetch the expected recipe", testWithData(url));
   });
 
   it("should throw an error if the url does not contain a Recipe Ld+Json schema", async () => {

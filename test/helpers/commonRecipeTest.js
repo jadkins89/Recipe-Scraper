@@ -18,6 +18,7 @@ const commonRecipeTest = (name, constants, url) => {
         expect(true);
       } else {
         let actualRecipe = await scraper.fetchRecipe();
+        delete actualRecipe.sectionedInstructions;
         expect(constants.expectedRecipe).to.deep.equal(actualRecipe);
       }
 

@@ -1,15 +1,28 @@
-const BaseScraper = require("./BaseScraper");
+const PuppeteerScraper = require("./PuppeteerScraper");
 
-class DefaultLdJasonScraper extends BaseScraper {
+class DefaultLdJasonScraper extends PuppeteerScraper {
+
+  async customPoll(page) {
+    let container,
+      count = 0;
+    do {
+      container = await page.$("script[type='application/ld+json']");
+      if (!container) {
+        await page.waitForTimeout(100);
+        count++;
+      }
+    } while (!container && count < 60);
+    return true;
+  }
+
   scrape($) {
     const isSchemaFound = this.defaultLD_JOSN($);
-
-    console.log(isSchemaFound)
-    console.log(this.recipe)
 
     if (!isSchemaFound) {
       throw new Error("Site not yet supported");
     }
+
+    console.log(this.recipe)
 
   }
 }
