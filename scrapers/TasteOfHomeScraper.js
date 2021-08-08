@@ -12,31 +12,11 @@ class TasteOfHomeScraper extends BaseScraper {
   }
 
   scrape($) {
-    this.defaultSetImage($);
-    this.defaultSetDescription($);
-    const { ingredients, instructions, tags, time } = this.recipe;
-    this.recipe.name = $("h1.recipe-title")
-      .text()
-      .trim();
+    this.defaultLD_JOSN($);
 
-    $("meta[property='article:tag']").each((i, el) => {
-      tags.push($(el).attr("content"));
+    $("script[data-article-tags]").each((i, el) => {
+      this.recipe.tags = [...new Set([...this.recipe.tags, ...el.attribs['data-article-tags'].split(', ')])];
     });
-
-    $(".recipe-ingredients__list li").each((i, el) => {
-      ingredients.push($(el).text());
-    });
-
-    $(".recipe-directions__item").each((i, el) => {
-      instructions.push(this.textTrim($(el)));
-    });
-
-    let timeStr = $(".recipe-time-yield__label-prep")
-      .text()
-      .split(/Bake:/g);
-    time.prep = timeStr[0].replace("Prep:", "").trim();
-    time.cook = (timeStr[1] || "").trim();
-    this.recipe.servings = $(".recipe-time-yield__label-servings").text().trim();
   }
 }
 

@@ -48,6 +48,104 @@ class BaseScraper {
   }
 
   /**
+   * look for LD+JOSN script in the web page.
+   * @param {object} $ - a cheerio object representing a DOM
+   * @returns {boolean} - if exist, set recipe data and return true, else - return false.
+   */
+  defaultLD_JOSN($) {
+    const jsonLDs = Object.values($("script[type='application/ld+json']"));
+    let isRecipeSchemaFound = false;
+
+    jsonLDs.forEach(jsonLD => {
+      if (jsonLD && jsonLD.children && Array.isArray(jsonLD.children)) {
+        jsonLD.children.forEach(el => {
+          if (el.data) {
+
+            const jsonRaw = el.data;
+            const result = JSON.parse(jsonRaw);
+
+            if (result['@type'] === 'Recipe') {
+              try {
+                // name
+                this.recipe.name = BaseScraper.HtmlDecode($, result.name);
+
+                // description
+                this.recipe.description = result.description ? BaseScraper.HtmlDecode($, result.description) : this.defaultSetDescription($);
+
+                // image
+                this.recipe.image = result.image ? result.image[0] : this.defaultSetImage($);
+
+                // tags
+                this.recipe.tags = [];
+                if (result.keywords) {
+                  if (typeof result.keywords === "string") {
+                    this.recipe.tags = [...result.keywords.split(',')]
+                  } else if (Array.isArray(result.keywords)) {
+                    this.recipe.tags = result.keywords
+                  }
+                }
+
+                if (result.recipeCuisine) {
+                  if (typeof result.recipeCuisine === "string") {
+                    this.recipe.tags.push(result.recipeCuisine)
+                  } else if (Array.isArray(result.recipeCuisine)) {
+                    this.recipe.tags = [...new Set(...this.recipe.tags, ...result.recipeCuisine)]
+                  }
+                }
+
+                if (result.recipeCategory) {
+                  if (typeof result.recipeCategory === "string") {
+                    this.recipe.tags.push(result.recipeCategory)
+                  } else if (Array.isArray(result.recipeCategory)) {
+                    this.recipe.tags = [...new Set([...this.recipe.tags, ...result.recipeCategory])]
+                  }
+                }
+
+                // ingredients
+                this.recipe.ingredients = result.recipeIngredient.map(i => BaseScraper.HtmlDecode($, i));
+
+                // instructions
+                if (Array.isArray(result.recipeInstructions)) {
+                  this.recipe.instructions = result.recipeInstructions.map(step => {
+                    if (step.text) return step.text;
+                    else if (typeof step === "string") return BaseScraper.HtmlDecode($, step)
+                  });
+                } else if (typeof result.recipeInstructions === "string") {
+                  this.recipe.instructions = [BaseScraper.HtmlDecode($, result.recipeInstructions)]
+                }
+
+                // prep time
+                if (result.prepTime) {
+                  this.recipe.time.prep = BaseScraper.parsePTTime(result.prepTime);
+                }
+
+                // cook time
+                if (result.cookTime) {
+                  this.recipe.time.cook = BaseScraper.parsePTTime(result.cookTime);
+                }
+
+                // total time
+                if (result.total) {
+                  this.recipe.time.total = BaseScraper.parsePTTime(result.totalTime);
+                }
+
+                // servings
+                this.recipe.servings = result.recipeYield;
+
+                isRecipeSchemaFound = true;
+              } catch (e) {
+                console.log(e);
+              }
+            }
+          }
+        });
+      }
+    });
+
+    return isRecipeSchemaFound;
+  }
+
+  /**
    * @param {object} $ - a cheerio object representing a DOM
    * @returns {string|null} - if found, an image url
    */
@@ -108,6 +206,10 @@ class BaseScraper {
 
   textTrim(el) {
     return el.text().trim();
+  }
+
+  static HtmlDecode($, s) {
+    return $('<div>').html(s).text();
   }
 
   /**
