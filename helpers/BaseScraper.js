@@ -65,7 +65,7 @@ class BaseScraper {
             const recipe = JSON.parse(jsonRaw);
 
             if (recipe['@type'] === 'Recipe') {
-              console.log('found a Recipe type json schema!');
+              // console.log('found a Recipe type json schema!');
               // console.log(recipe)
               try {
                 // name
@@ -236,9 +236,14 @@ class BaseScraper {
    */
   async fetchRecipe() {
     this.checkUrl();
-    const $ = await this.fetchDOMModel();
-    this.createRecipeObject();
-    this.scrape($);
+    try {
+      const $ = await this.fetchDOMModel();
+      this.createRecipeObject();
+      this.scrape($);
+    } catch (e) {
+      this.defaultError();
+    }
+
     return this.validateRecipe();
   }
 

@@ -36,7 +36,7 @@ describe("defaultLdJson", () => {
       await scraper.fetchRecipe();
       assert.fail("was not supposed to succeed");
     } catch (error) {
-      expect(error.message).to.equal("Site not yet supported");
+      expect(error.message).to.equal("No recipe found on page");
     }
   });
 
