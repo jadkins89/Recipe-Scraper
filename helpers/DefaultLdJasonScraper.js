@@ -22,7 +22,7 @@ class DefaultLdJasonScraper extends PuppeteerScraper {
       throw new Error("Site not yet supported");
     }
 
-    console.log(this.recipe)
+    // console.log(this.recipe)
 
   }
 }
