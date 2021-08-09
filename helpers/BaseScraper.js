@@ -123,7 +123,7 @@ class BaseScraper {
                   this.recipe.ingredients = recipe.recipeIngredient.split(",").map(i => BaseScraper.HtmlDecode($, i.trim()));
                 }
 
-                // instructions
+                // instructions (may be string, array of strings, or object of sectioned instructions)
                 this.recipe.instructions = [];
                 this.recipe.sectionedInstructions = [];
 
@@ -139,7 +139,7 @@ class BaseScraper {
                     section.itemListElement.forEach(i => {
                       this.recipe.sectionedInstructions.push({
                         sectionTitle: section.name,
-                        text: i.text,
+                        text: BaseScraper.HtmlDecode($, i.text),
                         image: i.image || ''
                       })
                     });
@@ -157,10 +157,8 @@ class BaseScraper {
                       this.recipe.instructions.push(BaseScraper.HtmlDecode($, step));
                     }
                   });
-
-
                 } else if (typeof recipe.recipeInstructions === "string") {
-                  this.recipe.instructions = [BaseScraper.HtmlDecode($, recipe.recipeInstructions)]
+                  this.recipe.instructions = [BaseScraper.HtmlDecode($, recipe.recipeInstructions.replace(/\n/g, ""))]
                 }
 
                 // prep time
@@ -258,6 +256,7 @@ class BaseScraper {
   }
 
   static HtmlDecode($, s) {
+    if (s && typeof s === "string") s.replace(/amp;/gm, '');
     return $('<div>').html(s).text();
   }
 
