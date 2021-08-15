@@ -35,11 +35,10 @@ module.exports = {
       "Skillet Recipes",
       "French Recipes",
       "Pork Chop",
-      "Meat",
       "Pork",
       "Potato",
-      "Vegetable",
-      "Main Dish"
+      "Main Dish",
+      "Gluten Free"
     ],
     time: {
       prep: "",

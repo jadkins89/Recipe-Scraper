@@ -19,6 +19,18 @@
       "uniqueItems": true,
       "items": { "type": "string" }
     },
+    "sectionedInstructions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "sectionTitle": { "type": "string"},
+          "text": { "type": "string"},
+          "image": { "type": "string"}
+        }
+      }
+    },
     "tags": {
       "type": "array",
       "uniqueItems": true,

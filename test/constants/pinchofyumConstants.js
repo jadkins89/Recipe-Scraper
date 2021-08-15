@@ -4,7 +4,7 @@ module.exports = {
   invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://pinchofyum.com/about/",
   expectedRecipe: {
-    name: "Couscous Summer Salad - Pinch of Yum",
+    name: "Couscous Summer Salad",
     description: "Couscous Summer Salad! Spiced couscous, juicy nectarines, crunchy cucumber, avocado, chickpeas, cherries, sweet corn, and mint.",
     ingredients: [
       "1 cup couscous (uncooked)",
@@ -40,6 +40,7 @@ module.exports = {
       "Quick and Easy",
       "Salads",
       "Sugar-Free",
+      "Summer",
       "Vegan",
       "Vegetarian"
     ],

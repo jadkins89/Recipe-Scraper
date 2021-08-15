@@ -19,7 +19,8 @@ class AllRecipesScraper extends BaseScraper {
       const value = $(el)
         .children(".recipe-meta-item-body")
         .text()
-        .replace(/\s\s+/g, "");
+        .replace(/\s\s+/g, "")
+        .trim();
       switch (title) {
         case "prep":
           time.prep = value;

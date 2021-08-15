@@ -21,11 +21,10 @@ module.exports = {
       "Minced fresh parsley"
     ],
     instructions: [
-      "In a large skillet, brown chicken in butter. Remove chicken to an ungreased 13x9-in. baking dish. Arrange artichokes and mushrooms on top of chicken; set aside.",
-      "Saute onion in pan juices until crisp-tender. Combine the flour, rosemary, salt and pepper. Stir into pan until blended. Add chicken broth. Bring to a boil; cook and stir until thickened and bubbly, about 2 minutes. Spoon over chicken.",
-      "Bake, uncovered, at 350° until a thermometer inserted in the chicken reads 165°, about 40 minutes. Serve with noodles and sprinkle with parsley. Freeze option: Cool unbaked casserole; cover and freeze. To use, partially thaw in refrigerator overnight. Remove from refrigerator 30 minutes before baking. Preheat oven to 350°. Bake casserole as directed, increasing time as necessary to heat through and for a thermometer inserted in the chicken to read 165°."
+      "In a large skillet, brown chicken in butter. Remove chicken to an ungreased 13x9-in. baking dish. Arrange artichokes and mushrooms on top of chicken; set aside. ,    Saute onion in pan juices until crisp-tender. Combine the flour, rosemary, salt and pepper. Stir into pan until blended. Add chicken broth. Bring to a boil; cook and stir until thickened and bubbly, about 2 minutes. Spoon over chicken. ,    Bake, uncovered, at 350° until a thermometer inserted in the chicken reads 165°, about 40 minutes. Serve with noodles and sprinkle with parsley. Freeze option: Cool unbaked casserole; cover and freeze. To use, partially thaw in refrigerator overnight. Remove from refrigerator 30 minutes before baking. Preheat oven to 350°. Bake casserole as directed, increasing time as necessary to heat through and for a thermometer inserted in the chicken to read 165°."
     ],
     tags: [
+      "Dinner",
       "13x9",
       "Artichoke Hearts",
       "Artichokes",
@@ -35,7 +34,6 @@ module.exports = {
       "Chicken",
       "Cooking Style",
       "Diabetic",
-      "Dinner",
       "Easy",
       "Freezer-Friendly",
       "Gear",
@@ -51,15 +49,15 @@ module.exports = {
       "Winning Recipes"
     ],
     time: {
-      prep: "15 min.",
-      cook: "40 min.",
+      prep: "15 minutes",
+      cook: "40 minutes",
       active: "",
       inactive: "",
       ready: "",
-      total: ""
+      total: "55 minutes"
     },
-    servings: "8 servings",
+    servings: "8 servings.",
     image:
-      "https://www.tasteofhome.com/wp-content/uploads/2018/01/Artichoke-Chicken_EXPS_13X9BZ19_24_B10_04_5b-14.jpg"
+      "https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Artichoke-Chicken_EXPS_13X9BZ19_24_B10_04_5b.jpg"
   }
 };

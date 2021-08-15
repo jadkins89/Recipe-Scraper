@@ -12,7 +12,7 @@
   ],
   "main": "scrapers/index.js",
   "scripts": {
-    "test": "mocha --timeout 15000",
+    "test": "mocha --timeout 30000",
     "start": "node scrapers/index.js",
     "coverage": "nyc npm test",
     "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls"

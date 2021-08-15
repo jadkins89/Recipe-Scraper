@@ -1,9 +1,9 @@
 module.exports = {
-  testUrl: "https://www.woolworths.com.au/shop/recipedetail/7440/bean-tomato-nachos",
-  invalidUrl: "https://woolworths.com.au/shop/recipedetail/notarealurl",
+  testUrl: "https://www.woolworths.com.au/shop/recipes/bean-and-tomato-nachos",
+  invalidUrl: "https://woolworths.com.au/shop/recipes/notarealurl",
   invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl:
-    "https://www.woolworths.com.au/shop/recipedetail/0000/not-a-recipe",
+    "https://www.woolworths.com.au/shop/recipes/not-a-recipe",
   expectedRecipe: {
     name: "Bean & Tomato Nachos",
     description: "Try our easy to follow Bean & Tomato Nachos recipe. Absolutely delicious with the best ingredients from Woolworths.",
