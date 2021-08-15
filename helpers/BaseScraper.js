@@ -163,16 +163,28 @@ class BaseScraper {
                     });
                   });
                 } else if (Array.isArray(recipe.recipeInstructions)) {
-                  recipe.recipeInstructions.forEach(step => {
-                    if (step["@type"] === "HowToStep") {
-                      this.recipe.instructions.push(BaseScraper.HtmlDecode($, step.text));
+                  recipe.recipeInstructions.forEach(instructionStep => {
+                    if (instructionStep["@type"] === "HowToStep") {
+                      this.recipe.instructions.push(BaseScraper.HtmlDecode($, instructionStep.text));
                       this.recipe.sectionedInstructions.push({
-                        sectionTitle: step.name || '',
-                        text: BaseScraper.HtmlDecode($, step.text),
-                        image: step.image || ''
+                        sectionTitle: instructionStep.name || '',
+                        text: BaseScraper.HtmlDecode($, instructionStep.text),
+                        image: instructionStep.image || ''
                       })
-                    } else if (typeof step === "string") {
-                      this.recipe.instructions.push(BaseScraper.HtmlDecode($, step));
+                    } else if (instructionStep["@type"] === "HowToSection") {
+                      if (instructionStep.itemListElement) {
+                        instructionStep.itemListElement.forEach(step => {
+                          this.recipe.instructions.push(BaseScraper.HtmlDecode($, step.text));
+
+                          this.recipe.sectionedInstructions.push({
+                            sectionTitle: instructionStep.name,
+                            text: BaseScraper.HtmlDecode($, step.text),
+                            image: step.image || ''
+                          })
+                        });
+                      }
+                    } else if (typeof instructionStep === "string") {
+                      this.recipe.instructions.push(BaseScraper.HtmlDecode($, instructionStep));
                     }
                   });
                 } else if (typeof recipe.recipeInstructions === "string") {
