@@ -62,17 +62,35 @@ class BaseScraper {
           if (el.data) {
 
             const jsonRaw = el.data;
-            const recipe = JSON.parse(jsonRaw);
+            const result = JSON.parse(jsonRaw);
+            let recipe;
 
-            if (recipe['@type'] === 'Recipe') {
+            if (result['@graph'] && Array.isArray(result['@graph'])) {
+              // console.log('found a graph');
+              result['@graph'].forEach(g => {
+                if (g['@type'] === 'Recipe') {
+                  // console.log('found a Recipe type json schema!');
+                  recipe = g;
+                }
+              })
+            }
+
+            if (result['@type'] === 'Recipe') {
+              recipe = result;
               // console.log('found a Recipe type json schema!');
-              // console.log(recipe)
+            }
+
+            if (recipe) {
               try {
                 // name
                 this.recipe.name = BaseScraper.HtmlDecode($, recipe.name);
 
                 // description
-                this.recipe.description = recipe.description ? BaseScraper.HtmlDecode($, recipe.description) : this.defaultSetDescription($);
+                if (recipe.description) {
+                  this.recipe.description = BaseScraper.HtmlDecode($, recipe.description);
+                } else {
+                  this.defaultSetDescription($);
+                }
 
                 // image
                 if (recipe.image) {
@@ -158,7 +176,7 @@ class BaseScraper {
                     }
                   });
                 } else if (typeof recipe.recipeInstructions === "string") {
-                  this.recipe.instructions = [BaseScraper.HtmlDecode($, recipe.recipeInstructions.replace(/\n/g, ""))]
+                  this.recipe.instructions = [BaseScraper.HtmlDecode($, recipe.recipeInstructions)]
                 }
 
                 // prep time
@@ -177,7 +195,11 @@ class BaseScraper {
                 }
 
                 // servings
-                this.recipe.servings = recipe.recipeYield;
+                if (Array.isArray(recipe.recipeYield)) {
+                  this.recipe.servings = recipe.recipeYield[0];
+                } else if (typeof recipe.recipeYield === "string") {
+                  this.recipe.servings = recipe.recipeYield;
+                }
 
                 isRecipeSchemaFound = true;
               } catch (e) {
@@ -261,8 +283,12 @@ class BaseScraper {
   }
 
   static HtmlDecode($, s) {
-    if (s && typeof s === "string") s.replace(/amp;/gm, '');
-    return $('<div>').html(s).text();
+    const res = $('<div>').html(s).text() || "";
+
+    return res.trim()
+      .replace(/amp;/gm, '')
+      .replace(/(?=\[caption).*?(?<=\[ caption\])/g, '') // removes short-codes [caption.*[ caption]
+      .replace(/\n/g, "");
   }
 
   /**

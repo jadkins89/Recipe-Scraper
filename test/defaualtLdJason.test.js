@@ -5,11 +5,12 @@ const constants = require("./constants/defaultLdJasonConstants");
 describe("defaultLdJson", () => {
   let scraper;
 
-  var testWithData = function (url) {
-    return async function () {
-      console.log(url);
-      //Here do your test.
-      scraper.url = url;
+  var testWithData = (test) => {
+    return async () => {
+      let domain = (new URL(test.url));
+      console.log(domain.hostname.replace('www.', ''));
+
+      scraper.url = test.url;
       let isServiceAvailable = await scraper.checkServerResponse();
 
       if (!isServiceAvailable) {
@@ -17,7 +18,7 @@ describe("defaultLdJson", () => {
         expect(true);
       } else {
         let actualRecipe = await scraper.fetchRecipe();
-        expect(actualRecipe).to.not.be.null;
+        expect(test.expected).to.deep.equal(actualRecipe);
       }
     };
   };
@@ -26,17 +27,18 @@ describe("defaultLdJson", () => {
     scraper = new ScraperFactory().getScraper("www.test.com");
   });
 
-  constants.testUrls.forEach(function (url) {
-    it("should fetch the expected recipe", testWithData(url));
+  constants.tests.forEach((test) => {
+    it("should fetch the expected recipe", testWithData(test));
   });
 
   it("should throw an error if the url does not contain a Recipe Ld+Json schema", async () => {
     try {
       scraper.url = constants.noLdJasonSupportedRecipeUrl;
-      await scraper.fetchRecipe();
+      let actualRecipe = await scraper.fetchRecipe();
+      console.log(actualRecipe)
       assert.fail("was not supposed to succeed");
     } catch (error) {
-      expect(error.message).to.equal("No recipe found on page");
+      expect(error.message).to.equal("Site not yet supported");
     }
   });
 
