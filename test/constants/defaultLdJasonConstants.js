@@ -733,7 +733,7 @@ module.exports = {
           'leaving 1/4-inch border around edge. Top with Oreo ' +
           'pieces.'
         ],
-        tags: [ 'oreo-shamrock cupcakes', 'Dessert' ],
+        tags: ['oreo-shamrock cupcakes', 'Dessert'],
         time: {
           prep: '0 hours 30 minutes',
           cook: '',
@@ -777,6 +777,579 @@ module.exports = {
             'frosting in circular motion on top of each cupcake, ' +
             'leaving 1/4-inch border around edge. Top with Oreo ' +
             'pieces.',
+            image: ''
+          }
+        ]
+      }
+    },
+    {
+      url: "https://www.vegrecipesofindia.com/pav-bhaji-recipe-mumbai-pav-bhaji-a-fastfood-recipe-from-mumbai/#wprm-recipe-container-136147",
+      expected: {
+        name: 'Pav Bhaji Recipe',
+        description: 'Pav Bhaji is a hearty, delightsome, flavorful meal of mashed ' +
+        'vegetable gravy with fluffy soft buttery dinner rolls served with a ' +
+        'side of crunchy piquant onions, tangy lemon and herby coriander. You ' +
+        'will love this pav bhaji recipe for its Mumbai style flavors. I share ' +
+        'the traditional method of making Pav Bhaji and a quick Instant Pot ' +
+        'recipe.',
+        ingredients: [
+          '3  potatoes ((medium-sized) - 250 grams)',
+          '1 to 1.25 cups chopped cauliflower (- 120 to 130 grams)',
+          '1 cup chopped carrot',
+          '1 cup green peas (- fresh or frozen)',
+          '⅓ cup chopped french beans (- 12 to 14 french beans  -  optional)',
+          '2.25 to 2.5 cups  water (- for pressure cooking veggies)',
+          '3 tablespoons butter (- salted or unsalted)',
+          '1 teaspoon cumin seeds',
+          '½  cup finely chopped onion (or 1 medium to large onion)',
+          '2 teaspoons Ginger-Garlic Paste (or 1.5 inch ginger ' +
+          '& 5 to 6 medium garlic cloves crushed in a mortar)',
+          '1 teaspoon chopped green chilies (or ' +
+          'serrano peppers or 1 to 2 green ' +
+          'chilies)',
+          '½ cup finely chopped capsicum  (or 1 ' +
+          'medium sized capsicum (green bell ' +
+          'pepper))',
+          '2 cups finely chopped tomatoes ((tightly ' +
+          'packed) or about 2 to 3 large tomatoes)',
+          '1 teaspoon turmeric powder ((ground turmeric))',
+          '1 teaspoon kashmiri chilli powder (or freshly ' +
+          'ground 3 to 4 soaked dry kashmiri red chilies)',
+          '2 to 3 tablespoons Pav Bhaji Masala (- add as required)',
+          '1.5 to 2 cups water (or the stock in ' +
+          'which the veggies were cooked, add as ' +
+          'needed)',
+          'salt (as required)',
+          '2 to 3 tablespoons butter ( - salted or unsalted)',
+          '½  teaspoon cumin seeds',
+          '½  cup finely chopped onions (or 1 ' +
+          'medium to large onion - 50 to 60 ' +
+          'grams)',
+          '2 teaspoons Ginger-Garlic Paste (or 1.5 inch ginger ' +
+          'and 5 to 6 medium garlic cloves crushed in a mortar)',
+          '1  teaspoon chopped green chilies (or ' +
+          'serrano peppers or 1 to 2 green ' +
+          'chillies)',
+          '2 cups chopped tomatoes ( or 3 large tomatoes - 300 grams)',
+          '⅓  cup chopped capsicum ((green bell pepper))',
+          '2 cups chopped potatoes ( or 3 medium or 2 large potatoes - 250 grams)',
+          '¾ to 1  cup chopped cauliflower (-  100 grams)',
+          '¾  cup chopped carrots ( or 1 medium to large carrot - 100 grams)',
+          '¼  cup chopped french beans (- optional)',
+          '½  cup green peas (- fresh or frozen)',
+          '½  teaspoon turmeric powder',
+          '1 to 1.5 teaspoons kashmiri red chilli powder ' +
+          '(or  ½ to 1 teaspoon cayenne pepper or paprika)',
+          '1.25 cups water',
+          'salt  (as required)',
+          '2 tablespoons  Pav Bhaji Masala',
+          '1 to 2 tablespoons  butter (- to be added later)',
+          '2 tablespoons  coriander leaves ((cilantro))',
+          '12  pav ((dinner rolls))',
+          '3 to 4 tablespoons butter (- for roasting pav)',
+          '1  lemon (or lime, chopped in wedges)',
+          '1  onion (- medium to large, finely chopped)',
+          '3 to 4 tablespoons chopped coriander leaves (- for garnish)',
+          '2 to 3 tablespoons  butter (- for ' +
+          'topping - add more for a richer ' +
+          'version)'
+        ],
+        instructions: [
+          'Rinse, peel and chop the veggies. You will need 1 cup chopped ' +
+          'cauliflower, 1 cup chopped carrot, 3 medium sized potatoes (chopped) ' +
+          'and ⅓ cup chopped french beans. You can also add veggies of your ' +
+          'choice.',
+          'Add all the above chopped veggies in a 2 litre ' +
+          'pressure cooker. Also add 1 cup green peas (fresh or ' +
+          'frozen).',
+          'Add 2.25 to 2.5 cups water.',
+          'Pressure cook the veggies for 5 to 6 ' +
+          'whistles or for about 12 minutes on medium ' +
+          'flame.',
+          'When the pressure settles down on its own, open the cooker and ' +
+          'check if the veggies are cooked well. You can even steam or cook ' +
+          'the veggies in a pan. The vegetables have be to cooked ' +
+          'completely.',
+          'Heat a pan or kadai. You can also use a large tawa. Add ' +
+          '2 to 3 tablespoons butter. You can use amul butter or ' +
+          'any brand of butter. Butter can be salted or unsalted.',
+          'As soon as the butter melts, add 1 teaspoon cumin seeds.',
+          'Let the cumin seeds crackle and change their color.',
+          'Then add ½ cup finely chopped onions.',
+          'Mix onions with the butter and saute on a low ' +
+          'to medium flame till the onions translucent.',
+          'Then add 2 teaspoons ginger-garlic paste. You can also crush 1.5 ' +
+          'inch ginger and 5 to 6 medium garlic cloves in a mortar-pestle.',
+          'Mix and saute till the raw aroma of both ginger and garlic goes away.',
+          'Then add chopped green chilies. Mix well.',
+          'Now add 2 cups finely chopped tomatoes. Mix very well.',
+          'Then begin to sauté tomatoes on a low to medium heat.',
+          'Saute till the tomatoes become soft and mushy and you see ' +
+          'butter releasing from the sides. This takes about 6 to 7 ' +
+          'minutes on a low to medium flame. If the tomatoes start ' +
+          'sticking to the pan, then sprinkle some water and mix ' +
+          'well.',
+          'When the tomatoes have softened, then add ½ cup finely chopped ' +
+          'capsicum (green bell pepper). Sauté for 2 to 3 minutes. If the ' +
+          'mixture starts sticking to the pan, then you can sprinkle some water. ' +
+          'You don’t need to cook the capsicum till very soft. A little crunch ' +
+          'is alright.',
+          'Add 1 teaspoon turmeric powder and 1 ' +
+          'teaspoon kashmiri red chilli powder.',
+          'Then add 2 to 3 tablespoons pav bhaji masala. mix very well.',
+          'Add the cooked veggies. Add all of the stock or water from the ' +
+          'pressure cooker in which the veggies were cooked. Mix very well.',
+          'Then season with salt as per taste.',
+          'With a potato masher, begin to mash the veggies directly in the pan.',
+          'You can mash the veggies less or more according to the consistency you ' +
+          'want. For a smooth mixture mash more. For a chunky pav bhaji, mash less.',
+          'Keep on stirring occasionally and let ' +
+          'the bhaji simmer for 8 to 10 minutes.',
+          'If the bhaji looks dry and then add some more ' +
+          'water. The consistency is neither very thick nor ' +
+          'thin.',
+          'Do stir often so that the bhaji does not stick to the pan. When ' +
+          'the pav bhaji simmers to the desired consistency, check the taste. ' +
+          'Add salt, pav bhaji masala, red chili powder or butter if ' +
+          'required.',
+          'When the bhaji is simmering, you can fry the pav so ' +
+          'that you serve the pav with hot bhaji. Slice the ' +
+          'pavs.',
+          'Switch on the instant pot. Press the sauté button on ' +
+          'less mode. Add 2 tablespoons butter in the ip steel ' +
+          'insert.',
+          'When the butter melts, add cumin seeds and let them splutter and change ' +
+          'color. Then add finely chopped onions and sauté onions till they soften.',
+          'Next add the ginger-garlic paste and green chillies. Mix and sauté ' +
+          'for a few seconds till the raw aroma of ginger-garlic goes away.',
+          'Then add chopped tomatoes and chopped capsicum. Sauté ' +
+          'for 1 to 2 minutes.Add the chopped veggies and green ' +
+          'peas.',
+          'Add ½ teaspoon turmeric powder and 1 to 1.5 teaspoons kashmiri ' +
+          'red chilli powder. If using any other red chili powder or cayenne ' +
+          'pepper, then you can add less of it. Also, add salt as per taste.',
+          'Mix everything very well. Add water and stir.',
+          'Press the cancel button. Now press the pressure ' +
+          'cooker/manual button and set time to 7 minutes on high ' +
+          'pressure.',
+          'When the beep sound is heard and the pressure ' +
+          'cooking is complete, do a quick pressure release ' +
+          '(qpr). When all the pressure is released, open the ' +
+          'lid.',
+          'Using a napkin or oven mittens, remove the steel insert ' +
+          'from the instant pot. Place it on your kitchen counter.',
+          'With a potato masher, begin to mash the cooked ' +
+          'vegetables. Mash very well. You can even use an ' +
+          'immersion blender and puree the veggies. Just make a ' +
+          'semi-fine puree.',
+          'Now add 2 tablespoons pav bhaji masala and 1 to 2 tablespoons ' +
+          'butter. You can skip the butter if you want. Mix very well.',
+          'Place the steel insert pan in the IP. Press the ' +
+          'cancel button and then press the sauté button on ' +
+          'normal mode. Set the timer to 3 to 5 minutes or ' +
+          'more.',
+          'Simmer the bhaji for a few minutes, till it thickens a bit and you ' +
+          'get the desired consistency. Stir often, so that the bhaji does not ' +
+          'stick to the bottom. If the bhaji looks very thick, then add some ' +
+          'water.',
+          'Sprinkle 2 tablespoons chopped coriander leaves. Mix very well. Do ' +
+          'check the taste and add salt, butter, kashmiri red chili powder or ' +
+          'pav bhaji masala if required. Cancel and keep the IP on warm mode.',
+          'Heat a skillet or a shallow frying pan. ' +
+          'Keep the flame to a low and then add ' +
+          'butter.',
+          'When the butter begins to melt, add a bit of pav ' +
+          'bhaji masala. You can skip pav bhaji masala if you ' +
+          'want.',
+          'Mix the pav bhaji masala very well with a spoon or spatula.',
+          'Then place the pav on the butter.',
+          'Rotate the pav all over the melted ' +
+          'butter so that the pav absorbs the ' +
+          'butter.',
+          'Now turn over the pav and rotate them on the tawa so that the ' +
+          'second side absorbs the butter. Add more butter if required.',
+          'You can turn over and toast them more if ' +
+          'required. Then remove in a plate and keep ' +
+          'aside.',
+          'Take the bhaji in a serving plate or a bowl. Top it up with one ' +
+          'to two cubes of butter. You can add more butter, if you like.',
+          'Place a side of finely chopped onions, lemon wedges and ' +
+          'finely chopped coriander leaves. Or you can sprinkle ' +
+          'onions, coriander leaves and lemon juice directly on the ' +
+          'bhaji.',
+          'Serve bhaji with the lightly pan fried and buttered pav. Pav ' +
+          'bhaji is topped with chopped onions, coriander leaves and the ' +
+          'lime or lemon juice is squeezed on the bhaji while eating.',
+          'Refrigerate only the bhaji (vegetable gravy without any toppings of ' +
+          'onions, coriander and lemon juice) in the refrigerator for 1 to 2 ' +
+          'days.',
+          'Reheat in a small pan. If the bhaji looks thick, ' +
+          'mix in some water to loosen it a bit and reheat.'
+        ],
+        tags: [
+          'pav bhaji',
+          'Indian Street Food',
+          'Maharashtrian',
+          'Brunch',
+          'Main Course',
+          'Snacks',
+          'Starters'
+        ],
+        time: {
+          prep: '20 minutes',
+          cook: '20 minutes',
+          active: '',
+          inactive: '',
+          ready: '',
+          total: '40 minutes'
+        },
+        servings: '5',
+        image: 'https://www.vegrecipesofindia.com/wp-content/uploads/2021/04/pav-bhaji-recipe-3.jpg',
+        sectionedInstructions: [
+          {
+            sectionTitle: 'Cooking veggies',
+            text: 'Rinse, peel and chop the veggies. You will need 1 cup chopped ' +
+            'cauliflower, 1 cup chopped carrot, 3 medium sized potatoes (chopped) ' +
+            'and ⅓ cup chopped french beans. You can also add veggies of your ' +
+            'choice.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Cooking veggies',
+            text: 'Add all the above chopped veggies in a 2 litre ' +
+            'pressure cooker. Also add 1 cup green peas (fresh or ' +
+            'frozen).',
+            image: ''
+          },
+          {
+            sectionTitle: 'Cooking veggies',
+            text: 'Add 2.25 to 2.5 cups water.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Cooking veggies',
+            text: 'Pressure cook the veggies for 5 to 6 ' +
+            'whistles or for about 12 minutes on medium ' +
+            'flame.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Cooking veggies',
+            text: 'When the pressure settles down on its own, open the cooker and ' +
+            'check if the veggies are cooked well. You can even steam or cook ' +
+            'the veggies in a pan. The vegetables have be to cooked ' +
+            'completely.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Sautéing onions',
+            text: 'Heat a pan or kadai. You can also use a large tawa. Add ' +
+            '2 to 3 tablespoons butter. You can use amul butter or ' +
+            'any brand of butter. Butter can be salted or unsalted.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Sautéing onions',
+            text: 'As soon as the butter melts, add 1 teaspoon cumin seeds.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Sautéing onions',
+            text: 'Let the cumin seeds crackle and change their color.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Sautéing onions',
+            text: 'Then add ½ cup finely chopped onions.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Sautéing onions',
+            text: 'Mix onions with the butter and saute on a low ' +
+            'to medium flame till the onions translucent.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Sautéing onions',
+            text: 'Then add 2 teaspoons ginger-garlic paste. You can also crush 1.5 ' +
+            'inch ginger and 5 to 6 medium garlic cloves in a mortar-pestle.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Sautéing onions',
+            text: 'Mix and saute till the raw aroma of both ginger and garlic goes away.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Sautéing onions',
+            text: 'Then add chopped green chilies. Mix well.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Sautéing tomatoes',
+            text: 'Now add 2 cups finely chopped tomatoes. Mix very well.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Sautéing tomatoes',
+            text: 'Then begin to sauté tomatoes on a low to medium heat.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Sautéing tomatoes',
+            text: 'Saute till the tomatoes become soft and mushy and you see ' +
+            'butter releasing from the sides. This takes about 6 to 7 ' +
+            'minutes on a low to medium flame. If the tomatoes start ' +
+            'sticking to the pan, then sprinkle some water and mix ' +
+            'well.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Sautéing tomatoes',
+            text: 'When the tomatoes have softened, then add ½ cup finely chopped ' +
+            'capsicum (green bell pepper). Sauté for 2 to 3 minutes. If the ' +
+            'mixture starts sticking to the pan, then you can sprinkle some water. ' +
+            'You don’t need to cook the capsicum till very soft. A little crunch ' +
+            'is alright.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Sautéing ground spices',
+            text: 'Add 1 teaspoon turmeric powder and 1 ' +
+            'teaspoon kashmiri red chilli powder.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Sautéing ground spices',
+            text: 'Then add 2 to 3 tablespoons pav bhaji masala. mix very well.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Adding cooked vegetables',
+            text: 'Add the cooked veggies. Add all of the stock or water from the ' +
+            'pressure cooker in which the veggies were cooked. Mix very well.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Adding cooked vegetables',
+            text: 'Then season with salt as per taste.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Adding cooked vegetables',
+            text: 'With a potato masher, begin to mash the veggies directly in the pan.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Adding cooked vegetables',
+            text: 'You can mash the veggies less or more according ' +
+            'to the consistency you want. For a smooth ' +
+            'mixture mash more. For a chunky pav bhaji, mash ' +
+            'less.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Adding cooked vegetables',
+            text: 'Keep on stirring occasionally and let ' +
+            'the bhaji simmer for 8 to 10 minutes.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Adding cooked vegetables',
+            text: 'If the bhaji looks dry and then add some more ' +
+            'water. The consistency is neither very thick nor ' +
+            'thin.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Adding cooked vegetables',
+            text: 'Do stir often so that the bhaji does not stick to the pan. When ' +
+            'the pav bhaji simmers to the desired consistency, check the taste. ' +
+            'Add salt, pav bhaji masala, red chili powder or butter if ' +
+            'required.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Adding cooked vegetables',
+            text: 'When the bhaji is simmering, you can fry the pav so ' +
+            'that you serve the pav with hot bhaji. Slice the ' +
+            'pavs.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Making Instant Pot Pav Bhaji',
+            text: 'Switch on the instant pot. Press the sauté button on ' +
+            'less mode. Add 2 tablespoons butter in the ip steel ' +
+            'insert.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Making Instant Pot Pav Bhaji',
+            text: 'When the butter melts, add cumin seeds and let ' +
+            'them splutter and change color. Then add finely ' +
+            'chopped onions and sauté onions till they ' +
+            'soften.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Making Instant Pot Pav Bhaji',
+            text: 'Next add the ginger-garlic paste and green chillies. Mix and sauté ' +
+            'for a few seconds till the raw aroma of ginger-garlic goes away.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Making Instant Pot Pav Bhaji',
+            text: 'Then add chopped tomatoes and chopped capsicum. Sauté ' +
+            'for 1 to 2 minutes.Add the chopped veggies and green ' +
+            'peas.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Making Instant Pot Pav Bhaji',
+            text: 'Add ½ teaspoon turmeric powder and 1 to 1.5 teaspoons kashmiri ' +
+            'red chilli powder. If using any other red chili powder or cayenne ' +
+            'pepper, then you can add less of it. Also, add salt as per taste.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Making Instant Pot Pav Bhaji',
+            text: 'Mix everything very well. Add water and stir.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Making Instant Pot Pav Bhaji',
+            text: 'Press the cancel button. Now press the pressure ' +
+            'cooker/manual button and set time to 7 minutes on high ' +
+            'pressure.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Making Instant Pot Pav Bhaji',
+            text: 'When the beep sound is heard and the pressure ' +
+            'cooking is complete, do a quick pressure release ' +
+            '(qpr). When all the pressure is released, open the ' +
+            'lid.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Making Instant Pot Pav Bhaji',
+            text: 'Using a napkin or oven mittens, remove the steel insert ' +
+            'from the instant pot. Place it on your kitchen counter.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Making Instant Pot Pav Bhaji',
+            text: 'With a potato masher, begin to mash the cooked ' +
+            'vegetables. Mash very well. You can even use an ' +
+            'immersion blender and puree the veggies. Just make a ' +
+            'semi-fine puree.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Making Instant Pot Pav Bhaji',
+            text: 'Now add 2 tablespoons pav bhaji masala and 1 to 2 tablespoons ' +
+            'butter. You can skip the butter if you want. Mix very well.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Making Instant Pot Pav Bhaji',
+            text: 'Place the steel insert pan in the IP. Press the ' +
+            'cancel button and then press the sauté button on ' +
+            'normal mode. Set the timer to 3 to 5 minutes or ' +
+            'more.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Making Instant Pot Pav Bhaji',
+            text: 'Simmer the bhaji for a few minutes, till it thickens a bit and you ' +
+            'get the desired consistency. Stir often, so that the bhaji does not ' +
+            'stick to the bottom. If the bhaji looks very thick, then add some ' +
+            'water.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Making Instant Pot Pav Bhaji',
+            text: 'Sprinkle 2 tablespoons chopped coriander leaves. Mix very well. Do ' +
+            'check the taste and add salt, butter, kashmiri red chili powder or ' +
+            'pav bhaji masala if required. Cancel and keep the IP on warm mode.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Toasting pav (dinner rolls)',
+            text: 'Heat a skillet or a shallow frying pan. ' +
+            'Keep the flame to a low and then add ' +
+            'butter.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Toasting pav (dinner rolls)',
+            text: 'When the butter begins to melt, add a bit of pav ' +
+            'bhaji masala. You can skip pav bhaji masala if you ' +
+            'want.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Toasting pav (dinner rolls)',
+            text: 'Mix the pav bhaji masala very well with a spoon or spatula.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Toasting pav (dinner rolls)',
+            text: 'Then place the pav on the butter.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Toasting pav (dinner rolls)',
+            text: 'Rotate the pav all over the melted ' +
+            'butter so that the pav absorbs the ' +
+            'butter.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Toasting pav (dinner rolls)',
+            text: 'Now turn over the pav and rotate them on the tawa so that the ' +
+            'second side absorbs the butter. Add more butter if required.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Toasting pav (dinner rolls)',
+            text: 'You can turn over and toast them more if ' +
+            'required. Then remove in a plate and keep ' +
+            'aside.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Serving suggestions',
+            text: 'Take the bhaji in a serving plate or a bowl. Top it up with one ' +
+            'to two cubes of butter. You can add more butter, if you like.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Serving suggestions',
+            text: 'Place a side of finely chopped onions, lemon wedges and ' +
+            'finely chopped coriander leaves. Or you can sprinkle ' +
+            'onions, coriander leaves and lemon juice directly on the ' +
+            'bhaji.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Serving suggestions',
+            text: 'Serve bhaji with the lightly pan fried and buttered pav. Pav ' +
+            'bhaji is topped with chopped onions, coriander leaves and the ' +
+            'lime or lemon juice is squeezed on the bhaji while eating.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Storage and Leftovers',
+            text: 'Refrigerate only the bhaji (vegetable gravy without any toppings of ' +
+            'onions, coriander and lemon juice) in the refrigerator for 1 to 2 ' +
+            'days.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Storage and Leftovers',
+            text: 'Reheat in a small pan. If the bhaji looks thick, ' +
+            'mix in some water to loosen it a bit and reheat.',
             image: ''
           }
         ]
