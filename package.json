@@ -36,7 +36,7 @@
     "jsonschema": "^1.4.0",
     "node-fetch": "^2.6.1",
     "parse-domain": "^2.3.2",
-    "puppeteer": "^9.0.0"
+    "puppeteer": "^10.2.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
