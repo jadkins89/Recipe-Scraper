@@ -86,7 +86,7 @@ class PuppeteerScraper extends BaseScraper {
     });
 
     if (response._status >= 400) {
-      this.defaultError()
+      throw new Error("Server not responding");
     }
     return cheerio.load(html);
   }

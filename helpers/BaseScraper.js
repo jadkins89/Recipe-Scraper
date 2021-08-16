@@ -259,7 +259,8 @@ class BaseScraper {
       const html = await res.text();
       return cheerio.load(html);
     } catch (err) {
-      this.defaultError();
+      throw err;
+      // this.defaultError();
     }
   }
 
@@ -274,8 +275,8 @@ class BaseScraper {
       this.createRecipeObject();
       this.scrape($);
     } catch (e) {
-      console.log(e);
-      this.defaultError();
+      throw e;
+      // this.defaultError();
     }
 
     return this.validateRecipe();
@@ -310,7 +311,8 @@ class BaseScraper {
   validateRecipe() {
     let res = validate(this.recipe, recipeSchema);
     if (!res.valid) {
-      this.defaultError();
+      throw new Error("Recipe not valid")
+      // this.defaultError();
     }
     return this.recipe;
   }
