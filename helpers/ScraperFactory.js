@@ -1,7 +1,7 @@
 "use strict";
 
 const parseDomain = require("parse-domain");
-const defaultLdJasonScraper = require('./DefaultLdJasonScraper');
+const defaultLdJsonScraper = require('./DefaultLdJsonScraper');
 
 const domains = {
   "101cookbooks": require("../scrapers/101CookbooksScraper"),
@@ -61,7 +61,7 @@ class ScraperFactory {
       if (domains[domain] !== undefined) {
         return new domains[domain](url);
       } else {
-        return new defaultLdJasonScraper(url);
+        return new defaultLdJsonScraper(url);
       }
     } else {
       throw new Error("Failed to parse domain");

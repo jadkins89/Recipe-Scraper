@@ -1,6 +1,6 @@
 const PuppeteerScraper = require("./PuppeteerScraper");
 
-class DefaultLdJasonScraper extends PuppeteerScraper {
+class DefaultLdJsonScraper extends PuppeteerScraper {
 
   async customPoll(page) {
     let container,
@@ -27,4 +27,4 @@ class DefaultLdJasonScraper extends PuppeteerScraper {
   }
 }
 
-module.exports = DefaultLdJasonScraper;
+module.exports = DefaultLdJsonScraper;

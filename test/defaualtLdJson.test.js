@@ -1,6 +1,6 @@
 const {assert, expect} = require("chai");
 const ScraperFactory = require("../helpers/ScraperFactory");
-const constants = require("./constants/defaultLdJasonConstants");
+const constants = require("./constants/defaultLdJsonConstants");
 
 describe("defaultLdJson", () => {
   let scraper;
@@ -33,7 +33,7 @@ describe("defaultLdJson", () => {
 
   it("should throw an error if the url does not contain a Recipe Ld+Json schema", async () => {
     try {
-      scraper.url = constants.noLdJasonSupportedRecipeUrl;
+      scraper.url = constants.noLdJsonSupportedRecipeUrl;
       let actualRecipe = await scraper.fetchRecipe();
       console.log(actualRecipe)
       assert.fail("was not supposed to succeed");
