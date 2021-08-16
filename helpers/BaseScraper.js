@@ -53,6 +53,7 @@ class BaseScraper {
    * @returns {boolean} - if exist, set recipe data and return true, else - return false.
    */
   defaultLD_JOSN($) {
+    console.log('defaultLD_JOSN');
     const jsonLDs = Object.values($("script[type='application/ld+json']"));
     let isRecipeSchemaFound = false;
 
@@ -66,10 +67,8 @@ class BaseScraper {
             let recipe;
 
             if (result['@graph'] && Array.isArray(result['@graph'])) {
-              // console.log('found a graph');
               result['@graph'].forEach(g => {
                 if (g['@type'] === 'Recipe') {
-                  // console.log('found a Recipe type json schema!');
                   recipe = g;
                 }
               })
@@ -77,10 +76,10 @@ class BaseScraper {
 
             if (result['@type'] === 'Recipe') {
               recipe = result;
-              // console.log('found a Recipe type json schema!');
             }
 
             if (recipe) {
+              console.log('found a Recipe type json schema!');
               try {
                 // name
                 this.recipe.name = BaseScraper.HtmlDecode($, recipe.name);
@@ -275,6 +274,7 @@ class BaseScraper {
       this.createRecipeObject();
       this.scrape($);
     } catch (e) {
+      console.log(e);
       this.defaultError();
     }
 
