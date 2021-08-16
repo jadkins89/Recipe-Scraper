@@ -53,7 +53,6 @@ class BaseScraper {
    * @returns {boolean} - if exist, set recipe data and return true, else - return false.
    */
   defaultLD_JOSN($) {
-    console.log('defaultLD_JOSN');
     const jsonLDs = Object.values($("script[type='application/ld+json']"));
     let isRecipeSchemaFound = false;
 
@@ -79,7 +78,7 @@ class BaseScraper {
             }
 
             if (recipe) {
-              console.log('found a Recipe type json schema!');
+              // console.log('found a Recipe type json schema!');
               try {
                 // name
                 this.recipe.name = BaseScraper.HtmlDecode($, recipe.name);
