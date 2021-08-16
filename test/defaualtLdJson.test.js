@@ -34,11 +34,10 @@ describe("defaultLdJson", () => {
   it("should throw an error if the url does not contain a Recipe Ld+Json schema", async () => {
     try {
       scraper.url = constants.noLdJsonSupportedRecipeUrl;
-      let actualRecipe = await scraper.fetchRecipe();
-      console.log(actualRecipe)
+      await scraper.fetchRecipe();
       assert.fail("was not supposed to succeed");
     } catch (error) {
-      expect(error.message).to.equal("Site not yet supported");
+      expect(error.message).to.equal("No recipe found on page");
     }
   });
 

@@ -274,8 +274,8 @@ class BaseScraper {
       this.createRecipeObject();
       this.scrape($);
     } catch (e) {
-      throw e;
-      // this.defaultError();
+      // throw e;
+      this.defaultError();
     }
 
     return this.validateRecipe();
@@ -310,8 +310,7 @@ class BaseScraper {
   validateRecipe() {
     let res = validate(this.recipe, recipeSchema);
     if (!res.valid) {
-      throw new Error("Recipe not valid")
-      // this.defaultError();
+      this.defaultError();
     }
     return this.recipe;
   }
