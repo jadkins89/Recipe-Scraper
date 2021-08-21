@@ -239,52 +239,6 @@ module.exports = {
       }
     },
     {
-      url: "https://www.foodsdictionary.co.il/Recipes/5021",
-      expected: {
-        name: 'מוקפץ סיני עם חזה עוף וירקות',
-        description: 'חזה עוף מוקפץ עם מגוון ירקות בסגנון סיני ברוטב סויה וצ`ילי',
-        ingredients: [
-          'חזה עוף מבושל-מטוגן',
-          'שמן קנולה מזוכך',
-          'פטריות מבושלות',
-          'בצל מבושל',
-          'פלפל אדום מבושל',
-          'בצל ירוק',
-          'פלפל ירוק חריף',
-          'גזר מבושל',
-          'קישוא %28חורף%29 מבושל',
-          'כרוב מבושל',
-          'שמן קנולה מזוכך',
-          'רוטב סויה קיקומן דל נתרן',
-          'רוטב צ%60ילי מתוק',
-          'פלפל שחור',
-          'מלח שולחן',
-          'סוכר חום',
-          'שומשום'
-        ],
-        instructions: [
-          '1. במחבת גדולה ומוצקה לטגן את רצועות חזה העוף עד להזהבה קלה.2. כשרצועות ' +
-          'העוף מוכנות להוציאן להצטננות.3. באותה מחבת לחמם 3 כפות שמן נוספות ולטגן ' +
-          'את הירקות לפי רמת הקושי - תחילה בצל עד להזהבה ולאחר מכן אפשר להוסיף את ' +
-          'כל הירקות. שימו לב - הירקות צריכים להיות קריספיים ולא רכים.4. לאחר הקפצת ' +
-          'הירקות יש להוסיף את חזה העוף המוכן ואת שאר התבלינים.5. להחזיר לאש לעוד 4 ' +
-          'דקות בישול, לפזר מלמעלה את השומשום הקלוי ולערבב קלות.6. בתיאבון (:'
-        ],
-        tags: ['סיני', 'ירקות, עוף'],
-        time: {
-          prep: '',
-          cook: '',
-          active: '',
-          inactive: '',
-          ready: '',
-          total: '15 minutes'
-        },
-        servings: '5 מנות',
-        image: 'https://st1.foodsd.co.il/Images/Recipes/xxl/Recipe-5021-eOWGFcW189fiNAnM.jpg',
-        sectionedInstructions: []
-      }
-    },
-    {
       url: "https://www.chowhound.com/recipes/basic-pumpkin-pie-30175",
       expected: {
         name: 'Perfect Pumpkin Pie',
@@ -799,7 +753,7 @@ module.exports = {
           '1 cup green peas (- fresh or frozen)',
           '⅓ cup chopped french beans (- 12 to 14 french beans  -  optional)',
           '2.25 to 2.5 cups  water (- for pressure cooking veggies)',
-          '3 tablespoons butter (- salted or unsalted)',
+          '3 tablespoons Butter (- salted or unsalted)',
           '1 teaspoon cumin seeds',
           '½  cup finely chopped onion (or 1 medium to large onion)',
           '2 teaspoons Ginger-Garlic Paste (or 1.5 inch ginger ' +
@@ -820,7 +774,7 @@ module.exports = {
           'which the veggies were cooked, add as ' +
           'needed)',
           'salt (as required)',
-          '2 to 3 tablespoons butter ( - salted or unsalted)',
+          '2 to 3 tablespoons Butter ( - salted or unsalted)',
           '½  teaspoon cumin seeds',
           '½  cup finely chopped onions (or 1 ' +
           'medium to large onion - 50 to 60 ' +
@@ -843,14 +797,14 @@ module.exports = {
           '1.25 cups water',
           'salt  (as required)',
           '2 tablespoons  Pav Bhaji Masala',
-          '1 to 2 tablespoons  butter (- to be added later)',
+          '1 to 2 tablespoons  Butter (- to be added later)',
           '2 tablespoons  coriander leaves ((cilantro))',
           '12  pav ((dinner rolls))',
-          '3 to 4 tablespoons butter (- for roasting pav)',
+          '3 to 4 tablespoons Butter (- for roasting pav)',
           '1  lemon (or lime, chopped in wedges)',
           '1  onion (- medium to large, finely chopped)',
           '3 to 4 tablespoons chopped coriander leaves (- for garnish)',
-          '2 to 3 tablespoons  butter (- for ' +
+          '2 to 3 tablespoons  Butter (- for ' +
           'topping - add more for a richer ' +
           'version)'
         ],
@@ -1355,6 +1309,54 @@ module.exports = {
         ]
       }
     }
+  ],
+  toBeFixed: [
+    {
+      url: "https://www.foodsdictionary.co.il/Recipes/5021",
+      expected: {
+        name: 'מוקפץ סיני עם חזה עוף וירקות',
+        description: 'חזה עוף מוקפץ עם מגוון ירקות בסגנון סיני ברוטב סויה וצ`ילי',
+        ingredients: [
+          'חזה עוף מבושל-מטוגן',
+          'שמן קנולה מזוכך',
+          'פטריות מבושלות',
+          'בצל מבושל',
+          'פלפל אדום מבושל',
+          'בצל ירוק',
+          'פלפל ירוק חריף',
+          'גזר מבושל',
+          'קישוא %28חורף%29 מבושל',
+          'כרוב מבושל',
+          'שמן קנולה מזוכך',
+          'רוטב סויה קיקומן דל נתרן',
+          'רוטב צ%60ילי מתוק',
+          'פלפל שחור',
+          'מלח שולחן',
+          'סוכר חום',
+          'שומשום'
+        ],
+        instructions: [
+          '1. במחבת גדולה ומוצקה לטגן את רצועות חזה העוף עד להזהבה קלה.2. כשרצועות ' +
+          'העוף מוכנות להוציאן להצטננות.3. באותה מחבת לחמם 3 כפות שמן נוספות ולטגן ' +
+          'את הירקות לפי רמת הקושי - תחילה בצל עד להזהבה ולאחר מכן אפשר להוסיף את ' +
+          'כל הירקות. שימו לב - הירקות צריכים להיות קריספיים ולא רכים.4. לאחר הקפצת ' +
+          'הירקות יש להוסיף את חזה העוף המוכן ואת שאר התבלינים.5. להחזיר לאש לעוד 4 ' +
+          'דקות בישול, לפזר מלמעלה את השומשום הקלוי ולערבב קלות.6. בתיאבון (:'
+        ],
+        tags: ['סיני', 'ירקות, עוף'],
+        time: {
+          prep: '',
+          cook: '',
+          active: '',
+          inactive: '',
+          ready: '',
+          total: '15 minutes'
+        },
+        servings: '5 מנות',
+        image: 'https://st1.foodsd.co.il/Images/Recipes/xxl/Recipe-5021-eOWGFcW189fiNAnM.jpg',
+        sectionedInstructions: []
+      }
+    },
   ],
   noLdJsonSupportedRecipeUrl: "https://www.mamadiali.co.il/%d7%a1%d7%aa%d7%9d-%d7%a1%d7%9c%d7%9e%d7%95%d7%9f-%d7%9c%d7%99%d7%95%d7%9d-%d7%a9%d7%9c-%d7%97%d7%95%d7%9c/"
 }

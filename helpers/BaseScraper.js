@@ -66,10 +66,8 @@ class BaseScraper {
             let recipe;
 
             if (result['@graph'] && Array.isArray(result['@graph'])) {
-              // console.log('found a graph');
               result['@graph'].forEach(g => {
                 if (g['@type'] === 'Recipe') {
-                  // console.log('found a Recipe type json schema!');
                   recipe = g;
                 }
               })
@@ -77,10 +75,10 @@ class BaseScraper {
 
             if (result['@type'] === 'Recipe') {
               recipe = result;
-              // console.log('found a Recipe type json schema!');
             }
 
             if (recipe) {
+              // console.log('found a Recipe type json schema!');
               try {
                 // name
                 this.recipe.name = BaseScraper.HtmlDecode($, recipe.name);
@@ -260,7 +258,8 @@ class BaseScraper {
       const html = await res.text();
       return cheerio.load(html);
     } catch (err) {
-      this.defaultError();
+      throw err;
+      // this.defaultError();
     }
   }
 
@@ -275,6 +274,7 @@ class BaseScraper {
       this.createRecipeObject();
       this.scrape($);
     } catch (e) {
+      // throw e;
       this.defaultError();
     }
 
