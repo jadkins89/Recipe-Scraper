@@ -31,14 +31,10 @@ describe("defaultLdJson", () => {
     it("should fetch the expected recipe", testWithData(test));
   });
 
-  it("should throw an error if the url does not contain a Recipe Ld+Json schema", async () => {
-    try {
+  it("should return page title, image & description if the url does not contain a Recipe Ld+Json schema", async () => {
       scraper.url = constants.noLdJsonSupportedRecipeUrl;
-      await scraper.fetchRecipe();
-      assert.fail("was not supposed to succeed");
-    } catch (error) {
-      expect(error.message).to.equal("No recipe found on page");
-    }
+      let response = await scraper.fetchRecipe();
+      expect(constants.expectedPageInfo).to.deep.equal(response);
   });
 
 });

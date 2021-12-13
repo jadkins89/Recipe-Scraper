@@ -10,13 +10,10 @@
     },
     "ingredients": {
       "type": "array",
-      "minItems": 1,
       "items": { "type": "string" }
     },
     "instructions": {
       "type": "array",
-      "minItems": 1,
-      "uniqueItems": true,
       "items": { "type": "string" }
     },
     "sectionedInstructions": {

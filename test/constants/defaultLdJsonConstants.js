@@ -1,6 +1,327 @@
 module.exports = {
   tests: [
     {
+      url: "https://bakeplaysmile.com/favourite-chocolate-cake/#recipe",
+      expected: {
+        name: 'The BEST Chocolate Mud Cake',
+        description: 'You only need one chocolate mud cake recipe... and ' +
+        'this is it! It really is the best chocolate mud ' +
+        'cake recipe ever! Dense, rich and oh-so-delicious!',
+        ingredients: [
+          '1 3/4 cup (220g) plain flour',
+          '1 3/4 cup (350g) caster sugar',
+          '3/4 cup (65g) cocoa powder',
+          '1 tsp baking powder',
+          '2 tsps bi-carb soda',
+          '1 tsp salt',
+          '1 cup (250ml) buttermilk (see tips)',
+          '1/2 cup (125ml) vegetable oil',
+          '2  large eggs (at room temperature)',
+          '1 tsp vanilla extract',
+          '1 cup (250ml) coffee (hot and strong)',
+          '290 g unsalted butter (softened to room temperature)',
+          '3-4 cups (360-480g) icing sugar',
+          '3/4 cup (65g) cocoa powder',
+          '3-5 tbs (45-75ml) milk',
+          '1 tsp vanilla extract',
+          '1/4 tsp salt (optional)'
+        ],
+        instructions: [
+          'Preheat oven to 170 degrees celsius.',
+          'Grease two 9 inch round cake pans and line with baking paper.',
+          'Sift the flour, sugar, cocoa powder, baking ' +
+          'powder, bi-carb soda and salt into a bowl and set ' +
+          'aside.',
+          'Using beaters or a stand mixer, mix the buttermilk, ' +
+          'oil, eggs and vanilla in a large bowl until well ' +
+          'combined.',
+          'Slowly add all of the dry ingredients to ' +
+          'the wet ingredients with the mixer on low.',
+          'Pour in the coffee and mix.',
+          'Divide the batter equally between the baking pans and bake for ' +
+          'approximately 25 minutes or until a toothpick inserted in the center ' +
+          "comes out clean (don't overcook the cake - you want it to be nice and " +
+          'fudge-like!)',
+          'Allow to cool completely.',
+          'To make the frosting beat the butter on high speed until ' +
+          'smooth and creamy (this will take a couple of minutes).',
+          'Reduce the speed to low and slowly add in 3 1/2 ' +
+          'cups of icing sugar as well as the cocoa powder.',
+          'Beat until the icing sugar and cocoa have been completely ' +
+          'mixed into the butter (again this will take a couple of ' +
+          'minutes).',
+          'Turn the mixer up to medium speed and add in the vanilla and the milk.',
+          'Beat on high speed for 1 minute.',
+          "If your frosting isn't thick enough, feel free " +
+          'to add in the remaining 1/2 cup of icing sugar.',
+          'Add a tiny bit of salt to taste (optional).',
+          'Spread a little frosting onto a serving ' +
+          'cake plate (this will hold the cake in ' +
+          'place).',
+          'Carefully place one of the cakes on top of the ' +
+          'icing (make sure the flat side is facing up).',
+          'Using a spatula or flat knife, spread the top of the cake with frosting.',
+          'Place the second cake on top (this time with the rounded side up) ' +
+          'and spread the frosting evenly onto the top and the sides of the ' +
+          'cake.',
+          'Decorate with fresh strawberries or any preferred toppings.',
+          'Store in an airtight container at room temperature for 3-4 days ' +
+          'or in the fridge for 5-6 days. Please note that keeping the cake ' +
+          'at room temperature will result in a beautiful, moist texture.',
+          'Preheat oven to 170 degrees celsius (fan-forced). Grease ' +
+          'two 9 inch round cake pans and line with baking paper.',
+          'Measure the flour, sugar, cocoa powder, baking ' +
+          'powder, bi-carb soda and salt into the TM bowl and ' +
+          'sift for 5 seconds, Speed 8. Set aside in a separate ' +
+          'bowl.',
+          'Place the the buttermilk, oil, eggs and vanilla in the ' +
+          'Thermomix bowl and mix on Speed 3 until well combined.',
+          'With the blades on speed 2, slowly add the dry ' +
+          'ingredients to the wet ingredients and mix until ' +
+          'combined.',
+          'Pour in the coffee and mix on Speed 2 until combined.',
+          'Divide the batter equally between the baking pans and bake ' +
+          'for approximately 25 minutes or until a toothpick inserted in ' +
+          "the center comes out clean (don't overcook the cake - you " +
+          'want it to be nice and fudge-like!). Allow to cool ' +
+          'completely.',
+          'To make the frosting add the icing sugar to the Thermomix bowl and ' +
+          'mix for 10 seconds, Speed 9, then add all of the remaining ' +
+          'ingredients and mix for 30 seconds, Speed 4, or until light and ' +
+          'fluffy.',
+          'Spread a little frosting onto a serving cake plate (this ' +
+          'will hold the cake in place). Carefully place one of the ' +
+          'cakes on top of the icing (make sure the flat side is facing ' +
+          'up).',
+          'Using a spatula or flat knife, spread the top of the cake with ' +
+          'frosting. Place the second cake on top (this time with the rounded ' +
+          'side up) and spread the frosting evenly onto the top and the sides of ' +
+          'the cake.',
+          'Decorate with fresh strawberries or any preferred toppings.',
+          'Store in an airtight container at room ' +
+          'temperature for 3-4 days, or in the fridge for ' +
+          '5-6 days.'
+        ],
+        tags: [ 'chocolate mud cake', 'American', 'western', 'Cakes' ],
+        time: {
+          prep: '30 minutes',
+          cook: '25 minutes',
+          active: '',
+          inactive: '',
+          ready: '',
+          total: '55 minutes'
+        },
+        servings: '16',
+        image: 'https://bakeplaysmile.com/wp-content/uploads/2020/10/Chocolate-Mud-Cake-7-2.jpg',
+        sectionedInstructions: [
+          {
+            sectionTitle: 'Conventional Method',
+            text: 'Preheat oven to 170 degrees celsius.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Conventional Method',
+            text: 'Grease two 9 inch round cake pans and line with baking paper.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Conventional Method',
+            text: 'Sift the flour, sugar, cocoa powder, baking ' +
+            'powder, bi-carb soda and salt into a bowl and set ' +
+            'aside.',
+            image: 'https://bakeplaysmile.com/wp-content/uploads/2020/10/Mud-Cake-Collages-2.jpg'
+          },
+          {
+            sectionTitle: 'Conventional Method',
+            text: 'Using beaters or a stand mixer, mix the buttermilk, ' +
+            'oil, eggs and vanilla in a large bowl until well ' +
+            'combined.',
+            image: 'https://bakeplaysmile.com/wp-content/uploads/2020/10/Mud-Cake-Collages-3.jpg'
+          },
+          {
+            sectionTitle: 'Conventional Method',
+            text: 'Slowly add all of the dry ingredients to ' +
+            'the wet ingredients with the mixer on low.',
+            image: 'https://bakeplaysmile.com/wp-content/uploads/2020/10/Mud-Cake-Collages.jpg'
+          },
+          {
+            sectionTitle: 'Conventional Method',
+            text: 'Pour in the coffee and mix.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Conventional Method',
+            text: 'Divide the batter equally between the baking pans and ' +
+            'bake for approximately 25 minutes or until a toothpick ' +
+            "inserted in the center comes out clean (don't overcook " +
+            'the cake - you want it to be nice and fudge-like!)',
+            image: ''
+          },
+          {
+            sectionTitle: 'Conventional Method',
+            text: 'Allow to cool completely.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Conventional Method',
+            text: 'To make the frosting beat the butter on high speed until ' +
+            'smooth and creamy (this will take a couple of minutes).',
+            image: ''
+          },
+          {
+            sectionTitle: 'Conventional Method',
+            text: 'Reduce the speed to low and slowly add in 3 1/2 ' +
+            'cups of icing sugar as well as the cocoa powder.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Conventional Method',
+            text: 'Beat until the icing sugar and cocoa have been completely ' +
+            'mixed into the butter (again this will take a couple of ' +
+            'minutes).',
+            image: ''
+          },
+          {
+            sectionTitle: 'Conventional Method',
+            text: 'Turn the mixer up to medium speed and add in the vanilla and the milk.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Conventional Method',
+            text: 'Beat on high speed for 1 minute.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Conventional Method',
+            text: "If your frosting isn't thick enough, feel free " +
+            'to add in the remaining 1/2 cup of icing sugar.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Conventional Method',
+            text: 'Add a tiny bit of salt to taste (optional).',
+            image: ''
+          },
+          {
+            sectionTitle: 'Conventional Method',
+            text: 'Spread a little frosting onto a serving ' +
+            'cake plate (this will hold the cake in ' +
+            'place).',
+            image: ''
+          },
+          {
+            sectionTitle: 'Conventional Method',
+            text: 'Carefully place one of the cakes on top of the ' +
+            'icing (make sure the flat side is facing up).',
+            image: ''
+          },
+          {
+            sectionTitle: 'Conventional Method',
+            text: 'Using a spatula or flat knife, ' +
+            'spread the top of the cake with ' +
+            'frosting.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Conventional Method',
+            text: 'Place the second cake on top (this time with the rounded side up) ' +
+            'and spread the frosting evenly onto the top and the sides of the ' +
+            'cake.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Conventional Method',
+            text: 'Decorate with fresh strawberries or any preferred toppings.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Conventional Method',
+            text: 'Store in an airtight container at room temperature for 3-4 days ' +
+            'or in the fridge for 5-6 days. Please note that keeping the cake ' +
+            'at room temperature will result in a beautiful, moist texture.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Thermomix Method',
+            text: 'Preheat oven to 170 degrees celsius (fan-forced). Grease ' +
+            'two 9 inch round cake pans and line with baking paper.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Thermomix Method',
+            text: 'Measure the flour, sugar, cocoa powder, baking ' +
+            'powder, bi-carb soda and salt into the TM bowl and ' +
+            'sift for 5 seconds, Speed 8. Set aside in a separate ' +
+            'bowl.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Thermomix Method',
+            text: 'Place the the buttermilk, oil, eggs and vanilla in the ' +
+            'Thermomix bowl and mix on Speed 3 until well combined.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Thermomix Method',
+            text: 'With the blades on speed 2, slowly add the dry ' +
+            'ingredients to the wet ingredients and mix until ' +
+            'combined.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Thermomix Method',
+            text: 'Pour in the coffee and mix on Speed 2 until combined.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Thermomix Method',
+            text: 'Divide the batter equally between the baking pans and bake ' +
+            'for approximately 25 minutes or until a toothpick inserted in ' +
+            "the center comes out clean (don't overcook the cake - you " +
+            'want it to be nice and fudge-like!). Allow to cool ' +
+            'completely.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Thermomix Method',
+            text: 'To make the frosting add the icing sugar to the Thermomix bowl and ' +
+            'mix for 10 seconds, Speed 9, then add all of the remaining ' +
+            'ingredients and mix for 30 seconds, Speed 4, or until light and ' +
+            'fluffy.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Thermomix Method',
+            text: 'Spread a little frosting onto a serving cake plate (this ' +
+            'will hold the cake in place). Carefully place one of the ' +
+            'cakes on top of the icing (make sure the flat side is facing ' +
+            'up).',
+            image: ''
+          },
+          {
+            sectionTitle: 'Thermomix Method',
+            text: 'Using a spatula or flat knife, spread the top of the cake with ' +
+            'frosting. Place the second cake on top (this time with the rounded ' +
+            'side up) and spread the frosting evenly onto the top and the sides of ' +
+            'the cake.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Thermomix Method',
+            text: 'Decorate with fresh strawberries or any preferred toppings.',
+            image: ''
+          },
+          {
+            sectionTitle: 'Thermomix Method',
+            text: 'Store in an airtight container at room ' +
+            'temperature for 3-4 days, or in the fridge for ' +
+            '5-6 days.',
+            image: ''
+          }
+        ]
+      }
+    },
+    {
       url: "https://foody.co.il/foody_recipe/%d7%9e%d7%aa%d7%9b%d7%95%d7%9f-%d7%91-10-%d7%93%d7%a7%d7%95%d7%aa-%d7%a2%d7%95%d7%92%d7%aa-%d7%a9%d7%95%d7%a7%d7%95%d7%9c%d7%93-%d7%95%d7%a0%d7%a1-%d7%a7%d7%a4%d7%94-%d7%9e%d7%9e%d7%9b%d7%a8%d7%aa/",
       expected: {
         name: 'מתכון של עוגת שוקולד בחושה עם קפה ממכרת ב-10 דקות',
@@ -15,22 +336,15 @@ module.exports = {
           '1 כף קפה נמס',
           '1 כוס שמן קנולה',
           '4 ביצים L',
-          '125 מ"ל שמנת מתוקה 38%',
+          '125 מ"ל שמנת להקצפה יטבתה 38%',
           '1 כפית תמצית וניל',
           '1 כף קפה נמס',
           '1/2 כוס מים רותחים',
           '100 גרם שוקולד מריר',
-          '125 מ"ל שמנת מתוקה 38%'
+          '125 מ"ל שמנת להקצפה יטבתה 38%'
         ],
         instructions: [
-          'אופן הכנה בקערה גדולה מערבבים את כל חומרי העוגה. מחממים תנור ל-180 ' +
-          'מעלות. משמנים תבנית אפיה עגולה (מספר 26) או תבנית קוגלהוף (כמו בתמונה). ' +
-          'שופכים את בלילת העוגה ואופים 30 דקות. כאשר העוגה יוצאת מהתנור שופכים ' +
-          'עליה חצי כוס נס קפה שמכינים מכף קפה נמס וחצי כוס מים חמים). אם יש לכם ' +
-          'מכונת קפה, מכינים אספרסו ושופכים, זה ממש משדרג את העוגה. מכינים את ' +
-          'הציפוי: באמבט בן מרי ממיסים את השוקולד כאשר נמס מערבבים לתוכו את 1 2 ' +
-          'השמנת שנותרה. שופכים על העוגה. אפשר לקשט את העוגה בסוכריות, אגוזים או ' +
-          'פולי קפה טחונים.'
+         'אופן הכנה בקערה גדולה מערבבים את כל חומרי העוגה. מחממים תנור ל-180 מעלות. משמנים תבנית אפייה עגולה בקוטר 26 ס״מ או תבנית קוגלהוף (כמו בתמונה). שופכים את בלילת העוגה ואופים 30 דקות. כאשר העוגה יוצאת מהתנור שופכים עליה חצי כוס נס קפה שמכינים מכף קפה נמס וחצי כוס מים חמים). אם יש לכם מכונת קפה, מכינים אספרסו ושופכים, זה ממש משדרג את העוגה. מכינים את הציפוי: באמבט בן מרי ממיסים את השוקולד כאשר נמס מערבבים לתוכו את 1 2 השמנת שנותרה. שופכים על העוגה. אפשר לקשט את העוגה בסוכריות, אגוזים או פולי קפה טחונים.'
         ],
         tags: [
           'מכונת קפה סימנס',
@@ -420,7 +734,8 @@ module.exports = {
           'Add pasta water as needed to combine, transfer to ' +
           'serving bowl and top with more cheese, remaining ' +
           'eggplant, fresno chilis (if using), parsley and ' +
-          'mint'
+          'mint',
+          'Listicle: Cucina Dinnerware 14-Inch Round Serving Bowl'
         ],
         tags: [
           'Food & Fun',
@@ -505,6 +820,11 @@ module.exports = {
             'eggplant, fresno chilis (if using), parsley and ' +
             'mint',
             image: ''
+          },
+          {
+            "image": "",
+            "sectionTitle": "",
+            "text": "Listicle: Cucina Dinnerware 14-Inch Round Serving Bowl"
           }
         ]
       }
@@ -739,7 +1059,7 @@ module.exports = {
     {
       url: "https://www.vegrecipesofindia.com/pav-bhaji-recipe-mumbai-pav-bhaji-a-fastfood-recipe-from-mumbai/#wprm-recipe-container-136147",
       expected: {
-        name: 'Pav Bhaji Recipe',
+        name: 'Pav Bhaji Recipe (Mumbai Pav Bhaji on Stovetop and Instant Pot)',
         description: 'Pav Bhaji is a hearty, delightsome, flavorful meal of mashed ' +
         'vegetable gravy with fluffy soft buttery dinner rolls served with a ' +
         'side of crunchy piquant onions, tangy lemon and herby coriander. You ' +
@@ -799,7 +1119,7 @@ module.exports = {
           '2 tablespoons  Pav Bhaji Masala',
           '1 to 2 tablespoons  Butter (- to be added later)',
           '2 tablespoons  coriander leaves ((cilantro))',
-          '12  pav ((dinner rolls))',
+          '12  pav ((dinner rolls) or as required)',
           '3 to 4 tablespoons Butter (- for roasting pav)',
           '1  lemon (or lime, chopped in wedges)',
           '1  onion (- medium to large, finely chopped)',
@@ -1358,5 +1678,22 @@ module.exports = {
       }
     },
   ],
-  noLdJsonSupportedRecipeUrl: "https://www.mamadiali.co.il/%d7%a1%d7%aa%d7%9d-%d7%a1%d7%9c%d7%9e%d7%95%d7%9f-%d7%9c%d7%99%d7%95%d7%9d-%d7%a9%d7%9c-%d7%97%d7%95%d7%9c/"
+  noLdJsonSupportedRecipeUrl: "https://rotteml.com/%D7%A4%D7%91%D7%9C%D7%95%D7%91%D7%94-%D7%A4%D7%99%D7%A8%D7%95%D7%AA-%D7%94%D7%93%D7%A8",
+  expectedPageInfo: {
+    "description": "פבלובה חורפית עם פירות הדר זה ליגה! כשהגשתי לשולחן את הפבלובה, התשואות היו ליגה!!! עכשיו, גם לכם יש את המתכון, היכנסו ותתחילו להכין.",
+    "image": "https://rotteml.com/wp-content/uploads/2021/12/WhatsApp-Image-2021-12-07-at-11.41.54.jpeg",
+    "ingredients": [],
+    "instructions": [],
+    "name": "פבלובה פירות הדר",
+    "servings": "",
+    "tags": [],
+    "time": {
+      "active": "",
+      "cook": "",
+      "inactive": "",
+      "prep": "",
+      "ready": "",
+      "total": ""
+    }
+  }
 }

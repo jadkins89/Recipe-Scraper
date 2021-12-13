@@ -22,7 +22,7 @@ class BaseScraper {
 
       return res.ok; // res.status >= 200 && res.status < 300
     } catch (e) {
-      console.log(e)
+      // console.log(e)
       return false;
     }
   }
@@ -237,6 +237,21 @@ class BaseScraper {
 
   /**
    * @param {object} $ - a cheerio object representing a DOM
+   * if found, set recipe name
+   */
+  defaultSetName($) {
+    let title =
+      $("meta[name='title']").attr("content") ||
+      $("meta[property='og:title']").attr("content") ||
+      $("meta[name='twitter:title']").attr("content");
+
+    title = title.split('|')[0];
+
+    this.recipe.name = title ? title.trim() : '';
+  }
+
+  /**
+   * @param {object} $ - a cheerio object representing a DOM
    * if found, set recipe description
    */
   defaultSetDescription($) {
@@ -254,7 +269,11 @@ class BaseScraper {
    */
   async fetchDOMModel() {
     try {
-      const res = await fetch(this.url);
+      const meta = [
+        ['User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1.2 Safari/605.1.15'],
+      ];
+      const headers = new fetch.Headers(meta);
+      const res = await fetch(this.url, {headers});
       const html = await res.text();
       return cheerio.load(html);
     } catch (err) {
@@ -310,6 +329,9 @@ class BaseScraper {
   validateRecipe() {
     let res = validate(this.recipe, recipeSchema);
     if (!res.valid) {
+      // res.errors.forEach(error => {
+      //   console.log(error.property + ' ' + error.message);
+      // });
       this.defaultError();
     }
     return this.recipe;

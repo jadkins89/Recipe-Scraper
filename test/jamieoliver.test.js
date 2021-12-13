@@ -40,14 +40,4 @@ describe("JamieOliver", () => {
       expect(error.message).to.equal("No recipe found on page");
     }
   });
-
-  it("should throw an error if non-recipe page is used", async () => {
-    try {
-      jamieOliver.url = constants.nonRecipeUrl;
-      await jamieOliver.fetchRecipe();
-      assert.fail("was not supposed to succeed");
-    } catch (error) {
-      expect(error.message).to.equal("No recipe found on page");
-    }
-  });
 });

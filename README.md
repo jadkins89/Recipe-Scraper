@@ -105,30 +105,14 @@ Depending on the recipe, certain fields may be left blank. All fields are repres
 
 ## Error Handling
 
+If a recipe is not found on the given url, the basic page info will be returned: title, image & description.
+
 If the url provided is invalid and a domain is unable to be parsed, an error message will be returned.
 
 ```javascript
 recipeScraper("keyboard kitty").catch(error => {
   console.log(error.message);
   // => "Failed to parse domain"
-});
-```
-
-If the url provided doesn't match a supported domain, an error message will be returned.
-
-```javascript
-recipeScraper("some.invalid.url").catch(error => {
-  console.log(error.message);
-  // => "Site not yet supported"
-});
-```
-
-If a recipe is not found on a supported domain site, an error message will be returned.
-
-```javascript
-recipeScraper("some.no.recipe.url").catch(error => {
-  console.log(error.message);
-  // => "No recipe found on page"
 });
 ```
 
@@ -149,6 +133,8 @@ recipeScraper("some.improper.url").catch(error => {
   // => "url provided must include '#subUrl'"
 });
 ```
+
+
 
 ## Bugs
 

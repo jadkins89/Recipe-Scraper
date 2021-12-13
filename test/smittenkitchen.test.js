@@ -49,14 +49,4 @@ describe("smittenKitchen", () => {
       expect(error.message).to.equal("No recipe found on page");
     }
   });
-
-  it("should throw an error if non-recipe page is used", async () => {
-    try {
-      smittenKitchen.url = constants.nonRecipeUrl;
-      await smittenKitchen.fetchRecipe();
-      assert.fail("was not supposed to succeed");
-    } catch (error) {
-      expect(error.message).to.equal("No recipe found on page");
-    }
-  });
 });

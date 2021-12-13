@@ -24,15 +24,15 @@ const commonRecipeTest = (name, constants, url) => {
 
     });
 
-    it("should throw an error if a problem occurred during page retrieval", async () => {
-      try {
-        scraper.url = constants.invalidUrl;
-        await scraper.fetchRecipe();
-        assert.fail("was not supposed to succeed");
-      } catch (error) {
-        expect(error.message).to.equal("No recipe found on page");
-      }
-    });
+    // it("should throw an error if a problem occurred during page retrieval", async () => {
+    //   try {
+    //     scraper.url = constants.invalidUrl;
+    //     await scraper.fetchRecipe();
+    //     assert.fail("was not supposed to succeed");
+    //   } catch (error) {
+    //     expect(error.message).to.equal("No recipe found on page");
+    //   }
+    // });
 
     it("should throw an error if the url doesn't contain required sub-url", async () => {
       try {
@@ -41,16 +41,6 @@ const commonRecipeTest = (name, constants, url) => {
         assert.fail("was not supposed to succeed");
       } catch (error) {
         expect(error.message).to.equal(`url provided must include '${url}'`);
-      }
-    });
-
-    it("should throw an error if non-recipe page is used", async () => {
-      try {
-        scraper.url = constants.nonRecipeUrl;
-        await scraper.fetchRecipe(constants.nonRecipeUrl);
-        assert.fail("was not supposed to succeed");
-      } catch (error) {
-        expect(error.message).to.equal("No recipe found on page");
       }
     });
   });

@@ -27,7 +27,6 @@ module.exports = {
       "Add half of kale mixture to noodles and toss to incorporate. Drizzle in more dressing as needed, tossing until noodles are creamy; season with salt. Pile remaining kale on top. Drizzle with additional sesame oil and sprinkle with more red pepper flakes."
     ],
     tags: [
-      "recipes",
       "soba",
       "noodle",
       "kale",

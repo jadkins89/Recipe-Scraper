@@ -19,11 +19,12 @@ class DefaultLdJsonScraper extends BaseScraper {
     const isSchemaFound = this.defaultLD_JOSN($);
 
     if (!isSchemaFound) {
-      throw new Error("Site not yet supported");
+      // throw new Error("Site not yet supported");
+      // if no recipe schema was found, return the basic page info
+      this.defaultSetName($);
+      this.defaultSetDescription($);
+      this.defaultSetImage($);
     }
-
-    // console.log(this.recipe)
-
   }
 }
 

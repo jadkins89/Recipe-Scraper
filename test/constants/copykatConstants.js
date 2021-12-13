@@ -5,7 +5,7 @@ module.exports = {
   nonRecipeUrl: "https://copykat.com/contact/",
   expectedRecipe: {
     name: "Air Fryer Croutons",
-    description: "See how quick and easy it is to make buttery, crispy, homemade croutons in an air fryer with this easy, step-by-step recipe. Make tasty croutons in minutes!",
+    description: "See how quick and easy it is to make buttery, crispy, homemade croutons in an air fryer with this easy, step-by-step recipe. Tasty croutons in minutes!",
     ingredients: [
       "4 slices bread",
       "2 tablespoons melted butter",
@@ -19,12 +19,12 @@ module.exports = {
     ],
     tags: [],
     time: {
-      prep: "",
-      cook: "",
+      prep: "5 minutes",
+      cook: "7 minutes",
       active: "",
       inactive: "",
       ready: "",
-      total: ""
+      total: "12 minutes"
     },
     servings: "4",
     image:
