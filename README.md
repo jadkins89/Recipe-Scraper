@@ -48,7 +48,6 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://copykat.com/
 - https://damndelicious.net/
 - https://www.eatingwell.com/
-- https://www.epicurious.com/
 - https://www.food.com/
 - https://www.foodandwine.com/
 - https://www.foodnetwork.com/
@@ -78,7 +77,8 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://www.yummly.com/
 - https://www.jamieoliver.com/
 
-Don't see a website you'd like to scrape? Open an [issue](https://github.com/jadkins89/Recipe-Scraper/issues) and we'll do our best to add it.
+And many more! the list above is old fashioned scraping, but for all those websites who have google recipe ld json included, it will also work.
+
 
 ## Recipe Object
 

@@ -65,6 +65,8 @@ class BaseScraper {
             const result = JSON.parse(jsonRaw);
             let recipe;
 
+
+
             if (result['@graph'] && Array.isArray(result['@graph'])) {
               result['@graph'].forEach(g => {
                 if (g['@type'] === 'Recipe') {
@@ -74,6 +76,10 @@ class BaseScraper {
             }
 
             if (result['@type'] === 'Recipe') {
+              recipe = result;
+            }
+
+            if (Array.isArray(result['@type']) && result['@type'].includes('Recipe')) {
               recipe = result;
             }
 
@@ -91,13 +97,15 @@ class BaseScraper {
                 }
 
                 // image
+                if (Array.isArray(recipe.image)) {
+                  recipe.image = recipe.image[0];
+                }
+
                 if (recipe.image) {
-                  if (recipe.image["@type"] === "ImageObject" && recipe.url) {
+                  if (recipe.image["@type"] === "ImageObject" && recipe.image.url) {
                     this.recipe.image = recipe.image.url;
                   } else if (typeof recipe.image === "string") {
                     this.recipe.image = recipe.image;
-                  } else if (Array.isArray(recipe.image)) {
-                    this.recipe.image = recipe.image[0];
                   }
                 } else {
                   this.defaultSetImage($);
@@ -131,6 +139,7 @@ class BaseScraper {
                 }
 
                 this.recipe.tags = this.recipe.tags.map(i => BaseScraper.HtmlDecode($, i));
+                this.recipe.tags = [...new Set(this.recipe.tags)];
 
                 // ingredients
                 if (Array.isArray(recipe.recipeIngredient)) {

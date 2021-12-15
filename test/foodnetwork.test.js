@@ -39,14 +39,4 @@ describe("foodNetwork", () => {
     }
   });
 
-  it("should throw an error if a problem occurred during page retrieval", async () => {
-    try {
-      foodNetwork.url = constants.invalidUrl;
-      await foodNetwork.fetchRecipe();
-      assert.fail("was not supposed to succeed");
-    } catch (error) {
-      expect(error.message).to.equal("No recipe found on page");
-    }
-  });
-
 });

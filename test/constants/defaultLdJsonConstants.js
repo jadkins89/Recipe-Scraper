@@ -1,6 +1,285 @@
 module.exports = {
   tests: [
     {
+      url: "https://therealfoodrds.com/veggie-loaded-turkey-chili/",
+      expected: {
+        "name": "Veggie Loaded Turkey Chili",
+        "description": "When the weather turns cold, warming up with a bowl of Veggie Loaded Turkey Chili is about as good as it gets!",
+        "image": "https://therealfooddietitians.com/wp-content/uploads/2017/10/IMG_9397-2-e1508438046925-225x225.jpg",
+        "ingredients": [
+          "1 lb. lean ground turkey, beef or chicken",
+          "1 Tbsp olive oil or avocado oil",
+          "2 large garlic cloves, minced",
+          "1/2 medium onion, diced",
+          "1 small red bell pepper, diced",
+          "1 small zucchini or yellow squash, diced",
+          "1 medium carrot, diced",
+          "2 Tbsp. chili powder",
+          "1 Tbsp. cumin, ground",
+          "1 can (15 ounces) tomato sauce + 1/2 can of water or broth",
+          "1 can (15 ounces) Crushed or petite diced tomatoes",
+          "1 can (15 ounces) black beans, rinsed and drained",
+          "1 cup corn, frozen",
+          "Dash of Cayenne (optional)",
+          "Salt and pepper, to taste",
+          "Optional: Diced avocado, chopped cilantro, shredded cheese, sour cream or Greek yogurt and/or lime wedges for serving",
+        ],
+        "instructions": [
+          "In a large pot or Dutch oven over medium heat add the oil. Once the oil is hot, add ground meat, garlic, onions, bell peppers, zucchini or yellow squash, and carrots and sauté for 7-9 minutes or until meat is cooked and no longer pink.",
+          "Add seasonings, tomato sauce, crushed tomatoes, beans, corn, and water. Bring to a boil over medium-high heat. Reduce heat to low, cover, and simmer for 15 minutes or until carrots are tender. Serve with toppings of choice.",
+          "Follow directions for the Stovetop version through Step 1.",
+          "Add turkey and vegetable mixture to slow cooker.",
+          "Add remaining ingredients (except salt and pepper) and stir to combine.",
+          "Cook on LOW for 8 hours or on HIGH for 4 hours.",
+        ],
+        "sectionedInstructions": [
+          {
+            "image": "",
+            "sectionTitle": "Stovetop Directions:",
+            "text": "In a large pot or Dutch oven over medium heat add the oil. Once the oil is hot, add ground meat, garlic, onions, bell peppers, zucchini or yellow squash, and carrots and sauté for 7-9 minutes or until meat is cooked and no longer pink.",
+          },
+          {
+            "image": "",
+            "sectionTitle": "Stovetop Directions:",
+            "text": "Add seasonings, tomato sauce, crushed tomatoes, beans, corn, and water. Bring to a boil over medium-high heat. Reduce heat to low, cover, and simmer for 15 minutes or until carrots are tender. Serve with toppings of choice.",
+          },
+          {
+            "image": "",
+            "sectionTitle": "Slow Cooker Directions:",
+            "text": "Follow directions for the Stovetop version through Step 1.",
+          },
+          {
+            "image": "",
+            "sectionTitle": "Slow Cooker Directions:",
+            "text": "Add turkey and vegetable mixture to slow cooker.",
+          },
+          {
+            "image": "",
+            "sectionTitle": "Slow Cooker Directions:",
+            "text": "Add remaining ingredients (except salt and pepper) and stir to combine.",
+          },
+          {
+            "image": "",
+            "sectionTitle": "Slow Cooker Directions:",
+            "text": "Cook on LOW for 8 hours or on HIGH for 4 hours.",
+          }
+        ],
+        "servings": "6",
+        "tags": [
+          "Entree | Soup",
+        ],
+        "time": {
+          "active": "",
+          "cook": "25 minutes",
+          "inactive": "",
+          "prep": "15 minutes",
+          "ready": "",
+          "total": "40 minutes"
+        }
+      }
+    },
+    {
+      url: "https://www.simplyrecipes.com/recipes/panzanella_bread_salad/",
+      expected: {
+        "name": "Panzanella Bread Salad",
+        "description": "Got ripe summer tomatoes? Got day-old bread? Make this classic Tuscan Panzanella Salad recipe! This is a great make-ahead recipe for a summer potluck or backyard party, or make it for dinner and serve with grilled chicken.",
+        "image": "https://www.simplyrecipes.com/thmb/t7sd-cTfzF4AKAmDZCbWPDCLpS0=/1600x900/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2013__07__panzanella-bread-salad-horiz-a-1600-694a76c8b391430c8012f5c916aa8caa.jpg",
+        "ingredients": [
+          "4 cups tomatoes, cut into large chunks",
+          "4 cups day old (somewhat dry and hard) crusty bread (Italian or French loaf), cut into chunks the same size as the tomatoes (see Recipe Note)",
+          "1 cucumber, skinned and seeded, cut into large chunks",
+          "1/2 red onion, chopped",
+          "1 bunch fresh basil, torn into little pieces",
+          "1/4 to 1/2 cup high quality extra virgin olive oil",
+          "Salt and pepper to taste",
+        ],
+        "instructions": [
+          "Mix everything together and let marinate, covered, at room temperature for at least 30 minutes.",
+          "If refrigerating, let come to room temperature before serving.",
+        ],
+        "sectionedInstructions": [
+          {
+            "image": "",
+            "sectionTitle": "",
+            "text": "Mix everything together and let marinate, covered, at room temperature for at least 30 minutes.",
+          },
+          {
+            "image": "",
+            "sectionTitle": "",
+            "text": "If refrigerating, let come to room temperature before serving.",
+          }
+        ],
+        "servings": "8",
+        "tags": [
+          "Make-ahead",
+          "Salad",
+          "Italian",
+          "Vegan",
+          "Vegetarian",
+          "Lunch",
+          "Side Dish",
+          "Favorite Summer"
+        ],
+        "time": {
+          "active": "",
+          "cook": "",
+          "inactive": "",
+          "prep": "15 minutes",
+          "ready": "",
+          "total": "45 minutes"
+        }
+      }
+    },
+    {
+      url: "https://gimmedelicious.com/creamy-spinach-and-mushroom-pasta-bake",
+      expected: {
+        "name": "Creamy Spinach and Mushroom Pasta Bake",
+        "description": "Pasta with spinach & mushroom sautéed in butter and garlic then baked in parmesan cream sauce. This creamy pasta casserole is packed full of flavor and makes a delicious quick weeknight dinner!",
+        "image": "https://gimmedelicious.com/wp-content/uploads/2021/01/Spinach-Mushroom-Pasta-Bake.jpg",
+        "ingredients": [
+          "12 oz pasta (uncooked)",
+          "2 tablespoons unsalted butter",
+          "1  small onion (diced)",
+          "1 pound mushrooms of choice (thinly sliced)",
+          "2 cloves garlic (minced)",
+          "3 cups baby spinach",
+          "1 teaspoon italian seasoning",
+          "1/2 tsp salt",
+          "1/4 tsp pepper",
+          "1 tablespoon all-purpose flour",
+          "1/2 cup vegetable broth (or water)",
+          "1 cup light cream (or half and half)",
+          "1/4 cup freshly grated Parmesan",
+          "1 cup mozzarella cheese",
+          "2 tablespoons chopped fresh parsley leaves"
+        ],
+        "instructions": [
+          "Pre-heat oven to 375F.In a large pot of boiling salted water, cook pasta according to package instructions; drain well. Set aside.",
+          "Melt butter in a large skillet over medium heat. onion and mushrooms, cook for 2-3 minute or until the mushrooms are soft and tender. Add garlic, spinach, italian seasoning, and salt + pepper. cook for another minute.",
+          "Whisk in flour until lightly browned, about 1 minute. Gradually whisk in vegetable broth and then cream, and cook, whisking constantly, until incorporated, about 1-2 minutes. Stir in parmesan just before turning off heat.",
+          "Pour cooked pasta into a large 13x9 baking dish. Top with spinach mushroom cream sauce. Drizzle with mozzarella cheese. Bake for 18-20 minutes or until bubbly."
+        ],
+        "sectionedInstructions": [
+          {
+            "image": "",
+            "sectionTitle": "Pre-heat oven to 375F.In a large pot of boiling salted water, cook pasta according to package instructions; drain well. Set aside.",
+            "text": "Pre-heat oven to 375F.In a large pot of boiling salted water, cook pasta according to package instructions; drain well. Set aside."
+          },
+          {
+            "image": "",
+            "sectionTitle": "Melt butter in a large skillet over medium heat. onion and mushrooms, cook for 2-3 minute or until the mushrooms are soft and tender. Add garlic, spinach, italian seasoning, and salt + pepper. cook for another minute.",
+            "text": "Melt butter in a large skillet over medium heat. onion and mushrooms, cook for 2-3 minute or until the mushrooms are soft and tender. Add garlic, spinach, italian seasoning, and salt + pepper. cook for another minute."
+          },
+          {
+            "image": "",
+            "sectionTitle": "Whisk in flour until lightly browned, about 1 minute. Gradually whisk in vegetable broth and then cream, and cook, whisking constantly, until incorporated, about 1-2 minutes. Stir in parmesan just before turning off heat.",
+            "text": "Whisk in flour until lightly browned, about 1 minute. Gradually whisk in vegetable broth and then cream, and cook, whisking constantly, until incorporated, about 1-2 minutes. Stir in parmesan just before turning off heat."
+          },
+          {
+            "image": "",
+            "sectionTitle": "Pour cooked pasta into a large 13x9 baking dish. Top with spinach mushroom cream sauce. Drizzle with mozzarella cheese. Bake for 18-20 minutes or until bubbly.",
+            "text": "Pour cooked pasta into a large 13x9 baking dish. Top with spinach mushroom cream sauce. Drizzle with mozzarella cheese. Bake for 18-20 minutes or until bubbly."
+          }
+        ],
+        "servings": "6",
+        "tags": [
+          "baked",
+          "creamy",
+          "pasta",
+          "spinach mushroom",
+          "American",
+          "Dinner",
+        ],
+        "time": {
+          "active": "",
+          "cook": "25 minutes",
+          "inactive": "",
+          "prep": "5 minutes",
+          "ready": "",
+          "total": "30 minutes",
+        }
+      }
+    },
+    {
+      url: "https://www.epicurious.com/recipes/food/views/trout-toast-with-soft-scrambled-eggs",
+      expected: {
+        name: "Trout Toast with Soft Scrambled Eggs Recipe",
+        description: "Splurge on high-quality smoked fish and good bread—it makes all the difference",
+        ingredients: [
+          "8 large eggs",
+          "3/4 tsp. kosher salt, plus more",
+          "6 Tbsp. unsalted butter, divided",
+          '4 (1"-thick) slices sourdough or\tcountry-style bread',
+          "3 Tbsp. crème fraîche or sour cream",
+          '1 skin-on, boneless smoked trout fillet (about 5 oz.), skin removed, flesh broken into 1" pieces',
+          "1 lemon, halved",
+          "Freshly ground black pepper",
+          "2 scallions, thinly sliced on a diagonal",
+          "2 Tbsp. coarsely chopped dill",
+          "4 oz. mature arugula, tough stems trimmed (about 4 cups)",
+          "2 tsp. extra-virgin olive oil"
+        ],
+        instructions: [
+          "Crack eggs into a medium bowl and add 3/4 tsp. salt. Whisk until no streaks remain.",
+          "Heat 2 Tbsp. butter in a large nonstick skillet over medium. As soon as foaming subsides, add 2 slices of bread and cook until golden brown underneath, about 3 minutes. Transfer to plates, cooked side up. Repeat with another 2 Tbsp. butter and remaining 2 slices of bread. Season toast with salt. Wipe out skillet and let it cool 3 minutes.",
+          "Heat remaining 2 Tbsp. butter in reserved skillet over medium-low. Once butter is foaming, cook egg mixture, stirring with a heatproof rubber spatula in broad sweeping motions, until some curds begin to form but eggs are still runny, about 2 minutes. Stir in crème fraîche and cook, stirring occasionally, until eggs are barely set, about 1 minute.",
+          "Spoon eggs over toast and top with trout. Finely grate lemon zest from one of the lemon halves over trout, then squeeze juice over toast. Season with pepper; scatter scallions and dill on top.",
+          "Squeeze juice from remaining lemon half into a medium bowl. Add arugula and drizzle with oil; season with salt and pepper. Toss to coat. Mound alongside toasts."
+        ],
+        "sectionedInstructions": [
+          {
+            "image": "",
+            "sectionTitle": "",
+            "text": "Crack eggs into a medium bowl and add 3/4 tsp. salt. Whisk until no streaks remain."
+          },
+          {
+            "image": "",
+            "sectionTitle": "",
+            "text": "Heat 2 Tbsp. butter in a large nonstick skillet over medium. As soon as foaming subsides, add 2 slices of bread and cook until golden brown underneath, about 3 minutes. Transfer to plates, cooked side up. Repeat with another 2 Tbsp. butter and remaining 2 slices of bread. Season toast with salt. Wipe out skillet and let it cool 3 minutes."
+          },
+          {
+            "image": "",
+            "sectionTitle": "",
+            "text": "Heat remaining 2 Tbsp. butter in reserved skillet over medium-low. Once butter is foaming, cook egg mixture, stirring with a heatproof rubber spatula in broad sweeping motions, until some curds begin to form but eggs are still runny, about 2 minutes. Stir in crème fraîche and cook, stirring occasionally, until eggs are barely set, about 1 minute."
+          },
+          {
+            "image": "",
+            "sectionTitle": "",
+            "text": "Spoon eggs over toast and top with trout. Finely grate lemon zest from one of the lemon halves over trout, then squeeze juice over toast. Season with pepper; scatter scallions and dill on top."
+          },
+          {
+            "image": "",
+            "sectionTitle": "",
+            "text": "Squeeze juice from remaining lemon half into a medium bowl. Add arugula and drizzle with oil; season with salt and pepper. Toss to coat. Mound alongside toasts."
+          }
+        ],
+        tags: [
+          "bon appétit",
+          "breakfast",
+          "brunch",
+          "dinner",
+          "egg",
+          "fish",
+          "trout",
+          "peanut free",
+          "tree nut free",
+          "bread",
+          "sourdough",
+          "web"
+        ],
+        time: {
+          prep: "",
+          cook: "",
+          active: "",
+          inactive: "",
+          ready: "",
+          total: ""
+        },
+        servings: "4 servings",
+        image: "https://assets.epicurious.com/photos/5c1146171ba70e4fce83c3e5/2:1/w_4000,h_2000,c_limit/trout-toast-with-soft-scrambled-eggs-recipe-BA-121218.jpg"
+      }
+    },
+    {
       url: "https://bakeplaysmile.com/favourite-chocolate-cake/#recipe",
       expected: {
         name: 'The BEST Chocolate Mud Cake',
@@ -102,7 +381,7 @@ module.exports = {
           'temperature for 3-4 days, or in the fridge for ' +
           '5-6 days.'
         ],
-        tags: [ 'chocolate mud cake', 'American', 'western', 'Cakes' ],
+        tags: ['chocolate mud cake', 'American', 'western', 'Cakes'],
         time: {
           prep: '30 minutes',
           cook: '25 minutes',
@@ -344,7 +623,7 @@ module.exports = {
           '125 מ"ל שמנת להקצפה יטבתה 38%'
         ],
         instructions: [
-         'אופן הכנה בקערה גדולה מערבבים את כל חומרי העוגה. מחממים תנור ל-180 מעלות. משמנים תבנית אפייה עגולה בקוטר 26 ס״מ או תבנית קוגלהוף (כמו בתמונה). שופכים את בלילת העוגה ואופים 30 דקות. כאשר העוגה יוצאת מהתנור שופכים עליה חצי כוס נס קפה שמכינים מכף קפה נמס וחצי כוס מים חמים). אם יש לכם מכונת קפה, מכינים אספרסו ושופכים, זה ממש משדרג את העוגה. מכינים את הציפוי: באמבט בן מרי ממיסים את השוקולד כאשר נמס מערבבים לתוכו את 1 2 השמנת שנותרה. שופכים על העוגה. אפשר לקשט את העוגה בסוכריות, אגוזים או פולי קפה טחונים.'
+          'אופן הכנה בקערה גדולה מערבבים את כל חומרי העוגה. מחממים תנור ל-180 מעלות. משמנים תבנית אפייה עגולה בקוטר 26 ס״מ או תבנית קוגלהוף (כמו בתמונה). שופכים את בלילת העוגה ואופים 30 דקות. כאשר העוגה יוצאת מהתנור שופכים עליה חצי כוס נס קפה שמכינים מכף קפה נמס וחצי כוס מים חמים). אם יש לכם מכונת קפה, מכינים אספרסו ושופכים, זה ממש משדרג את העוגה. מכינים את הציפוי: באמבט בן מרי ממיסים את השוקולד כאשר נמס מערבבים לתוכו את 1 2 השמנת שנותרה. שופכים על העוגה. אפשר לקשט את העוגה בסוכריות, אגוזים או פולי קפה טחונים.'
         ],
         tags: [
           'מכונת קפה סימנס',
@@ -625,7 +904,7 @@ module.exports = {
           total: '1 hours 30 minutes'
         },
         servings: '1 (9-1/2-inch) deep-dish pie, or 8 to 10 servings',
-        image: '',
+        image: 'https://www.chowhound.com/a/recipe_photos/30175_easy_pumpkin_pie.jpg',
         sectionedInstructions: [
           {
             sectionTitle: 'For the crust:',
