@@ -60,7 +60,8 @@ class EatingWellScraper extends BaseScraper {
                 .children(".recipe-meta-item-body")
                 .text()
                 .replace(/\s\s+/g, "")
-                .replace(/\n/g, "");
+                .replace(/\n/g, "")
+                .trim();
             switch (title) {
                 case "prep":
                     time.prep = value;

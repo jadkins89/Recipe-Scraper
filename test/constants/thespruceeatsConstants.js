@@ -9,11 +9,11 @@ module.exports = {
     ingredients: [
       "1 pound squid, cleaned",
       "1 tablespoon extra-virgin olive oil",
-      "1 tablespoon fresh lemon juice",
+      "1 tablespoon freshly squeezed lemon juice",
       "1/4 teaspoon salt",
-      "1/8 teaspoon ground black pepper",
+      "1/8 teaspoon freshly ground black pepper",
       "1 tablespoon fresh parsley, chopped",
-      "Lemon wedges"
+      "Lemon wedges, for garnish"
     ],
     instructions: [
       "Gather the ingredients.",

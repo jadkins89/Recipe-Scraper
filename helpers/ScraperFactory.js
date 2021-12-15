@@ -1,6 +1,7 @@
 "use strict";
 
 const parseDomain = require("parse-domain");
+const defaultLdJsonScraper = require('./DefaultLdJsonScraper');
 
 const domains = {
   "101cookbooks": require("../scrapers/101CookbooksScraper"),
@@ -17,11 +18,9 @@ const domains = {
   copykat: require("../scrapers/CopyKatScraper"),
   damndelicious: require("../scrapers/DamnDeliciousScraper"),
   eatingwell: require("../scrapers/EatingWellScraper"),
-  epicurious: require("../scrapers/EpicuriousScraper"),
   food: require("../scrapers/FoodScraper"),
   foodandwine: require("../scrapers/FoodAndWineScraper"),
   foodnetwork: require("../scrapers/FoodNetworkScraper"),
-  gimmedelicious: require("../scrapers/GimmeDeliciousScraper"),
   gimmesomeoven: require("../scrapers/GimmeSomeOvenScraper"),
   julieblanner: require("../scrapers/JulieBlannerScraper"),
   kitchenstories: require("../scrapers/KitchenStoriesScraper"),
@@ -33,7 +32,6 @@ const domains = {
   pinchofyum: require("../scrapers/PinchOfYumScraper"),
   recipetineats: require("../scrapers/RecipeTinEatsScraper"),
   seriouseats: require("../scrapers/SeriousEatsScraper"),
-  simplyrecipes: require("../scrapers/SimplyRecipesScraper"),
   smittenkitchen: require("../scrapers/SmittenKitchenScraper"),
   tastesbetterfromscratch: require("../scrapers/TastesBetterFromScratchScraper"),
   tasteofhome: require("../scrapers/TasteOfHomeScraper"),
@@ -60,7 +58,7 @@ class ScraperFactory {
       if (domains[domain] !== undefined) {
         return new domains[domain](url);
       } else {
-        throw new Error("Site not yet supported");
+        return new defaultLdJsonScraper(url);
       }
     } else {
       throw new Error("Failed to parse domain");

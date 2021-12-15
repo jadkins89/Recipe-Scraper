@@ -41,16 +41,6 @@ describe("seriousEats", () => {
     }
   });
 
-  it("should throw an error if non-recipe page is used", async () => {
-    try {
-      seriousEats.url = constants.nonRecipeUrl;
-      await seriousEats.fetchRecipe();
-      assert.fail("was not supposed to succeed");
-    } catch (error) {
-      expect(error.message).to.equal("No recipe found on page");
-    }
-  });
-
   it("should throw an error if sponsored recipe is used", async () => {
     try {
       seriousEats = new SeriousEats(constants.sponsorUrl);

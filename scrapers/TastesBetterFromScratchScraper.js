@@ -47,16 +47,9 @@ class TastesBetterFromScratchScraper extends PuppeteerScraper {
       );
     });
 
-    $(".wprm-recipe-time-container").each((i, el) => {
-      let text = $(el).text();
-      if (text.includes("Total Time:")) {
-        time.total = text.replace("Total Time:", "").trim();
-      } else if (text.includes("Prep Time:")) {
-        time.prep = text.replace("Prep Time:", "").trim();
-      } else if (text.includes("Cook Time:")) {
-        time.cook = text.replace("Cook Time:", "").trim();
-      }
-    });
+    time.prep = $(".wprm-recipe-prep-time-container").text().replace('Prep', '').trim();
+    time.cook = $(".wprm-recipe-cook-time-container").text().replace('Cook', '').trim();
+    time.total = $(".wprm-recipe-total-time-container").text().replace('Total', '').trim();
 
     this.recipe.servings = $(".wprm-recipe-servings").text() || "";
   }
