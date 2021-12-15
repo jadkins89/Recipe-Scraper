@@ -14,6 +14,7 @@ class BaseScraper {
   constructor(url, subUrl = "") {
     this.url = url;
     this.subUrl = subUrl;
+    this.status = null;
   }
 
   async checkServerResponse() {
@@ -284,6 +285,8 @@ class BaseScraper {
       const headers = new fetch.Headers(meta);
       const res = await fetch(this.url, {headers});
       const html = await res.text();
+      this.status = res.status;
+
       return cheerio.load(html);
     } catch (err) {
       throw err;
@@ -299,6 +302,9 @@ class BaseScraper {
     this.checkUrl();
     try {
       const $ = await this.fetchDOMModel();
+      if (this.status >= 400) {
+        this.defaultError();
+      }
       this.createRecipeObject();
       this.scrape($);
     } catch (e) {
