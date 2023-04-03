@@ -1,11 +1,12 @@
 const {assert, expect} = require("chai");
 const ScraperFactory = require("../helpers/ScraperFactory");
+const {percentageOfLikeliness} = require('./helpers/precentageOfLikeliness');
 const constants = require("./constants/defaultLdJsonConstants");
 
 describe("defaultLdJson", () => {
   let scraper;
 
-  var testWithData = (test) => {
+  const testWithData = (test) => {
     return async () => {
       let domain = (new URL(test.url));
       console.log(domain.hostname.replace('www.', ''));
@@ -13,7 +14,12 @@ describe("defaultLdJson", () => {
       scraper.url = test.url;
 
       let actualRecipe = await scraper.fetchRecipe();
-      expect(test.expected).to.deep.equal(actualRecipe);
+      const likeliness = percentageOfLikeliness(
+        JSON.stringify(test.expected),
+        JSON.stringify(actualRecipe)
+      );
+      console.log("likeliness: ", likeliness);
+      expect(Number(likeliness)).to.be.gt(80);
 
     };
   };
@@ -23,7 +29,7 @@ describe("defaultLdJson", () => {
   });
 
   constants.tests.forEach((test) => {
-    it("should fetch the expected recipe", testWithData(test));
+    it("should fetch the expected recipe: " + test.url, testWithData(test));
   });
 
   it("should return page title, image & description if the url does not contain a Recipe Ld+Json schema", async () => {

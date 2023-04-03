@@ -7,6 +7,17 @@ const {validate} = require("jsonschema");
 const Recipe = require("./Recipe");
 const recipeSchema = require("./RecipeSchema.json");
 
+function getFirstImage(image) {
+  let result = image || "";
+  if(Array.isArray(image) && image.length > 0) {
+    if(image[0]["@type"] === "ImageObject") {
+      result = image[0]["url"];
+    }
+  }
+
+  return result;
+}
+
 /**
  * Abstract Class which all scrapers inherit from
  */
@@ -66,7 +77,14 @@ class BaseScraper {
             const result = JSON.parse(jsonRaw);
             let recipe;
 
-
+            if(Array.isArray(result)) {
+              result.forEach(r => {
+                if ((Array.isArray(r['@type']) && r['@type'].includes('Recipe')) ||
+                  r['@type'] === 'Recipe') {
+                  recipe = r;
+                }
+              })
+            }
 
             if (result['@graph'] && Array.isArray(result['@graph'])) {
               result['@graph'].forEach(g => {
@@ -76,16 +94,14 @@ class BaseScraper {
               })
             }
 
-            if (result['@type'] === 'Recipe') {
-              recipe = result;
-            }
-
-            if (Array.isArray(result['@type']) && result['@type'].includes('Recipe')) {
+            if ((Array.isArray(result['@type']) && result['@type'].includes('Recipe')) ||
+              result['@type'] === 'Recipe') {
               recipe = result;
             }
 
             if (recipe) {
-              // console.log('found a Recipe type json schema!');
+              console.log('found a Recipe type json schema!');
+              // console.log(recipe)
               try {
                 // name
                 this.recipe.name = BaseScraper.HtmlDecode($, recipe.name);
@@ -177,7 +193,7 @@ class BaseScraper {
                       this.recipe.sectionedInstructions.push({
                         sectionTitle: instructionStep.name || '',
                         text: BaseScraper.HtmlDecode($, instructionStep.text),
-                        image: instructionStep.image || ''
+                        image: getFirstImage(instructionStep.image)
                       })
                     } else if (instructionStep["@type"] === "HowToSection") {
                       if (instructionStep.itemListElement) {
@@ -187,7 +203,7 @@ class BaseScraper {
                           this.recipe.sectionedInstructions.push({
                             sectionTitle: instructionStep.name,
                             text: BaseScraper.HtmlDecode($, step.text),
-                            image: step.image || ''
+                            image: getFirstImage(step.image)
                           })
                         });
                       }
@@ -231,6 +247,7 @@ class BaseScraper {
       }
     });
 
+    // console.log(this.recipe);
     return isRecipeSchemaFound;
   }
 

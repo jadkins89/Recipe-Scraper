@@ -12,28 +12,7 @@ class BbcScraper extends BaseScraper {
   }
 
   scrape($) {
-    this.defaultSetImage($);
-    this.defaultSetDescription($);
-    const { ingredients, instructions, time } = this.recipe;
-    this.recipe.name = $(".content-title__text").text();
-
-    $(".recipe-ingredients__list-item").each((i, el) => {
-      ingredients.push($(el).text());
-    });
-
-    $(".recipe-method__list-item-text").each((i, el) => {
-      instructions.push($(el).text());
-    });
-
-    time.prep = $(".recipe-metadata__prep-time")
-      .first()
-      .text();
-    time.cook = $(".recipe-metadata__cook-time")
-      .first()
-      .text();
-
-    this.recipe.servings = $(".recipe-leading-info__side-bar .recipe-metadata__serving")
-      .text();
+    this.defaultLD_JOSN($);
   }
 }
 

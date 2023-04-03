@@ -4,30 +4,55 @@ module.exports = {
   invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://copykat.com/contact/",
   expectedRecipe: {
-    name: "Air Fryer Croutons",
-    description: "See how quick and easy it is to make buttery, crispy, homemade croutons in an air fryer with this easy, step-by-step recipe. Tasty croutons in minutes!",
+    name: 'Air Fryer Croutons',
+    description: 'Homemade croutons are so easy to make! Make the crispiest croutons ever in your air fryer.',
     ingredients: [
-      "4 slices bread",
-      "2 tablespoons melted butter",
-      "1 teaspoon parsley",
-      "1/2 teaspoon onion powder",
-      "1/2 teaspoon seasoned salt",
-      "1/2 teaspoon garlic salt"
+      '2 tablespoons butter (melted)',
+      '1 teaspoon parsley',
+      '1/2 teaspoon onion powder',
+      '1/2 teaspoon seasoned salt',
+      '1/2 teaspoon garlic salt',
+      '4 slices bread (cut into bite-sized pieces)'
     ],
     instructions: [
-      "Preheat air fryer to 390 degrees. Cut 4 slices of bread into bite-sized pieces. Melt butter, and place butter into a medium-sized bowl. Add 1 teaspoon parsley, 1/2 teaspoon seasoned salt, 1/2 teaspoon garlic salt, 1/2 teaspoon of onion powder to the melted butter. Stir well. Add bread to the bowl and carefully stir to coat the bread so that it is coated by the seasoned butter. Place buttered bread into the air fryer basket. Cook for 5 to 7 minutes or until the bread is toasted. Serve immediately."
+      'Preheat the air fryer to 390°F.',
+      'In a medium-sized bowl, combine the butter, parsley, onion powder, seasoned salt, and garlic salt. Stir well.',
+      'Add the bread to the bowl and carefully stir to coat the bread with the seasoned butter.',
+      'Place buttered bread into the air fryer basket and cook for 5 to 7 minutes, or until the bread is toasted. Serve immediately.'
     ],
-    tags: [],
+    sectionedInstructions: [
+      {
+        sectionTitle: 'Preheat the air fryer to 390°F.',
+        text: 'Preheat the air fryer to 390°F.',
+        image: ''
+      },
+      {
+        sectionTitle: 'In a medium-sized bowl, combine the butter, parsley, onion powder, seasoned salt, and garlic salt. Stir well.',
+        text: 'In a medium-sized bowl, combine the butter, parsley, onion powder, seasoned salt, and garlic salt. Stir well.',
+        image: ''
+      },
+      {
+        sectionTitle: 'Add the bread to the bowl and carefully stir to coat the bread with the seasoned butter.',
+        text: 'Add the bread to the bowl and carefully stir to coat the bread with the seasoned butter.',
+        image: ''
+      },
+      {
+        sectionTitle: 'Place buttered bread into the air fryer basket and cook for 5 to 7 minutes, or until the bread is toasted. Serve immediately.',
+        text: 'Place buttered bread into the air fryer basket and cook for 5 to 7 minutes, or until the bread is toasted. Serve immediately.',
+        image: ''
+      }
+    ],
+    tags: [ 'Air Fryer Recipes', 'Croutons', 'American', 'Salad' ],
     time: {
-      prep: "5 minutes",
-      cook: "7 minutes",
-      active: "",
-      inactive: "",
-      ready: "",
-      total: "12 minutes"
+      prep: '5 minutes',
+      cook: '7 minutes',
+      active: '',
+      inactive: '',
+      ready: '',
+      total: '12 minutes'
     },
-    servings: "4",
-    image:
-      "https://copykat.com/wp-content/uploads/2019/07/butter-air-fryer-croutons.jpg"
+    servings: '4',
+    image: 'https://copykat.com/wp-content/uploads/2023/01/Air-Fryer-Croutons-Pin-5.jpg'
   }
+
 };

@@ -81,53 +81,53 @@ module.exports = {
     {
       url: "https://www.simplyrecipes.com/recipes/panzanella_bread_salad/",
       expected: {
-        "name": "Panzanella Bread Salad",
-        "description": "Got ripe summer tomatoes? Got day-old bread? Make this classic Tuscan Panzanella Salad recipe! This is a great make-ahead recipe for a summer potluck or backyard party, or make it for dinner and serve with grilled chicken.",
-        "image": "https://www.simplyrecipes.com/thmb/t7sd-cTfzF4AKAmDZCbWPDCLpS0=/1600x900/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2013__07__panzanella-bread-salad-horiz-a-1600-694a76c8b391430c8012f5c916aa8caa.jpg",
-        "ingredients": [
-          "4 cups tomatoes, cut into large chunks",
-          "4 cups day old (somewhat dry and hard) crusty bread (Italian or French loaf), cut into chunks the same size as the tomatoes (see Recipe Note)",
-          "1 cucumber, skinned and seeded, cut into large chunks",
-          "1/2 red onion, chopped",
-          "1 bunch fresh basil, torn into little pieces",
-          "1/4 to 1/2 cup high quality extra virgin olive oil",
-          "Salt and pepper to taste",
+        name: 'Panzanella Bread Salad',
+        description: 'Got ripe summer tomatoes? Got day-old bread? Make this classic Tuscan Panzanella Salad recipe! This is a great make-ahead recipe for a summer potluck or backyard party, or make it for dinner and serve with grilled chicken.',
+        ingredients: [
+          '4 cups tomatoes, cut into large chunks',
+          '4 cups day old (somewhat dry and hard) crusty bread (Italian or French loaf), cut into chunks the same size as the tomatoes (see Recipe Note)',
+          '1 cucumber, skinned and seeded, cut into large chunks',
+          '1/2 red onion, chopped',
+          '1 bunch fresh basil, torn into little pieces',
+          '1/4 to 1/2 cup high quality extra virgin olive oil',
+          'Salt and pepper to taste'
         ],
-        "instructions": [
-          "Mix everything together and let marinate, covered, at room temperature for at least 30 minutes.",
-          "If refrigerating, let come to room temperature before serving.",
+        instructions: [
+          'Mix everything together and let marinate, covered, at room temperature for at least 30 minutes.',
+          'If refrigerating, let come to room temperature before serving. Note if you add meat, eggs, or cheese to this salad, store chilled if making ahead, and bring to room temp to serve.'
         ],
-        "sectionedInstructions": [
+        sectionedInstructions: [
           {
-            "image": "",
-            "sectionTitle": "",
-            "text": "Mix everything together and let marinate, covered, at room temperature for at least 30 minutes.",
+            sectionTitle: '',
+            text: 'Mix everything together and let marinate, covered, at room temperature for at least 30 minutes.',
+            image: ''
           },
           {
-            "image": "",
-            "sectionTitle": "",
-            "text": "If refrigerating, let come to room temperature before serving.",
+            sectionTitle: '',
+            text: 'If refrigerating, let come to room temperature before serving. Note if you add meat, eggs, or cheese to this salad, store chilled if making ahead, and bring to room temp to serve.',
+            image: ''
           }
         ],
-        "servings": "8",
-        "tags": [
-          "Make-ahead",
-          "Salad",
-          "Italian",
-          "Vegan",
-          "Vegetarian",
-          "Lunch",
-          "Side Dish",
-          "Favorite Summer"
+        tags: [
+          'Make-ahead',
+          'Salad',
+          'Italian',
+          'Vegan',
+          'Vegetarian',
+          'Lunch',
+          'Side Dish',
+          'Favorite Summer'
         ],
-        "time": {
-          "active": "",
-          "cook": "",
-          "inactive": "",
-          "prep": "15 minutes",
-          "ready": "",
-          "total": "45 minutes"
-        }
+        time: {
+          prep: '15 minutes',
+          cook: '',
+          active: '',
+          inactive: '',
+          ready: '',
+          total: '45 minutes'
+        },
+        servings: '8',
+        image: 'https://www.simplyrecipes.com/thmb/OR2aIuiJgOOf_5w7ndAgMLmBiUE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2013__07__panzanella-bread-salad-horiz-a-1600-694a76c8b391430c8012f5c916aa8caa.jpg'
       }
     },
     {
@@ -726,7 +726,8 @@ module.exports = {
           'אוכל בריא לילדים',
           'במטבח עם הילדים',
           'אפייה טבעונית',
-          'אפייה בלי חמאה'
+          'אפייה בלי חמאה',
+          'בייגלה'
         ],
         time: {
           prep: '',
@@ -745,7 +746,7 @@ module.exports = {
       url: "https://food.walla.co.il/item/3452312",
       expected: {
         name: 'מקלות גבינה מבצק עלים',
-        description: "פריכים, זהובים ומתובלים - כל מה שצריך בשביל מקלות הגבינה המופלאים האלו הם 4 מרכיבים. ויש גם טיפ איך תוכלו להכין אותם מראש ולשלוף בעת הצורך. למתכון המלא >>>",
+        description: 'פריכים, זהובים ומתובלים - כל מה שצריך בשביל מקלות הגבינה המופלאים האלו הם 4 מרכיבים. ויש גם טיפ איך תוכלו להכין אותם מראש ולשלוף בעת הצורך. למתכון המלא >>>',
         ingredients: [
           '1  חבילה בצק עלים שהופשר במקרר',
           '200  גרם צדר מגוררת דק',
@@ -757,15 +758,47 @@ module.exports = {
           'מחממים תנור ל-180 מעלות.',
           'מערבבים בקערה את שני סוגי הגבינות.',
           'פורסים את הבצק על משטח, מחלקים אותו לשני חלקים שווים ומרדדים מעט כל חלק.',
-          'מברישים את אחת מיריעות הבצק בביצה טרופה, מפזרים כ-3/4 מכמות ' +
-          'הגבינה ואת הזעתר או תבלין אחר שאוהבים ומניחים מעל את יריעת הבצק ' +
-          'השניה.',
-          'מרדדים יחד את שתי היריעות כדי להצמיד אותן היטב אחת לשניה. ' +
-          'מברישים שוב בביצה טרופה ומפזרים את יתרת הגבינות והתבלין.',
-          'בעזרת חותכן פיצה או סכין חדה, חותכים רצועות דקות ' +
-          'לרוחב הבצק ברוחב של 3 סמ. מלפפים בזהירות כל רצועה ' +
-          'לצורת בורג ומניחים על תבנית מרופדת נייר אפייה.',
+          'מברישים את אחת מיריעות הבצק בביצה טרופה, מפזרים כ-3/4 מכמות הגבינה ואת הזעתר או תבלין אחר שאוהבים ומניחים מעל את יריעת הבצק השניה.',
+          'מרדדים יחד את שתי היריעות כדי להצמיד אותן היטב אחת לשניה. מברישים שוב בביצה טרופה ומפזרים את יתרת הגבינות והתבלין.',
+          'בעזרת חותכן פיצה או סכין חדה, חותכים רצועות דקות לרוחב הבצק ברוחב של 3 סמ. מלפפים בזהירות כל רצועה לצורת בורג ומניחים על תבנית מרופדת נייר אפייה.',
           'אופים כ-25-30 דקות עד הזהבה.'
+        ],
+        sectionedInstructions: [
+          {
+            sectionTitle: 'שלב 1',
+            text: 'מחממים תנור ל-180 מעלות.',
+            image: ''
+          },
+          {
+            sectionTitle: 'שלב 2',
+            text: 'מערבבים בקערה את שני סוגי הגבינות.',
+            image: ''
+          },
+          {
+            sectionTitle: 'שלב 3',
+            text: 'פורסים את הבצק על משטח, מחלקים אותו לשני חלקים שווים ומרדדים מעט כל חלק.',
+            image: ''
+          },
+          {
+            sectionTitle: 'שלב 4',
+            text: 'מברישים את אחת מיריעות הבצק בביצה טרופה, מפזרים כ-3/4 מכמות הגבינה ואת הזעתר או תבלין אחר שאוהבים ומניחים מעל את יריעת הבצק השניה.',
+            image: ''
+          },
+          {
+            sectionTitle: 'שלב 5',
+            text: 'מרדדים יחד את שתי היריעות כדי להצמיד אותן היטב אחת לשניה. מברישים שוב בביצה טרופה ומפזרים את יתרת הגבינות והתבלין.',
+            image: ''
+          },
+          {
+            sectionTitle: 'שלב 6',
+            text: 'בעזרת חותכן פיצה או סכין חדה, חותכים רצועות דקות לרוחב הבצק ברוחב של 3 סמ. מלפפים בזהירות כל רצועה לצורת בורג ומניחים על תבנית מרופדת נייר אפייה.',
+            image: ''
+          },
+          {
+            sectionTitle: 'שלב 7',
+            text: 'אופים כ-25-30 דקות עד הזהבה.',
+            image: 'https://images.wcdn.co.il/f_auto,q_auto,w_1000,t_54/3/2/6/2/3262796-46.jpg'
+          }
         ],
         tags: [
           'ישראלי',
@@ -785,169 +818,7 @@ module.exports = {
           total: '30 minutes'
         },
         servings: '',
-        image: 'https://img.wcdn.co.il/f_auto,q_auto,w_1000,t_54/3/2/6/2/3262797-46.jpg',
-        sectionedInstructions: [
-          {
-            sectionTitle: 'שלב 1',
-            text: 'מחממים תנור ל-180 מעלות.',
-            image: ''
-          },
-          {
-            sectionTitle: 'שלב 2',
-            text: 'מערבבים בקערה את שני סוגי הגבינות.',
-            image: ''
-          },
-          {
-            sectionTitle: 'שלב 3',
-            text: 'פורסים את הבצק על משטח, מחלקים אותו ' +
-            'לשני חלקים שווים ומרדדים מעט כל חלק.',
-            image: ''
-          },
-          {
-            sectionTitle: 'שלב 4',
-            text: 'מברישים את אחת מיריעות הבצק בביצה טרופה, מפזרים כ-3/4 מכמות ' +
-            'הגבינה ואת הזעתר או תבלין אחר שאוהבים ומניחים מעל את יריעת הבצק ' +
-            'השניה.',
-            image: ''
-          },
-          {
-            sectionTitle: 'שלב 5',
-            text: 'מרדדים יחד את שתי היריעות כדי להצמיד אותן היטב אחת לשניה. ' +
-            'מברישים שוב בביצה טרופה ומפזרים את יתרת הגבינות והתבלין.',
-            image: ''
-          },
-          {
-            sectionTitle: 'שלב 6',
-            text: 'בעזרת חותכן פיצה או סכין חדה, חותכים רצועות דקות ' +
-            'לרוחב הבצק ברוחב של 3 סמ. מלפפים בזהירות כל רצועה ' +
-            'לצורת בורג ומניחים על תבנית מרופדת נייר אפייה.',
-            image: ''
-          },
-          {
-            sectionTitle: 'שלב 7',
-            text: 'אופים כ-25-30 דקות עד הזהבה.',
-            image: 'https://img.wcdn.co.il/f_auto,q_auto,w_1000,t_54/3/2/6/2/3262796-46.jpg'
-          }
-        ]
-      }
-    },
-    {
-      url: "https://www.chowhound.com/recipes/basic-pumpkin-pie-30175",
-      expected: {
-        name: 'Perfect Pumpkin Pie',
-        description: "For Chowhound's pumpkin pie recipe, you don't need to buy " +
-        'a prepared crust or filling, just a single press-in ' +
-        'crust. It only takes a few minutes to mix the ' +
-        'ingredients...',
-        ingredients: [
-          '8 tablespoons unsalted butter (1 stick), melted and cooled slightly',
-          '1 tablespoon vegetable oil',
-          '1 tablespoon granulated sugar',
-          '1/4 teaspoon fine salt',
-          '1 1/3 cups all-purpose flour, plus more as needed',
-          '1 (15-ounce) can pumpkin purée (not pie mix)',
-          '1 (14-ounce) can sweetened condensed milk',
-          '2 large eggs',
-          '1 teaspoon ground cinnamon',
-          '1/2 teaspoon ground nutmeg',
-          '1/2 teaspoon fine salt',
-          '1/8 teaspoon ground cloves',
-          'Easy Whipped Cream, for serving (recipe link in intro)'
-        ],
-        instructions: [
-          'Stir the butter, oil, sugar, and salt together in a medium bowl until ' +
-          'evenly combined. Add the measured flour and stir until a soft dough ' +
-          'forms.',
-          'Sprinkle the dough in small clumps over the bottom of a 9-1/2-inch ' +
-          'deep-dish pie plate. Using a measuring cup or your fingers, evenly ' +
-          'press the dough into the bottom and up the sides of the plate (flour ' +
-          'the cup or your fingers occasionally to prevent sticking). Cover ' +
-          'with plastic wrap and chill in the refrigerator for at least 30 ' +
-          'minutes.',
-          'Heat the oven to 350°F and arrange a rack in the lower third. ' +
-          'Place a baking sheet on the rack while the oven is heating.',
-          'Place all of the ingredients except the whipped cream in a large bowl ' +
-          'and whisk until smooth and combined. Pour into the chilled pie crust.',
-          'Place the pie on the hot baking sheet and bake until the ' +
-          'top starts to brown and the filling is set but still ' +
-          'jiggles slightly in the center, about 50 minutes. Remove ' +
-          'from the oven to a wire rack and let cool completely ' +
-          'before serving. Top slices of the pie with whipped cream, ' +
-          'if desired.'
-        ],
-        tags: [
-          'Christmas',
-          'Thanksgiving',
-          'Baking',
-          'Dinner Party',
-          'Potluck',
-          'Vegetarian',
-          'Condensed Milk',
-          'Eggs',
-          'Pumpkin Pie Spice Mix',
-          'Pumpkin',
-          'Pies',
-          'Holidays',
-          'Fall',
-          'Winter',
-          'Easy',
-          'Eat: Bon Appétit!',
-          'Comfort Food',
-          'Dessert'
-        ],
-        time: {
-          prep: '0 hours 10 minutes',
-          cook: '',
-          active: '',
-          inactive: '',
-          ready: '',
-          total: '1 hours 30 minutes'
-        },
-        servings: '1 (9-1/2-inch) deep-dish pie, or 8 to 10 servings',
-        image: 'https://www.chowhound.com/a/recipe_photos/30175_easy_pumpkin_pie.jpg',
-        sectionedInstructions: [
-          {
-            sectionTitle: 'For the crust:',
-            text: 'Stir the butter, oil, sugar, and salt together ' +
-            'in a medium bowl until evenly combined. Add the ' +
-            'measured flour and stir until a soft dough ' +
-            'forms.',
-            image: ''
-          },
-          {
-            sectionTitle: 'For the crust:',
-            text: 'Sprinkle the dough in small clumps over the bottom of a 9-1/2-inch ' +
-            'deep-dish pie plate. Using a measuring cup or your fingers, evenly ' +
-            'press the dough into the bottom and up the sides of the plate (flour ' +
-            'the cup or your fingers occasionally to prevent sticking). Cover ' +
-            'with plastic wrap and chill in the refrigerator for at least 30 ' +
-            'minutes.',
-            image: ''
-          },
-          {
-            sectionTitle: 'For the pie:',
-            text: 'Heat the oven to 350°F and arrange a rack in the lower third. ' +
-            'Place a baking sheet on the rack while the oven is heating.',
-            image: ''
-          },
-          {
-            sectionTitle: 'For the pie:',
-            text: 'Place all of the ingredients except the whipped cream in a large bowl ' +
-            'and whisk until smooth and combined. Pour into the chilled pie crust.',
-            image: ''
-          },
-          {
-            sectionTitle: 'For the pie:',
-            text: 'Place the pie on the hot baking sheet and bake until the ' +
-            'top starts to brown and the filling is set but still ' +
-            'jiggles slightly in the center, about 50 minutes. Remove ' +
-            'from the oven to a wire rack and let cool completely ' +
-            'before serving. Top slices of the pie with whipped cream, ' +
-            'if desired.',
-            image: ''
-          }
-        ]
-
+        image: 'https://images.wcdn.co.il/f_auto,q_auto,w_1000,t_54/3/2/6/2/3262797-46.jpg'
       }
     },
     {
@@ -1112,8 +983,7 @@ module.exports = {
       url: "https://www.delish.com/restaurants/a37070789/paris-hilton-vegan-burger-recipe/",
       expected: {
         name: "Paris Hilton's Vegan Un-Cheeseburger and Fries",
-        description: "Without any meat or cheese, Paris Hilton's recipe " +
-        "for a McDonald's burger is surprisingly delicious.",
+        description: "Without any meat or cheese, Paris Hilton's recipe for a McDonald's burger is surprisingly delicious.",
         ingredients: [
           '2 (12-oz.) packages Impossible Meat',
           '1 yellow onion, peeled and quartered',
@@ -1133,18 +1003,52 @@ module.exports = {
           '1 package frozen French fries'
         ],
         instructions: [
-          'Make Pink Sauce: Whisk together ingredients and put in the refrigerator ' +
-          'until ready to use. Make fries: Bake frozen French fries according to ' +
-          'package directions. Make burger patties: Put onion into a small food ' +
-          'processor and pulse until finely chopped. Add to a large bowl with ' +
-          'Impossible Meat and salt and season with pepper. Mix until well ' +
-          'combined. Form 1/2 cup of the "meat" mixture into balls and flatten ' +
-          'into patties. Preheat grill pan over medium heat. Drizzle pan with a ' +
-          'little oil and cook until well browned, about 3 minutes on each side. ' +
-          'Spread Pink Sauce on buns, add patty, and top with cheese, lettuce, ' +
-          'tomato, and onion.'
+          'Make Pink Sauce: Whisk together ingredients and put in the refrigerator until ready to use.',
+          'Make fries: Bake frozen French fries according to package directions.',
+          'Make burger patties: Put onion into a small food processor and pulse until finely chopped. Add to a large bowl with Impossible Meat and salt and season with pepper. Mix until well combined.',
+          'Form 1/2 cup of the "meat" mixture into balls and flatten into patties.',
+          'Preheat grill pan over medium heat.',
+          'Drizzle pan with a little oil and cook until well browned, about 3 minutes on each side.',
+          'Spread Pink Sauce on buns, add patty, and top with cheese, lettuce, tomato, and onion.'
         ],
-        tags: ['パン'],
+        sectionedInstructions: [
+          {
+            sectionTitle: '',
+            text: 'Make Pink Sauce: Whisk together ingredients and put in the refrigerator until ready to use.',
+            image: ''
+          },
+          {
+            sectionTitle: '',
+            text: 'Make fries: Bake frozen French fries according to package directions.',
+            image: ''
+          },
+          {
+            sectionTitle: '',
+            text: 'Make burger patties: Put onion into a small food processor and pulse until finely chopped. Add to a large bowl with Impossible Meat and salt and season with pepper. Mix until well combined.',
+            image: ''
+          },
+          {
+            sectionTitle: '',
+            text: 'Form 1/2 cup of the "meat" mixture into balls and flatten into patties.',
+            image: ''
+          },
+          {
+            sectionTitle: '',
+            text: 'Preheat grill pan over medium heat.',
+            image: ''
+          },
+          {
+            sectionTitle: '',
+            text: 'Drizzle pan with a little oil and cook until well browned, about 3 minutes on each side.',
+            image: ''
+          },
+          {
+            sectionTitle: '',
+            text: 'Spread Pink Sauce on buns, add patty, and top with cheese, lettuce, tomato, and onion.',
+            image: ''
+          }
+        ],
+        tags: [ 'パン' ],
         time: {
           prep: '0 seconds',
           cook: '0 seconds',
@@ -1154,8 +1058,7 @@ module.exports = {
           total: '20 minutes'
         },
         servings: '4',
-        image: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/netflix-paris-social-copy-1627581598.jpg',
-        sectionedInstructions: []
+        image: 'https://hips.hearstapps.com/hmg-prod/images/netflix-paris-social-copy-1627581598.jpg?crop=0.502xw:1.00xh;0,0&resize=1200:*'
       }
     },
     {
@@ -1254,39 +1157,44 @@ module.exports = {
       url: "https://www.bettycrocker.com/recipes/oreo-shamrock-cupcakes/cfa5f2f3-f959-408a-907f-0429815cf8dc",
       expected: {
         name: 'Oreo-Shamrock Cupcakes',
-        description: 'These adorable cupcakes deliver on minty flavor ' +
-        'and the lucky charm of delicious shamrock shakes.',
+        description: 'These adorable cupcakes deliver on minty flavor and the lucky charm of delicious shamrock shakes.',
         ingredients: [
-          '1  box Betty Crocker™ Super Moist™ Yellow Cake Mix',
+          '1  box (15.25 oz) Betty Crocker™ Super Moist™ Yellow Cake Mix',
           'Water, vegetable oil and eggs called for on cake mix box',
           'Mint green gel food color',
-          '2 1/2  cups Betty Crocker™ Whipped Fluffy ' +
-          'White Frosting (from two 12-oz containers)',
+          '2 1/2  cups from 2 tubs (12 oz) Betty Crocker™ Whipped Fluffy White Frosting',
           '1  teaspoon peppermint extract',
-          '6  Oreo Thins chocolate mint crème ' +
-          'sandwich cookies, cut into quarters (about ' +
-          '1 cup)'
+          '6  Oreo Thins chocolate mint crème sandwich cookies, cut into quarters (about 1 cup)'
         ],
         instructions: [
-          'Heat oven to 350°F. Place paper baking ' +
-          'cup in each of 24 regular-size muffin ' +
-          'cups.',
-          'Make cake batter as directed on box, stirring food color into batter to ' +
-          'desired shade of green. Bake cupcakes as directed. Cool in pans 10 ' +
-          'minutes; remove from pans to cooling rack. Cool completely, about 30 ' +
-          'minutes.',
-          'In medium bowl, mix frosting and peppermint extract. Spoon about ' +
-          '1 cup frosting into decorating bag fitted with 1/8- to 1/4-inch ' +
-          'tip. Insert tip into center of 1 cupcake, about halfway down. ' +
-          'Gently squeeze decorating bag, pulling upward until cupcake ' +
-          'swells slightly and filling comes to top. Repeat with remaining ' +
-          'cupcakes.',
-          'Spoon remaining frosting into same bag; generously pipe ' +
-          'frosting in circular motion on top of each cupcake, ' +
-          'leaving 1/4-inch border around edge. Top with Oreo ' +
-          'pieces.'
+          'Heat oven to 350°F. Place paper baking cup in each of 24 regular-size muffin cups.',
+          'Make cake batter as directed on box, stirring food color into batter to desired shade of green. Bake cupcakes as directed. Cool in pans 10 minutes; remove from pans to cooling rack. Cool completely, about 30 minutes.',
+          'In medium bowl, mix frosting and peppermint extract. Spoon about 1 cup frosting into decorating bag fitted with 1/8- to 1/4-inch tip. Insert tip into center of 1 cupcake, about halfway down. Gently squeeze decorating bag, pulling upward until cupcake swells slightly and filling comes to top. Repeat with remaining cupcakes.',
+          'Spoon remaining frosting into same bag; generously pipe frosting in circular motion on top of each cupcake, leaving 1/4-inch border around edge. Top with Oreo pieces.'
         ],
-        tags: ['oreo-shamrock cupcakes', 'Dessert'],
+        sectionedInstructions: [
+          {
+            sectionTitle: '',
+            text: 'Heat oven to 350°F. Place paper baking cup in each of 24 regular-size muffin cups.',
+            image: ''
+          },
+          {
+            sectionTitle: '',
+            text: 'Make cake batter as directed on box, stirring food color into batter to desired shade of green. Bake cupcakes as directed. Cool in pans 10 minutes; remove from pans to cooling rack. Cool completely, about 30 minutes.',
+            image: ''
+          },
+          {
+            sectionTitle: '',
+            text: 'In medium bowl, mix frosting and peppermint extract. Spoon about 1 cup frosting into decorating bag fitted with 1/8- to 1/4-inch tip. Insert tip into center of 1 cupcake, about halfway down. Gently squeeze decorating bag, pulling upward until cupcake swells slightly and filling comes to top. Repeat with remaining cupcakes.',
+            image: ''
+          },
+          {
+            sectionTitle: '',
+            text: 'Spoon remaining frosting into same bag; generously pipe frosting in circular motion on top of each cupcake, leaving 1/4-inch border around edge. Top with Oreo pieces.',
+            image: ''
+          }
+        ],
+        tags: [ 'oreo-shamrock cupcakes', 'Dessert' ],
         time: {
           prep: '0 hours 30 minutes',
           cook: '',
@@ -1296,43 +1204,7 @@ module.exports = {
           total: '1 hours 30 minutes'
         },
         servings: '24',
-        image: 'https://images-gmi-pmc.edge-generalmills.com/9f46f888-5797-4c67-bce7-277d687f1196.jpg',
-        sectionedInstructions: [
-          {
-            sectionTitle: '',
-            text: 'Heat oven to 350°F. Place paper baking ' +
-            'cup in each of 24 regular-size muffin ' +
-            'cups.',
-            image: ''
-          },
-          {
-            sectionTitle: '',
-            text: 'Make cake batter as directed on box, stirring food ' +
-            'color into batter to desired shade of green. Bake ' +
-            'cupcakes as directed. Cool in pans 10 minutes; remove ' +
-            'from pans to cooling rack. Cool completely, about 30 ' +
-            'minutes.',
-            image: ''
-          },
-          {
-            sectionTitle: '',
-            text: 'In medium bowl, mix frosting and peppermint extract. Spoon about ' +
-            '1 cup frosting into decorating bag fitted with 1/8- to 1/4-inch ' +
-            'tip. Insert tip into center of 1 cupcake, about halfway down. ' +
-            'Gently squeeze decorating bag, pulling upward until cupcake ' +
-            'swells slightly and filling comes to top. Repeat with remaining ' +
-            'cupcakes.',
-            image: ''
-          },
-          {
-            sectionTitle: '',
-            text: 'Spoon remaining frosting into same bag; generously pipe ' +
-            'frosting in circular motion on top of each cupcake, ' +
-            'leaving 1/4-inch border around edge. Top with Oreo ' +
-            'pieces.',
-            image: ''
-          }
-        ]
+        image: 'https://images-gmi-pmc.edge-generalmills.com/9f46f888-5797-4c67-bce7-277d687f1196.jpg'
       }
     },
     {
@@ -1957,13 +1829,14 @@ module.exports = {
       }
     },
   ],
-  noLdJsonSupportedRecipeUrl: "https://rotteml.com/%D7%A4%D7%91%D7%9C%D7%95%D7%91%D7%94-%D7%A4%D7%99%D7%A8%D7%95%D7%AA-%D7%94%D7%93%D7%A8",
-  expectedPageInfo: {
-    "description": "פבלובה חורפית עם פירות הדר זה ליגה! כשהגשתי לשולחן את הפבלובה, התשואות היו ליגה!!! עכשיו, גם לכם יש את המתכון, היכנסו ותתחילו להכין.",
-    "image": "https://rotteml.com/wp-content/uploads/2021/12/WhatsApp-Image-2021-12-07-at-11.41.54.jpeg",
+  noLdJsonSupportedRecipeUrl: "https://www.oogio.net/chocolate_coffee_and_hazelnut_cake/",
+  expectedPageInfo:{
+    "description": "עוגת שוקולד וקפה עם אגוזים - ללא גלוטן, רכה, עסיסית ונמסה בפה שמכינים בקלי קלות ומגישים עם רוטב שוקולד חם ואגוזי לוז קלויים לקישוט.",
+    "image": "https://www.oogio.net/wp-content/uploads/2014/04/1-s-1.jpg",
     "ingredients": [],
     "instructions": [],
-    "name": "פבלובה פירות הדר",
+    "name": "עוגת שוקולד וקפה עם אגוזים מושלמת לפסח - עוגיו.נט",
+    "sectionedInstructions": [],
     "servings": "",
     "tags": [],
     "time": {
@@ -1975,4 +1848,4 @@ module.exports = {
       "total": ""
     }
   }
-}
+};
