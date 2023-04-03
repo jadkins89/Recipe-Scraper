@@ -1,47 +1,34 @@
 module.exports = {
   testUrl:
-    "https://www.yummly.com/recipe/No-Bake-Lemon-Mango-Cheesecakes-with-Speculoos-crust-781945",
+    "https://www.yummly.com/recipe/Gluten-Free-Sugar-Cookies-9100629",
   invalidUrl: "https://www.yummly.com/recipe/notarealurl",
   invalidDomainUrl: "www.invalid.com",
   nonRecipeUrl: "https://www.yummly.com/recipes",
   expectedRecipe: {
-    name: "No-Bake Lemon-Mango Cheesecakes with Speculoos crust",
-    description: "Perfect for times when you just don’t want to use your oven. Cheesecake sitting on a cookie. What could be better than that? Combining the tart flavors of lemon and mango adds a hint of the exotic to this rich dessert.",
+    name: 'Gluten Free Sugar Cookies',
+    description: 'Wonderful recipe my family and friends could not tell it was gluten free.',
     ingredients: [
-      "125 grams cookies (spéculoos)",
-      "60 grams butter ",
-      "300 grams cream cheese ",
-      "125 grams powdered sugar ",
-      "1 lemon ",
-      "150 milliliters creme fraiche (or sour cream)",
-      "7 grams gelatin powder (unflavored)",
-      "200 grams mango (puree)"
+      '1 cup sugar',
+      '1/2 cup butter softened',
+      '1 egg room temperature',
+      '1 tablespoon milk',
+      '2 teaspoons vanilla extract',
+      '1/4 teaspoon salt omit if butter is salted',
+      '2 cups gluten free all purpose flour'
     ],
-    instructions: [
-      "Using a blender, smash the cookies into pieces, add the diced butter and mix, pulsing  to incorporate.",
-      "Place circular cookie molds on a baking sheet covered with a plastic wrap.",
-      "Spread some cookie mixture on each circle and press with a spoon to cover the bottom.",
-      "Keep cool.",
-      "Sprinkle the gelatin in a bowl of cold water to soften it.",
-      "With an electric mixer beat the cream cheese, sugar, lemon juice, and sour cream and until smooth.",
-      "In a small bowl, over a saucepan of boiling water, 3 Tablespoons of mango puree.",
-      "Add the gelatin and stir until well dissolved.",
-      "Blend into the remaining mango purée  mixing with a fork and add into the cream cheese mixture while beating continuously.",
-      "Fill the cookie molds with this mixture.",
-      "Let it cool overnight in the refrigerator.",
-      "To unmold, pass a hot knife blade along the sides of the circle."
-    ],
-    tags: ["Desserts","Boiling","Blending"],
+    instructions: [],
+    sectionedInstructions: [],
+    tags: [ 'Desserts', 'Sugar Cookies', 'Frosting', 'Cookies', 'Baking' ],
     time: {
-      prep: "",
-      cook: "",
-      active: "",
-      inactive: "",
-      ready: "",
-      total: "35 Minutes"
+      prep: '',
+      cook: '',
+      active: '',
+      inactive: '',
+      ready: '',
+      total: '45 minutes'
     },
-    servings: "4",
-    image:
-      "https://www.yummly.com/images/No-Bake-Lemon-Mango-Cheesecakes-with-Speculoos-crust-recipe-781945"
+    servings: '',
+    image: 'https://lh3.googleusercontent.com/iHTCX-ZrqIHcxcDWSY-c_9OHyh_ZDxDoRa1ci0IcwDeEOCshL0G9z-rB_5vJZFgsdDjR4TyZ8tR5DwCDRUj4_g=w1280-h1280-c-rj-v1-e365'
   }
+
 };

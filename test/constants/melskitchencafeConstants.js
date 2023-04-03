@@ -16,25 +16,38 @@ module.exports = {
       '3 cups BBQ sauce (plus more for serving)'
     ],
     instructions: [
-      'Cut the pork roast into large 4-inch pieces ' +
-      '(optional, but helps cook a bit faster and more ' +
-      'evenly). Season the pork on all sides with salt and ' +
-      'pepper.',
-      'Slow Cooker Directions: add water or broth and liquid smoke ' +
-      'to slow cooker. Add pork. Cover and cook on low 8-10 hours ' +
-      'or high for 5-6 hours, until the pork is fall-apart tender.',
-      'Pressure Cooker Directions: Decrease the water/broth to 1 cup. Add ' +
-      'the water or broth, pork and liquid smoke to an electric pressure ' +
-      'cooker. Secure the lid, set the valve to seal, and cook on high ' +
-      'pressure for 55-60 minutes. Let the pressure naturally release for ' +
-      '10 minutes (or all the way). Quick release any remaining pressure.',
-      'Remove the pork from the slow cooker or pressure cooker and discard ' +
-      'most of the remaining liquid (I leave about 1/4 cup or so). Shred ' +
-      'the pork using a couple of forks - it should easily fall apart into ' +
-      'pieces. Place the meat back in the slow cooker or pressure cooker. ' +
-      'Add the BBQ sauce and heat through (or keep on warm for several ' +
-      'hours).',
+      'Cut the pork roast into large 4-inch pieces (optional, but helps cook a bit faster and more evenly). Season the pork on all sides with salt and pepper.',
+      'Slow Cooker Directions: add water or broth and liquid smoke to slow cooker. Add pork. Cover and cook on low 8-10 hours or high for 5-6 hours, until the pork is fall-apart tender.',
+      'Pressure Cooker Directions: Decrease the water/broth to 1 cup. Add the water or broth, pork and liquid smoke to an electric pressure cooker. Secure the lid, set the valve to seal, and cook on high pressure for 55-60 minutes. Let the pressure naturally release for 10 minutes (or all the way). Quick release any remaining pressure.',
+      'Remove the pork from the slow cooker or pressure cooker and discard most of the remaining liquid (I leave about 1/4 cup or so). Shred the pork using a couple of forks - it should easily fall apart into pieces. Place the meat back in the slow cooker or pressure cooker. Add the BBQ sauce and heat through (or keep on warm for several hours).',
       'Serve on buns with extra barbecue sauce.'
+    ],
+    sectionedInstructions: [
+      {
+        sectionTitle: 'Cut the pork roast into large 4-inch pieces (optional, but helps cook a bit faster and more evenly). Season the pork on all sides with salt and pepper.',
+        text: 'Cut the pork roast into large 4-inch pieces (optional, but helps cook a bit faster and more evenly). Season the pork on all sides with salt and pepper.',
+        image: ''
+      },
+      {
+        sectionTitle: 'Slow Cooker Directions: add water or broth and liquid smoke to slow cooker. Add pork. Cover and cook on low 8-10 hours or high for 5-6 hours, until the pork is fall-apart tender.',
+        text: 'Slow Cooker Directions: add water or broth and liquid smoke to slow cooker. Add pork. Cover and cook on low 8-10 hours or high for 5-6 hours, until the pork is fall-apart tender.',
+        image: ''
+      },
+      {
+        sectionTitle: 'Pressure Cooker Directions: Decrease the water/broth to 1 cup. Add the water or broth, pork and liquid smoke to an electric pressure cooker. Secure the lid, set the valve to seal, and cook on high pressure for 55-60 minutes. Let the pressure naturally release for 10 minutes (or all the way). Quick release any remaining pressure.',
+        text: 'Pressure Cooker Directions: Decrease the water/broth to 1 cup. Add the water or broth, pork and liquid smoke to an electric pressure cooker. Secure the lid, set the valve to seal, and cook on high pressure for 55-60 minutes. Let the pressure naturally release for 10 minutes (or all the way). Quick release any remaining pressure.',
+        image: ''
+      },
+      {
+        sectionTitle: 'Remove the pork from the slow cooker or pressure cooker and discard most of the remaining liquid (I leave about 1/4 cup or so). Shred the pork using a couple of forks - it should easily fall apart into pieces. Place the meat back in the slow cooker or pressure cooker. Add the BBQ sauce and heat through (or keep on warm for several hours).',
+        text: 'Remove the pork from the slow cooker or pressure cooker and discard most of the remaining liquid (I leave about 1/4 cup or so). Shred the pork using a couple of forks - it should easily fall apart into pieces. Place the meat back in the slow cooker or pressure cooker. Add the BBQ sauce and heat through (or keep on warm for several hours).',
+        image: ''
+      },
+      {
+        sectionTitle: 'Serve on buns with extra barbecue sauce.',
+        text: 'Serve on buns with extra barbecue sauce.',
+        image: ''
+      }
     ],
     tags: [],
     time: {
@@ -48,4 +61,5 @@ module.exports = {
     servings: '12',
     image: 'https://www.melskitchencafe.com/wp-content/uploads/2010/08/bbq-pork-sandwich1.jpg'
   }
+
 };

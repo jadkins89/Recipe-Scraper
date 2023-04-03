@@ -247,7 +247,6 @@ class BaseScraper {
       }
     });
 
-    // console.log(this.recipe);
     return isRecipeSchemaFound;
   }
 
@@ -370,6 +369,10 @@ class BaseScraper {
   }
 
   static parsePTTime(ptTime) {
+    if(!ptTime) return;
+    if (ptTime["@type"] === "Duration") {
+      ptTime = ptTime["maxValue"];
+    }
     ptTime = ptTime.replace('PT', '');
     ptTime = ptTime.replace('H', ' hours ');
     ptTime = ptTime.replace('M', ' minutes ');

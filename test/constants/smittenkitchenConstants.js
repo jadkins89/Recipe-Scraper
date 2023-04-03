@@ -27,6 +27,7 @@ module.exports = {
       "Trim end off endives and arrange individual leaves on a medium platter. Add a few orange chunks to each, then goat cheese crumbles and almonds. Season with black pepper, then drizzle with a very thin stream of olive oil. Add a few droplets of sherry vinegar to each “boat.” Scatter chives over and finish each with sea salt.",
       "Dig in. No forks needed, unless you’re classy."
     ],
+    "sectionedInstructions": [],
     tags: ["Citrus","Endive","Gluten-Free","Orange","Party Snacks","Photo","Salad","Spanish","Vegetarian","Winter"],
     time: {
       prep: "",
@@ -80,6 +81,7 @@ module.exports = {
       "2. Fruit pies are done when you can see bubbles forming at the edges, with some creeping through and over some crumbs. If it takes longer, that’s better than an underbaked pie.",
       "To serve: Try to let the pie cool until close to room temperature before serving. This gives the pie thickener a chance to help the pie set. The pie will be even better set after a night in the fridge. Bring it back to room temperature before serving."
     ],
+    "sectionedInstructions": [],
     tags: ["Blackberries","Blueberries","Photo","Summer","Tarts/Pies"],
     time: {
       prep: "",
@@ -122,6 +124,7 @@ module.exports = {
       "Set pan on a cooling rack and let cool; refrigerate at least 2 hours or ideally overnight. ",
       "To serve: Use foil sling to carefully lift bars out of pan and transfer them to a cutting board. If you can, carefully slide them off their foil — this should be doable, but I did manage to crack my whole slab of bars while doing so, so proceed at your own risk. Scatter berries all over cake. Cut gently into 2×2-ish-inch squares with a serrated knife. Keep leftovers in fridge. Repeat again next weekend."
     ],
+    "sectionedInstructions": [],
     tags: ["Bars","Blackberries","Blueberries","Cake","Fruit","Picnics","Raspberries","Recipes","Strawberries","Summer"],
     time: {
       prep: "",

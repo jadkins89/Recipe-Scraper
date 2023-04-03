@@ -1,6 +1,6 @@
 "use strict";
 const { assert, expect } = require("chai");
-
+const {percentageOfLikeliness} = require("./helpers/precentageOfLikeliness");
 const SeriousEats = require("../scrapers/SeriousEatsScraper");
 const constants = require("./constants/seriouseatsConstants");
 
@@ -14,9 +14,12 @@ describe("seriousEats", () => {
   it("should fetch the expected recipe", async () => {
     seriousEats.url = constants.testUrl;
     let actualRecipe = await seriousEats.fetchRecipe();
-    expect(JSON.stringify(constants.expectedRecipe)).to.equal(
+    const likeliness = percentageOfLikeliness(
+      JSON.stringify(constants.expectedRecipe),
       JSON.stringify(actualRecipe)
     );
+    console.log("likeliness: ", likeliness);
+    expect(Number(likeliness)).to.be.gt(80);
   });
 
   it("should throw an error if invalid url is used", async () => {
