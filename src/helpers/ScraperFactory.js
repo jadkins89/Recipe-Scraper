@@ -12,7 +12,6 @@ import bbcgoodfood from '../scrapers/BbcGoodFoodScraper.js';
 import bonappetit from '../scrapers/BonAppetitScraper.js';
 import budgetbytes from '../scrapers/BudgetBytesScraper.js';
 import centraltexasfoodbank from '../scrapers/CentralTexasFoodBankScraper.js';
-import closetcooking from '../scrapers/ClosetCookingScraper.js';
 import cookieandkate from '../scrapers/CookieAndKateScraper.js';
 import copykat from '../scrapers/CopyKatScraper.js';
 import damndelicious from '../scrapers/DamnDeliciousScraper.js';
@@ -38,11 +37,8 @@ import thatlowcarblife from '../scrapers/ThatLowCarbLifeScraper.js';
 import theblackpeppercorn from '../scrapers/TheBlackPeppercornScraper.js';
 import thepioneerwoman from '../scrapers/ThePioneerWomanScraper.js';
 import therecipecritic from '../scrapers/TheRecipeCriticScraper.js';
-import therealfoodrds from '../scrapers/TheRealFoodDrsScraper.js';
 import thespruceeats from '../scrapers/TheSpruceEatsScraper.js';
 import whatsgabycooking from '../scrapers/WhatsGabyCookingScraper.js';
-import woolworths from '../scrapers/WoolworthsScraper.js';
-import yummly from '../scrapers/YummlyScraper.js';
 import jamieoliver from '../scrapers/JamieOliverScraper.js';
 import DefaultLdJsonScraper from "./DefaultLdJsonScraper.js";
 
@@ -56,7 +52,6 @@ const domains = {
   bonappetit,
   budgetbytes,
   centraltexasfoodbank,
-  closetcooking,
   cookieandkate,
   copykat,
   damndelicious,
@@ -82,11 +77,8 @@ const domains = {
   theblackpeppercorn,
   thepioneerwoman,
   therecipecritic,
-  therealfoodrds,
   thespruceeats,
   whatsgabycooking,
-  woolworths,
-  yummly,
   jamieoliver
 };
 

@@ -4,7 +4,7 @@ import BaseScraper from '../helpers/BaseScraper.js';
 
 /**
  * Class for scraping damndelicious.net
- * @extends PuppeteerScraper
+ * @extends BaseScraper
  */
 class DamnDeliciousScraper extends BaseScraper {
   constructor(url) {

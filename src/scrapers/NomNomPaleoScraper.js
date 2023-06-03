@@ -1,7 +1,7 @@
 import BaseScraper from '../helpers/BaseScraper.js';
 /**
  * Class for scraping nomnompaleo.com
- * @extends PuppeteerScraper
+ * @extends BaseScraper
  */
 
 class NomNomPaleoScraper extends BaseScraper {
