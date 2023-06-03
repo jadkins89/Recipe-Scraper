@@ -11,7 +11,7 @@
     "web-scraper",
     "recipe"
   ],
-  "main": "scrapers/index.js",
+  "main": "src/scrapers/index.js",
   "scripts": {
     "lint": "npx eslint ./src",
     "test": "mocha ./src/test --timeout 30000",
