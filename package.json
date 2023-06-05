@@ -3,7 +3,7 @@
   "version": "2.1.1",
   "type": "module",
   "description": "A JS package for scraping recipes from the web.",
-  "author": "Justin Adkins <jadkins1019@gmail.com>",
+  "author": "Shani Almog",
   "license": "MIT",
   "keywords": [
     "recipes",
@@ -25,8 +25,8 @@
     ]
   },
   "files": [
-    "helpers/",
-    "scrapers/",
+    "src/helpers/",
+    "src/scrapers/",
     "LICENSE",
     "README.md"
   ],
