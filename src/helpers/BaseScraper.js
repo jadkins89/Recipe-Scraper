@@ -5,9 +5,11 @@ import cheerio from 'cheerio';
 import { validate } from 'jsonschema';
 import Recipe from './Recipe.js';
 import * as fs from "fs";
+import path from 'path';
+const __dirname = path.resolve();
 
 // Read the JSON file
-const jsonData = fs.readFileSync("src/helpers/RecipeSchema.json", "utf-8");
+const jsonData = fs.readFileSync(path.resolve(__dirname, "src/helpers/RecipeSchema.json"), "utf-8");
 
 // Parse the JSON data
 const recipeSchema = JSON.parse(jsonData);
