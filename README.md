@@ -78,7 +78,7 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://www.yummly.com/
 - https://www.jamieoliver.com/
 
-Don't see a website you'd like to scrape? Open an [issue](https://github.com/jadkins89/Recipe-Scraper/issues) and we'll do our best to add it.
+Don't see a website you'd like to scrape? Open an [issue](https://github.com/jadkins89/Recipe-Scraper/issues) and we'll do our best to add it, or [contribute](#contributing) by adding it yourself!
 
 ## Recipe Object
 
@@ -102,7 +102,7 @@ Depending on the recipe, certain fields may be left blank. All fields are repres
     }
 }
 ```
-
+To learn more about the Recipe object and how to leverage site metadata to build your scraper, refer to the [Google Documentation for Recipe Structured Data](https://developers.google.com/search/docs/appearance/structured-data/recipe)
 ## Error Handling
 
 If the url provided is invalid and a domain is unable to be parsed, an error message will be returned.
@@ -155,5 +155,51 @@ recipeScraper("some.improper.url").catch(error => {
 With web scraping comes a reliance on the website being used not changing format. If this occurs we need to update our scrape. Please reach out if you are experiencing an issue.
 
 ## Contributing
+
+### Creating a New Scraper
+
+In order to add a new site URL and scraper, you can try the following steps.
+
+1. Fork the repository, clone your fork locally, and create a new branch for your changes.
+
+2. Create a new file in the `/scrapers` directory. In this file you will create a new Class that extends the [BaseScraper](/helpers/BaseScraper.js) class. This class should implement the `scrape` method, which extracts recipe information from the site and saves it inside the recipe object. 
+
+```js
+"use strict";
+
+const BaseScraper = require("../helpers/BaseScraper");
+
+class MyRecipeSiteScraper extends BaseScraper {
+  constructor(url) {
+    super(url, "my-recipe-site.com/");
+  }
+
+  scrape($) {
+    // Your scrape implementation
+    // . . .
+  }
+}
+
+module.exports = MyRecipeSiteScraper;
+```
+
+* Note: In cases where the BaseScraper is not able to parse the DOM correctly, you may choose to extend the [PuppeteerScraper](/helpers/PuppeteerScraper.js). Keep in mind that using Puppeteer may result in your scraper being more resource-intensive.
+
+3. Update the domain list in [ScraperFactory.js](/helpers/ScraperFactory.js) by mapping the domain name of the scraper you are developing to a `require` statement that pulls your scraper implementation.
+
+```js
+const domains = {
+  // . . .
+
+  // For example, for https://my-recipe-site.com
+  "my-recipe-site": require("../scrapers/MyRecipeSiteScraper"),
+
+  // . . .
+}
+```
+
+4. Create a test file for your scraper in the ['/test'](/test/) to verify that your implementation works as intended. There is a `commonRecipeTest` to help test the basic functionality of your Scraper. In order to use it, you will need to define some constants for the test in the ['/constants'](/test/constants/) directory. An exammple of what these constants should look like can be found [here](/test/constants/averiecooksConstants.js).
+
+5. Create a pull request to merge your fork's branch to this repo's main branch.
 
 I welcome pull requests that keep the scrapes up to date or add new ones. I'm doing my best to keep this package maintained and with your help this goal is much more achievable. Please add testing if you add a scrape. Thank you 😁
