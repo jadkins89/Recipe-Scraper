@@ -75,6 +75,7 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://www.thespruceeats.com/
 - https://whatsgabycooking.com/
 - https://www.woolworths.com.au/
+- https://www.yellowblissroad.com/
 - https://www.yummly.com/
 - https://www.jamieoliver.com/
 
