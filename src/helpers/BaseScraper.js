@@ -102,8 +102,6 @@ class BaseScraper {
             }
 
             if (recipe) {
-              console.log('found a Recipe type json schema!');
-              // console.log(recipe)
               try {
                 // name
                 this.recipe.name = BaseScraper.HtmlDecode($, recipe.name);

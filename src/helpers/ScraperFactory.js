@@ -84,7 +84,6 @@ const domains = {
 
 class ScraperFactory {
   getScraper(url) {
-    console.log("url: ", url);
     let parse = parseDomain(fromUrl(url));
     if (parse) {
       let domain = parse.domain;
