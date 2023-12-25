@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "A recipe scraped from the web",
+  "type": "object",
+  "required": ["name", "ingredients", "instructions"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ingredients": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "instructions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "sectionedInstructions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "sectionTitle": { "type": "string"},
+          "text": { "type": "string"},
+          "image": { "type": "string"}
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string" }
+    },
+    "time": {
+      "type": "object",
+      "properties": {
+        "prep": { "type": "string" },
+        "cook": { "type": "string" },
+        "active": { "type": "string" },
+        "inactive": { "type": "string" },
+        "ready": { "type": "string" },
+        "total": { "type": "string" }
+      }
+    },
+    "servings": {
+      "type": { "type": "string" }
+    },
+    "image": { "type": "string" }
+  }
+}

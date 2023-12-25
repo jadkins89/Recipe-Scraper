@@ -48,7 +48,6 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://copykat.com/
 - https://damndelicious.net/
 - https://www.eatingwell.com/
-- https://www.epicurious.com/
 - https://www.food.com/
 - https://www.foodandwine.com/
 - https://www.foodnetwork.com/
@@ -78,7 +77,8 @@ recipeScraper("some.recipe.url").then(recipe => {
 - https://www.yummly.com/
 - https://www.jamieoliver.com/
 
-Don't see a website you'd like to scrape? Open an [issue](https://github.com/jadkins89/Recipe-Scraper/issues) and we'll do our best to add it.
+And many more! the list above is old fashioned scraping, but for all those websites who have google recipe ld json included, it will also work.
+
 
 ## Recipe Object
 
@@ -105,30 +105,14 @@ Depending on the recipe, certain fields may be left blank. All fields are repres
 
 ## Error Handling
 
+If a recipe is not found on the given url, the basic page info will be returned: title, image & description.
+
 If the url provided is invalid and a domain is unable to be parsed, an error message will be returned.
 
 ```javascript
 recipeScraper("keyboard kitty").catch(error => {
   console.log(error.message);
   // => "Failed to parse domain"
-});
-```
-
-If the url provided doesn't match a supported domain, an error message will be returned.
-
-```javascript
-recipeScraper("some.invalid.url").catch(error => {
-  console.log(error.message);
-  // => "Site not yet supported"
-});
-```
-
-If a recipe is not found on a supported domain site, an error message will be returned.
-
-```javascript
-recipeScraper("some.no.recipe.url").catch(error => {
-  console.log(error.message);
-  // => "No recipe found on page"
 });
 ```
 
@@ -149,6 +133,8 @@ recipeScraper("some.improper.url").catch(error => {
   // => "url provided must include '#subUrl'"
 });
 ```
+
+
 
 ## Bugs
 

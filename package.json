@@ -1,8 +1,9 @@
 {
   "name": "recipe-scraper",
-  "version": "2.1.1",
+  "version": "2.1.2",
+  "type": "module",
   "description": "A JS package for scraping recipes from the web.",
-  "author": "Justin Adkins <jadkins1019@gmail.com>",
+  "author": "Shani Almog",
   "license": "MIT",
   "keywords": [
     "recipes",
@@ -10,16 +11,22 @@
     "web-scraper",
     "recipe"
   ],
-  "main": "scrapers/index.js",
+  "main": "src/scrapers/index.js",
   "scripts": {
-    "test": "mocha --timeout 15000",
-    "start": "node scrapers/index.js",
+    "lint": "npx eslint ./src",
+    "test": "mocha ./src/test --timeout 30000",
+    "start": "node ./src/scrapers/index.js",
     "coverage": "nyc npm test",
     "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
+  "standard": {
+    "env": [
+      "mocha"
+    ]
+  },
   "files": [
-    "helpers/",
-    "scrapers/",
+    "src/helpers/",
+    "src/scrapers/",
     "LICENSE",
     "README.md"
   ],
@@ -35,13 +42,15 @@
     "cheerio": "^1.0.0-rc.3",
     "jsonschema": "^1.4.0",
     "node-fetch": "^2.6.1",
-    "parse-domain": "^2.3.2",
-    "puppeteer": "^9.0.0"
+    "parse-domain": "^7.0.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "coveralls": "^3.0.6",
-    "mocha": "^6.2.1",
+    "eslint": "^8.40.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-mocha": "^10.1.0",
+    "mocha": "^10.2.0",
     "nyc": "^14.1.1"
   }
 }
